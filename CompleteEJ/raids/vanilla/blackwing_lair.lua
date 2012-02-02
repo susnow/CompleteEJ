@@ -323,35 +323,35 @@ local BLACKWING_LAIR = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Brood Afflictions",
-        desc = "During the encounter, Chromaggus will apply random afflictions on the raid.",
+        name = "龙血之痛",
+        desc = "克洛玛古斯将会对玩家随机释放龙血之痛.",
         sections = {
-          Spell(23174, {so = true, desc = "Once a player has been afflicted with all five of the debuffs, they will turn into a Chromatic Drakonid for 5 minutes, and will most surely wipe the raid, as melee damage is increased by 600% and all resistances are set to 500.", flag1 = IMPORTANT}), -- Chromatic Mutation
+          Spell(23174, {so = true, desc = "一旦一名玩家同时拥有了5个龙血之痛的Debuff,他将变成一个多彩龙人并且开始攻击玩家,具有顺劈攻击,近战伤害提升600%,魔法抗性提高500点,持续5分钟.", flag1 = IMPORTANT}), -- Chromatic Mutation
           Spell(23154, {flag1 = CURSE}), -- Brood Affliction: Black
-          Spell(23153, {desc = "Burns 50 mana every second. Reduces casting speed by 50% and movement speed by 30%.", flag1 = MAGIC}), -- Brood Affliction: Blue
-          Spell(23170, {desc = "Periodically stuns the target for 4 seconds.  This can be removed using Hourglass Sand that players can loot from previous trash packs.", flag1 = IMPORTANT}), -- Brood Affliction: Bronze
+          Spell(23153, {desc = "每秒燃烧50点法力值,施法速度降低50%,移动速度降低30%.", flag1 = MAGIC}), -- Brood Affliction: Blue
+          Spell(23170, {desc = "随机使玩家昏迷4秒.可被沙漏解除,黑翼之巢中的小怪有概率掉落沙漏这个物品.", flag1 = IMPORTANT}), -- Brood Affliction: Bronze
           Spell(23169, {flag1 = POISON}), -- Brood Affliction: Green
           Spell(23155, {flag1 = DISEASE}), -- Brood Affliction: Red
         },
       }),
       Stage({
-        name = "Breaths",
-        desc = "Chromaggus will use two of the five breaths, this is random each raid and you won't know what combination you got until you fight him.",
+        name = "吐息",
+        desc = "克洛玛古斯将在5种吐息中随机使用一种,除非战斗开始,否则你将不知道它下一次将使用哪一个吐息.",
         sections = {
-          Spell(23314, {desc = "Deals 1124 damage every 3 seconds. Reduces armor by 3939 and lasts 15 seconds."}), -- Corrosive Acid (#23313 duplicate?)
+          Spell(23314, {desc = "每3秒造成875~1125点伤害,护甲值降低3939点,持续15秒."}), -- Corrosive Acid (#23313 duplicate?)
           Spell(23189), -- Frost Burn (#23187 old?)
           Spell(23316), -- Ignite Flesh (#23315 old?)
           Spell(23309), -- Incinerate (#23308 old?)
-          Spell(23312, {desc = "Freezes the raid in time, reducing Health by 50% and lasts 8 seconds. Only applies to targets in line-of-sight.", flag1 = HEALER}), -- Time Lapse (#23310 old?)
+          Spell(23312, {desc = "被冻结在时光流中,生命值降低50%,持续8秒.", flag1 = HEALER}), -- Time Lapse (#23310 old?)
         },
       }),
-      Spell(23128, {desc = "Periodically enters this Enraged state, decreasing the time between attacks by 150% for 8 seconds.", flag1 = ENRAGE}), -- Enrage
-      Spell(23537, {desc = "At 20% health, Chromaggus will enter a state of Frenzy, attacking 50% faster and dealing 219 to 281 additional Physical damage each melee swing.", flag1 = HEALER}), -- Frenzy
+      Spell(23128, {desc = "克洛玛古斯进入狂暴状态, 攻击速度提高150%,持续8秒.", flag1 = ENRAGE}), -- Enrage
+      Spell(23537, {desc = "当生命值降到20%以下后, 克洛玛古斯进入狂乱状态, 攻击速度提高50%,对玩家造成的物理伤害提高219~281点.", flag1 = HEALER}), -- Frenzy
     },
   },
   {
-    name = "Nefarian",
-    desc = "Nefarian, also known as Blackwing, was the eldest son of Deathwing and his Prime Consort Sintharia. Like his father and his sister Onyxia, he had a human guise, appearing as Victor Nefarius, Lord of Blackrock.  Holding the Blackrock clan and various clans of ogres under his control, Nefarian ruled from his lair at the top of Blackrock Spire until he was defeated by champions of Azeroth.  Upon the return of his father and the Shattering that resulted, Nefarian was brought back to life as a rotted abomination, and descended further into Blackrock Mountain, where he set up a laboratory full of new (and mostly failed) experiments - including reanimating his sister Onyxia. Ultimately, he was destroyed once again by Azeroth's champions.",
+    name = "奈法利安",
+    desc = "黑龙奈法利安是死亡之翼的长子.他的人类形态是领主维克多·奈法里奥斯,黑石之王.奈法利安统领着黑石氏族及多个食人魔氏族,他在黑石塔顶端的巢穴中进行统治.奈法利安精通通用语,达纳苏斯语,矮人语,地精语,侏儒语,低级通用语,兽人语,萨拉斯语和赞达拉语.",
     --icon = true,
     creature = 11583,
     display = 11380,
@@ -360,22 +360,22 @@ local BLACKWING_LAIR = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Phase 1: Drakonoids",
-        desc = "The raid must defeat 42 Drakonids before the next phase starts.",
+        name = "第一阶段: 多彩龙兽",
+        desc = "当玩家击杀42只多彩龙兽之后,进入下一阶段.",
         sections = {
           Stage({
             so = true,
             stype = CREATURE,
             creature = 10162,
             display = 9472,
-            name = "Lord Victor Nefarius",
-            desc = "You can't attack him, but he will still attack you during phase 1 in his humanoid form. He will randomly blink around and attack random enemies.",
+            name = "黑石领主奈法利安",
+            desc = "你无法攻击他, 但是他会在第一阶段使用人形态对你们进行攻击. 他会随机闪现到任意一个地方并且随机攻击一名玩家.",
             sections = {
-              Spell(22667, {desc = "Uses the guile of Deathwing to charm the target, increasing its damage by 300% and making it turn on his own allies for 15 seconds.", flag1 = IMPORTANT}), -- Shadow Command
-              Spell(22666, {desc = "Silences an enemy, preventing it from casting spells for 6 seconds.", flag1 = MAGIC}), -- Silence
-              Spell(22678, {desc = "Strikes fear in an enemy, causing it to flee in terror for 6 seconds.", flag1 = MAGIC}), -- Fear
-              Spell(22665, {desc = "Hurls missiles of dark magic, inflicting 133 to 154 Shadow damage to enemies within 30 yards."}), -- Shadow Bolt Volley
-              Spell(22677, {desc = "Hurls a bolt of dark magic at an enemy, inflicting 1020 to 1380 Shadow damage."}), -- Shadow Bolt
+              Spell(22667, {desc = "使用死亡之翼的狡诈来魅惑目标,使其所造成的伤害提高300%,并开始攻击奈法利安的敌人，持续15秒.", flag1 = IMPORTANT}), -- Shadow Command
+              Spell(22666, {desc = "使一个目标沉默,在6秒内不能施法.", flag1 = MAGIC}), -- Silence
+              Spell(22678, {desc = "使一个目标因为极度的恐惧而奔逃,最多持续6秒.", flag1 = MAGIC}), -- Fear
+              Spell(22665, {desc = "向30码内的所有敌人射出暗影箭,对它们造成133~154点暗影伤害."}), -- Shadow Bolt Volley
+              Spell(22677, {desc = "向一个目标射出暗影箭,造成1020~1380点暗影伤害."}), -- Shadow Bolt
               --Spell(22663), -- Nefarian's Barrier
               --Spell(22664), -- Shadowblink
               --Spell(22681), -- Shadowblink
@@ -385,7 +385,7 @@ local BLACKWING_LAIR = CreateInstance({
             stype = CREATURE,
             creature = 14265,
             display = 14885,
-            name = "Chromatic Drakonid",
+            name = "多彩龙兽",
             sections = {
               Spell(22560, {so = true}),
             },
@@ -394,7 +394,7 @@ local BLACKWING_LAIR = CreateInstance({
             stype = CREATURE,
             creature = 14265,
             display = 14885,
-            name = "Black Drakonid",
+            name = "黑色龙兽",
             sections = {
               Spell(22560, {so = true}),
             },
@@ -403,7 +403,7 @@ local BLACKWING_LAIR = CreateInstance({
             stype = CREATURE,
             creature = 14261,
             display = 14886,
-            name = "Blue Drakonid",
+            name = "蓝色龙兽",
             sections = {
               Spell(22559, {so = true}),
             },
@@ -412,7 +412,7 @@ local BLACKWING_LAIR = CreateInstance({
             stype = CREATURE,
             creature = 14263,
             display = 14887,
-            name = "Bronze Drakonid",
+            name = "青铜龙兽",
             sections = {
               Spell(22642, {so = true}),
             },
@@ -421,7 +421,7 @@ local BLACKWING_LAIR = CreateInstance({
             stype = CREATURE,
             creature = 14262,
             display = 14888,
-            name = "Green Drakonid",
+            name = "绿色龙兽",
             sections = {
               Spell(22561, {so = true}),
             },
@@ -430,7 +430,7 @@ local BLACKWING_LAIR = CreateInstance({
             stype = CREATURE,
             creature = 14264,
             display = 14889,
-            name = "Red Drakonid",
+            name = "红色龙兽",
             sections = {
               Spell(22558, {so = true}),
             },
@@ -438,72 +438,72 @@ local BLACKWING_LAIR = CreateInstance({
         },
       }),
       Stage({
-        name = "Phase 2: Nefarian",
-        desc = "When Nefarian reaches 20% health, phase 3 is added into the mix, but phase 2 keeps going until Nefarian is defeated.",
+        name = "第二阶段: 奈法利安",
+        desc = "当奈法利安的生命值低于20%时,将会使用第三阶段的技能,但是第二阶段会一直持续到奈法利安被击败为止.",
         sections = {
           Stage({
             icon = "Interface\\Icons\\INV_Misc_Questionmark",
-            name = "Class calls",
-            desc = "Every 25 to 35 seconds, Nefarian will \"call out\" a specific class, all players with that class are affected.",
+            name = "职业点名",
+            desc = "每隔25-30秒, 奈法利安会对某个职业进行点名, 该职业的所有玩家会受到这次职业点名的特殊影响.",
             sections = {
               Stage({
                 --Spell(23398), -- Involuntary Transformation
                 icon = "Interface\\Icons\\Ability_Druid_Maul",
-                name = "Druid",
-                desc = "Forced into Cat Form for 30 seconds.\n\nDue to a bug, this is not counted as the real Cat Form and actionbars for the Cat Form would not show up, instead the default actionbar is used.",
+                name = "德鲁伊(自然变形)",
+                desc = "强制使德鲁伊玩家进入猎豹形态,持续30秒.",
               }),
               Stage({
                 --Spell(51399), -- Death Grip
                 --Spell(49560), -- Death Grip
                 icon = "Interface\\Icons\\Spell_DeathKnight_ClassIcon",
-                name = "Death Knight",
-                desc = "Nefarian will Death Grip random players to him.",
+                name = "死亡骑士(死亡之握)",
+                desc = "奈法利安将会随机对一名玩家释放死亡之握.",
               }),
               Stage({
                 icon = "Interface\\Icons\\INV_Weapon_Bow_07",
-                name = "Hunter",
-                desc = "Equipped ranged weapon instantly breaks.  It is recommended to remove your weapon either manually or by using a macro, before the class call.",
+                name = "猎人(远程武器损坏)",
+                desc = "猎人装备的远程武器的耐久度将变为0点.",
               }),
               Stage({
                 --Spell(23410), -- Wild Magic
                 icon = "Interface\\Icons\\INV_Staff_13",
-                name = "Mage",
-                desc = "Transformed into giraffes, cows or worms by Wild Polymorph.",
+                name = "法师(狂野魔法)",
+                desc = "将周围随机的玩家变形成为一些奇怪的小动物,持续30秒.",
               }),
               Stage({
                 --Spell(23401), -- Corrupted Healing
                 icon = "Interface\\Icons\\Inv_Staff_30",
-                name = "Priest",
-                desc = "Afflicted with Corrupted Healing, any direct heals adds Corrupted Healing, a debuff dealing 44 to 56 damage every second for 30 seconds. It can stack up to 50 and would tick for minimum 2200 damage each second, that is 66000 damage over 30 seconds.",
+                name = "牧师(堕落治疗)",
+                desc = "使牧师对目标的直接治疗法术转而造成持续法术伤害.",
               }),
               Stage({
                 --Spell(23418), -- Siphon Blessing
                 icon = "Interface\\Icons\\Ability_Thunderbolt",
-                name = "Paladin",
-                desc = "Nefarian forces them to cast Hand of Protection on him.",
+                name = "圣骑士(虹吸祝福)",
+                desc = "奈法利安强制圣骑士玩家对其施加保护祝福.",
               }),
               Stage({
                 --Spell(23414), -- Paralyze
                 icon = "Interface\\Icons\\INV_ThrowingKnife_04",
-                name = "Rogue",
-                desc = "Teleported and rooted infront of Nefarian, making them voulnerable to his Cleave and Breath attacks.",
+                name = "盗贼(麻痹)",
+                desc = "将盗贼玩家随机传送到一个地点并且被固定在原地无法移动,持续30秒.",
               }),
               Stage({
                 icon = "Interface\\Icons\\Spell_Nature_Bloodlust",
-                name = "Shaman",
-                desc = "Will spawn corrupted totems, powerful versions of their own totems, only that they aid Nefarian and deal damage to the raid.",
+                name = "萨满祭司(崩坏图腾)",
+                desc = "萨满祭司将使用比他们自身力量更强大的崩坏图腾,但是作用于奈法利安",
               }),
               Stage({
                 --Spell(23397), -- Berserk
                 icon = "Interface\\Icons\\INV_Sword_27",
-                name = "Warrior",
-                desc = "Stuck in Berserker Stance, increasing damage taken.\n\nDue to a bug, this is not counted as the real Berserker Stance and actionbars for the stance would not show up, instead the default actionbar is used.",
+                name = "战士(狂暴)",
+                desc = "强制使战士进入狂暴姿态,持续30秒,受到的伤害提高30%",
               }),
               Stage({
                 --Spell(23427), -- Summon Infernals
                 icon = "Interface\\Icons\\Spell_Nature_Drowsy",
-                name = "Warlock",
-                desc = "Summons two Corrupted Infernal per Warlock. These stun for 2 seconds at spawn and deal 14 to 17 Fire damage each 3 seconds to anyone within 5 yards.",
+                name = "术士(召唤地狱火)",
+                desc = "两个巨大的地狱火恶魔从天而降,地狱火恶魔会不断释放地狱烈焰,对5码范围内的玩家每3秒造成14~17点火焰伤害,并且使他们晕眩2秒.",
               }),
             },
           }),
@@ -516,8 +516,8 @@ local BLACKWING_LAIR = CreateInstance({
         },
       }),
       Stage({
-        name = "Phase 3: Bone Construct",
-        desc = "At 20% health, Nefarian will revive the dead Drakonoids into the form of Bone Constructs. This means you will have 42 Bone Constructs to kill with area-of-effect abilities.",
+        name = "第三阶段: 白骨魔像",
+        desc = "当奈法利安的生命值降低至20%以后,他将使用堕落的力量使之前被击杀的42只龙兽全部复活成白骨魔像,玩家需要使用AOE技能来击杀这42只白骨魔像.",
         sections = {
           Spell(8355, {so = true}), -- Exploit Weakness
         },
@@ -525,17 +525,17 @@ local BLACKWING_LAIR = CreateInstance({
     },
     adds = {
       {
-        name = "Lord Victor Nefarius",
+        name = "黑石领主奈法利安",
         creature = 10162,
         display = 9472,
       },
       {
-        name = "Drakonoids",
+        name = "多彩龙兽",
         creature = 14265,
         display = 14885,
       },
       {
-        name = "Bone Construct",
+        name = "白骨魔像",
         creature = 14605,
         display = 12073,
       },
