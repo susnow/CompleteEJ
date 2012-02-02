@@ -1,0 +1,70 @@
+local _, db = ...
+local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
+
+local VANILLA, TBC, WOTLK = 1, 2, 3
+
+local N5, H5, N10, N25, H10, H25, RF = 1, 2, 1, 2, 3, 4, 5
+
+local PHASE, CREATURE, ABILITY = 0, 1, 2
+
+local TANK = 0
+local DPS = 1
+local HEALER = 2
+local HEROIC = 3
+local DEADLY = 4
+local IMPORTANT = 5
+local INTERRUPT = 6
+local MAGIC = 7
+local CURSE = 8
+local POISON = 9
+local DISEASE = 10
+local ENRAGE = 11
+local ENRAGE2 = 12
+
+local THE_FORGE_OF_SOULS = CreateInstance({
+  name = "The Forge of Souls",
+  desc = "The Forge of Souls is the first wing of the dungeon complex known as the Frozen Halls, located within Icecrown Citadel. The instance portal is located to the left inside the secured area of Icecrown Citadel, near the meeting stone. No attunement is required for entry, but completing the instance is required to gain entrance to the Pit of Saron.",
+  --texture = "TheForgeofSouls",
+  area = 601,
+}, {
+  {
+    name = "Bronjahm",
+    desc = "Bronhahm, the Godfather of Souls, is the first boss in The Forge of Souls. It is related to the achievement Soul Power.",
+    --icon = true,
+    creature = 36497,
+    display = 30226,
+    coords = {0.433, 0.499, 1},
+    loot = {{50196,H5},49783,{50193,H5},49784,49785,{50197,H5},50317,49786,49787,49788,50316,{50194,H5},{50191,H5},{50169,H5},},
+    sections = {
+      Spell(68839), -- Corrupt Soul
+      Spell(68950), -- Fear
+      Spell(68793, {fbd = N5}), -- Magic's Bane
+      Spell(69050, {fbd = H5}), -- Magic's Bane
+      Spell(70043), -- Shadow Bolt
+      Spell(68921, {fbd = N5}), -- Soulstorm
+      Spell(69049, {fbd = H5}), -- Soulstorm
+      Spell(68872), -- Soulstorm
+      Spell(68988), -- Teleport
+    },
+  },
+  {
+    name = "Devourer of Souls",
+    desc = "The Devourer of Souls is the second and last boss in The Forge of Souls. It also guards the Crucible of Souls, needed to temper Quel'Delar. It is related to the achievement Three Faced.",
+    --icon = true,
+    creature = 36502,
+    display = 30148,
+    coords = {0.436, 0.124, 1},
+    loot = {{49796,N5},{50211,H5},{50210,H5},{50203,H5},{50206,H5},{50208,H5},{49797,N5},{50214,H5},{50212,H5},{49791,N5},{50209,H5},{50207,H5},{43102,H5},{50198,H5},{50213,H5},{49794,N5},{49792,N5},{49799,N5},{50215,H5},{49800,N5},{49789,N5},{49798,N5},{49793,N5},{49795,N5},{49790,N5},},
+    sections = {
+      Spell(69051), -- Mirrored Soul
+      Spell(68982, {fbd = N5, flag1 = MAGIC}), -- Phantom Blast
+      Spell(70322, {fbd = H5, flag1 = MAGIC}), -- Phantom Blast
+      Spell(68939), -- Unleashed Souls
+      Spell(68912), -- Wailing Souls
+      Spell(68899), -- Wailing Souls
+      Spell(68820), -- Well of Souls
+    },
+  },
+})
+
+table.insert(db, THE_FORGE_OF_SOULS)

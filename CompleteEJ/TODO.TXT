@@ -1,0 +1,47 @@
+--------------------------------------------------------------------------------
+Separate messages with double lines, use hashtag and username, then new line
+and your message. Put newer messages on top of the old once, so older messages
+end up on the bottom of the file. Any objections? Comments on here and we can
+work out how to write in the TODO file. ;) - vladinator
+--------------------------------------------------------------------------------
+
+#vladinator
+The world bosses thing, the only "issue" is that the dungeons (i.e. zone/map)
+wouldn't allow you to see blobs of the bosses on the map, unless we make one
+"instance" per continent. I think it would look nicer with one "World Bosses"
+instance with all the bosses under it, or perhaps "World Bosses: <Expansion>"
+tough I think just plain "World Bosses" may be fine since you only got Outland
+and Cataclysm, to my knowledge... none in Wotlk right?
+Not a big deal, just nice if we try keep it Blizzard-like I guess.
+(The huge bar with "----" is just so we make new line properly, so text is
+readable without wrapping the lines, hehe.)
+The only issue for now is, I got Photoshop templates that I worked out for
+the images, but not sure if Photoshop is the best way, what image editors do
+you use?
+
+#Arxae
+Made a checklist, don't know completion rate of those though. So people should
+remove it from the list or something :p
+For the worlf bosses "issue". Why not make a folder "Misc" or so and store it
+in there? Or leave it in the root. I will start on Wotlk (top of the checklist)
+
+#vladinator
+There is a strange texture issue now, for no reason, in the tga it works fine
+but in the blp files the right edge is supposed to be hidden but it's visible
+when looking at an encounter. need to try and find a better tga>blp converter
+or try to fix this somehow, the blp seem fine when I look at them in a viewer
+so I am not sure why this happened.
+
+#vladinator
+If you like I can put the tools I used to make the tga into working blp in some
+other SVN directory, along with some templates if you like to use them -saves
+you time. but what folder should I put those in?
+
+#vladinator
+Finishes Blackfathom Deeps, doing Gnomeregan and Scarlet Monastery after it.
+
+#vladinator
+Needs to put "world_bosses.lua" into the right category, I guess under raids
+and have either one for all expansions or split it up, one world boss file per
+expansion, not sure what is the best course of action right now. In any case,
+going to work with Blackfathom Deeps then Gnomeregan, just so you know.

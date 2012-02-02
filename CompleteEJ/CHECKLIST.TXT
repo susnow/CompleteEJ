@@ -1,0 +1,57 @@
+dungeons
+	vanilla
+		Blackrock Depths
+		Straholme
+		Lower Blackrock Spire
+		Upper Blackrock Spire
+	tbc
+		Hellfire Ramparts
+		Blood Furnace
+		Slave Pens
+		The Underbog
+		Mana Tombs
+		Auchenai Crypts
+		Escape from Durnholde Keep
+		Sethekk Halls
+		The Steamvault
+		Shadow Labyrinth
+		Shattered Halls
+		The Mechanar
+		The Botanica
+		Black Morass
+		The Arcatraz
+		Magisters' Terrace
+	wotlk
+		Ahn'Kahet (Graphics)
+		Azjol-Nerub (Graphics)
+		Drak'Thraon Keep
+		Violet Hold
+		Gundrak
+		Halls of Stone
+		Halls of Lightning
+		The Oculus
+		Culling of Stratholme
+		Utgarde Pinnacle
+		Trial of the Champion
+		Forge of Souls
+		Pit of Saron
+		Halls of Reflection
+
+raids
+	tbc
+		Serpentshrine Cavern
+		The Eye
+		Battle for Mount Hyjal
+		Black Temple
+		Sunwell Plateau
+	wotlk
+		Naxxramas
+		Obsidian Sanctum
+		Vault of Archavon
+		The Eye of Eternity
+		Ulduar
+		Trial of the Crusader
+		Onyxia's Lair
+		Trial of the Grand Crusader
+		Ruby Sanctum
+		Icecrown Citadel
