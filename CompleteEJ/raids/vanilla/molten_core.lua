@@ -205,8 +205,8 @@ local MOLTEN_CORE = CreateInstance({
     },
   },
   {
-    name = "Sulfuron Harbinger",
-    desc = "Among the most favored of the flamewakers, Sulfuron Harbinger is the terrifying herald of Ragnaros himself. From the infernal depths of the Molten Core, the Harbinger commands Ambassador Flamelash and the other lesser flamewakers in the outside world.  Sulfuron Harbinger answers only to Executus and guards the rune of Koro, one of several runes that empower the Firelord's servants.  Sulfuron Harbinger keeps Shazzrah in particular under close watch, believing that Shazzrah seeks to betray Ragnaros. Flanked by four of the Firelord's most fervid priests, the Harbinger prepares for the day when the elemental lord of fire claims the world of Azeroth for his own.",
+    name = "萨弗隆先驱者",
+    desc = "萨菲隆先驱者是拉格纳罗斯的先锋部队,由一群烈焰行者组成的爪牙部队,为拉格纳罗斯看守着一枚烈焰符文",
     --icon = true,
     creature = 12098,
     display = 13030,
@@ -215,20 +215,20 @@ local MOLTEN_CORE = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Flamewaker Priest",
+        name = "烈焰行者祭司",
         sections = {
-          Spell(19775, {desc = "Uses dark magic to heal an ally for 27750 to 32250 damage. This ability has 60 yards range and will be cast on any ally that is low on health.", flag1 = INTERRUPT}), -- Dark Mending
+          Spell(19775, {desc = "使用黑暗魔法的能量治疗一个盟友,回复27750~32250点生命值.", flag1 = INTERRUPT}), -- Dark Mending
           Spell(19777), -- Dark Strike
           Spell(20294, {flag1 = MAGIC}), -- Immolate
-          Spell(19776, {desc = "Utters a word of darkness, inflicting 4 Shadow damage to an enemy every 3 seconds for 15 seconds.", flag1 = MAGIC}), -- Shadow Word: Pain
+          Spell(19776, {desc = "黑暗的咒语,每3秒对敌人造成一次暗影伤害,持续15秒.", flag1 = MAGIC}), -- Shadow Word: Pain
         },
       }),
       Stage({
         so = true,
-        name = "Sulfuron Harbinger",
+        name = "萨菲隆先驱者",
         sections = {
           Spell(19778), -- Demoralizing Shout
-          Spell(19781, {desc = "Tosses a spear of flame, inflicting 850 to 1150 Fire damage to an enemy, as well as scorching any other enemies in the vicinity of the target, within 10 yards.", flag1 = IMPORTANT}), -- Flame Spear
+          Spell(19781, {desc = "投掷烈焰之矛，对一个敌人造成850~1150点火焰伤害，并灼烧它附近10码的其它敌人.", flag1 = IMPORTANT}), -- Flame Spear
           Spell(19780, {flag1 = HEALER}), -- Hand of Ragnaros
           Spell(19779), -- Inspire
           Spell(19785), -- Throw
@@ -237,15 +237,15 @@ local MOLTEN_CORE = CreateInstance({
     },
     adds = {
       {
-        name = "Flamewaker Priest",
+        name = "烈焰祭司",
         creature = 11662,
         display = 12030,
       },
     },
   },
   {
-    name = "Golemagg the Incinerator",
-    desc = "The most feared soldiers of Ragnaros's elemental forces are the molten giants, and among them Golemagg the Incinerator is unrivaled for his sheer brutality and savage efficiency. So absolute is the molten behemoth's power that he has cowed two core ragers - offspring of the colossal beast Magmadar - which he now uses as pets.  For this affront, he has earned Magmadar's eternal and unwavering ire, although the fearsome creature has yet to act on his savage impulses.",
+    name = "焚化者古雷曼格",
+    desc = "焚化者古雷曼格是拉格纳罗斯手下最强大的熔岩巨人,他极度残暴,野蛮.他无视玛格曼达的愤怒,将其的两个后代抓获,作为自己的护卫犬.",
     --icon = true,
     creature = 11988,
     display = 11986,
@@ -254,29 +254,29 @@ local MOLTEN_CORE = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Core Rager",
+        name = "熔岩巨犬",
         sections = {
           Spell(19820), -- Mangle 
           Stage({
-            name = "Death Insurance",
+            name = "死亡治愈",
             icon = "Interface\\Icons\\Spell_Holy_Resurrection",
-            desc = "If the Core Rager health drops below 50% they will refuse to die and heal to full health.",
+            desc = "如果熔岩巨犬的血量降至50%以下,它们将死灰复燃,生命值恢复全满.",
             flag1 = IMPORTANT,
           }),
           Stage({
-            name = "Evade",
+            name = "逃匿",
             icon = "Interface\\Icons\\Ability_Rogue_Smoke",
-            desc = "If separated too far from Golemagg, will Evade the Core Ragers and Golemagg and reset the encounter.",
+            desc = "如果熔岩巨犬离开焚化者古雷曼格太远的话,那么将直接重置战斗.",
             flag1 = IMPORTANT,
           }),
         },
       }),
       Stage({
         so = true,
-        name = "Golemagg the Incinerator",
+        name = "焚化者古雷曼格",
         sections = {
-          Spell(19798, {desc = "Inflicts 1388 to 1612 damage to enemies within 18 yards."}), -- Earthquake
-          Spell(13880, {desc = "Splashes the target with Magma, melting its armor, dealing 93 to 107 Fire damage and additional 50 Fire damage every 3 seconds for 30 sec. This can stack up to 50 times."}), -- Magma Splash
+          Spell(19798, {desc = "对附近18码内的敌人造成1388~1612点伤害."}), -- Earthquake
+          Spell(13880, {desc = "向目标喷溅熔岩，熔化其护甲，对其造成93~107点火焰伤害外加额外每3秒一次的50点火焰伤害，持续30秒.这个效果可以叠加50次."}), -- Magma Splash
           Spell(20228), -- Pyroblast
           --Spell(20477), -- Summon Player
         },
@@ -284,15 +284,15 @@ local MOLTEN_CORE = CreateInstance({
     },
     adds = {
       {
-        name = "Core Rager",
+        name = "熔岩巨犬",
         creature = 11672,
         display = 11997,
       },
     },
   },
   {
-    name = "Majordomo Executus",
-    desc = "Executus comes with four Flamewaker Healers and four Flamewaker Elite guards making this a total of a nine enemy encounter. Executus will \"submit\" and the fight is won when all the adds are dead.  He then appears in Ragnaros' chamber and will summon the Firelord to begin the encounter.",
+    name = "管理者埃克索图斯",
+    desc = "与埃克索图斯的战斗时你需要面对4名烈焰行者医师和4名烈焰行者精英,当8名烈焰使者被全部消灭时,战斗结束.埃克索图斯将前往拉格纳罗斯的巢穴开始召唤拉格纳罗斯.",
     --icon = true,
     creature = 12018,
     display = 12029,
@@ -301,32 +301,32 @@ local MOLTEN_CORE = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Flamewaker Healer and Elite",
+        name = "烈焰行者医师和精英",
         sections = {
           Stage({
-            name = "Flamewaker Healer",
+            name = "烈焰行者医师",
             sections = {
               Spell(21077), -- Shadow Bolt
-              Spell(20603, {desc = "Instantly lashes enemies within 20 yards with dark magic, inflicting 740 to 860 Shadow damage."}), -- Shadow Shock
+              Spell(20603, {desc = "使用暗影魔法攻击附近20码内的敌人，造成740~860点暗影伤害."}), -- Shadow Shock
             },
           }),
           Stage({
-            name = "Flamewaker Elite",
+            name = "烈焰行者精英",
             sections = {
               Spell(20229), -- Blast Wave
               Spell(20623), -- Fire Blast
               Spell(20420), -- Fireball
             },
           }),
-          Spell(21095, {desc = "When separated further than 45 yards of Majordomo Executus, will become immune to all damage and increase damage done by 200%.", flag1 = IMPORTANT}), -- Separation Anxiety
+          Spell(21095, {desc = "当烈焰行者精英离开管理者埃克索图斯45码以上的时候,将免疫一切伤害,并且自身伤害提升200%.", flag1 = IMPORTANT}), -- Separation Anxiety
         },
       }),
       Stage({
         so = true,
-        name = "Majordomo Executus",
+        name = "管理者埃克索图斯",
         sections = {
-          Spell(20620, {desc = "Surrounds the caster with a shield woven of Shadow magic. The shield lasts 5 minutes, absorbs up to 30000 Physical or magical damage, and inflicts 250 damage to melee attackers. Heals the caster to full health periodically."}), -- Aegis of Ragnaros
-          Spell(21075, {desc = "Shields the target and inflicts 100 Arcane damage to each melee strike received."}), -- Damage Shield
+          Spell(20620, {desc = "暗影魔法的能量笼罩着施法者，持续5分钟。可以吸收最多30000点物理或魔法伤害，并对近战攻击者造成250点伤害."}), -- Aegis of Ragnaros
+          Spell(21075, {desc = "对攻击附近任意仆从的生物造成100点奥术伤害."}), -- Damage Shield
           Spell(20619), -- Magic Reflection
           --Spell(19774), -- Summon Ragnaros
           Spell(20534), -- Teleport (#20618 duplicate?)
@@ -335,20 +335,20 @@ local MOLTEN_CORE = CreateInstance({
     },
     adds = {
       {
-        name = "Flamewaker Healer",
+        name = "烈焰行者医师",
         creature = 11663,
         display = 13029,
       },
       {
-        name = "Flamewaker Elite",
+        name = "烈焰使者精英",
         creature = 11664,
         display = 12002,
       },
     },
   },
   {
-    name = "Ragnaros",
-    desc = "Ragnaros the Firelord was an incredibly powerful Elemental Lord and master of all fire elementals. He ruled for more than three hundred years over his minions from deep inside the fiery core of Blackrock Mountain. After being banished back to the Firelands, he aligned himself with Deathwing and his fellow Elemental Lord, Al'Akir, in the effort to purge all life from Azeroth.  To help bring about the end of days, Ragnaros laid siege to the World Tree Nordrassil on Mount Hyjal, unleashing his most powerful minions. Despite the incredible destructive forces at his disposal, the mortal champions of Azeroth were able to lay siege to the Firelord's domain, where they bested all of the challenges he laid before them, and eventually destroyed him within his own fortress.",
+    name = "拉格纳罗斯",
+    desc = "火元素领主，炎魔拉格纳罗斯，上古之神手下4个元素首领中的火元素首领,在黑石山中被打败了之后,重新回到了火源之地.",
     --icon = true,
     creature = 11502,
     display = 11121,
@@ -357,24 +357,24 @@ local MOLTEN_CORE = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Phase 1: Ragnaros",
-        desc = "You have 3 minutes before the next phase starts.",
+        name = "第一阶段: 拉格纳罗斯",
+        desc = "3分钟后进入第二阶段.",
         sections = {
           --Spell(19773), -- Elemental Fire (used on Majordomo Executus)
           Spell(20564, {flag1 = HEALER}), -- Elemental Fire
-          Spell(20565, {desc = "Inflicts 6000 Fire damage to an random enemy. Only used when there is no one in melee range of Ragnaros.", flag1 = TANK}), -- Magma Blast
+          Spell(20565, {desc = "对敌人造成6000点火焰伤害,只会对不在拉格纳罗斯近战范围内的玩家释放.", flag1 = TANK}), -- Magma Blast
           Spell(20566), -- Wrath of Ragnaros
         },
       }),
       Stage({
         so = true,
-        name = "Phase 2: Son of Flame",
-        desc = "You have 90 seconds to defeat all the Sons of Flame before Ragnaros rises back up. Note that he will rise instantly after the sons are defeated, regardless of the timer.\n\nPhase 1 is repeated after this phase ends.",
+        name = "第二阶段: 召唤烈焰之子",
+        desc = "你有90秒的时间来消灭所有的烈焰之子直到拉格纳罗斯下一次从岩浆中出现.",
       }),
     },
     adds = {
       {
-        name = "Son of Flame",
+        name = "烈焰之子",
         creature = 12143,
         display = 5488,
       },
