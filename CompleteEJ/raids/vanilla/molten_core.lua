@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[2], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,15 +22,15 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local MOLTEN_CORE = CreateInstance({
-  name = "Molten Core",
-  desc = "The Molten Core is a level 60 raid dungeon located within Blackrock Mountain, home to Ragnaros the Firelord. It was one of two forty (40) player raid dungeons available upon release of World of Warcraft, with the other being Onyxia's Lair. Considered the pinnacle of raiding achievement at the time, the Molten Core enticed adventurers to enter the instance in the search of realm glory.\n\nJust before the re-opening of the Dark Portal, Ragnaros - the land's fiery overlord - was cast down from his dark throne and returned to the firelands. Ragnaros now rages war on the world tree Nordrassil.",
+  name = "熔火之心",
+  desc = "熔火之心是暴雪《魔兽世界》中的第一个真正意义上的团队(40人)副本,位于东部王国黑石山内的黑石深渊深处.这里是受黑石矮人召唤的元素领主炎魔拉格纳罗斯的巢穴.在熔火之心内玩家需要面对十名强大的BOSS.",
   texture = "MoltenCore",
   area = 696,
   dflag = N10,
 }, {
   {
-    name = "Lucifron",
-    desc = "Lucifron, and his two Flamewaker Protector guards, can be found watching over the enormous core hound Magmadar, favored pet of Ragnaros.",
+    name = "鲁西弗隆",
+    desc = "鲁西弗隆和他的两名烈焰行者护卫,看守着拉格纳罗斯的熔岩犬宠物玛格曼达.",
     --icon = true,
     creature = 12118,
     display = 13031,
@@ -39,33 +39,33 @@ local MOLTEN_CORE = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Lucifron",
+        name = "鲁西弗隆",
         sections = {
           Spell(19702, {flag1 = MAGIC}), -- Impending Doom
           Spell(19703, {flag1 = CURSE}), -- Lucifron's Curse
-          Spell(19460, {desc = "Instantly lashes an enemy with dark magic, inflicting 24 to 29 Shadow damage."}), -- Shadow Shock
+          Spell(19460, {desc = "使用暗影魔法攻击敌人,对其造成24~29点暗影伤害."}), -- Shadow Shock
         },
       }),
       Stage({
         so = true,
-        name = "Flamewaker Protector",
+        name = "烈焰行者护卫",
         sections = {
-          Spell(20605, {desc = "Inflicts normal damage to an enemy and its 3 nearest allies."}), -- Cleave
-          Spell(20604, {desc = "Takes control of a humanoid enemy for 15 seconds. If line-of-sight with Lucifron is broken, the Protector will not cast this spell.", flag1 = MAGIC}), -- Dominate Mind
+          Spell(20605, {desc = "对目标和它身边最近的敌人造成你的武器伤害,最多可影响3个目标."}), -- Cleave
+          Spell(20604, {desc = "控制一个人形生物,持续15秒.", flag1 = MAGIC}), -- Dominate Mind
         },
       }),
     },
     adds = {
       {
-        name = "Flamewaker Protector",
+        name = "烈焰行者护卫",
         creature = 12119,
         display = 12030,
       },
     },
   },
   {
-    name = "Magmadar",
-    desc = "A terrifying behemoth composed of igneous rock and roiling magma, Magmadar serves as the origin of the core hounds that roam the earthen halls of Molten Core. Favored among Ragnaros's pets, Magmadar is protected by the flamewaker Lucifron and surrounded by vicious packs of ravenous hounds.",
+    name = "玛格曼达",
+    desc = "玛格曼达是火焰之王拉格纳罗斯最宠爱的宠物,烈焰行者鲁西弗隆保护着它.据说当拉格纳罗斯被囚禁在元素位面时,曾以被俘获的敌人的尸体喂食这头巨兽.玛格曼达由此成为火焰之王忠诚的仆从",
     --icon = true,
     creature = 11982,
     display = 10193,
@@ -74,33 +74,33 @@ local MOLTEN_CORE = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Core Hound Packs",
+        name = "熔岩猎犬",
         sections = {
-          Spell(19771, {desc = "Inflicts 1500 Physical damage to an enemy over 30 seconds, stacks up to 10 times and dealing maximum of 15000 Physical damage over 30 seconds, 500 Physical damage per tick."}),
+          Spell(19771, {desc = "在30秒内对一个敌人造成1500点物理伤害,最多可以叠加10次,造成最高15000点伤害."}),
           Stage({
-            name = "Revive",
+            name = "复生",
             icon = "Interface\\Icons\\Spell_Holy_Resurrection",
-            desc = "If all Core Hounds do not die within 10 seconds of the first Core Hound death, they will be brought back to life with full health and the process will repeat.",
+            desc = "如果所有的熔岩犬没有在第一只被杀死之后的10秒内全部杀死,那么死去的熔岩犬将会复活,生命值全满.",
             flag1 = IMPORTANT,
           }),
         },
       }),
       Stage({
         so = true,
-        name = "Magmadar",
+        name = "玛格曼达",
         sections = {
-          Spell(19451, {desc = "Increases attack speed by 150% for 8 seconds.", flag1 = ENRAGE}), -- Enrage
-          Spell(19411, {desc = "Throws a Lava Bomb at an enemy, inflicting 3200 Fire damage over 8 seconds, as long the target remains in the fire.", flag1 = IMPORTANT}), -- Lava Bomb (#20474 too, duplicate or not?)
-          Spell(19450, {desc = "Spews 93 to 107 Fire damage at the target, dealing 75 additional Fire damage every 3 seconds."}), -- Magma Spit
-          Spell(19408, {desc = "Panics enemies within 45 yards, causing them to flee in fear for 8 seconds.", flag1 = MAGIC}), -- Panic
+          Spell(19451, {desc = "攻击速度提高150%,持续8秒.", flag1 = ENRAGE}), -- Enrage
+          Spell(19411, {desc = "向敌人投掷熔岩炸弹，在8秒内对其造成3200点火焰伤害.", flag1 = IMPORTANT}), -- Lava Bomb (#20474 too, duplicate or not?)
+          Spell(19450, {desc = "向目标喷射火焰伤害,造成93~107点火焰伤害,每3秒对其造成一次额外的75点火焰伤害."}), -- Magma Spit
+          Spell(19408, {desc = "恐吓附近的敌人,使它们惊慌地逃跑,持续8秒.", flag1 = MAGIC}), -- Panic
           --Spell(20477), -- Summon Player
         },
       }),
     },
   },
   {
-    name = "Gehennas",
-    desc = "Gehennas and his fellow flamewakers were extricated from the Elemental Plane by Ragnaros shortly after Thaurissan accidentally summoned the Firelord. Unlike the fire elementals, who are beings of pure flame, the flamewakers are elementals composed of flesh and blood.\n\nGehennas resides near the bottom of the Firelord's elemental hierarchy and covets the power and station of his superiors. He is distrusted by all who serve with him, with the exception of his two loyal guards, who believe they might gain from their overseer's ascension.",
+    name = "基赫纳斯",
+    desc = "基赫纳斯和他的烈焰守卫在摆脱了索瑞恩之后无意中被召唤到了炎魔拉格纳罗斯的元素位面.与其他火元素领主不同,他们是由血肉组成的元素生物 \n 除了他的两个忠诚的卫士之外,他不信任任何效劳与他的人.",
     --icon = true,
     creature = 12259,
     display = 13030,
@@ -109,17 +109,17 @@ local MOLTEN_CORE = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Flamewaker Elite",
+        name = "烈焰守卫",
         sections = {
           Spell(20229), -- Blast Wave
           Spell(20623), -- Fire Blast
           Spell(20420), -- Fireball
-          Spell(21095, {desc = "When separated further than 45 yards of Gehennas, will become immune to all damage and increase damage done by 200%.", flag1 = IMPORTANT}), -- Separation Anxiety
+          Spell(21095, {desc = "当烈焰守卫离开基赫纳斯45码以上时,将免疫所有伤害,并且自身的伤害提升200%.", flag1 = IMPORTANT}), -- Separation Anxiety
         },
       }),
       Stage({
         so = true,
-        name = "Gehennas",
+        name = "基赫纳斯",
         sections = {
           Spell(19716, {flag1 = CURSE}), -- Gehennas' Curse
           Spell(19717), -- Rain of Fire
@@ -129,15 +129,15 @@ local MOLTEN_CORE = CreateInstance({
     },
     adds = {
       {
-        name = "Flamewaker Elite",
+        name = "烈焰守卫",
         creature = 11664,
         display = 12002,
       },
     },
   },
   {
-    name = "Garr",
-    desc = "Garr is described as one of the lieutenants of Ragnaros who carried out the betrayal of Lord Thunderaan, the Prince of Air and otherwise referred to as the \"Windseeker.\" During the Elemental Sundering, Ragnaros sought to consume Thunderaan, and did so by having his two lieutenants, Baron Geddon and Garr perpetrate him. Thunderaan, caught off guard, was utterly destroyed. Ragnaros almost completely consumed Thunderaan's essence, and stored the rest within a talisman of elemental binding. Ragnaros cleaved this talisman into two equal pieces, to which he assigned Baron Geddon and Garr.",
+    name = "加尔",
+    desc = "加尔原本是风王子桑德兰的手下,后背叛了风王子成为了拉格纳罗斯的仆从,拉格纳罗斯在摧毁桑德兰之后将桑德兰的元素护符 逐风者的禁锢之颅 分成了两个部分,分别交给了加尔和迦顿男爵保管.",
     --icon = true,
     creature = 12057,
     display = 12110,
@@ -146,19 +146,19 @@ local MOLTEN_CORE = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Firesworn",
+        name = "火誓者",
         sections = {
-          Spell(19497, {desc = "Will upon death Erupt and deal 1850 to 2150 Fire damage to all enemies within 15 yards, also knocking them back.", flag1 = IMPORTANT}), -- Eruption
-          Spell(15732, {desc = "Burns an enemy for 37 to 43 Fire damage, then inflicts 6 additional Fire damage every 3 seconds for 15 seconds.", flag1 = MAGIC}), -- Immolate
-          Spell(23492, {desc = "When separated further than 45 yards of Garr, will become immune to all damage and increase damage done by 300%.", flag1 = IMPORTANT}), -- Separation Anxiety
-          Spell(19516, {desc = "When killed will increase Garr's attack speed by 9%. If all 8 Firesworn are killed, Garr will attack 72% faster.", flag1 = IMPORTANT}), -- Frenzy
+          Spell(19497, {desc = "对附近15码内的敌人造成1850~2150点火焰伤害,并将其击退.", flag1 = IMPORTANT}), -- Eruption
+          Spell(15732, {desc = "灼烧敌人造成37~43点火焰伤害,并对其每3秒造成一次额外火焰伤害,持续15秒.", flag1 = MAGIC}), -- Immolate
+          Spell(23492, {desc = "当火誓者离开加尔45码以上,将免疫所有伤害,并且自身伤害提高300%.", flag1 = IMPORTANT}), -- Separation Anxiety
+          Spell(19516, {desc = "每杀死一只火誓者,加尔的攻击速度就提高9%.当8只火誓者全部被杀死之后,加尔的攻击速度提高72%.", flag1 = IMPORTANT}), -- Frenzy
         },
       }),
       Stage({
         so = true,
-        name = "Garr",
+        name = "加尔",
         sections = {
-          Spell(19492, {desc = "Occasionally dispels a beneficial magic spell on enemies within 45 yards."}), -- Antimagic Pulse
+          Spell(19492, {desc = "驱散附近45码的敌人身上的魔法,移除1个有益法术效果."}), -- Antimagic Pulse
           Spell(19496, {flag1 = MAGIC}), -- Magma Shackles
           --Spell(20477), -- Summon Player
         },
@@ -166,15 +166,15 @@ local MOLTEN_CORE = CreateInstance({
     },
     adds = {
       {
-        name = "Firesworn",
+        name = "火誓者",
         creature = 12099,
         display = 5781,
       },
     },
   },
   {
-    name = "Shazzrah",
-    desc = "Of all the flamewakers who followed Ragnaros into the world of Azeroth, Shazzrah is the most talented in the realm of the arcane. He is aware that his colleague Baron Geddon suspects the elemental Garr of treachery.\n\nThe conflict between Baron Geddon and Garr suits Shazzrah well, for in fact it is Shazzrah who seeks to posses both halves of the Talisman of Elemental Binding so that he might find a way to siphon its energes for his own use. Ragnaros was very likely aware of his underling's penchant for duplicity when he split the talisman in half and entrusted the pieces to Baron Geddon and Garr.",
+    name = "沙斯拉尔",
+    desc = "沙斯拉尔是拉格纳罗斯手下的烈焰元素中最深不可测的一名仆从,加尔和迦顿男爵一直以来互存敌意,而沙斯拉尔则一直在其中调停.他调停的目的是为了获悉逐风者的禁锢之颅中的秘密,并且汲取其中的能量.",
     --icon = true,
     creature = 12264,
     display = 13032,
@@ -183,24 +183,24 @@ local MOLTEN_CORE = CreateInstance({
     sections = {
       Spell(19712), -- Arcane Explosion
       Spell(19715), -- Counterspell
-      Spell(23138, {desc = "Randomly teleports to an enemy location inside line-of-sight."}), -- Gate of Shazzrah
+      Spell(23138, {desc = "立即传送到一名敌人身边."}), -- Gate of Shazzrah
       Spell(19714, {flag1 = MAGIC}), -- Magic Grounding
       Spell(19713, {flag1 = CURSE}), -- Shazzrah's Curse
     },
   },
   {
-    name = "Baron Geddon",
-    desc = "Baron Geddon is one of the eldest of all fire elementals, and he served as Ragnaros' right hand during the beginning of the war against the titans.  During one of the first battles against the then-unknown titan attackers, Geddon was defeated and forced into humiliating retreat.  Ragnaros immediately demoted his commander, thinking that Geddon had been defeated by an inferior foe, since the Old Gods and their lieutenants had never yet met a challenge.  His replacement was the flamewaker Majordomo Executus; Geddon was infuriated that a creature not purely of fire replaced him, a noble among the elementals. In an effort to regain his master's faith, Baron Geddon planned the now legendary betrayal of Thunderaan the Windseeker. In the midst of a great battle, Geddon separated the massive lightning elemental from his allies, and together with Garr and Ragnaros, they ambushed the great elemental in an effort to steal his power.",
+    name = "迦顿男爵",
+    desc = "迦顿男爵曾经是拉格纳罗斯手下的第一将领,在与泰坦的战役中被击败后撤退.拉格纳罗斯不满于他的失败,剥去了他指挥官的权利,并且将这个职务交给了一名烈焰使者.迦顿男爵非常愤怒,被一个不是火元素的生物取代了他的位置,这是自上古以来对他而言最大的侮辱.为了重新夺回他在拉格纳罗斯心中的地位和信任,他策划了击杀逐风者桑德兰的计划.",
     --icon = true,
     creature = 12056,
     display = 12129,
     coords = {0.517, 0.758, 1},
     loot = {19136,16856,18291,16836,18257,18861,16797,18822,18820,18824,18264,18829,18265,},
     sections = {
-      Spell(20478, {desc = "Will randomly pulse and hit all enemies within 20 yards for Fire damage. The damage increases after every other pulse by 500, starting at 500 damage. He will do 6 to 10 pulses and the last once will do 1500 Fire damage or more.", flag1 = IMPORTANT}), -- Armageddon
+      Spell(20478, {desc = "随机对20码范围内的所有敌人释放末日决战,造成持续的火焰伤害,伤害值会随着时间的推移越来越高.", flag1 = IMPORTANT}), -- Armageddon
       Spell(19659, {flag1 = MAGIC}), -- Ignite Mana
-      Spell(19695, {desc = "Unable to move or use abilities. Periodically inflicts Fire damage to nearby enemies, lasts 8 seconds."}), -- Inferno
-      Spell(20475, {desc = "Throws a bomb at en enemy. After 8 seconds the bomb explodes, inflicting 3200 Fire damage to the target and all nearby allies. The target is thrown into the air, taking fall damage upon landing.", flag1 = IMPORTANT}), -- Living Bomb
+      Spell(19695, {desc = "地狱的烈焰环绕施法者,周期性地对附近的敌人造成火焰伤害,持续8秒.在这段时间里,施法者不能移动或使用任何技能."}), -- Inferno
+      Spell(20475, {desc = "向敌人投掷炸弹,8秒后爆炸,对目标和它周围的盟友造成3200点火焰伤害.", flag1 = IMPORTANT}), -- Living Bomb
       --Spell(20477), -- Summon Player
     },
   },
