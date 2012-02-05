@@ -23,37 +23,55 @@ local ENRAGE2 = 12
 
 local SERPENTSHRINE_CAVERN = CreateInstance({
   name = "Serpentshrine Cavern",
-  desc = "Serpentshrine Cavern is the final wing of Coilfang Reservoir, where Lady Vashj has made her lair. It is a 25-man raid instance with six bosses.",
+  desc = "\"Whoever controls the water controls Outland.\"  These are the words of Lord Illidan Stormrage to his most trusted lieutenant, Lady Vashj. Shortly after the Third War, when Illidan requested the aid of the naga, a group of naga led by Lady Vashj answered his call. Ever since, Vashj has displayed a fierce dedication to Illidan.\n\nNow the naga witch carefully monitors Coilfang's operations from her seat of power within Serpentshrine Cavern. Far more at home here among the waters of the reservoir than locked within the cold stone walls of Black Temple, Vashj maintains a close eye on her minions and personally oversees the draining of Zangarmarsh.\n\nWhether her loyalties belong to Illidan alone, however, remains to be seen.",
   --texture = "SerpentshrineCavern",
   area = 780,
+  dflag = N25,
 }, {
   {
     name = "Hydross the Unstable",
-    desc = "Hydross the Unstable is the first boss of Serpentshrine Cavern.",
+    desc = "Hydross the Unstable is the first boss you encounter. There are two columns which channel beams of energy into him. It seems that the beams are keeping his body purified and \"stable\". If he crosses the threshold, the columns will stop channeling energy into him, causing him to revert into his \"unstable\", poisonous form, causing him great pain. Thus, he is more or less a prisoner of Lady Vashj, forced to guard the way and to prevent any intruders from getting past. He could have been captured by the naga and struck a deal with them, with him guarding the area and them finding a way to purify his body. It seems now that he has no choice in the matter.",
     --icon = true,
     creature = 21216,
     display = 20162,
     coords = {0.362, 0.844, 1},
     loot = {30306,30047,30324,30050,30307,30049,30629,30054,30283,33055,30308,30053,30281,},
     sections = {
-      Spell(37961, {fbd = N10}), -- Corruption
-      Spell(38222, {fbd = N10}), -- Mark of Corruption
-      Spell(38220, {fbd = N10}), -- Mark of Corruption
-      Spell(40583, {fbd = N10}), -- Mark of Corruption
-      Spell(38219, {fbd = N10}), -- Mark of Corruption
-      Spell(38221, {fbd = N10}), -- Mark of Corruption
-      Spell(38230, {fbd = N10}), -- Mark of Corruption
-      Spell(38215, {fbd = N10}), -- Mark of Hydross
-      Spell(38231, {fbd = N10}), -- Mark of Hydross
-      Spell(38218, {fbd = N10}), -- Mark of Hydross
-      Spell(40584, {fbd = N10}), -- Mark of Hydross
-      Spell(38216, {fbd = N10}), -- Mark of Hydross
-      Spell(38217, {fbd = N10}), -- Mark of Hydross
-      Spell(36459, {fbd = N10}), -- Summon Water Elemental
-      Spell(45573, {fbd = N10}), -- Vile Sludge
-      Spell(38246, {fbd = N10}), -- Vile Sludge
-      Spell(38235, {fbd = N10}), -- Water Tomb
-      Spell(45574, {fbd = N10}), -- Water Tomb
+      Stage({
+        name = "Water Form",
+        desc = "He starts in between both beams, thus he starts in his water form once engaged. He is immune to frost damage and attacks with frost based abilities.",
+        sections = {
+          Spell(45574, {desc = "Encases a random enemy and any of its nearby allies in a tomb of water, stunning them and dealing 900 Frost damage every second for 4 seconds."}), -- Water Tomb (38235 old?)
+          --Spell(38215), -- Mark of Hydross (10%)
+          --Spell(38216), -- Mark of Hydross (25%)
+          --Spell(38217), -- Mark of Hydross (50%)
+          --Spell(38218), -- Mark of Hydross (100%)
+          --Spell(38231), -- Mark of Hydross (250%)
+          Spell(40584, {desc = "Each 15 to 30 seconds, Hydross applies a raid wide debuff on all enemy targets that increases Frost damage taken by 10/25/50/100/250/500%, each application increases the damage increased."}), -- Mark of Hydross (500%)
+        },
+      }),
+      Stage({
+        name = "Poison Form",
+        desc = "When pulled away from both beams, he enters his poison form. He is immune to nature damage and attacks with nature based abilities.",
+        sections = {
+          --Spell(37961), -- Corruption
+          Spell(45573, {desc = "Coats a random enemy in a slick coat of sludge, reducing damage and healing done by that target by 50% and dealing 500 Nature damage every 3 seconds for 24 seconds."}), -- Vile Sludge (38246 old?)
+          --Spell(38219), -- Mark of Corruption (10%)
+          --Spell(38220), -- Mark of Corruption (25%)
+          --Spell(38221), -- Mark of Corruption (50%)
+          --Spell(38222), -- Mark of Corruption (100%)
+          --Spell(38230), -- Mark of Corruption (250%)
+          Spell(40583, {desc = "Each 15 to 30 seconds, Hydross applies a raid wide debuff on all enemy targets that increases Nature damage taken by 10/25/50/100/250/500%, each application increases the damage increased."}), -- Mark of Corruption (500%)
+        },
+      }),
+      Spell(36459, {so = true, icon = "Interface\\Icons\\Spell_Frost_SummonWaterElemental_2", name = "Summon Elementals", desc = "After each form change, four elementals are summoned to serve. If he enters Water Form then Water Elementals will spawn, otherwise Poison Elementals.\n\nJust like Hydross, these spawns will attack and be immune to the same school of magic as themselves.", flag1 = IMPORTANT}, 1), -- Summon Water Elemental
+    },
+    adds = {
+      {
+        name = "Hydross the Unstable (Poison Form)",
+        creature = 21932,
+        display = 20609,
+      },
     },
   },
   {
@@ -65,8 +83,8 @@ local SERPENTSHRINE_CAVERN = CreateInstance({
     coords = {0.404, 0.588, 1},
     loot = {30067,30064,30062,30059,30063,30665,30058,30323,},
     sections = {
-      Spell(37478, {fbd = N10}), -- Geyser
-      Spell(37138, {fbd = N10}), -- Water Bolt
+      Spell(37478), -- Geyser
+      Spell(37138), -- Water Bolt
     },
   },
   {
@@ -78,12 +96,12 @@ local SERPENTSHRINE_CAVERN = CreateInstance({
     coords = {0.408, 0.260, 1},
     loot = {30307,30096,30239,30240,30091,30308,30097,30282,},
     sections = {
-      Spell(27680, {fbd = N10}), -- Berserk
-      Spell(37675, {fbd = N10}), -- Chaos Blast
-      Spell(37749, {fbd = N10}), -- Consuming Madness
-      Spell(37676, {fbd = N10}), -- Insidious Whisper
-      Spell(37640, {fbd = N10}), -- Whirlwind
-      Spell(37641, {fbd = N10}), -- Whirlwind
+      Spell(27680), -- Berserk
+      Spell(37675), -- Chaos Blast
+      Spell(37749), -- Consuming Madness
+      Spell(37676), -- Insidious Whisper
+      Spell(37640), -- Whirlwind
+      Spell(37641), -- Whirlwind
     },
   },
   {
@@ -95,10 +113,10 @@ local SERPENTSHRINE_CAVERN = CreateInstance({
     coords = {0.480, 0.170, 1},
     loot = {30324,30245,30283,30100,30247,30663,30307,30090,30281,},
     sections = {
-      Spell(27680, {fbd = N10}), -- Berserk
-      Spell(38441, {fbd = N10}), -- Cataclysmic Bolt
-      Spell(38445, {fbd = N10}), -- Sear Nova
-      Spell(38373, {fbd = N10}), -- The Beast Within
+      Spell(27680), -- Berserk
+      Spell(38441), -- Cataclysmic Bolt
+      Spell(38445), -- Sear Nova
+      Spell(38373), -- The Beast Within
     },
   },
   {
@@ -110,13 +128,13 @@ local SERPENTSHRINE_CAVERN = CreateInstance({
     coords = {0.594, 0.258, 1},
     loot = {30008,30324,30098,30283,33058,30720,30082,30282,30084,30307,30080,30302,},
     sections = {
-      Spell(37764, {fbd = N10}), -- Earthquake
-      Spell(37730, {fbd = N10}), -- Tidal Wave
-      Spell(37850, {fbd = N10}), -- Watery Grave
-      Spell(38028, {fbd = N10}), -- Watery Grave
-      Spell(38023, {fbd = N10}), -- Watery Grave
-      Spell(38024, {fbd = N10}), -- Watery Grave
-      Spell(38025, {fbd = N10}), -- Watery Grave
+      Spell(37764), -- Earthquake
+      Spell(37730), -- Tidal Wave
+      Spell(37850), -- Watery Grave
+      Spell(38028), -- Watery Grave
+      Spell(38023), -- Watery Grave
+      Spell(38024), -- Watery Grave
+      Spell(38025), -- Watery Grave
     },
   },
   {
@@ -128,12 +146,12 @@ local SERPENTSHRINE_CAVERN = CreateInstance({
     coords = {0.714, 0.590, 1},
     loot = {30242,30281,30243,30308,30112,30323,30107,30621,30104,30306,30105,30324,30108,30301,},
     sections = {
-      Spell(38316, {fbd = N10}), -- Entangle
-      Spell(38145, {fbd = N10}), -- Forked Lightning
-      Spell(38310, {fbd = N10}), -- Multi-Shot
-      Spell(38509, {fbd = N10}), -- Shock Blast
-      Spell(38295, {fbd = N10}), -- Shoot
-      Spell(38280, {fbd = N10}), -- Static Charge
+      Spell(38316), -- Entangle
+      Spell(38145), -- Forked Lightning
+      Spell(38310), -- Multi-Shot
+      Spell(38509), -- Shock Blast
+      Spell(38295), -- Shoot
+      Spell(38280), -- Static Charge
     },
   },
 })

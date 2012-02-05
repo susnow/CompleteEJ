@@ -444,7 +444,7 @@ local BLACKWING_LAIR = CreateInstance({
           Stage({
             icon = "Interface\\Icons\\INV_Misc_Questionmark",
             name = "职业点名",
-            desc = "每隔25-30秒, 奈法利安会对某个职业进行点名, 该职业的所有玩家会受到这次职业点名的特殊影响.",
+            desc = "每隔25-35秒, 奈法利安会对某个职业进行点名, 该职业的所有玩家会受到这次职业点名的特殊影响.",
             sections = {
               Stage({
                 --Spell(23398), -- Involuntary Transformation

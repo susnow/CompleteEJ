@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[2], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,32 +22,32 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local RUINS_OF_AHNQIRAJ = CreateInstance({
-  name = "Ruins of Ahn'Qiraj",
-  desc = "During the final hours of the War of the Shifting Sands, the combined forces of the night elves and the four dragonflights drove the battle to the very heart of the qiraji empire, to the fortress city of Ahn'Qiraj. Yet at the city gates, the armies of Kalimdor encountered a concentration of silithid war drones more massive than any they had encountered before. Ultimately the silithid and their qiraji masters were not defeated, but merely imprisoned inside a magical barrier, and the war left the cursed city in ruins.\n\nA thousand years have passed since that day, but the qiraji forces have not been idle. A new and terrible army has been spawned from the hives, and the ruins of Ahn'Qiraj are teeming once again with swarming masses of silithid and qiraji. This threat must be eliminated, or else all of Azeroth may fall before the terrifying might of the new qiraji army.",
+  name = "安其拉废墟",
+  desc = "在流沙之战最后几个小时里，四巨龙军团和暗夜精灵的联军将战场逼至其拉帝国的最中心，希利苏斯的异种虫群退败至最终堡垒安其拉城。但在安其拉之门内，等待着的却是大规模的其拉异种虫，数量是卡利姆多联军所无法想象的。经过漫长的战役，卡利姆多联军仍然无法击败其拉帝王以及他的异种虫群，只能以一个强大的魔法结界将它们困禁在内，而安其拉城也因为战火而成了一个被诅咒的废墟。经过了数千年，其拉的侵略心却没有因为结界而消退。新一代的异种虫群从巢穴中慢慢的破茧而出，安其拉废墟又再度充满了其拉异种虫。这股威胁一定要被消灭，否则艾泽拉斯将可能会被这股恐怖的新世代其拉势力给毁灭",
   texture = "RuinsofAhnQiraj",
   area = 717,
   dflag = N10,
 }, {
   {
-    name = "Kurinnaxx",
-    desc = "Kurinnaxx, a large sand reaver, is the first boss found in the Ruins of Ahn'Qiraj. He has a wide aggro radius and can see stealthed rogues.",
+    name = "库林纳克斯",
+    desc = "库林纳克斯是一条巨大的沙虫,是安其拉废墟的看门BOSS.他的反潜视野很大,可以在很远的地方就发现潜行的目标.",
     --icon = true,
     creature = 15348,
     display = 15742,
     coords = {0.560, 0.353, 0},
     loot = {20885,20884,21500,20888,21503,76401,},
     sections = {
-      Spell(26527, {desc = "At 30% health Kurinnaxx will enter a frenzied state, increasing physical damage dealt by 250 and attack speed increased by 75%. Lasts 2 minutes."}), -- Frenzy
-      Spell(25646, {desc = "A punshing blow strikes the target, reducing the effectiveness of healing spells by 10%. Stacks 10 times and lasts 15 seconds.", flag1 = TANK}), -- Mortal Wound
+      Spell(26527, {desc = "当库林纳克斯的血量降到30%以下时进入狂乱状态.攻击速度提高75%,对敌人造成的物理伤害提高250点,持续2分钟"}), -- Frenzy
+      Spell(25646, {desc = "对目标进行惩戒打击,使其受到的治疗法术效果降低10%,持续15秒.", flag1 = TANK}), -- Mortal Wound
       --Spell(20477), -- Summon Player
       --Spell(26446), -- Summon Player
       Spell(3391), -- Thrash
-      Spell(25814, {desc = "Inflicts normal damage plus 500 to all enemies within 10 yards, in front of Kurinnaxx.", flag1 = DPS}), -- Wide Slash
+      Spell(25814, {desc = "对施法者面前一个锥形区域中10码范围内的所有的敌人造成普通武器伤害再加上500点额外伤害.", flag1 = DPS}), -- Wide Slash
     },
   },
   {
-    name = "General Rajaxx",
-    desc = "The mighty qiraji known as General Rajaxx commands the qiraji armies in battle. He was described in the War of the Shifting Sands as a towering monstrosity, swinging clawed limbs, looming over all and always shouting commands to the insect soldiers of Qiraji and Silithid during battle. During the War of the Shifting Sands, Rajaxx clashed with Fandral and Valstann Staghelm, the leaders of the night elf forces. Later, he personally killed Valstann.",
+    name = "拉贾克斯将军",
+    desc = "拉贾克斯将军是其拉虫群中一名强大的指挥官.在流沙战争中,他率领虫群击败了范达尔鹿盔的暗夜部队,并且亲手杀死了范达尔的儿子瓦尔斯坦.",
     --icon = true,
     creature = 15341,
     display = 15376,
@@ -56,25 +56,25 @@ local RUINS_OF_AHNQIRAJ = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Assistance",
-        desc = "Lieutenant General Andorov and his four Kaldorei Elite can assist during the fight. Talk to him instead of manually engaging the event.",
+        name = "拉贾克斯将军",
+        desc = "安多洛夫中将和4名卡多雷精英将会和玩家一起协同作战,与NPC对话即可开始与拉贾克斯将军的战斗. ",
         sections = {
           Stage({
             stype = CREATURE,
             creature = 15471,
             display = 15688,
-            name = "Lieutenant General Andorov",
+            name = "安多洛夫中将",
             sections = {
-              Spell(25516, {so = true, desc = "Nearby allies are healed for 200 health every 3 seconds, attack speed increased by 10% and casting speed increased by 11%. Lasts 30 seconds."}), -- Aura of Command
-              Spell(25515, {desc = "Stuns an enemy, rendering it unable to move or attack for 5 seconds."}), -- Bash
-              Spell(22591, {desc = "Strikes an enemy, inflicting normal and 20 bonus damage."}), -- Strike
+              Spell(25516, {so = true, desc = "使周围的友方单位每3秒回复200点生命值,攻击速度提高10% ,施法速度提高11%. 持续30秒."}), -- Aura of Command
+              Spell(25515, {desc = "使目标因昏迷而无法移动或攻击,持续5秒"}), -- Bash
+              Spell(22591, {desc = "对敌人造成额外的20点近战伤害."}), -- Strike
             },
           }),
           Stage({
             stype = CREATURE,
             creature = 15473,
             display = 15689,
-            name = "Kaldorei Elite",
+            name = "卡多雷精英",
             sections = {
               Spell(26350), -- Cleave
               Spell(16856), -- Mortal Strike
@@ -84,8 +84,8 @@ local RUINS_OF_AHNQIRAJ = CreateInstance({
       }),
       Stage({
         so = true,
-        name = "Waves",
-        desc = "Before you fight General Rajaxx, you will fight seven waves of his subordinates and their minions.",
+        name = "虫群卫士波次",
+        desc = "在与拉贾克斯将军交战之前,你需要首先击败他手下的7名其拉虫群卫士将领.",
         sections = {
           Stage({
             name = "Subordinates",
@@ -102,25 +102,25 @@ local RUINS_OF_AHNQIRAJ = CreateInstance({
                 stype = CREATURE,
                 creature = 15391,
                 display = 15738,
-                name = "Captain Qeez",
+                name = "奎兹上尉",
                 sections = {
-                  Spell(19134, {so = true, desc = "Shouts at enemies within 15 yards, causing them to flee in fear for 6 seconds.", flag1 = IMPORTANT}), -- Frightening Shout
+                  Spell(19134, {so = true, desc = "向附近15码内的敌人发出怒吼，使它们因恐惧而逃跑，持续6秒.", flag1 = IMPORTANT}), -- Frightening Shout
                 },
               }),
               Stage({
                 stype = CREATURE,
                 creature = 15392,
                 display = 15738,
-                name = "Captain Tuubid",
+                name = "图比德上尉",
                 sections = {
-                  Spell(25471, {so = true, desc = "Marks a random enemy for death, nearby minions focus their attacks at the marked target.", flag1 = IMPORTANT}), -- Attack Order
+                  Spell(25471, {so = true, desc = "随机对一个敌对目标释放死亡的印记,所有攻击者将转火攻击被标记的目标.", flag1 = IMPORTANT}), -- Attack Order
                 },
               }),
               Stage({
                 stype = CREATURE,
                 creature = 15389,
                 display = 15738,
-                name = "Captain Drenn",
+                name = "德雷恩上尉",
                 sections = {
                   Spell(26550, {so = true, flag1 = IMPORTANT}), --  Lightning Cloud
                 },
@@ -129,7 +129,7 @@ local RUINS_OF_AHNQIRAJ = CreateInstance({
                 stype = CREATURE,
                 creature = 15390,
                 display = 15738,
-                name = "Captain Xurrem",
+                name = "库雷姆上尉",
                 sections = {
                   Spell(25425, {so = true, desc = "Inflicts 1313 to 1687 Nature damage to enemies within 20 yards and stunning them for 2 seconds and disarming them for 5 seconds.", flag1 = IMPORTANT}), -- Shockwave
                 },
