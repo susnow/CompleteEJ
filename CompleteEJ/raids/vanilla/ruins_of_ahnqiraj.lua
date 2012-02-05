@@ -84,15 +84,15 @@ local RUINS_OF_AHNQIRAJ = CreateInstance({
       }),
       Stage({
         so = true,
-        name = "虫群卫士波次",
+        name = "虫群卫士",
         desc = "在与拉贾克斯将军交战之前,你需要首先击败他手下的7名其拉虫群卫士将领.",
         sections = {
           Stage({
-            name = "Subordinates",
+            name = "其拉战士",
             sections = {
               Stage({
                 so = true,
-                name = "Shared abilities among subordinates",
+                name = "共有的技能",
                 sections = {
                   Spell(40504), -- Cleave
                   Spell(24317), -- Sunder Armor
@@ -131,34 +131,34 @@ local RUINS_OF_AHNQIRAJ = CreateInstance({
                 display = 15738,
                 name = "库雷姆上尉",
                 sections = {
-                  Spell(25425, {so = true, desc = "Inflicts 1313 to 1687 Nature damage to enemies within 20 yards and stunning them for 2 seconds and disarming them for 5 seconds.", flag1 = IMPORTANT}), -- Shockwave
+                  Spell(25425, {so = true, desc = "对附近20码内的敌人造成1313~1687点自然伤害,使他们昏迷2秒,并且使他们的攻击速度和移动速度降低,持续5秒.", flag1 = IMPORTANT}), -- Shockwave
                 },
               }),
               Stage({
                 stype = CREATURE,
                 creature = 15386,
                 display = 15738,
-                name = "Major Yeggeth",
+                name = "耶吉斯少校",
                 sections = {
-                  Spell(25282, {so = true, desc = "Makes the caster immune to all schools of magic for 6 seconds.", flag1 = IMPORTANT}), -- Shield of Rajaxx
+                  Spell(25282, {so = true, desc = "使施法者免疫魔法，持续6秒.", flag1 = IMPORTANT}), -- Shield of Rajaxx
                 },
               }),
               Stage({
                 stype = CREATURE,
                 creature = 15388,
                 display = 15738,
-                name = "Major Pakkon",
+                name = "帕库少校",
                 sections = {
-                  Spell(25322, {so = true, desc = "Inflicts normal damage plus 1750 to 2250 to enemies within 15 yards and in front of Major Pakkon, also knocking them back.", flag1 = IMPORTANT}), -- Sweeping Slam
+                  Spell(25322, {so = true, desc = "对施法者面前15码的一个锥形区域中的敌人造成普通武器伤害再加上1750~2250点额外伤害,并将它们击退.", flag1 = IMPORTANT}), -- Sweeping Slam
                 },
               }),
               Stage({
                 stype = CREATURE,
                 creature = 15385,
                 display = 15738,
-                name = "Colonel Zerran",
+                name = "泽兰上校",
                 sections = {
-                  Spell(25462, {so = true, desc = "Increases physical damage dealt by 438 to 562 and increasing Colonel Zerran's size by 50% to match his new strenght.", flag1 = IMPORTANT}), -- Enlarge
+                  Spell(25462, {so = true, desc = "泽兰上校的体型增大50%,物理伤害提高438~562点.", flag1 = IMPORTANT}), -- Enlarge
                 },
               }),
             },
@@ -167,7 +167,7 @@ local RUINS_OF_AHNQIRAJ = CreateInstance({
             stype = CREATURE,
             creature = 15344,
             display = 15354,
-            name = "Swarmguard Needler",
+            name = "虫群守卫钉刺者",
             sections = {
               Spell(40504), -- Cleave
             },
@@ -176,10 +176,10 @@ local RUINS_OF_AHNQIRAJ = CreateInstance({
             stype = CREATURE,
             creature = 15387,
             display = 15437,
-            name = "Qiraji Warrior",
+            name = "其拉战士",
             sections = {
-              Spell(8599, {desc = "Enrages the caster and increases physical damage dealt by 10% and attack speed increased by 30% for 2 minutes."}), -- Enrage
-              Spell(15588, {desc = "Inflicts 71 to 79 Nature damage to enemies within 10 yards, increasing the time between their attacks by 33% and reducing their movement speed by 40% for 6 seconds."}), -- Thunderclap
+              Spell(8599, {desc = "激怒,物理伤害提高10%,攻击速度提高30%."}), -- Enrage
+              Spell(15588, {desc = "对附近10码的敌人造成71~79点自然伤害,使其攻击间隔延长33%,移动速度降低40%,持续6秒."}), -- Thunderclap
               Spell(10966), -- Uppercut
             },
           }),
@@ -190,46 +190,46 @@ local RUINS_OF_AHNQIRAJ = CreateInstance({
         stype = CREATURE,
         creature = 15341,
         display = 15376,
-        name = "General Rajaxx",
+        name = "拉贾克斯将军",
         sections = {
           Spell(6713), -- Disarm
           Spell(8269), -- Frenzy
           --Spell(20477), -- Summon Player
-          Spell(25599, {so = true, desc = "Reduces the health of all players by 50% of current health and knocks them back.", flag1 = IMPORTANT}), -- Thundercrash
+          Spell(25599, {so = true, desc = "对玩家造成玩家生命值50%的自然伤害并将其击退.", flag1 = IMPORTANT}), -- Thundercrash
         },
       }),
     },
     adds = {
       {
-        name = "Lieutenant General Andorov",
+        name = "安多洛夫中将",
         creature = 15471,
         display = 15688,
       },
       {
-        name = "Kaldorei Elite",
+        name = "卡雷多精英",
         creature = 15473,
         display = 15689,
       },
       {
-        name = "Subordinates",
+        name = "其拉角斗士",
         creature = 15391,
         display = 15738,
       },
       {
-        name = "Swarmguard Needler",
+        name = "虫群守卫钉刺者",
         creature = 15344,
         display = 15354,
       },
       {
-        name = "Qiraji Warrior",
+        name = "其拉战士",
         creature = 15387,
         display = 15437,
       },
     },
   },
   {
-    name = "Moam",
-    desc = "C'Thun commanded Emperor Vek'lor to create a new obsidian statue superior to all other Destroyers. Vek'lor sought his twin brother's aid in the task, and while Vek'nilash used his physical might to craft a grand body of volcanic rock, Vek'lor fortified the shell with powerful magic.\n\nEmperor Vek'lor named the finished construct Moam, and observed as the dark master infused it with life. He was pleased and surprised to find that the improved Obsidian Destroyer was far more versatile than its earlier counterparts. The Twin Emperors intended to use Moam as a colossal weapon, knowing that its strengths would help it survive in the thick of melee as well as magical combat-but they did not expect for the construct's abilities to advance further without their own assistance.",
+    name = "莫阿姆",
+    desc = "莫阿姆是克苏恩的靡下双子皇帝利用黑曜石雕像改造出来的战斗兵器,维克洛尔大帝为这尊雕像注入了黑暗的魔法,把它命名为莫阿姆.在创造了莫阿姆之后,维克洛尔大帝欣喜的发现这尊雕像在黑暗魔法的改进下居然有了自我生命形态的意识,并且比起其他的黑曜石雕像来说具有了更多强大的能力.",
     --icon = true,
     creature = 15340,
     display = 15392,
