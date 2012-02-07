@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_CULLING_OF_STRATHOLME = CreateInstance({
-  name = "The Culling of Stratholme",
+  name = "净化斯坦索姆",
   desc = "Located in the eastern part of Tanaris, the Caverns of Time contain various portals to different key time periods and events in Warcraft history. The caverns act as a crossroads for the various timelines; through them one can travel back and forth across time. The Caverns of Time are home to the  and the bronze dragonflight. Recently, a mysterious force called the Infinite Dragonflight has begun to meddle with time--the bronze dragonflight is recruiting heroes to make sure that the events that took place in the past remain as they were. The Culling of Stratholme is one of the timeways (\"wings\") accessible in the Caverns of Time. It is centered around helping Prince Arthas purge the city of Stratholme from the grain-infected populace. It is one of the first acts in Arthas' descent into madness and evil.",
   --texture = "TheCullingofStratholme",
   area = 521,
 }, {
   {
-    name = "Meathook",
-    desc = "Meathook is an abomination and the first boss of the Culling of Stratholme, a wing of the Caverns of Time. He spawns after five trash waves have been defeated.",
+    name = "肉钩",
+    desc = "肉钩 is an abomination and净化斯坦索姆中的第一个BOSS， a wing of the Caverns of Time。他在5波小怪被击败后出现。",
     --icon = true,
     creature = 26529,
     display = 26579,
@@ -44,8 +44,8 @@ local THE_CULLING_OF_STRATHOLME = CreateInstance({
     },
   },
   {
-    name = "Salramm the Fleshcrafter",
-    desc = "Salramm the Fleshcarver, a member of the Cult of the Damned, is the second boss in the Caverns of Time: Culling of Stratholme. He spawns after ten trash waves have been defeated.",
+    name = "塑血者沙尔拉姆",
+    desc = "塑血者沙尔拉姆, a member of the Cult of the Damned, 净化斯坦索姆中的第二个BOSS。他在十波小怪被击败后出现。",
     --icon = true,
     creature = 26530,
     display = 26581,
@@ -64,8 +64,8 @@ local THE_CULLING_OF_STRATHOLME = CreateInstance({
     },
   },
   {
-    name = "Chrono-Lord Epoch",
-    desc = "Chrono-Lord Epoch is the third boss in The Culling of Stratholme. He is a highly-ranked member of the Infinite Dragonflight.",
+    name = "时光领主埃博克",
+    desc = "时光领主埃博克是净化斯坦索姆中的第三个BOSS。 He is a highly-ranked member of the Infinite Dragonflight.",
     --icon = true,
     creature = 26532,
     display = 26580,
@@ -80,8 +80,8 @@ local THE_CULLING_OF_STRATHOLME = CreateInstance({
     },
   },
   {
-    name = "Mal'Ganis",
-    desc = "Mal'Ganis is the final boss of the Culling of Stratholme, a wing of the Caverns of Time.",
+    name = "玛尔加尼斯",
+    desc = "玛尔加尼斯是精华斯坦索姆中的最后BOSS, a wing of the Caverns of Time.",
     --icon = true,
     creature = 26533,
     display = 26582,
@@ -98,7 +98,7 @@ local THE_CULLING_OF_STRATHOLME = CreateInstance({
     },
   },
   {
-    name = "Infinite Corruptor",
+    name = "永恒腐蚀者",
     --desc = "",
     --icon = true,
     creature = 32273,

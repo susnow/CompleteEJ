@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local HALLS_OF_LIGHTNING = CreateInstance({
-  name = "Halls of Lightning",
+  name = "闪电大厅",
   desc = "Ulduar is a dungeon hub located at The Storm Peaks of Northrend, revealing many details about the Titans and their activities. Halls of LIghtning is home to Loken, a corrupted Titan watcher. Halls of Lightning is the second and highest level 5 five-man dungeon connected to the titan city Ulduar.",
   --texture = "HallsofLightning",
   area = 525,
 }, {
   {
-    name = "General Bjarngrim",
-    desc = "General Bjarngrim, an Iron Vrykul, is the first boss in the Halls of Lightning. He patrols around the Unyielding Garrison and is related to the achievement Lightning Struck.",
+    name = "比亚格里将军",
+    desc = "比亚格里将军, an Iron Vrykul, is the first boss in the Halls of Lightning. He patrols around the Unyielding Garrison and与成就<雷击>相关。",
     --icon = true,
     creature = 28586,
     display = 27301,
@@ -60,8 +60,8 @@ local HALLS_OF_LIGHTNING = CreateInstance({
     },
   },
   {
-    name = "Volkhan",
-    desc = "Volkhan, a Fire Giant, is the second boss in the Halls of Lightning. He is related to the achievement Shatter Resistant.",
+    name = "沃尔坎",
+    desc = "沃尔坎, a Fire Giant, 闪电大厅中的第二个BOSS。与成就<破碎的抵抗>相关。",
     --icon = true,
     creature = 28587,
     display = 27071,
@@ -76,8 +76,8 @@ local HALLS_OF_LIGHTNING = CreateInstance({
     },
   },
   {
-    name = "Ionar",
-    desc = "Ionar, a Lightning Revenant, is the third boss in the Halls of Lightning.",
+    name = "艾欧纳尔",
+    desc = "艾欧纳尔, a Lightning Revenant,闪电大厅中的第三个BOSS。",
     --icon = true,
     creature = 28546,
     display = 27484,
@@ -92,8 +92,8 @@ local HALLS_OF_LIGHTNING = CreateInstance({
     },
   },
   {
-    name = "Loken",
-    desc = "Loken, a Titan Watcher, is the fourth and last boss of the Halls of Lightning. He is related to the achievement Timely Death.",
+    name = "洛肯",
+    desc = "洛肯, a Titan Watcher,闪电大厅的最后BOSS。与成就<适时死亡>相关。",
     --icon = true,
     creature = 28923,
     display = 27485,

@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local HALLS_OF_REFLECTION = CreateInstance({
-  name = "Halls of Reflection",
-  desc = "Halls of Reflection is the third and final wing of the Frozen Halls, located within Icecrown Citadel. The The Forge of Souls and Pit of Saron must be completed before a player can enter the Halls of Reflection for the first time.",
+  name = "映像大厅",
+  desc = "映像大厅 is the third and final wing of the Frozen Halls, located within Icecrown Citadel. The The Forge of Souls and Pit of Saron must be completed before a player can enter the Halls of Reflection for the first time.",
   --texture = "HallsofReflection",
   area = 603,
 }, {
   {
-    name = "Falric",
-    desc = "Falric, a captain for Arthas in both life and death, is the first boss in the Halls of Reflection. He will engage the party after 4 spirit waves have been defeated.",
+    name = "法勒瑞克",
+    desc = "法勒瑞克, a captain for Arthas in both life and death, is the first boss in the Halls of Reflection. He will engage the party after 4 spirit waves have been defeated.",
     --icon = true,
     creature = 38112,
     display = 30972,
@@ -50,8 +50,8 @@ local HALLS_OF_REFLECTION = CreateInstance({
     },
   },
   {
-    name = "Marwyn",
-    desc = "Marwyn, Arthas Menethil's second captain, is the second boss in the Halls of Reflection. He will engage the party after the 9th spirit wave has been defeated.",
+    name = "玛维恩",
+    desc = "玛维恩, Arthas Menethil's second captain, is the second boss in the Halls of Reflection. He will engage the party after the 9th spirit wave has been defeated.",
     --icon = true,
     creature = 38113,
     display = 30973,
