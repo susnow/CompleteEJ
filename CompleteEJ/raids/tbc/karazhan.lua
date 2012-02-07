@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[2], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,15 +22,15 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local KARAZHAN = CreateInstance({
-  name = "Karazhan",
-  desc = "The decrepit tower of Karazhan once housed one of the greatest powers Azeroth has ever known: the sorcerer Medivh. Since his death, a terrible curse has pervaded the tower and the surrounding lands. The spirits of nobles from nearby Darkshire reportedly walk its halls, suffering a fate worse than death for their curiosity. More dangerous spirits wait within Medivh's study, for it was there that he summoned demonic entities to do his bidding. However, the brave and foolish are still relentlessly drawn to Karazhan, tempted by rumors of unspeakable secrets and powerful treasures. Forge a group of ten stalwart heroes, and journey to the tower in Deadwind Pass.",
+  name = "卡拉赞",
+  desc = "卡拉赞曾被艾泽拉斯最强的人拥有，即提瑞斯法守护者麦迪文。自从麦迪文死后，一股死亡气息弥漫在卡拉赞与其周围的土地上。那里的厅堂与长廊中，他召唤出了无数并不属于这个世界的存在，研究着旁人视为禁断的课题。然而，无论是勇敢之人还是愚昧之人都义无反顾的去卡拉赞冒险，去揭开其中不可告人的秘密，找寻强大的宝物。现在就建立一个10人的团队，踏上去卡拉赞的征程吧。",
   texture = "Karazhan",
   area = 799,
   dflag = N10,
 }, {
   {
-    name = "Servant's Quarters",
-    desc = "Once the basement has been cleared, one of three random bosses will emerge from the shadows.",
+    name = "仆人区",
+    desc = "曾经的地下室已经不复存在，现在那里是三名随机BOSS。",
     --icon = true,
     creature = 16179,
     display = 15938,
@@ -42,11 +42,11 @@ local KARAZHAN = CreateInstance({
         stype = CREATURE,
         creature = 16179,
         display = 15938,
-        name = "Hyakiss the Lurker",
+        name = "潜伏者希亚奇斯",
         sections = {
-          Spell(29901, {desc = "Inflicts normal damage, then additional 500 Nature damage every 2 seconds for 30 seconds. Reduces armor by 1000 per stack, stacks up to 7 times.  Does 3500 Nature damage every 2 seconds and 7000 armor reduction at max stack.", flag1 = POISON}), -- Acidic Fang
-          Spell(29896, {desc = "Stuns an enemy for 10 seconds.", flag1 = MAGIC}), -- Hyakiss' Web
-          Spell(22766, {desc = "Hyakiss lurks in the shadows, try searching in the dark corners of the rooms."}), -- Sneak
+          Spell(29901, {desc = "造成普通伤害，然后附带一个持续30秒每2秒500自然伤害的DEBUFF。每一层减少1000护甲，每7跳涨一层，最高可达到每2秒3500自然伤害，减少7000护甲。", flag1 = POISON}), -- Acidic Fang
+          Spell(29896, {desc = "击晕一名敌人10秒。", flag1 = MAGIC}), -- Hyakiss' Web
+          Spell(22766, {desc = "潜伏者希亚奇斯进入潜行状态，试着在阴暗的角落找到它。"}), -- Sneak
         },
       }),
       Stage({
@@ -54,7 +54,7 @@ local KARAZHAN = CreateInstance({
         stype = CREATURE,
         creature = 16181,
         display = 16054,
-        name = "Rokad the Ravager",
+        name = "蹂躏者洛卡德",
         sections = {
           Spell(29906), -- Ravage
         },
@@ -64,30 +64,30 @@ local KARAZHAN = CreateInstance({
         stype = CREATURE,
         creature = 16180,
         display = 16053,
-        name = "Shadikith the Glider",
+        name = "滑翔者沙德基斯",
         sections = {
-          Spell(29903, {desc = "Charges a distant within 45 yards and inflicts normal damage, then stuns the target for 2 seconds."}), -- Dive
-          Spell(29904, {desc = "Inflicts normal damage plus 2188 to 2812 on enemies within 20 yards, also preventing them from spellcasting for 5 seconds.", flag1 = MAGIC}), -- Sonic Burst
-          Spell(29905, {desc = "Inflicts 1050 to 1350 damage to enemies in a cone in front of the caste, and within 20 yards, then they are knocked away.", flag1 = TANK}), -- Wing Buffet
+          Spell(29903, {desc = "对45码内的目标造成普通伤害，并击晕目标2秒。"}), -- Dive
+          Spell(29904, {desc = "对20码内所有敌人造成 2188—2812 普通伤害，并打断沉默5秒。", flag1 = MAGIC}), -- Sonic Burst
+          Spell(29905, {desc = "近战范围群体击退，冲锋最远队员造成 1050—1350 伤害。", flag1 = TANK}), -- Wing Buffet
         },
       }),
     },
     adds = {
       {
-        name = "Rokad the Ravager",
+        name = "蹂躏者洛卡德",
         creature = 16181,
         display = 16054,
       },
       {
-        name = "Shadikith the Glider",
+        name = "滑翔者沙德基斯",
         creature = 16180,
         display = 16053,
       },
     },
   },
   {
-    name = "Attumen and Midnight",
-    desc = "Attumen the Huntsman is the proud owner of Midnight, the strongest horse in the stables. If his horse is put in danger, he will rush to defend and destroy the attackers. As the first and easiest boss in Karazhan, he is considered a gear check for any adventurers who wish to delve deeper into Karazhan. Attumen is optional; it is not necessary to kill him in order to progress to the later bosses. Moroes and the Maiden of Virtue are both considered to be substantially tougher.",
+    name = "猎手阿图门",
+    desc = "猎手阿图门是午夜的拥有者。如果他的马处于危险之中，阿图门会立刻冲上来保卫并杀死进攻者。作为卡拉赞中最简单的BOSS，他是对玩家装备水平的一个检验。阿图门是可跳过的BOSS。不过，莫罗斯和贞节圣女要比阿图门强很多。",
     --icon = true,
     creature = 16152,
     display = 16040,
@@ -99,8 +99,8 @@ local KARAZHAN = CreateInstance({
         stype = CREATURE,
         creature = 16151,
         display = 19640,
-        name = "Phase 1: Midnight",
-        desc = "Midnight does not attack unless attacked first.",
+        name = "第一阶段： 午夜",
+        desc = "只有你攻击午夜，午夜才会攻击你。",
         sections = {
           Spell(29711, {desc = "Knocks down the current enemy target for 3 seconds."}), -- Knockdown
         },
@@ -110,11 +110,11 @@ local KARAZHAN = CreateInstance({
         stype = CREATURE,
         creature = 15550,
         display = 16416,
-        name = "Phase 2: Attumen the Huntsman",
-        desc = "Joins the fight when Midnight reaches 95% health.",
+        name = "第二阶段： 猎手阿图门",
+        desc = "当午夜剩余95%血量时，猎手阿图门加入战斗。",
         sections = {
-          Spell(29833, {desc = "Reduces the chance to hit with spells and melee attacks by 50% to all enemies within 10 yards, lasts 12 seconds.", flag1 = CURSE}), -- Intangible Presence
-          Spell(29832, {desc = "Inflicts weapon damage and additional 1500 Shadow damage to an enemy and its nearest allies, affecting up to 3 targets.", flag1 = TANK}), -- Shadow Cleave
+          Spell(29833, {desc = "缴械10码内一名敌人，持续10秒。", flag1 = CURSE}), -- Intangible Presence
+          Spell(29832, {desc = "暗影顺劈，对身前目标造成3000-3500的暗影伤害，可最多对3人造成伤害。", flag1 = TANK}), -- Shadow Cleave
         },
       }),
       Stage({
@@ -122,32 +122,32 @@ local KARAZHAN = CreateInstance({
         stype = CREATURE,
         creature = 16152,
         display = 16040,
-        name = "Phase 3: Attumen and Midnight",
-        desc = "Attumen mounts Midnight when one of them reaches 25% health.",
+        name = "第三阶段： 阿图门和午夜",
+        desc = "到阿图门或午夜到达25%血量，阿图门就会骑在午夜上面。",
         sections = {
-          Spell(29847, {desc = "Charges enemies between 8 and 25 yards, dealing normal damage plus 75 additional damage, and fixates on that target.\n\nWhile fixated, Attumen attacks 50% faster for 2 seconds and causes a threat reset. You should stay closer than 8 yards to never let him charge at all during the whole last phase.", flag1 = IMPORTANT}), -- Charge
-          Spell(29833, {desc = "Reduces the chance to hit with spells and melee attacks by 50% to all enemies within 10 yards, lasts 12 seconds.", flag1 = CURSE}), -- Intangible Presence
-          Spell(29711, {desc = "Knocks down the current enemy target for 3 seconds."}), -- Knockdown
-          Spell(29832, {desc = "Inflicts weapon damage and additional 1500 Shadow damage to an enemy and its nearest allies, affecting up to 3 targets.", flag1 = TANK}), -- Shadow Cleave
+          Spell(29847, {desc = "随机对一远程目标进行冲锋并造成4500左右伤害（对布衣）附带击倒效果。", flag1 = IMPORTANT}), -- Charge
+          Spell(29833, {desc = "缴械10码内一名敌人，持续10秒。", flag1 = CURSE}), -- Intangible Presence
+          Spell(29711, {desc = "击倒附近敌人3秒。"}), -- Knockdown
+          Spell(29832, {desc = "暗影顺劈，对身前目标造成3000-3500的暗影伤害，可最多对3人造成伤害。", flag1 = TANK}), -- Shadow Cleave
         },
       }),
     },
     adds = {
       {
-        name = "Attumen the Huntsman",
+        name = "猎手阿图门",
         creature = 15550,
         display = 16416,
       },
       {
-        name = "Midnight",
+        name = "午夜",
         creature = 16151,
         display = 19640,
       },
     },
   },
   {
-    name = "Moroes",
-    desc = "Moroes, also known as Moroes the Castellan, is Karazhan's steward and can be found tending to guests in the Banquet Hall in Karazhan. Along with four special invited patrons, Moroes fights any uninvited guests to the death. Moroes is the second boss and the first mandatory boss found in this raid instance, and his defeat allows access to the Opera Event.",
+    name = "莫罗斯",
+    desc = "莫罗斯是卡拉赞的管家，他拥有四名特殊的随从在卡拉赞的宴会厅。这是卡拉赞的第二场BOSS战，只有击败了他才能去卡拉赞的歌剧院。",
     --icon = true,
     creature = 15687,
     display = 16540,
@@ -159,7 +159,7 @@ local KARAZHAN = CreateInstance({
         stype = CREATURE,
         creature = 15687,
         display = 16540,
-        name = "Moroes",
+        name = "莫罗斯",
         sections = {
           Spell(34694, {desc = "Blinds the target, causing it to wander confused for 10 seconds. Any damage taken will remove the effect.", flag1 = POISON}), -- Blind
           Spell(29425, {desc = "Inflicts 950 to 1050 damage to an enemy and stuns it for 6 seconds. Any damage taken will remove the effect."}), -- Gouge
@@ -171,77 +171,77 @@ local KARAZHAN = CreateInstance({
       }),
       Stage({
         so = true,
-        name = "Companions",
-        desc = "Moroes will be accompanied by four of six possible companions.",
+        name = "随从",
+        desc = "莫罗斯将会从6名随从随机中选取4名进行战斗。",
         sections = {
           Stage({
             stype = CREATURE,
             creature = 19875,
             display = 19327,
-            name = "Baroness Dorothea Millstipe",
+            name = "朵洛希女爵",
             sections = {
-              Spell(29405, {desc = "Burns an enemy for 950 to 1050 mana and damages the target for 475 to 525 damage.", flag1 = INTERRUPT}), -- Mana Burn
-              Spell(29570, {desc = "Inflicts 875 Shadow damage every second and reduces movement speed by 50% for 3 seconds."}), -- Mind Flay
-              Spell(29406, {desc = "Increases shadow damage dealt by 20% and melee damage taken is reduced by 20%."}), -- Shadowform
+              Spell(29405, {desc = "法力燃烧，每次燃烧一名敌人950-1050的蓝，并造成475-525伤害。", flag1 = INTERRUPT}), -- Mana Burn
+              Spell(29570, {desc = "精神鞭笞，每秒造成875暗影伤害持续3秒，移动速度减少50%。"}), -- Mind Flay
+              Spell(29406, {desc = "提高20%暗影伤害，降低20%肉搏伤害。"}), -- Shadowform
             },
           }),
           Stage({
             stype = CREATURE,
             creature = 19874,
             display = 16637,
-            name = "Baron Rafe Dreuger",
+            name = "洛夫男爵",
             sections = {
-              Spell(13005, {desc = "Stuns an enemy for 5 seconds.", flag1 = MAGIC}), -- Hammer of Justice
-              Spell(29386, {desc = "Judges the enemy for 1425 to 1575 Holy damage."}), -- Judgement of Command
-              Spell(29385, {desc = "Gives the caster a chance to deal 7% additional damage, lasts 30 seconds.", flag1 = MAGIC}), -- Seal of Command
+              Spell(13005, {desc = "击晕一名敌人5秒。", flag1 = MAGIC}), -- Hammer of Justice
+              Spell(29386, {desc = "审判，造成1425-1575神圣伤害。"}), -- Judgement of Command
+              Spell(29385, {desc = "自身BUFF，有几率造成额外7%的伤害，持续30秒。", flag1 = MAGIC}), -- Seal of Command
             },
           }),
           Stage({
             stype = CREATURE,
             creature = 19872,
             display = 16640,
-            name = "Lady Catriona Von'Indi",
+            name = "凯特林娜女士",
             sections = {
-              Spell(29564, {desc = "Heals an ally for 11250 to 13750.", flag1 = INTERRUPT}), -- Greater Heal
-              Spell(15090, {desc = "Dispels magic on the target, removing 1 harmful spell from an ally or 1 beneficial spell from an enemy."}), -- Dispel Magic
-              Spell(29563, {desc = "Consumes an enemy in flames, burning it and inflicting 837 to 1063 Fire damage, then additional 950 Fire damage every 2 seconds for 8 seconds.", flag1 = MAGIC}), -- Holy Fire
-              Spell(29408, {desc = "Wraps an ally in a shield that absorbs maximum 2500 damage, lasts 30 seconds.", flag1 = MAGIC}), -- Power Word: Shield
+              Spell(29564, {desc = "治疗一名友方11250-13750血量。", flag1 = INTERRUPT}), -- Greater Heal
+              Spell(15090, {desc = "驱散友方身上的减益魔法或敌方身上的增益魔法。"}), -- Dispel Magic
+              Spell(29563, {desc = "神圣之火，对敌人造成837-1063火焰伤害，并额外附带一个每2秒950火焰伤害持续8秒的DEBUFF。", flag1 = MAGIC}), -- Holy Fire
+              Spell(29408, {desc = "给友方套盾，吸收2500伤害，持续30秒。", flag1 = MAGIC}), -- Power Word: Shield
             },
           }),
           Stage({
             stype = CREATURE,
             creature = 17007,
             display = 16639,
-            name = "Lady Keira Berrybuck",
+            name = "柯伊拉女士",
             sections = {
               Spell(29381, {flag1 = MAGIC}), -- Greater Blessing of Might
-              Spell(29382, {desc = "Protects the caster from all attacks and spells for 10 seconds. Reduces attack speed by 50%, lasts 10 seconds.", flag1 = MAGIC}), -- Divine Shield
-              Spell(29380, {desc = "Cleanses a friendly target, removing one  poison, disease and magic effect."}), -- Cleanse
-              Spell(29383, {desc = "Heals an ally for 7400 to 8600.", flag1 = INTERRUPT}), -- Holy Light
-              Spell(29562, {desc = "Heals an ally for 4625 to 5375.", flag1 = INTERRUPT}), -- Holy Light
+              Spell(29382, {desc = "保护施法者免受控制，减少攻击者的攻击速度，持续10秒。", flag1 = MAGIC}), -- Divine Shield
+              Spell(29380, {desc = "驱散队友身上的减益魔法或清除毒药。"}), -- Cleanse
+              Spell(29383, {desc = "治疗一名友方7400-8600血量。", flag1 = INTERRUPT}), -- Holy Light
+              Spell(29562, {desc = "治疗一名友方4625-5375血量。", flag1 = INTERRUPT}), -- Holy Light
             },
           }),
           Stage({
             stype = CREATURE,
             creature = 19876,
             display = 19328,
-            name = "Lord Robin Daris",
+            name = "罗宾公爵",
             sections = {
               Spell(29572, {flag1 = HEALER}), -- Mortal Strike
-              Spell(9080, {desc = "Inflicts 20% weapon damage to an enemy and reduces its movement speed by 50% for 5 seconds."}), -- Hamstring
-              Spell(29573, {desc = "Attacks all enemies within 8 yards for normal damage plus 300 each second for 2 seconds."}), -- Whirlwind (procs 15589)
+              Spell(9080, {desc = "对敌人造成20%武器伤害，并减缓移动速度50%持续5秒。"}), -- Hamstring
+              Spell(29573, {desc = "攻击8码内所有敌人，并额外造成600伤害。"}), -- Whirlwind (procs 15589)
             },
           }),
           Stage({
             stype = CREATURE,
             creature = 19873,
             display = 16638,
-            name = "Lord Crispin Ference",
+            name = "克利斯平公爵",
             sections = {
               Spell(8379, {flag1 = IMPORTANT}), -- Disarm
-              Spell(29567, {desc = "A strong attack that increases melee damage by 438 to 562."}), -- Heroic Strike
-              Spell(11972, {desc = "Bashes an enemy and inflicts 10% weapon damage and interrupts any spells that are being cast."}), -- Shield Bash
-              Spell(29390, {desc = "Reduces damage taken by 75% for 15 seconds."}), -- Shield Wall
+              Spell(29567, {desc = "一个强力的攻击，提高肉搏438-562伤害。"}), -- Heroic Strike
+              Spell(11972, {desc = "造成10%武器伤害，并打断施法。"}), -- Shield Bash
+              Spell(29390, {desc = "盾墙，减少受到伤害75%持续15秒。"}), -- Shield Wall
             },
           }),
         },
