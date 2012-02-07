@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local BLACKROCK_DEPTHS = CreateInstance({
-  name = "Blackrock Depths",
-  desc = "The Blackrock Depths (BRD) are the deepest parts of Blackrock Mountain, ruled by the Dark Iron dwarves led by Emperor Dagran Thaurissan. Blackrock Depths is one of the few sources of Dark Iron Ore and the Black Forge required for smelting the ore is located within. It is also the location of the Black Anvil, which is required by blacksmiths for crafting any dark iron equipment. BRD is fondly remembered as the most epic of zones prior to raiding--with almost two dozen bosses and many questlines, it was truly an experience back in vanilla. In the past two expansions, areas were tweaked to make travel quicker between bosses via the addition of mole machines and questlines have been removed such as the Onyxia attunement.",
+  name = "黑石深渊",
+  desc = "黑石深渊在黑石山的最深处，达格兰·索瑞森大帝和他的黑铁矮人统治着这里。黑石深渊是少量的黑铁矿石产地之一，熔炼它们需要的黑铁熔炉也在这里。同时这里还有制造一切黑铁装备所需要的黑铁铁砧。黑石深渊是团队副本之前最史诗的一个区域，这里有着二十多个首领和众多的任务线，是回到经典旧世真切的经历。在之后的两个资料片中，副本中的首领之间可以通过钻机快速到达，并移除了一些任务链，比如奥妮克希亚系列任务。",
   --texture = "BlackrockDepths",
   area = 704,
   dflag = N5,
 }, {
   {
-    name = "Lord Roccor",
+    name = "洛考尔",
     --desc = "",
     --icon = true,
     creature = 9025,
@@ -43,7 +43,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Bael'Gar",
+    name = "贝尔加",
     --desc = "",
     --icon = true,
     creature = 9016,
@@ -56,7 +56,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Houndmaster Grebmar",
+    name = "驯犬者格雷布玛尔",
     --desc = "",
     --icon = true,
     creature = 9319,
@@ -70,7 +70,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "High Interrogator Gerstahn",
+    name = "审讯官格斯塔恩",
     --desc = "",
     --icon = true,
     creature = 9018,
@@ -85,7 +85,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "High Justice Grimstone",
+    name = "裁决者格里斯通",
     desc = "Ring of Law (Random Boss) Gorosh the Dervish Grizzle Eviscerator Ok'thor the Breaker Anub'shiah Hedrum the Creeper  High Justice Grimstone can be found within the Ring of Law in Blackrock Depths. He can be targeted, but is not a hostile enemy. Approaching the center of the ring will start an event, and the High Justice will appear and approach one of the gates and let loose a wave of random enemies. Once these have been defeated, he will go to another gate and release a random boss monster. The boss you encounter is not related to the previous enemies in any way; they are both completely random spawns.",
     --icon = true,
     creature = 10096,
@@ -96,7 +96,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Pyromancer Loregrain",
+    name = "控火师罗格雷恩",
     --desc = "",
     --icon = true,
     creature = 9024,
@@ -111,7 +111,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "General Angerforge",
+    name = "安格弗将军",
     --desc = "",
     --icon = true,
     creature = 9033,
@@ -125,7 +125,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Golem Lord Argelmach",
+    name = "傀儡统帅阿格曼奇",
     --desc = "",
     --icon = true,
     creature = 8983,
@@ -139,7 +139,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Ribbly Screwspigot",
+    name = "雷布里·斯库比格特",
     --desc = "",
     --icon = true,
     creature = 9543,
@@ -152,7 +152,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Hurley Blackbreath",
+    name = "霍尔雷·黑须",
     --desc = "",
     --icon = true,
     creature = 9537,
@@ -165,7 +165,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Plugger Spazzring",
+    name = "普拉格",
     --desc = "",
     --icon = true,
     creature = 9499,
@@ -181,7 +181,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Phalanx",
+    name = "法拉克斯",
     --desc = "",
     --icon = true,
     creature = 9502,
@@ -195,7 +195,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Lord Incendius",
+    name = "伊森迪奥斯",
     --desc = "",
     --icon = true,
     creature = 9017,
@@ -210,7 +210,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Fineous Darkvire",
+    name = "弗诺斯·达克维尔",
     --desc = "",
     --icon = true,
     creature = 9056,
@@ -226,7 +226,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Warder Stilgiss",
+    name = "典狱官斯迪尔基斯",
     --desc = "",
     --icon = true,
     creature = 9041,
@@ -242,7 +242,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Ambassador Flamelash",
+    name = "弗莱拉斯大使",
     --desc = "",
     --icon = true,
     creature = 9156,
@@ -254,7 +254,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Magmus",
+    name = "玛格姆斯",
     --desc = "",
     --icon = true,
     creature = 9938,
@@ -267,7 +267,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Princess Moira Bronzebeard",
+    name = "铁炉堡公主茉艾拉·铜须",
     --desc = "",
     --icon = true,
     creature = 8929,
@@ -283,7 +283,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Emperor Dagran Thaurissan",
+    name = "达格兰·索瑞森大帝",
     --desc = "",
     --icon = true,
     creature = 9019,

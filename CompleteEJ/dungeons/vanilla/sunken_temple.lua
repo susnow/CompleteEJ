@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local SUNKEN_TEMPLE = CreateInstance({
-  name = "Sunken Temple",
-  desc = "The Temple of Atal'Hakkar, the Sunken Temple, is a shrine erected by the Atal'ai trolls to the Blood God Hakkar the Soulflayer. It is located in the Swamp of Sorrows.",
+  name = "沉没的神庙",
+  desc = "阿塔哈卡神庙，沉没的神庙，是阿塔莱巨魔为血神哈卡建立的。它坐落于悲伤沼泽。",
   --texture = "SunkenTemple",
   area = 687,
   dflag = N5,
 }, {
   {
-    name = "Jammal'an the Prophet",
+    name = "预言者迦玛兰",
     --desc = "",
     --icon = true,
     creature = 5710,
@@ -44,7 +44,7 @@ local SUNKEN_TEMPLE = CreateInstance({
     },
   },
   {
-    name = "Avatar of Hakkar",
+    name = "哈卡的化身",
     --desc = "",
     --icon = true,
     creature = 8443,
@@ -55,7 +55,7 @@ local SUNKEN_TEMPLE = CreateInstance({
     },
   },
   {
-    name = "Shade of Eranikus",
+    name = "伊兰尼库斯的阴影",
     --desc = "",
     --icon = true,
     creature = 5709,

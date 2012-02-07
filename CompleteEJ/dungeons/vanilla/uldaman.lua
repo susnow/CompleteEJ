@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,15 +22,15 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local ULDAMAN = CreateInstance({
-  name = "Uldaman",
-  desc = "Uldaman is an ancient Titan vault that has laid buried deep within the earth since the world's creation. Dwarven excavations have recently penetrated this forgotten city, releasing the Titans' first failed creations: the Troggs. Legends say that the Titans created troggs from stone. When they deemed the experiment a failure, the Titans locked the troggs away and tried again - resulting in the creation of the dwarven race. The secrets of the dwarves' creation are recorded on the fabled Discs of Norgannon - massive Titan artifacts that lie at the very bottom of the ancient city. Recently, the Dark Iron dwarves have launched a series of incursions into Uldaman, hoping to claim the discs for their fiery master, Ragnaros. However, protecting the buried city are several guardians - giant constructs of living stone that crush any hapless intruders they find. The Discs themselves are guarded by a massive, sapient Stonekeeper called Archaedas. Some rumors even suggest that the dwarves' stone-skinned ancestors, the earthen, still dwell deep within the city's hidden recesses.",
+  name = "奥达曼",
+  desc = "奥达曼是一座古代泰坦的地下堡垒，在创世完成后便被深埋地底。最近，矮人探险家发掘出了这座被遗忘的城市，放出了泰坦巨人失败的造物：穴居人。传说泰坦用石头造出了穴居人。当他们发现这种实验是失败的以后，泰坦把穴居人关了起来并重新开始尝试——他们最终创造出了矮人种族。创造矮人的秘密记录在传说中的白金圆盘里，这个巨大的泰坦遗物就位于这个远古城市的最深处。最近，黑铁矮人开展了一系列针对奥达曼的入侵，希望能够为他们凶狠的主人拉格纳罗斯夺到圆盘。但有一些守卫保护着这个被掩埋的城市——由活的岩石做出的巨大构造体会将他们能找到的所有倒霉的入侵者碾碎。圆盘本身被一个巨大的，叫做阿扎达斯的石卫士守护着。甚至有消息称，矮人们那拥有岩石皮肤的祖先，土灵，依然居住在这个城市中某些隐蔽的角落里。",
   texture = "Uldaman",
   area = 692,
   dflag = N5,
 }, {
   {
-    name = "The Lost Dwarves",
-    desc = "Baelog, Eric \"The Swift\" and Olaf are friendly to the Alliance, but can be defeated by the Horde.",
+    name = "失踪的矮人",
+    desc = "巴尔洛戈、埃瑞克和奥拉夫对于联盟是友善的，但是可被部落方攻击。",
     --icon = true,
     creature = 6906,
     display = 5710,
@@ -42,10 +42,10 @@ local ULDAMAN = CreateInstance({
         stype = CREATURE,
         creature = 6906,
         display = 5710,
-        name = "Baelog",
+        name = "巴尔洛戈",
         sections = {
-          Spell(15620, {desc = "Shoots at an enemy, inflicting 49 to 58 Physical damage."}), -- Shoot
-          Spell(14516, {desc = "Strikes at an enemy, inflicting 10% bonus damage."}), -- Strike
+          Spell(15620, {desc = "射击目标，对其造成49到58点物理伤害。"}), -- Shoot
+          Spell(14516, {desc = "对敌人造成10%额外的近战伤害。"}), -- Strike
         },
       }),
       Stage({
@@ -53,9 +53,9 @@ local ULDAMAN = CreateInstance({
         stype = CREATURE,
         creature = 6907,
         display = 5708,
-        name = "Eric \"The Swift\"",
+        name = "埃瑞克",
         sections = {
-          Spell(6268, {desc = "Eric charges the target and inflicts 30% additional damage on his next attack."}), -- Rushing Charge
+          Spell(6268, {desc = "向目标冲锋，使施法者的下一次攻击造成30%额外伤害。"}), -- Rushing Charge
         },
       }),
       Stage({
@@ -63,29 +63,29 @@ local ULDAMAN = CreateInstance({
         stype = CREATURE,
         creature = 6908,
         display = 5709,
-        name = "Olaf",
+        name = "奥拉夫",
         sections = {
-          Spell(8242, {desc = "Inflicts 20 Physical damage to an enemy, stunning it for 2 seconds."}), -- Shield Slam
+          Spell(8242, {desc = "对敌人造成20点物理伤害，并使其昏迷2秒。"}), -- Shield Slam
         },
       }),
     },
   },
   {
-    name = "Revelosh",
-    desc = "Revelosh is the first trogg boss found in Uldaman.",
+    name = "鲁维罗什",
+    desc = "鲁维罗什是奥达曼中第一个石腭怪BOSS。",
     --icon = true,
     creature = 6910,
     display = 5945,
     coords = {0.532, 0.727, 1},
     loot = {9389,9390,9387,9388,},
     sections = {
-      Spell(16006, {so = true, desc = "Strikes an enemy with a lightning bolt that arcs to another nearby enemy. The spell affects up to 3 targets, causing 99 to 116 Nature damage to each."}), -- Chain Lightning
-      Spell(15801, {so = true, desc = "Blasts an enemy with lightning, inflicting 99 to 116 Nature damage."}), -- Lightning Bolt
+      Spell(16006, {so = true, desc = "向敌人射出一支闪电箭，这支闪电箭会在击中目标后继续攻击它周围最近的敌人，对每个目标都造成99到116点自然伤害，最多可攻击3个目标。"}), -- Chain Lightning
+      Spell(15801, {so = true, desc = "用闪电攻击目标，对其造成99到116点自然伤害。"}), -- Lightning Bolt
     },
   },
   {
-    name = "Ironaya",
-    desc = "Ironaya tries to guard the secrets of Uldaman from curious adventurers.",
+    name = "艾隆纳亚",
+    desc = "艾隆纳亚试图保护奥达曼的秘密不被冒险者发现。",
     --icon = true,
     creature = 7228,
     display = 6089,
@@ -98,53 +98,53 @@ local ULDAMAN = CreateInstance({
     },
   },
   {
-    name = "Obsidian Sentinel",
-    desc = "The Titans built the Stone keeper Obsidian Sentinel to help protect Uldaman from would-be invaders and to oversee daily operations while Ironaya and Archaedas slumber. Aoren Sunglow and Kand Sandseeker suspects that one of the Old Gods corrupted this keeper. Another keeper not yet corrupted is the Ancient Stone Keeper in the Temple Hall.",
+    name = "黑曜石哨兵",
+    desc = "泰坦制造了这些黑曜石哨兵以防止在阿扎达斯和艾隆尼亚打盹时奥达曼被冒险者入侵。奥伦·日冕和坎德·沙寻者怀疑是一个上古之神导致了这些守护者的堕落。另一个守护者是神殿大厅中的古代的石头看守者，它还没有被腐化。",
     --icon = true,
     creature = 7023,
     display = 5285,
     coords = {0.290, 0.602, 1},
     loot = {62053,},
     sections = {
-      Spell(9941, {so = true, desc = "Raises a shield of magic, each spell cast has a 20% chance to be reflected back to the original caster.", flag1 = DPS}), -- Obsidian Reflection
-      Spell(10061, {so = true, desc = "At he shatters, his smaller shards come to life and fight with the sentinel."}), -- Summon Obsidian Shard
-      Spell(10072, {so = true, desc = "Each time he splits into shards, he applies one application of this buff, each increasing his damage dealt by 60. Stacks up to 4 times."}), -- Splintered Obsidian
+      Spell(9941, {so = true, desc = "制造魔法护盾，以20%的概率反射对你施放的法术。", flag1 = DPS}), -- Obsidian Reflection
+      Spell(10061, {so = true, desc = "10061"}), -- Summon Obsidian Shard
+      Spell(10072, {so = true, desc = "每次召唤黑曜石碎片，黑曜石守卫的物理伤害能力都会降低60点。最多叠加4次"}), -- Splintered Obsidian
       Stage({
         stype = CREATURE,
         creature = 7209,
         display = 3731,
-        name = "Obsidian Shard",
+        name = "黑曜石碎片",
         sections = {
-          Spell(9941, {so = true, desc = "Raises a shield of magic, each spell cast has a 20% chance to be reflected back to the original caster.", flag1 = DPS}), -- Obsidian Reflection
+          Spell(9941, {so = true, desc = "制造魔法护盾，以20%的概率反射对你施放的法术。", flag1 = DPS}), -- Obsidian Reflection
         },
       }),
     },
   },
   {
-    name = "Ancient Stone Keeper",
-    desc = "The Titans built the Ancient Stone Keeper to help protect Uldaman from would-be invaders and to oversee daily operations while Ironaya and Archaedas slumber. Another keeper yet corrupted is the Obsidian Sentinel in the Echomok Cavern.",
+    name = "古代的石头看守者",
+    desc = "泰坦制造了这些黑曜石哨兵以防止在阿扎达斯和艾隆尼亚打盹时奥达曼被冒险者入侵。奥伦·日冕和坎德·沙寻者怀疑是一个上古之神导致了这些守护者的堕落。另一个守护者是黑曜石洞穴中的黑曜石哨兵，它已被腐化。",
     --icon = true,
     creature = 7206,
     display = 10798,
     coords = {0.474, 0.442, 1},
     loot = {9410,9411,62055,},
     sections = {
-      Spell(10094, {so = true, desc = "Summons sand storms on the battlefield, reducing the movement speed and causing damage from harsh winds to enemies that get caught in them."}), -- Sand Storms (spawns at ranged enemies, 10132 spawns at melee specifically)
+      Spell(10094, {so = true, desc = "召唤1个沙尘风暴为施法者作战，持续30秒。"}), -- Sand Storms (spawns at ranged enemies, 10132 spawns at melee specifically)
       Stage({
         so = true,
         stype = CREATURE,
         creature = 7226,
         display = 31882, -- not the same NPC but borrowing from 42639
-        name = "Sand Storm",
+        name = "沙尘风暴",
         sections = {
-          Spell(10092, {so = true, desc = "Causes 9 to 10 Physical damage and slows movement speed by 50% each second to all enemies within 5 yards of the eye of the storm."}), -- Sand Storm (triggers 10093)
+          Spell(10092, {so = true, desc = "制造一场沙尘风暴，对陷入其中的敌人造成9到10点自然伤害，使其移动速度降低50%。"}), -- Sand Storm (triggers 10093)
         },
       }),
     },
   },
   {
-    name = "Galgann Firehammer",
-    desc = "Assisted by his shadowforge minions.",
+    name = "加加恩·火锤",
+    desc = "带领他的暗炉部族手下一同作战。",
     --icon = true,
     creature = 7291,
     display = 6059,
@@ -152,13 +152,13 @@ local ULDAMAN = CreateInstance({
     loot = {9412,9419,11310,11311,},
     sections = {
       Spell(9482, {so = true, flag1 = MAGIC}), -- Amplify Flames
-      Spell(3356, {so = true, desc = "Burns an enemy, dealing 24 to 29 Fire damage and reducing their Fire resistance by 10 for each application for 20 seconds. Stacks maximum 3 times.", flag1 = MAGIC}), -- Flame Lash
-      Spell(11969, {so = true, desc = "Inflicts 33 to 38 Fire damage to enemies within 10 yards."}), -- Fire Nova
+      Spell(3356, {so = true, desc = "使一个敌人燃烧，对其造成火焰伤害，并使其火焰抗性降低，持续20秒。", flag1 = MAGIC}), -- Flame Lash
+      Spell(11969, {so = true, desc = "	对附近的敌人造成33到38点火焰伤害。"}), -- Fire Nova
       Stage({
         stype = CREATURE,
         creature = 4849,
         display = 6067,
-        name = "Shadowforge Archaeologist",
+        name = "暗炉考古学家",
         sections = {
           Spell(6713, {so = true}), -- Disarm
           Spell(11972, {so = true}), -- Shield Bash
@@ -168,34 +168,34 @@ local ULDAMAN = CreateInstance({
         stype = CREATURE,
         creature = 7030,
         display = 6056,
-        name = "Shadowforge Geologist",
+        name = "暗炉地质学家",
         sections = {
-          Spell(3356, {so = true, desc = "Burns an enemy, dealing 24 to 29 Fire damage and reducing their Fire resistance by 10 for each application for 20 seconds. Stacks maximum 3 times.", flag1 = MAGIC}), -- Flame Lash
-          Spell(8814, {so = true, desc = "Calls down a pillar of flame, burning all enemies in the selected area for 93 to 107 Fire damage and additional 50 Fire damage every 3 seconds for 9 seconds."}), -- Flame Spike
+          Spell(3356, {so = true, desc = "使一个敌人燃烧，对其造成火焰伤害，并使其火焰抗性降低，持续20秒。", flag1 = MAGIC}), -- Flame Lash
+          Spell(8814, {so = true, desc = "召唤一根火柱，对指定区域内的所有敌人造成93到107点火焰伤害，并对它们每3秒造成50点额外伤害，持续9秒。"}), -- Flame Spike
         },
       }),
       Stage({
         stype = CREATURE,
         creature = 4848,
         display = 6055,
-        name = "Shadowforge Darkcaster",
+        name = "暗炉暗法师",
         sections = {
-          Spell(11981, {so = true, desc = "Hits an enemy with an anti-mana bolt. Burns 46 to 53 mana and damages them for the same amount of mana drained."}), -- Mana Burn
-          Spell(9081, {so = true, desc = "Hurls missiles of dark magic, inflicting 49 to 58 Shadow damage to enemies within 30 yards."}), -- Shadow Bolt Volley
+          Spell(11981, {so = true, desc = "向敌人射出一支可抽取46到53点法力值的箭，每抽取1点法力值，目标就受到1点伤害。"}), -- Mana Burn
+          Spell(9081, {so = true, desc = "向30码内的敌人射出多支暗影箭，对它们造成49到58点暗影伤害。"}), -- Shadow Bolt Volley
         },
       }),
     },
   },
   {
-    name = "Grimlok",
-    desc = "Accompanied by his pet Jadespine Basilisk and his two companions.",
+    name = "格瑞姆洛克",
+    desc = "与他的宠物玉脊蜥蜴和两个石腭怪一同战斗。",
     --icon = true,
     creature = 4854,
     display = 11165,
     coords = {0.221, 0.262, 1},
     loot = {9415,9414,9416,},
     sections = {
-      Spell(12167, {so = true, desc = "Blasts an enemy with lightning, inflicting 74 to 87 Nature damage."}), -- Lightning Bolt
+      Spell(12167, {so = true, desc = "用闪电攻击目标，对其造成74到87点自然伤害。"}), -- Lightning Bolt
       Spell(8292, {so = true}), -- Chain Bolt
       Spell(11892, {so = true, flag1 = CURSE}), -- Shrink
       Spell(6742, {so = true, flag1 = MAGIC}), -- Bloodlust
@@ -203,9 +203,9 @@ local ULDAMAN = CreateInstance({
         stype = CREATURE,
         creature = 4863,
         display = 4486,
-        name = "Jadespine Basilisk",
+        name = "玉脊蜥蜴",
         sections = {
-          Spell(3636, {so = true, desc = "Deals 15 Arcane damage and stuns an enemy, rendering it unable to move or attack for 3 seconds.", flag1 = MAGIC}), -- Crystalline Slumber
+          Spell(3636, {so = true, desc = "造成15点奥术伤害，并使目标因昏迷而无法移动或攻击，持续3秒。", flag1 = MAGIC}), -- Crystalline Slumber
           Spell(9906, {so = true, flag1 = DPS}), -- Reflection
         },
       }),
@@ -213,9 +213,9 @@ local ULDAMAN = CreateInstance({
         stype = CREATURE,
         creature = 4855,
         display = 11166,
-        name = "Stonevault Brawler",
+        name = "石窟争斗者",
         sections = {
-          Spell(8599, {so = true, desc = "Enrages and increases physical damage done by 10% and attack speed by 30% for 2 minutes.", flag1 = ENRAGE}), -- Enrage
+          Spell(8599, {so = true, desc = "激怒，物理伤害提高10%，攻击速度提高30%，持续2分钟。", flag1 = ENRAGE}), -- Enrage
           Spell(3391, {so = true}), -- Thrash
         },
       }),
@@ -223,58 +223,58 @@ local ULDAMAN = CreateInstance({
         stype = CREATURE,
         creature = 4853,
         display = 1194,
-        name = "Stonevault Geomancer",
+        name = "石窟地占师",
         sections = {
-          Spell(14034, {so = true, desc = "Inflicts 74 to 87 Fire damage to an enemy."}), -- Fireball
-          Spell(10452, {so = true, desc = "Inflicts 19 to 21 Fire damage to an enemy and increases the Fire damage it takes by 20 for 15 seconds. Stacks maximum 5 times."}), -- Flame Buffet
+          Spell(14034, {so = true, desc = "对一个敌人造成74到87点火焰伤害。"}), -- Fireball
+          Spell(10452, {so = true, desc = "对一名敌人造成21点火焰伤害，并使其受到的火焰伤害提高20点，持续15秒。最多叠加5次。"}), -- Flame Buffet
         },
       }),
     },
   },
   {
-    name = "Archaedas",
-    desc = "Archaedas is one of the ancient servants of the titans, a giant of stone crafted to guard the vault of Uldaman. To ensure he would always be vigilant, his creators sealed him in a stone shell that keeps him magically preserved in a timeless sleep. Any attempt to activate the keystone that opens the vault awakens him immediately.",
+    name = "阿扎达斯",
+    desc = "阿扎达斯是远古泰坦的仆从，奥达曼穹殿的石巨人守护者。为确保他能保持警惕，创造者用魔法使他保存在永恒的睡眠中。任何企图打开穹殿的行为都是使他醒来。",
     --icon = true,
     creature = 2748,
     display = 5988,
     coords = {0.552, 0.505, 2},
     loot = {11118,9418,9413,},
     sections = {
-      Spell(6524, {so = true, desc = "Stuns enemies within 20 yards, rendering them unable to move or attack for 2 seconds."}), -- Ground Tremor
+      Spell(6524, {so = true, desc = "使附近的敌人昏迷，无法移动或攻击，持续2秒。"}), -- Ground Tremor
       Stage({
-        name = "Phase 1",
+        name = "第一阶段",
         sections = {
-          Spell(10252, {so = true, name = "Awaken an Earthen Guardian", desc = "Randomly awakes one of the many Earthen Guardian statues of the outer circle."}, 1), -- Awaken Earthen Guardians
+          Spell(10252, {so = true, name = "唤醒土灵守护者", desc = "随机的唤醒1个在周围围成一圈的土灵守护者。"}, 1), -- Awaken Earthen Guardians
         },
       }),
       Stage({
-        name = "Phase 2: At 66% health",
+        name = "第二阶段：血量66%时",
         sections = {
-          Spell(10252, {so = true, name = "Awaken six Earthen Guardians", desc = "Randomly awakes six of the many Earthen Guardian statues of the outer circle."}, 1), -- Awaken Earthen Guardians
+          Spell(10252, {so = true, name = "唤醒6个土灵守护者", desc = "随机的唤醒6个在周围围成一圈的土灵守护者。"}, 1), -- Awaken Earthen Guardians
         },
       }),
       Stage({
-        name = "Phase 3: At 33% health",
+        name = "第三阶段：血量33%时",
         sections = {
-          Spell(10258, {so = true, name = "Awaken two Vault Warders", desc = "Randomly awakes two of the Vault Warders from the inner circle."}, 1), -- Awaken Vault Warder
+          Spell(10258, {so = true, name = "唤醒宝库护卫者", desc = "随机的唤醒2个在周围围成一圈的宝库护卫者。"}, 1), -- Awaken Vault Warder
         },
       }),
       Stage({
         stype = CREATURE,
         creature = 7076,
         display = 6026,
-        name = "Earthen Guardian",
+        name = "土灵守护者",
         sections = {
-          Spell(17207, {so = true, desc = "Attacks nearby enemies in a whirlwind of steel that lasts 2 seconds, inflicting 110% weapon damage."}), -- Whirlwind (triggers 15576)
+          Spell(17207, {so = true, desc = "像旋风一般挥舞手中的武器，攻击周围的所有敌人，造成110%的武器伤害，持续2秒。"}), -- Whirlwind (triggers 15576)
         },
       }),
       Stage({
         stype = CREATURE,
         creature = 10120,
         display = 5989,
-        name = "Vault Warder",
+        name = "宝库护卫者",
         sections = {
-          Spell(5568, {so = true, desc = "Inflicts normal damage plus 8% additional damage to nearby enemies."}), -- Trample
+          Spell(5568, {so = true, desc = "对附近的敌人造成普通武器伤害并附加8%额外伤害。"}), -- Trample
         },
       }),
     },

@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -23,14 +23,14 @@ local ENRAGE2 = 12
 
 local THE_STOCKADE = CreateInstance({
   name = "The Stockade",
-  desc = "The Stockade is a high-security prison complex, hidden beneath the canal district of Stormwind City. Presided over by Warden Thelwater, the Stockade is home to petty crooks, political insurgents, murderers and a score of the most dangerous criminals in the land. Recently, a prisoner-led revolt has resulted in a state of pandemonium within the Stockades - where the guards have been overthrown and the convicts roam free.\n\nWarden Thelwater has managed to defend himself, and is currently enlisting brave thrill-seekers to venture into the prison and put down the uprising, thought to have been instigated by some new prisoners - the terrifying menace known only as \"Hogger\" and his violent Riverpaw pack of gnolls.",
+  desc = "暴风城监狱是一座守卫严密的监狱，位于暴风城的运河下。暴风城监狱由典狱官塞尔沃特管理，关押着各种暴徒、叛乱份子、杀人犯和许多世界上最危险的罪犯。最近，一场由囚犯发起的暴乱使暴风城监狱陷入了混乱。守卫被赶出监狱，罪犯在监狱里随意走动。典狱官塞尔沃特设法逃出了关押。现在，他正在招募勇敢的冒险者进入监狱，刺杀这次叛乱的头目：狡猾的重刑犯巴基尔·斯瑞德。\n\n典狱官塞尔沃特设法保护了自己，现在他正在募集一些冒险者去镇压暴动。他认为相对那些被煽动的新囚犯而言，真正的威胁只有'霍格'和他的河爪豺狼人。",
   texture = "TheStockade",
   area = 690,
   dflag = N5,
 }, {
   {
-    name = "Randolph Moloch",
-    desc = "Randolph Moloch is the leader of the rebellious human convicts in the Stockade. He is considered the first boss of the dungeon, located at the end of the main tunnel.",
+    name = "藍道夫·摩洛克",
+    desc = "藍道夫·摩洛克是监狱中暴乱的人类罪犯的领导者。它位于监狱中的主要通道，是地下城的第一个BOSS。",
     --icon = true,
     creature = 46383,
     display = 35068,
@@ -39,26 +39,26 @@ local THE_STOCKADE = CreateInstance({
     sections = {
       Spell(86729, {so = true}), -- Sweep
       Spell(86726, {so = true}), -- Wildly Stabbing
-      Spell(55964, {so = true, desc = "Occasionally vanishes from sight for 2.5 seconds, gaining the element of surprise."}), -- Vanish
+      Spell(55964, {so = true, desc = "间歇性的从视野中消失2.5秒，并带来一些惊喜。"}), -- Vanish
     },
   },
   {
-    name = "Lord Overheat",
-    desc = "Lord Overheat is the leader of the fire elementals emerging in the Stockades after the earthquakes brought by the Shattering. He is considered the second boss of the dungeon, found at the end of its right wing.",
+    name = "灼热勋爵",
+    desc = "灼热勋爵是监狱地震后产生的火元素的领导者。他是监狱中的第二个BOSS，你可以在右侧的通道中找到他。",
     --icon = true,
     creature = 46264,
     display = 1204,
     coords = {0.783, 0.458, 1},
     loot = {5967,},
     sections = {
-      Spell(12466, {so = true, desc = "Inflicts 99 to 116 Fire damage to an enemy."}), -- Fireball
+      Spell(12466, {so = true, desc = "对一个敌人造成99到116点火焰伤害。"}), -- Fireball
       Spell(86636, {so = true}), -- Rain of Fire
       Spell(86633, {so = true, flag1 = MAGIC}), -- Overheat
     },
   },
   {
-    name = "Hogger",
-    desc = "Hogger the gnoll king has finally been captured by the forces of Stormwind aided by brave adventurers. He is now the most dangerous prisoner in the Stockades, riling up the other gnolls there, and threatening the peace in Stormwind itself.",
+    name = "霍格",
+    desc = "豺狼人之王霍格终于被暴风城的勇敢冒险者捕获了。他激怒了其他的豺狼人囚犯，并威胁到了暴风城的和平，是监狱中最危险的犯人。",
     --icon = true,
     creature = 46254,
     display = 501,
@@ -67,7 +67,7 @@ local THE_STOCKADE = CreateInstance({
     sections = {
       Spell(86604, {so = true}), -- Vicious Slice
       Spell(86620, {so = true}), -- Maddening Call
-      Spell(86736, {so = true, desc = "After 45% health, Hogger will enrage and attack 30% faster and deal 10% more damage.", flag1 = HEALER}), -- Enrage
+      Spell(86736, {so = true, desc = "生命低于45%后，霍格会狂暴，攻击速度提高30%，攻击速度提高10%。", flag1 = HEALER}), -- Enrage
     },
   },
 })
