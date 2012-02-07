@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,15 +22,15 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local SUNKEN_TEMPLE = CreateInstance({
-  name = "Sunken Temple",
-  desc = "Over a thousand years ago, the powerful Gurubashi Empire was torn apart by a massive civil war. An influential group of troll priests, known as the Atal'ai, attempted to bring back an ancient blood god named Hakkar the Soulflayer. Though the priests were defeated and ultimately exiled, the great troll empire buckled in upon itself. The exiled priests fled far to the north, into the Swamp of Sorrows. There they erected a great temple to Hakkar - where they could prepare for his arrival into the physical world. The great dragon Aspect, Ysera, learned of the Atal'ai's plans and smashed the temple beneath the marshes. To this day, the temple's drowned ruins are guarded by the green dragons who prevent anyone from getting in or out. However, it is believed that some of the fanatical Atal'ai may have survived Ysera's wrath - and recommitted themselves to the dark service of Hakkar.",
-  texture = "SunkenTemple",
+  name = "沉没的神庙",
+  desc = "阿塔哈卡神庙，沉没的神庙，是阿塔莱巨魔为血神哈卡建立的。它坐落于悲伤沼泽。",
+  --texture = "SunkenTemple",
   area = 687,
   dflag = N5,
 }, {
   {
-    name = "Jammal'an the Prophet",
-    desc = "Jammal'an is the spiritual leader of the great Atal'ai tribe and of the Hakkari of Zul'Gurub and Swamp of Sorrows. He believes the summoning of the blood god Hakkar the Soulflayer will bring the Atal'ai to immortality.",
+    name = "预言者迦玛兰",
+    --desc = "",
     --icon = true,
     creature = 5710,
     display = 6708,
@@ -52,8 +52,8 @@ local SUNKEN_TEMPLE = CreateInstance({
     },
   },
   {
-    name = "Avatar of Hakkar", -- Shade of Hakkar #8440 7690
-    desc = "The Avatar of Hakkar is the mortal presence of the god Hakkar the Soulflayer. Its spirit still haunts the Temple of Atal'Hakkar, waiting for the right time to regain its power.",
+    name = "哈卡的化身",
+    --desc = "",
     --icon = true,
     creature = 8443,
     display = 8053,
@@ -79,8 +79,8 @@ local SUNKEN_TEMPLE = CreateInstance({
     },
   },
   {
-    name = "Shade of Eranikus",
-    desc = "The great Emerald Wyrm Eranikus was dispatched by Ysera, the Dragon Aspect of the Emerald Dream, to deal with the growing troll threat in the Swamp of Sorrows. Unfortunately, Eranikus was possessed and corrupted by the Old Gods and now is a malevolent force in the Sunken Temple.",
+    name = "伊兰尼库斯的阴影",
+    --desc = "",
     --icon = true,
     creature = 5709,
     display = 7806,

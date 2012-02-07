@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,15 +22,15 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local BLACKROCK_DEPTHS = CreateInstance({
-  name = "Blackrock Depths",
-  desc = "Once the capital city of the Dark Iron dwarves, this volcanic labyrinth now serves as the seat of power for Ragnaros the Firelord. Ragnaros has uncovered the secret to creating life from stone and plans to build an army of unstoppable golems to aid him in conquering the whole of Blackrock Mountain. Obsessed with defeating Nefarian and his draconic minions, Ragnaros will go to any extreme to achieve final victory.",
-  texture = "BlackrockDepths",
+  name = "黑石深渊",
+  desc = "黑石深渊在黑石山的最深处，达格兰·索瑞森大帝和他的黑铁矮人统治着这里。黑石深渊是少量的黑铁矿石产地之一，熔炼它们需要的黑铁熔炉也在这里。同时这里还有制造一切黑铁装备所需要的黑铁铁砧。黑石深渊是团队副本之前最史诗的一个区域，这里有着二十多个首领和众多的任务线，是回到经典旧世真切的经历。在之后的两个资料片中，副本中的首领之间可以通过钻机快速到达，并移除了一些任务链，比如奥妮克希亚系列任务。",
+  --texture = "BlackrockDepths",
   area = 704,
   dflag = N5,
 }, {
   {
-    name = "Bael'Gar",
-    desc = "Once you enter the instance, take the port to the left and head forward. It's recommended to do him first to save time from running.",
+    name = "洛考尔",
+    --desc = "",
     --icon = true,
     creature = 9016,
     display = 12162,
@@ -42,8 +42,8 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Lord Roccor",
-    desc = "Lord Roccor can be found patroling the lower Halls of the Law, right outside the room of Houndmaster Grebmar, nearby the arena.",
+    name = "贝尔加",
+    --desc = "",
     --icon = true,
     creature = 9025,
     display = 5781,
@@ -56,8 +56,8 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Houndmaster Grebmar",
-    desc = "Houndmaster Grebmar resides under the arena, protected by a pack of his pet dogs.",
+    name = "驯犬者格雷布玛尔",
+    --desc = "",
     --icon = true,
     creature = 9319,
     display = 9212,
@@ -70,8 +70,8 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "High Interrogator Gerstahn",
-    desc = "The final boss of the Lower City section of the instance, usually most Looking for Dungeon groups go straight for her to finish up quickly and then queue again.",
+    name = "审讯官格斯塔恩",
+    --desc = "",
     --icon = true,
     creature = 9018,
     display = 8761,
@@ -85,8 +85,8 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "High Justice Grimstone",
-    desc = "High Justice Grimstone can be found within the Ring of Law, also known as the arena. When you walk near the center of the room, he will start an event that will spawn random waves of mobs, then one of six possible bosses.",
+    name = "裁决者格里斯通",
+    desc = "Ring of Law (Random Boss) Gorosh the Dervish Grizzle Eviscerator Ok'thor the Breaker Anub'shiah Hedrum the Creeper  High Justice Grimstone can be found within the Ring of Law in Blackrock Depths. He can be targeted, but is not a hostile enemy. Approaching the center of the ring will start an event, and the High Justice will appear and approach one of the gates and let loose a wave of random enemies. Once these have been defeated, he will go to another gate and release a random boss monster. The boss you encounter is not related to the previous enemies in any way; they are both completely random spawns.",
     --icon = true,
     creature = 10096,
     display = 9329,
@@ -166,8 +166,8 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Pyromancer Loregrain",
-    desc = "Loregrain is located just past the arena, accessible after you've first defeated the random boss event. Run past the crowd on the top floor and you are on your right way.",
+    name = "控火师罗格雷恩",
+    --desc = "",
     --icon = true,
     creature = 9024,
     display = 8762,
@@ -255,8 +255,8 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "General Angerforge",
-    desc = "General Angerforge is the venerable general of the Dark Iron armies. He is located just past the arena and across the bridge. You can skip the arena event you are doing the upper city run by using the doors instead. Remember to use the mechanism to lower the bridge before heading out.",
+    name = "安格弗将军",
+    --desc = "",
     --icon = true,
     creature = 9033,
     display = 8756,
@@ -284,8 +284,8 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Golem Lord Argelmach",
-    desc = "Golem Lord Argelmach can be found in a private room of the Manufactory, accompanied by two elite golems.",
+    name = "傀儡统帅阿格曼奇",
+    --desc = "",
     --icon = true,
     creature = 8983,
     display = 8759,
@@ -309,8 +309,8 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Hurley Blackbreath",
-    desc = "Engaged once the kegs of beer in the storage room have been destroyed. He is accompanied by four guards.",
+    name = "雷布里·斯库比格特",
+    --desc = "",
     --icon = true,
     creature = 9537,
     display = 8658,
@@ -333,8 +333,8 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Ribbly Screwspigot",
-    desc = "Ribbly Screwspigot hides from bounty hunters in the Grim Guzzler bar. You need to talk to him in order to engage the fight. He is accompanied by bodyguards.",
+    name = "霍尔雷·黑须",
+    --desc = "",
     --icon = true,
     creature = 9543,
     display = 8667,
@@ -358,8 +358,8 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Plugger Spazzring",
-    desc = "Plugger Spazzring supplies his Dark Iron dwarf patrons with mugs of ale, and holds the key to the bar door. While killing him may give access to the key, a rogue could simply pickpocket the key and sneak off. Once you engage Plugger Spazzring, nearby neutral dwarves will enter the fight and assist him. Alternatively you may talk to Private Rocknot nearby, and gain access further into the dungeon.",
+    name = "普拉格",
+    --desc = "",
     --icon = true,
     creature = 9499,
     display = 8652,
@@ -374,22 +374,69 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Phalanx",
-    desc = "In order to fight Phalanx you need to talk to Private Rocknot and make him knock down the door. Phalanx will run to protect the door and become hostile. It is important you engage him before any other bosses, as he may reset back to being friendly due to several reasons.",
+    name = "法拉克斯",
+    --desc = "",
     --icon = true,
     creature = 9502,
     display = 8177,
     coords = {0.525, 0.643, 2},
     loot = {11745,11744,22212,},
     sections = {
-      Spell(15588, {so = true, desc = "Inflicts 71 to 79 Nature damage to nearby enemies, increasing the time between their attacks by 33% and slowing their movement by 40% for 6 seconds.", flag1 = MAGIC}), -- Thunderclap
-      Spell(14099, {so = true, desc = "Inflicts normal damage plus 25 to an enemy, knocking it back."}), -- Mighty Blow
-      Spell(15285, {so = true, desc = "Inflicts 49 to 58 Fire damage to enemies within 20 yards."}), -- Fireball Volley
+      Spell(15285), -- Fireball Volley
+      Spell(14099), -- Mighty Blow
+      Spell(15588, {flag1 = MAGIC}), -- Thunderclap
     },
   },
   {
-    name = "Ambassador Flamelash",
-    desc = "Ambassador Flamelash is a servant of Sulfuron Harbinger, and is the first Flamewalker to be encountered by adventurers.",
+    name = "伊森迪奥斯",
+    --desc = "",
+    --icon = true,
+    creature = 9017,
+    display = 1204,
+    coords = {0.556, 0.322, 1},
+    loot = {11765,11767,11766,11764,19268,},
+    sections = {
+      Spell(26977, {flag1 = CURSE}), -- Curse of the Elemental Lord
+      Spell(13900), -- Fiery Burst
+      Spell(13899), -- Fire Storm
+      Spell(14099), -- Mighty Blow
+    },
+  },
+  {
+    name = "弗诺斯·达克维尔",
+    --desc = "",
+    --icon = true,
+    creature = 9056,
+    display = 8704,
+    coords = {0.646, 0.576, 2},
+    loot = {22223,11841,11842,11839,},
+    sections = {
+      Spell(8258), -- Devotion Aura
+      Spell(15493), -- Holy Light
+      Spell(13953), -- Holy Strike
+      Spell(11978), -- Kick
+      Spell(15346, {flag1 = MAGIC}), -- Seal of Reckoning
+    },
+  },
+  {
+    name = "典狱官斯迪尔基斯",
+    --desc = "",
+    --icon = true,
+    creature = 9041,
+    display = 9089,
+    coords = {0.602, 0.668, 2},
+    loot = {11782,11783,11784,22241,},
+    sections = {
+      Spell(6136, {flag1 = MAGIC}), -- Chilled
+      Spell(12544, {flag1 = MAGIC}), -- Frost Armor
+      Spell(12674, {flag1 = MAGIC}), -- Frost Nova
+      Spell(15044, {flag1 = MAGIC}), -- Frost Ward
+      Spell(12675, {flag1 = MAGIC}), -- Frostbolt
+    },
+  },
+  {
+    name = "弗莱拉斯大使",
+    --desc = "",
     --icon = true,
     creature = 9156,
     display = 8329,
@@ -411,8 +458,8 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "The Seven",
-    desc = "The Seven consist of Anger'rel, Doom'rel, Dope'rel, Gloom'rel, Hate'rel, Seeth'rel and Vile'rel. Talking to Doom'rel will engage the encounter. Before doing that, Miner characters would want to talk to Gloom'rel first for a quest to learn to smelt dark iron ore.",
+    name = "玛格姆斯",
+    --desc = "",
     --icon = true,
     creature = 9039,
     display = 8687,
@@ -512,8 +559,8 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Magmus",
-    desc = "Magmus protects the Emperor's Seat from penetration by any interested adventurers. When forced into battle, Magmus triggers statues in the Iron Hall to spew fire. The fire can be avoided by standing between statues while taking him down.\n\nIn order to fight him, you need to light two braziers in The Lyceum. You can do this by seeking out and defeating the patrolling Shadowforge Flame Keepers. The assigned party member has to loot the Shadowforge Torch and use it on one of the braziers.",
+    name = "铁炉堡公主茉艾拉·铜须",
+    --desc = "",
     --icon = true,
     creature = 9938,
     display = 12162,
@@ -525,8 +572,9 @@ local BLACKROCK_DEPTHS = CreateInstance({
     },
   },
   {
-    name = "Emperor Dagran Thaurissan",
-    desc = "Dagran Thaurissan is the current ruler of the Dark Iron clan, a descendant of Emperor Thaurissan and Modgud. Even as the leader of his clan, he is, like all Dark Iron dwarves, a servant of Ragnaros. The Emperor rules his people not from the city founded by (and named for) his ancestor, but rather from the depths of Blackrock Mountain near the entrance to Ragnaros's domain, the Molten Core.\n\nThe Emperor seduced King Magni Bronzebeard's daughter, Princess Moira Bronzebeard, and she is now pregnant with his child, who is half Bronzebeard dwarf and half Dark Iron dwarf, and the heir to both thrones of Shadowforge and Ironforge.",
+
+    name = "达格兰·索瑞森大帝",
+    --desc = "",
     --icon = true,
     creature = 9019,
     display = 8807,

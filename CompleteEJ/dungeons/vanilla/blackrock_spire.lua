@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local BLACKROCK_SPIRE = CreateInstance({
-  name = "Blackrock Spire",
-  desc = "Blackrock Spire (BRS) is a dungeon at the upper part of Blackrock Mountain, inhabited by members of the Dark Horde such as orcs, forest trolls, and ogres, as well as their new allies, the Black Dragonflight, led by the son of Deathwing--Nefarian. It consists of two five-player dungeons: Lower Blackrock Spire (LBRS) and Upper Blackrock Spire (UBRS).",
+  name = "黑石塔",
+  desc = "黑石山中那固若金汤的要塞便是矮人建筑师弗兰克罗恩·铸铁精心设计的杰作。作为黑铁的象征，数百年来邪恶的矮人一直占据着这座要塞。但是，死亡之翼之子——奈法利安却另有盘算。他率领龙族的仆从，夺得了黑石塔上层的控制权，并向黑石塔下层的矮人发动了攻击。奈法利安深知火焰之王拉格纳罗斯才是矮人的背后主谋，他发誓要击败劲敌，成为黑石山真正的主人。\n\n黑石塔分为上层和下层，下层有兽人巨魔两大种族里的几个没有归顺部落的氏族，上层则由黑龙死亡之翼的儿子奈法利安控制，以及已经归顺黑龙的兽人。",
   --texture = "BlackrockSpire",
   area = 721,
   dflag = N5,
 }, {
   {
-    name = "Highlord Omokk",
+    name = "欧莫克大王",
     --desc = "",
     --icon = true,
     creature = 9196,
@@ -42,7 +42,7 @@ local BLACKROCK_SPIRE = CreateInstance({
     },
   },
   {
-    name = "Shadow Hunter Vosh'gajin",
+    name = "暗影猎手沃什加斯",
     --desc = "",
     --icon = true,
     creature = 9236,
@@ -55,7 +55,7 @@ local BLACKROCK_SPIRE = CreateInstance({
     },
   },
   {
-    name = "War Master Voone",
+    name = "指挥官沃恩",
     --desc = "",
     --icon = true,
     creature = 9237,
@@ -73,7 +73,7 @@ local BLACKROCK_SPIRE = CreateInstance({
     },
   },
   {
-    name = "Mother Smolderweb",
+    name = "烟网蛛后",
     --desc = "",
     --icon = true,
     creature = 10596,
@@ -87,7 +87,7 @@ local BLACKROCK_SPIRE = CreateInstance({
     },
   },
   {
-    name = "Urok Doomhowl",
+    name = "乌洛克",
     --desc = "",
     --icon = true,
     creature = 10584,
@@ -101,7 +101,7 @@ local BLACKROCK_SPIRE = CreateInstance({
     },
   },
   {
-    name = "Quartermaster Zigris",
+    name = "军需官兹格雷斯",
     --desc = "",
     --icon = true,
     creature = 9736,
@@ -116,7 +116,7 @@ local BLACKROCK_SPIRE = CreateInstance({
     },
   },
   {
-    name = "Gizrul the Slavener",
+    name = "奴役者基兹鲁尔",
     --desc = "",
     --icon = true,
     creature = 10268,
@@ -130,7 +130,7 @@ local BLACKROCK_SPIRE = CreateInstance({
     },
   },
   {
-    name = "Halycon",
+    name = "哈雷肯",
     --desc = "",
     --icon = true,
     creature = 10220,
@@ -143,7 +143,7 @@ local BLACKROCK_SPIRE = CreateInstance({
     },
   },
   {
-    name = "Overlord Wyrmthalak",
+    name = "维姆萨拉克",
     --desc = "",
     --icon = true,
     creature = 9568,
@@ -157,7 +157,7 @@ local BLACKROCK_SPIRE = CreateInstance({
     },
   },
   {
-    name = "Pyroguard Emberseer",
+    name = "烈焰卫士艾博希尔",
     --desc = "",
     --icon = true,
     creature = 9816,
@@ -170,7 +170,7 @@ local BLACKROCK_SPIRE = CreateInstance({
     },
   },
   {
-    name = "Warchief Rend Blackhand",
+    name = "大酋长雷德·黑手",
     --desc = "",
     --icon = true,
     creature = 10429,
@@ -186,7 +186,7 @@ local BLACKROCK_SPIRE = CreateInstance({
     },
   },
   {
-    name = "Gyth",
+    name = "盖斯",
     --desc = "",
     --icon = true,
     creature = 10339,
@@ -202,7 +202,7 @@ local BLACKROCK_SPIRE = CreateInstance({
     },
   },
   {
-    name = "The Beast",
+    name = "比斯巨兽",
     --desc = "",
     --icon = true,
     creature = 10430,
@@ -220,7 +220,7 @@ local BLACKROCK_SPIRE = CreateInstance({
     },
   },
   {
-    name = "General Drakkisath",
+    name = "",
     --desc = "",
     --icon = true,
     creature = 10363,
