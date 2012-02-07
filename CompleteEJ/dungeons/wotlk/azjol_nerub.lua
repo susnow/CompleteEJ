@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,47 +22,47 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local AZJOL_NERUB = CreateInstance({
-  name = "Azjol-Nerub",
-  desc = "Azjol-Nerub is a vast underground dungeon hub home to the ruins of the arachnid-like nerubian empire. Located in icy Dragonblight, Azjol-Nerub can be divided into two sections: the Old Kingdom and the Upper Kingdom. Many of the deepest areas in Azjol-Nerub are held by Faceless Ones.",
+  name = "艾卓-尼鲁布",
+  desc = "艾卓-尼鲁布，现在位于龙骨荒野之下，是曾经的艾卓-尼鲁布帝国的一部分，当蛛魔在与巫妖王的战争中败退后，在战争中死去的蛛魔被复活，被迫为巫妖王而战。",
   --texture = "AzjolNerub",
   area = 533,
 }, {
   {
-    name = "Krik'thir the Gatewatcher",
-    desc = "Krik'thir the Gatewatcher is the first boss of Azjol-Nerub. He is a nerubian vizier under the command of Anub'Arak — a powerful servant of the Lich King. He is linked to the achievement Watch Him Die.",
+    name = "看门者克里克希尔",
+    desc = "看门者克里克希尔是艾卓-尼鲁布的第一个BOSS。他是巫妖王强大的仆从阿努巴拉克的手下一元。与“看着他死”成就相关",
     --icon = true,
     creature = 28684,
     display = 27394,
     --coords = {x, y, level},
     loot = {{35657,N5},{35655,N5},{37219,H5},{35656,N5},{37217,H5},{37218,H5},{37216,H5},},
     sections = {
-		Spell(59368, {so = true, fbd = H5, flag1 = CURSE}), -- Curse of Fatigue
-		Spell(52592, {so = true, fbd = N5, flag1 = CURSE}), -- Curse of Fatigue
+		Spell(59368, {so = true, fbd = H5, flag1 = CURSE}), -- 疲倦诅咒
+		Spell(52592, {so = true, fbd = N5, flag1 = CURSE}), -- 疲倦诅咒
 
-		Spell(52586, {desc = "Inflicts 1885 to 2115 Shadow damage to a target every second for 3 seconds.", fbd = N5}), -- Mind Flay
-		Spell(59367, {desc = "Increases attack speed by 50% and Physical damage by 100%.", fbd = H5}), -- Mind Flay
+		Spell(52586, {desc = "对一个敌人每秒造成1885至2115点暗影伤害，持续3秒。", fbd = N5}), -- 精神鞭笞
+		Spell(59367, {desc = "提高50%攻击速度和100%的物理伤害。", fbd = H5}), -- 精神鞭笞
 
 		Spell(28747), -- Frenzy
 
 		Stage({
 			so = true,
-			name = "Watchers",
+			name = "看守者",
 			sections = {
 				Stage({
 					stype = CREATURE,
-					name = "Watcher Gashra",
+					name = "看守者加什拉",
 					creature = 28730,
 					display = 23568,
 					sections = {
-						Spell(52470),	-- enrage
-						Spell(52469, {fbd = N5}), -- infected bite normal
-						Spell(59364, {fbd = H5}), -- infected bite heroic
-						Spell(52086, {flag1 = DPS}), -- web wrap
+						Spell(52470),	-- 激怒
+						Spell(52469, {fbd = N5}), -- 普通模式感染撕咬
+						Spell(59364, {fbd = H5}), -- 英雄模式感染撕咬
+						Spell(52086, {flag1 = DPS}), -- 52086
 					}
 				}),
 				Stage({
 					stype = CREATURE,
-					name = "Watcher Narjil",
+					name = "看守者纳尔伊",
 					creature = 28729,
 					display = 23984,
 					sections = {
@@ -74,12 +74,12 @@ local AZJOL_NERUB = CreateInstance({
 				}),
 				Stage({
 					stype = CREATURE,
-					name = "Watcher Silthik",
+					name = "看守者希尔希克",
 					creature = 28731,
 					display = 25729,
 					sections = {
-						Spell(52493, {desc = "Inflicts 875 to 1125 Nature damage and an additional 619 to 881 every 3 seconds for 10 seconds", fbd = N5}),
-						Spell(59366, {desc = "Inflicts 3063 to 3937 Nature damage and an additional 1238 to 1762 every 3 secibds for 10 seconds", fbd = H5}),
+						Spell(52493, {desc = "对敌人射出毒箭，造成875至1125点自然伤害，并在接下来的10秒内每3秒造成一次619至881点的额外伤害。", fbd = N5}),
+						Spell(59366, {desc = "对敌人射出毒箭，造成3063至3937点自然伤害，并在接下来的10秒内每3秒造成一次1238至1762点的额外伤害。", fbd = H5}),
 						Spell(52469, {fbd = N5}), -- infected bite normal
 						Spell(59364, {fbd = H5}), -- infected bite heroic
 						Spell(52086, {flag1 = DPS}), -- web wrap
@@ -90,8 +90,8 @@ local AZJOL_NERUB = CreateInstance({
     },
   },
   {
-    name = "Hadronox",
-    desc = "Hadronox is the second boss in Azjol-Nerub. He is a giant spider, native to Northrend, and opposes the Scourge--players initially encounter him fighting off mobs. He is linked to the achievement Hadronox Denied.",
+    name = "哈多诺克斯",
+    desc = "哈多诺克斯是艾卓-尼鲁布中的第二个BOSS。它是一个原本生活在诺森德大陆的巨大蜘蛛，它是天灾军团的最初反抗者，最终沦为巫妖王的手下。与“哈多诺克斯的闭门羹”成就相关。",
     --icon = true,
     creature = 28921,
     display = 26776,
@@ -108,8 +108,8 @@ local AZJOL_NERUB = CreateInstance({
     },
   },
   {
-    name = "Anub'arak",
-    desc = "Anub'arak is the final boss in Azjol-Nerub. The former king of the Nerbuians, Anub'arak is now a Crypt Lord, a mindless servant of the Lich King. He is tied to the achievement Gotta Go!.",
+    name = "阿努巴拉克",
+    desc = "阿努巴拉克是艾卓-尼鲁布的最后BOSS。它是曾经的尼鲁布人首领，现在是一名地穴领主，一个愚蠢的巫妖王仆从。与“速战速决”成就相关",
     --icon = true,
     creature = 29120,
     display = 27856,
@@ -156,7 +156,7 @@ local AZJOL_NERUB = CreateInstance({
 							creature = 29216,
 							display = 23561,
 							sections = {
-								Spell(52532, {desc = "Strikes at an enemy, inflicting 200% weapon damage"}),
+								Spell(52532, {desc = "攻击一名敌人，对其造成200%武器伤害。"}),
 								Spell(53618, {fbd = N5}),
 								Spell(59350, {fbd = H5}),
 							}

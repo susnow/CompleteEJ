@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_FORGE_OF_SOULS = CreateInstance({
-  name = "The Forge of Souls",
-  desc = "The Forge of Souls is the first wing of the dungeon complex known as the Frozen Halls, located within Icecrown Citadel. The instance portal is located to the left inside the secured area of Icecrown Citadel, near the meeting stone. No attunement is required for entry, but completing the instance is required to gain entrance to the Pit of Saron.",
+  name = "灵魂洪炉",
+  desc = "灵魂洪炉 is the first wing of the dungeon complex known as the Frozen Halls, located within Icecrown Citadel. The instance portal is located to the left inside the secured area of Icecrown Citadel, near the meeting stone. No attunement is required for entry, but completing the instance is required to gain entrance to the Pit of Saron.",
   --texture = "TheForgeofSouls",
   area = 601,
 }, {
   {
-    name = "Bronjahm",
-    desc = "Bronhahm, the Godfather of Souls, is the first boss in The Forge of Souls. It is related to the achievement Soul Power.",
+    name = "布隆亚姆",
+    desc = "布隆亚姆, the Godfather of Souls,是灵魂洪炉中的第一个BOSS。与成就<灵魂之能>相关。",
     --icon = true,
     creature = 36497,
     display = 30226,
@@ -48,8 +48,8 @@ local THE_FORGE_OF_SOULS = CreateInstance({
     },
   },
   {
-    name = "Devourer of Souls",
-    desc = "The Devourer of Souls is the second and last boss in The Forge of Souls. It also guards the Crucible of Souls, needed to temper Quel'Delar. It is related to the achievement Three Faced.",
+    name = "灵魂吞噬者",
+    desc = "灵魂吞噬者是灵魂洪炉中的第二个BOSS。 It also guards the Crucible of Souls, needed to temper Quel'Delar. 与成就<三面之灵>相关。",
     --icon = true,
     creature = 36502,
     display = 30148,

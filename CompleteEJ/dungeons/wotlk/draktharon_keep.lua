@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local DRAKTHARON_KEEP = CreateInstance({
-  name = "Drak'Tharon Keep",
-  desc = "Drak'Tharon Keep is located in the northwestern part of the Grizzly Hills and is an ancient ice troll stronghold. The Scourge drove the trolls out and took possession. The strange dungeon is filled with dinosaurs and lizards as well as teeming with undead. Players are sent in to learn the secrets behind Drakuru.",
+  name = "达克萨隆要塞",
+  desc = "达克萨隆要塞 Keep is located in the northwestern part of the Grizzly Hills and is an ancient ice troll stronghold. The Scourge drove the trolls out and took possession. The strange dungeon is filled with dinosaurs and lizards as well as teeming with undead. Players are sent in to learn the secrets behind Drakuru.",
   --texture = "DrakTharonKeep",
   area = 534,
 }, {
   {
-    name = "Trollgore",
-    desc = "Trollgore, a dire troll, is the first boss of Drak'Tharon Keep. He is linked to Consumption Junction.",
+    name = "托尔戈",
+    desc = "托尔戈, a dire troll, is the first boss of Drak'Tharon Keep. He is linked to Consumption Junction.",
     --icon = true,
     creature = 26630,
     display = 26352,
@@ -45,8 +45,8 @@ local DRAKTHARON_KEEP = CreateInstance({
     },
   },
   {
-    name = "Novos the Summoner",
-    desc = "Novos the Summoner, a lich, is the second boss of Drak'Tharon Keep. It is tied to Oh Novos!.",
+    name = "召唤者诺沃斯",
+    desc = "召唤者诺沃斯, a lich, is the second boss of Drak'Tharon Keep. It is tied to Oh Novos!.",
     --icon = true,
     creature = 26631,
     display = 26292,
@@ -66,8 +66,8 @@ local DRAKTHARON_KEEP = CreateInstance({
     },
   },
   {
-    name = "King Dred",
-    desc = "King Dred, a large raptor, is an optional boss of Drak'Tharon Keep. It is tied to Better Off Dred and he can also be tamed.",
+    name = "暴龙之王爵德",
+    desc = "暴龙之王爵德, a large raptor, is an optional boss of Drak'Tharon Keep. It is tied to Better Off Dred and he can also be tamed.",
     --icon = true,
     creature = 27483,
     display = 5240,
@@ -84,8 +84,8 @@ local DRAKTHARON_KEEP = CreateInstance({
     },
   },
   {
-    name = "The Prophet Tharon'ja",
-    desc = "Prophet Tharon'ja, a skeletal wind serpent, is the last boss of Drak'Tharon Keep.",
+    name = "先知萨隆亚",
+    desc = "先知萨隆亚, a skeletal wind serpent, is the last boss of Drak'Tharon Keep.",
     --icon = true,
     creature = 26632,
     display = 27072,
@@ -109,7 +109,7 @@ local DRAKTHARON_KEEP = CreateInstance({
     },
   },
   {
-    name = "Drakuru",
+    name = "达库鲁",
     --desc = "",
     --icon = true,
     creature = 28016,
