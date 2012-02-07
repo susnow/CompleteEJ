@@ -30,7 +30,7 @@ local SERPENTSHRINE_CAVERN = CreateInstance({
 }, {
   {
     name = "不稳定的海度斯",
-    desc = "不稳定的海度斯是你要面对的第一个BOSS。有两个能源通道连向它。它处于平台之上，它处于\"稳定状态\"，它一旦越过那个平台，那它就会编程\"不稳定状态\"。它更像是一个瓦斯琪的囚犯，用来守护门口防止入侵者侵入其中。娜迦把海度斯抓来并与它交易，海度斯负责镇守这个区域，而娜迦负责净化它的身体，不过，显然他没的选择。",
+    desc = "不稳定的海度斯是你要面对的第一个BOSS。有两个能源通道连向它。它处于平台之上，它处于\"稳定状态\"，它一旦越过那个平台，那它就会变成\"不稳定状态\"。它更像是一个瓦斯琪的囚犯，用来守护门口防止入侵者侵入其中。娜迦把海度斯抓来并与它交易，海度斯负责镇守这个区域，而娜迦负责净化它的身体，不过，显然他没的选择。",
     --icon = true,
     creature = 21216,
     display = 20162,
@@ -64,7 +64,7 @@ local SERPENTSHRINE_CAVERN = CreateInstance({
           Spell(40583, {desc = "每15秒为全团每人叠加一次自然法术易伤 10/25/50/100/250/500% 。"}), -- Mark of Corruption (500%)
         },
       }),
-      Spell(36459, {so = true, icon = "Interface\\Icons\\Spell_Frost_SummonWaterElemental_2", name = "Summon Elementals", desc = "After each form change, four elementals are summoned to serve. If he enters Water Form then Water Elementals will spawn, otherwise Poison Elementals.\n\nJust like Hydross, these spawns will attack and be immune to the same school of magic as themselves.", flag1 = IMPORTANT}, 1), -- Summon Water Elemental
+      Spell(36459, {so = true, icon = "Interface\\Icons\\Spell_Frost_SummonWaterElemental_2", name = "召唤元素", desc = "每当海度斯转换形态的时候,它会召唤4个元素怪物,元素的类型取决于海度斯当前的形态.元素怪对其当前的形态对应的法术免疫.", flag1 = IMPORTANT}, 1), -- Summon Water Elemental
     },
     adds = {
       {
@@ -76,7 +76,7 @@ local SERPENTSHRINE_CAVERN = CreateInstance({
   },
   {
     name = "鱼斯拉",
-    desc = "鱼斯拉是毒蛇神殿的二号BOSS。为了引出这个BOSS，你必须在BOSS所在的池中钓鱼。",
+    desc = "鱼斯拉是毒蛇神殿的二号BOSS。为了引出这个BOSS，你必须在奇怪的水池中钓鱼。",
     --icon = true,
     creature = 21217,
     display = 20216,
@@ -139,7 +139,7 @@ local SERPENTSHRINE_CAVERN = CreateInstance({
   },
   {
     name = "瓦斯琪女士",
-    desc = "瓦斯琪女士是毒蛇神殿的最终BOSS。她曾经需要玩家击败所有的BOSS才有击杀她的资格，但现在这个限制已经去掉了，你可以直接来击杀她。",
+    desc = "瓦斯琪女士是毒蛇神殿的最终BOSS。她曾经需要玩家击败毒蛇神殿中其他所有的BOSS才能解锁这最终的战斗，但现在这个限制已经去掉了，你可以直接面对她。",
     --icon = true,
     creature = 21212,
     display = 20748,
