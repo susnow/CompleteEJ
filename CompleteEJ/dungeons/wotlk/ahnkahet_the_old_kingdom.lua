@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local AHNKAHET_THE_OLD_KINGDOM = CreateInstance({
-  name = "Ahn'kahet: The Old Kingdom",
-  desc = "Azjol-Nerub is a vast underground dungeon hub home to the arachnid-like nerubian who were defeated by the Lich King in the War of the Spider. Located in icy Dragonblight, Azjol-Nerub can be divided into two sections: the Old Kingdom and the Upper Kingdom. In addition, many of the deepest areas in Azjol-Nerub are invaded by Faceless Ones. Ahn'kahet: The Old Kingdom is the second dungeon located within Azjol-Nerub and was controlled by nerubians until recently. An earthquake pushed Ahn'kahet closer to the surface, exposing the nerubian kingdom to attacks from the Scourge. Now, remnants of the old Nerubian empire, minions of the Lich King, and servants of the Old Gods fight for control in the underground galleries of the Old Kingdom.",
+  name = "安卡赫特：古代王国",
+  desc = "艾卓-尼鲁布帝国，一个由在冰冷的大陆地下延伸的通道和洞穴构成的庞大网络。这个王国的高智商的创造者是蛛魔，在大灾变撕裂大陆之前就在古卡利姆多大陆的北部建立了他们的地下巢穴。当巫妖王来到诺森德时，为了让诺森德的居民臣服于他的一直，他派出了天灾军团与蛛魔之间发生了一场残酷的战争。最终亡灵大军占了上风，在保卫艾卓-尼鲁布的战斗中死去的蛛魔被复活为亡灵，被迫为巫妖王而战。而安卡赫特：古代王国正是艾卓-尼鲁布帝国曾经的一部分。",
   --texture = "AhnkahetTheOldKingdom",
   area = 522,
 }, {
   {
-    name = "Elder Nadox",
-    desc = "Elder Nadox is the first boss of Ahn'kahet: The Old Kingdom. He is tied to the achievement Respect Your Elders.",
+    name = "纳多克斯长老",
+    desc = "纳多克斯长老是安卡赫特：古代王国中的第一个BOSS。与尊敬长者成就相关。",
     --icon = true,
     creature = 29309,
     display = 27407,
@@ -37,33 +37,33 @@ local AHNKAHET_THE_OLD_KINGDOM = CreateInstance({
     loot = {{35607,N5},{35608,N5},{37591,H5},{35606,N5},{37594,H5},{37593,H5},{37592,H5},},
     sections = {
 		-- normal
-		Spell(56130, {so = true, desc = "Applies a disease inflicting 1275 Nature damage every 3 seconds for 30 seconds", fbd = N5, flag1 = DISEASE}),
+		Spell(56130, {so = true, desc = "使敌人生病，在30秒内造成1275点自然伤害。", fbd = N5, flag1 = DISEASE}),
 		
 		-- heroic
-		Spell(59467, {so = true, desc = "Applies a disease inflicting 1275 Nature damage every 3 seconds for 30 seconds", fbd = H5, flag1 = DISEASE}),
-		Spell(59465, {so = true, desc = "Enrages a swarmer, increasing its damage by 200%, size by 100% and health by 10 000", fbd = H5, flag1 = IMPORTANT}),
+		Spell(59467, {so = true, desc = "使敌人生病，在30秒内造成2550点自然伤害。", fbd = H5, flag1 = DISEASE}),
+		Spell(59465, {so = true, desc = "激怒一个虫人, 使其造成的伤害提高200%, 体积增大一倍并且生命值上限提高10000点。", fbd = H5, flag1 = IMPORTANT}),
 		
 		Stage({
 			so = true,
 			stype = CREATURE,
-			name = "Ahn'kahar Guardian",
-			desc = "At 50% health, Nadox will summon an Ahn'kahar Guardian which renders all nearby swarmers and Nadox himself immune to damage",
+			name = "安卡哈守护者",
+			desc = "在50%血量时，纳多克斯长老会召唤一名安卡哈守护者，使附近所有的虫群以及纳多克斯长老免疫所有伤害。",
 			creature = 30176,
 			display = 28079,
 			flag1 = DPS, 
 			flag2 = IMPORTANT,
 			sections = {
-				Spell(56153, {desc = "Aura that renders nearby swarmers and Nadox immune to damage"}),
+				Spell(56153, {desc = "保护施法者身旁很大范围内的虫群，使其免疫一切伤害。"}),
 			}
 		}),
 		
 		-- common
-		Spell(26662, {desc = "Increases the caster's attack and movement speeds by 150% and all damage it deals by 500%. Grants immunity to Taunt effects. Used when Nadox is pulled too far away"}),
+		Spell(26662, {desc = "使施法者的攻击和移动速度提高150%，对敌人造成的所有伤害提高500%。并且免疫嘲讽。当纳多克斯长老被拉的太远时使用。"}),
     },
   },
   {
-    name = "Prince Taldaram",
-    desc = "Prince Taldaram, a vampiric darkfallen, is the second boss of Ahn'kahet: The Old Kingdom.",
+    name = "塔达拉姆王子",
+    desc = "塔达拉姆王子，一个吸血鬼王子，是安卡赫特：古代王国的第二个BOSS。",
     --icon = true,
     creature = 29308,
     display = 27406,
@@ -76,8 +76,8 @@ local AHNKAHET_THE_OLD_KINGDOM = CreateInstance({
 		Stage({
 			so = true,
 			stype = ABILITY,
-			name = "Conjure Flame Sphere",
-			desc = "Summons a Flame Orb which deals Fire damage to all players. Cannot be targeted. Will move outside the platform and despawn",
+			name = "制造烈焰之球",
+			desc = "塑能纯焰，制造出一颗漂浮在空中的烈焰之珠并向目标移动，沿途对18码内敌人发射灼烧光线。",
 			icon = "Interface\\Icons\\spell_fire_sealoffire",
 			sections = {
 				Spell(57748, {fbd = N5}),
@@ -95,8 +95,8 @@ local AHNKAHET_THE_OLD_KINGDOM = CreateInstance({
     },
   },
   {
-    name = "Jedoga Shadowseeker",
-    desc = "Jedoga Shadowseeker, a Twilight Hammer's cultist, is the third boss of Ahn'kahet: The Old Kingdom. It is related to Volunteer Work.",
+    name = "耶戈达·觅影者",
+    desc = "耶戈达·觅影者，一个暮光教徒，是安卡赫特：古代王国的第三个BOSS。与志愿工作成就相关。",
     --icon = true,
     creature = 29310,
     display = 26777,
@@ -112,63 +112,63 @@ local AHNKAHET_THE_OLD_KINGDOM = CreateInstance({
     },
   },
   {
-    name = "Herald Volazj",
-    desc = "Herald Volazj, a faceless one, is the last boss of Ahn'kahet: The Old Kingdom. He is linked to the achievement Volazj's Quick Demise.",
+    name = "传令官沃拉兹",
+    desc = "传令官沃拉兹，一个无面者，是安卡赫特：古代王国中的最后一个BOSS。与沃拉兹的快速死亡成就相关。",
     --icon = true,
     creature = 29311,
     display = 27408,
     coords = {0.236, 0.506, 1},
     loot = {{35614,N5},{35612,N5},{37619,H5},{35613,N5},{37615,H5},{37618,H5},{43102,H5},{37620,H5},{37616,H5},{37622,H5},{37617,H5},{37623,H5},{41790,H5},},
     sections = {
-		Spell(59974, {desc = "Inflicts 2828 to 3172 Shadow damage every second for 3 seconds and reduces movement speed by 50%.", fbd = H5}), -- Mind Flay
-		Spell(57941, {desc = "Inflicts 5655 to 6345 Shadow damage every second for 3 seconds and reduces movement speed by 50%.", fbd = N5}), -- Mind Flay
-		Spell(57942, {desc = "Inflicts 850 to 1,150 Shadow damage to all players in the room.", fbd = N5}), -- Shadow Bolt Volley
-		Spell(59975, {desc = "Inflicts 2550 to 3450 Shadow damage to all players in the room.", fbd = H5}), -- Shadow Bolt Volley
-		Spell(57949, {so = true, fbd = N5, flag1 = CURSE}), -- Shiver
-		Spell(59978, {so = true, fbd = H5, flag1 = CURSE}), -- Shiver
+		Spell(59974, {desc = "每秒造成2828 to 3172暗影伤害，持续3秒，并使其移动速度降低50%。", fbd = H5}), -- 精神鞭笞
+		Spell(57941, {desc = "每秒造成5655 to 6345暗影伤害，持续3秒，并使其移动速度降低50%。", fbd = N5}), -- 精神鞭笞
+		Spell(57942, {desc = "向附近的敌人发射暗影箭雨，对它们造成850到1,150点暗影伤害。", fbd = N5}), -- 暗影箭雨
+		Spell(59975, {desc = "向附近的敌人发射暗影箭雨，对它们造成2550 to 3450点暗影伤害。", fbd = H5}), -- 暗影箭雨
+		Spell(57949, {so = true, fbd = N5, flag1 = CURSE}), -- 碎裂
+		Spell(59978, {so = true, fbd = H5, flag1 = CURSE}), -- 碎裂
 		Stage({
 			so = true,
 			stype = ABILITY,
-			name = "Insanity",
+			name = "疯狂",
 			icon = "Interface\\Icons\\spell_shadow_painandsuffering",
-			desc = "Drive all players in the room insane and will be forced to fight Twilight Visages of their party members. Used at 66% and 33% of Voljazj's health",
+			desc = "使在场所有玩家疯狂，并被迫攻击与队友类似外貌的暮光化身。在传令官沃拉兹血量为66%与33%时使用。",
 		}),
     },
   },
   {
-    name = "Amanitar",
-    desc = "Amanitar is an optional boss in Ahn'kahet: The Old Kingdom, only found in Heroic mode.",
+    name = "埃曼尼塔",
+    desc = "埃曼尼塔是安卡赫特：古代王国中的一个可选BOSS，只在英雄模式下出现。",
     --icon = true,
     creature = 30258,
     display = 28133,
     --coords = {x, y, level},
     loot = {{43284,H5},{43287,H5},{43285,H5},{43286,H5},},
     sections = {
-		Spell(57094, {fbd = H5}), -- Bash
-		Spell(57088, {fbd = H5}), -- Venom Bolt Volley
-		Spell(57095, {fbd = H5, flag1 = MAGIC}), -- Entangling Roots
+		Spell(57094, {fbd = H5}), -- 猛击
+		Spell(57088, {fbd = H5}), -- 毒箭之雨
+		Spell(57095, {fbd = H5, flag1 = MAGIC}), -- 纠缠根须
 		Stage({
 			so = true,
 			stype = ABILITY,
 			fbd = H5,
-			name = "Mini",
-			desc = "Reduces damage done by 75% and Defense by 500. Lasts until receiving the Potent Fungus buff trough destroying a Healthy mushroom",
+			name = "迷你",
+			desc = "使所有人防御技能降低500点，伤害降低75%。需要在健康的蘑菇附近击杀这个蘑菇，以解除此减益效果",
 			icon = "Interface\\Icons\\spell_shadow_antishadow",
 		}),
 		Stage({
 			so = true,
 			stype = ABILITY,
 			fbd = H5,
-			name = "Summon Mushroom",
-			desc = "Amanitar randomly summons mushrooms",
+			name = "召唤蘑菇",
+			desc = "埃曼尼塔随机召唤蘑菇。",
 			sections = {
 				Stage({
 					stype = CREATURE,
 					fbd = H5,
 					creature = 30435,
 					display = 23870,
-					name = "Poisonous Mushroom",
-					desc = "Drops a poison cloud at their death.",
+					name = "毒云",
+					desc = "死亡时释放毒云，每2秒对附近敌人造成3238~3762点自然伤害，持续8秒。",
 					sections = {
 						Spell(57061),
 					}
@@ -179,8 +179,8 @@ local AHNKAHET_THE_OLD_KINGDOM = CreateInstance({
 					fbd = H5,
 					creature = 30435,
 					display = 23870,
-					name = "Healthy Mushroom",
-					desc = "Buff players with Potent Fungus. Removes mini",
+					name = "高能蘑菇",
+					desc = "使目标造成的伤害提高100%。移除迷你效果。",
 					sections = {
 						Spell(56648),
 					}

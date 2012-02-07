@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local GUNDRAK = CreateInstance({
-  name = "Gundrak",
-  desc = "Gundrak is the capital of the Ice Trolls. Located in Zul'Drak, the instance contains two entrances which all lead into a main circle. The Drakkari tribe rule Zul'Drak from here, constantly battling the mighty forces of the Scourge.",
+  name = "古达克",
+  desc = "古达克 is the capital of the Ice Trolls. Located in Zul'Drak, the instance contains two entrances which all lead into a main circle. The Drakkari tribe rule Zul'Drak from here, constantly battling the mighty forces of the Scourge.",
   --texture = "Gundrak",
   area = 530,
 }, {
   {
-    name = "Slad'ran",
-    desc = "Slad'ran, the former high prophet of Sseratus, is the first boss of Gundrak. It is tied to the achievement Snakes. Why'd It Have To Be Snakes?.",
+    name = "斯拉德兰",
+    desc = "斯拉德兰, 西莱图斯的高阶先知, 是古达克的第一个BOSS. 与成就<蛇。为什么是蛇？>相关",
     --icon = true,
     creature = 29304,
     display = 27422,
@@ -45,8 +45,8 @@ local GUNDRAK = CreateInstance({
     },
   },
   {
-    name = "Moorabi",
-    desc = "Moorabi is the third boss in Gundrak, home to the Northrend trolls. He transforms into a mammoth at points and is tied to the achievement Less-rabi.",
+    name = "莫拉比",
+    desc = "莫拉比是古达克的第三个BOSS, 他是犸托斯的高阶先知。home to the Northrend trolls. 与成就<干掉莫拉比>相关",
     --icon = true,
     creature = 29305,
     display = 27059,
@@ -65,8 +65,8 @@ local GUNDRAK = CreateInstance({
     },
   },
   {
-    name = "Gal'darah",
-    desc = "Gal'darah, an ice troll that transforms into a spirit rhino, is the final boss of Gundrak. He is tied to the achievement Share The Love.",
+    name = "迦尔达拉",
+    desc = "迦尔达拉, an ice troll that transforms into a spirit rhino, 是古达克的最后BOSS。与成就<有爱共享>相关。",
     --icon = true,
     creature = 29306,
     display = 27061,
@@ -89,8 +89,8 @@ local GUNDRAK = CreateInstance({
     },
   },
   {
-    name = "Eck the Ferocious",
-    desc = "Eck the Ferocious, a gorloc, is an optional boss in Gundrak, only accessible in Heroic mode. It is tied to the achievement What the Eck?.",
+    name = "凶残的伊克",
+    desc = "凶残的伊克, a gorloc,是古达克中的一个可选BOSS,只在英雄难度下出现。与成就<什么味道？>相关。",
     --icon = true,
     creature = 29932,
     display = 26644,

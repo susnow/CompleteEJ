@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local HALLS_OF_STONE = CreateInstance({
-  name = "Halls of Stone",
+  name = "岩石大厅",
   desc = "Ulduar is a dungeon hub located at The Storm Peaks of Northrend, revealing many details about the Titans and their activities. In particular, Halls of Stone is controlled by storm giants and crystal golems. These giants are a dying race desperately avoiding their fate, avoiding conflict with the Scourge. Halls of Stone is a large 5 five-man dungeon, and is the first instance of the titan city Ulduar wing.",
   --texture = "HallsofStone",
   area = 526,
 }, {
   {
-    name = "Maiden of Grief",
-    desc = "The Maiden of Grief is one of the bosses of the Halls of Stone. She is related to the achievement Good Grief.",
+    name = "悲伤圣女",
+    desc = "悲伤圣女是岩石大厅中的BOSS之一。与成就<无尽悲伤>相关。",
     --icon = true,
     creature = 27975,
     display = 26657,
@@ -46,8 +46,8 @@ local HALLS_OF_STONE = CreateInstance({
     },
   },
   {
-    name = "Krystallus",
-    desc = "Krystallus is one of the bosses in Halls of Stone, a sub-zone of Ulduar. He is usually the first boss that players fight in the dungeon, yet players can also skip him.",
+    name = "克莱斯塔卢斯",
+    desc = "克莱斯塔卢斯是岩石大厅中的BOSS之一，a sub-zone of Ulduar. 他通常是玩家在这个地下城中第一个进行战斗的BOSS，不过玩家也可以略过他。",
     --icon = true,
     creature = 27977,
     display = 20909,
@@ -64,8 +64,8 @@ local HALLS_OF_STONE = CreateInstance({
     },
   },
   {
-    name = "Tribunal of the Ages",
-    desc = "The Tribunal of the Ages is a scripted encounter with many waves of adds. It is related to the achievement Brann Spankin' New.",
+    name = "远古法庭宝箱",
+    desc = "T远古法庭宝箱 is a scripted encounter with many waves of adds.与成就<毫发无伤的布莱恩>相关。",
     --icon = true,
     creature = 28234,
     display = Array,
@@ -75,8 +75,8 @@ local HALLS_OF_STONE = CreateInstance({
     },
   },
   {
-    name = "Sjonnir The Ironshaper",
-    desc = "Sjonnir the Ironshaper is the last boss of Halls of Stone. It is related to the achievement Abuse the Ooze.",
+    name = "塑铁者斯约尼尔",
+    desc = "塑铁者斯约尼尔是岩石大厅的最后BOSS。与成就<清扫淤泥>相关。",
     --icon = true,
     creature = 27978,
     display = 27483,
