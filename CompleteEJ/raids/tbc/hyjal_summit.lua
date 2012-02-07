@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[2], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local HYJAL_SUMMIT = CreateInstance({
-  name = "Hyjal Summit",
-  desc = "Hyjal is the site of Nordrassil, the first World Tree. It's brought back through the Caverns of Time so that players can relive the major event of Warcraft history. The battle of Mount Hyjal takes place at the denouement of Warcraft III: Reign of Chaos, the seventh chapter of the Night Elf campaign, Twilight of the Gods. Archimonde advances the mountain just as he will in the raid instance, along with his lieutenants, Kaz'rogal the Doom Lord, Azgalor the Pit Lord, Rage Winterchill the Lich, and Anetheron the Dreadlord. Kaz'rogal is not present in the Warcraft III campaign mission.",
+  name = "海加尔峰",
+  desc = "海加尔峰是第一棵世界之树”诺达希尔“所在地。 通过时光之穴玩家可以重温魔兽世界中的主要历史事件。 海加尔峰的战斗发生在魔兽争霸3：混乱之治——暗夜精灵篇第七章——诸神的黄昏中。 污染者阿克蒙德将会带领他的四位手下，毁灭领主 卡兹洛加、深渊领主 阿兹加洛、巫妖 雷基·冬寒和恐惧魔王 安纳塞隆在副本中一同毁灭世界之树。（卡兹洛加没有在魔兽争霸3的战役中出现）",
   --texture = "HyjalSummit",
   area = 775,
 }, {
   {
-    name = "Rage Winterchill",
-    desc = "Rage Winterchill was a Lich employed by the Burning Legion during the Battle of Mount Hyjal. He is the first boss of Hyjal Summit.",
+    name = "雷基·冬寒",
+    desc = "巫妖 雷基·冬寒受燃烧军团命令前来参与海加尔峰的战斗，他是海加尔峰的第一个BOSS。",
     --icon = true,
     creature = 17767,
     display = 17444,
@@ -45,8 +45,8 @@ local HYJAL_SUMMIT = CreateInstance({
     },
   },
   {
-    name = "Anetheron",
-    desc = "Anetheron, a powerful dreadlord, is the second boss of Hyjal Summit.",
+    name = "安纳塞隆",
+    desc = "安纳塞隆是一名强力的恐惧魔王, 他是海加尔峰的第二个BOSS。",
     --icon = true,
     creature = 17808,
     display = 21069,
@@ -61,8 +61,8 @@ local HYJAL_SUMMIT = CreateInstance({
     },
   },
   {
-    name = "Kaz'rogal",
-    desc = "Kaz'rogal, a doomguard, is the third boss of Hyjal Summit.",
+    name = "卡兹洛加",
+    desc = "毁灭领主 卡兹洛加是海加尔峰的第三个BOSS。",
     --icon = true,
     creature = 17888,
     display = 17886,
@@ -76,8 +76,8 @@ local HYJAL_SUMMIT = CreateInstance({
     },
   },
   {
-    name = "Azgalor",
-    desc = "Azgalor was once the lieutenant to the mighty demon-king Mannoroth. He is the fourth boss in Hyjal Summit.",
+    name = "阿兹加洛",
+    desc = "阿兹加洛曾经是恶魔陆军的领导者玛诺洛斯的副官。 他是海加尔峰的第四个BOSS。",
     --icon = true,
     creature = 17842,
     display = 18526,
@@ -92,8 +92,8 @@ local HYJAL_SUMMIT = CreateInstance({
     },
   },
   {
-    name = "Archimonde",
-    desc = "Archimonde the Defiler was the left hand of the fallen titan, Sargeras. He is the fifth and final boss in Hyjal Summit.",
+    name = "阿克蒙德",
+    desc = "污染者 阿克蒙德是堕落泰坦萨格拉斯的左膀右臂。 他是海加尔峰的最终BOSS。推倒他，灾变与阿古斯在向你招手。",
     --icon = true,
     creature = 17968,
     display = 20939,
