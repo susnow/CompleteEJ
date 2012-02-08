@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_NEXUS = CreateInstance({
-  name = "The Nexus",
-  desc = "The Nexus, a dungeon hub, is an ice fortress found in the center of Coldarra, in Northrend's Borean Tundra. It is a column of magical energy surrounded by levitating earth-covered rings with ice caves underneath. The Nexus is an extensive series of caves and tunnels under Coldarra. The Nexus is an entry level 5 man dungeon with the final boss Keristrasza in the center of the dungeon.",
+  name = "魔枢",
+  desc = "玛里苟斯使用利用魔网能量线，使魔法能量导向他位于诺森德的地下要塞 —— 魔枢。一旦他获得成功，能量就将通过奈克瑟斯的上升循环集中，并且爆炸成为扭曲虚空.",
   texture = "TheNexus",
   area = 520,
 }, {
   {
-    name = "Commander Kolurg and Stoutbeard",
-    desc = "Commander Kolurg and Commander Stoutbeard are optional bosses in Heroic mode of the dungeon. The Alliance will encounter Kolurg and the Horde will encounter Stoutbeard.",
+    name = "指挥官库鲁尔格",
+    desc = "指挥官库鲁尔格和指挥官斯托比德是在英雄模式下才会遇到的Boss,如果玩家是联盟方,那么遇到的是鲁尔格,如果玩家是部落方,那么将遇到斯托比德.",
     --icon = true,
     creature = 26798,
     display = 24352,
@@ -43,26 +43,26 @@ local THE_NEXUS = CreateInstance({
       Stage({
         fbd = N5,
         so = true,
-        name = "Alliance and Horde Commander",
-        desc = "Replaces the regular encounter with a much weaker one and drops no superior loot.",
+        name = "联盟和部落的指挥官",
+        desc = "这个Boss的掉落列表与难度完全不成正比....",
         sections = {
           Spell(31403, {so = true}), -- Battle Shout
-          Spell(60067, {so = true, desc = "Charges the player furthest away, inflicting normal damage plus 75 Physical damage and stunning it for 2 seconds."}), -- Charge
+          Spell(60067, {so = true, desc = "冲锋一名敌人，造成普通伤害再加上75点伤害，并使对手昏迷2秒."}), -- Charge
           Spell(38619, {so = true}), -- Whirlwind (triggered 38618 but this had better tooltip)
         },
       }),
     },
     adds = {
       {
-        name = "Commander Stoutbeard",
+        name = "指挥官斯托比德",
         creature = 26796,
         display = 24366,
       },
     },
   },
   {
-    name = "Grand Magus Telestra",
-    desc = "Grand Magus Telestra is one of the mages of the Kirin Tor who has sided with Malygos to retain her arcane powers. Currently, she is guarding one part of Keristrasza's prison. She is also the leader of the effort to redirect the ley lines in the Dragonblight.",
+    name = "大魔导师泰蕾丝塔",
+    desc = "大魔导师泰蕾丝塔是蓝龙军团安插在肯瑞托的眼线",
     --icon = true,
     creature = 26731,
     display = 24066,
@@ -71,32 +71,32 @@ local THE_NEXUS = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Phase 1",
+        name = "第一阶段",
         sections = {
-          Spell(47765, {icon = "Interface\\Icons\\Spell_Nature_Earthbind", desc = "Continuously pulls all players within 60 yards to the caster, rapidly dealing 75 Shadow damage for 6 seconds."}), -- Gravity Well
-          Spell(47773, {fbd = N5, desc = "Inflicts 1700 to 2300 Fire damage to a target and nearby allies."}), -- Firebomb
-          Spell(47772, {fbd = N5, desc = "Inflicts 2357 to 2643 Frost damage to all enemiest within 60 yards and stuns them for 3 seconds."}), -- Ice Nova
-          Spell(56934, {fbd = H5, desc = "Inflicts 2720 to 3680 Fire damage to a target and nearby allies."}), -- Firebomb
-          Spell(56935, {fbd = H5, desc = "Inflicts 3299 to 3701 Frost damage to all enemiest within 60 yards and stuns them for 3 seconds."}), -- Ice Nova
+          Spell(47765, {icon = "Interface\\Icons\\Spell_Nature_Earthbind", desc = "持续将60码内所有玩家向施法者方向拉拽，并在6秒内迅速造成75点暗影伤害."}), -- Gravity Well
+          Spell(47773, {fbd = N5, desc = "对一名敌人及其附近的敌人造成1700~2300点火焰伤害."}), -- Firebomb
+          Spell(47772, {fbd = N5, desc = "对附近60码内的敌人造成2357~2643点冰霜伤害,并且将他们定在原地,持续3秒."}), -- Ice Nova
+          Spell(56934, {fbd = H5, desc = "对一名敌人及其附近的敌人造成2720~3680点火焰伤害"}), -- Firebomb
+          Spell(56935, {fbd = H5, desc = "对附近60码内的敌人造成3299~3701点冰霜伤害,并且将他们定在原地,持续3秒."}), -- Ice Nova
         },
       }),
       Stage({
         so = true,
-        name = "Phase 2",
-        desc = "She enters her second pahse at 50% health and again at 15% in Heroic mode.",
+        name = "第二阶段",
+        desc = "当泰蕾丝塔的生命值降至50%时(英雄模式是15%),进入第二阶段.",
         sections = {
           Stage({
             so = true,
             stype = ABILITY,
             icon = "Interface\\Icons\\Spell_Magic_LesserInvisibilty",
-            name = "Mirror Images",
-            desc = "At 50% health she will split into 3 mirror images, each of which uses a different type of spells. On Heroic mode she will split again at 15% health.",
+            name = "镜像",
+            desc = "泰蕾丝塔召唤出3名镜像,分别使用不同的法术攻击玩家.",
             sections = {
               Stage({
                 stype = CREATURE,
                 creature = 26741,
                 display = 24066,
-                name = "Arcane Image",
+                name = "奥术镜像",
                 sections = {
                   Spell(47731, {so = true}), -- Critter
                   Spell(47736, {so = true}), -- Time Stop
@@ -106,19 +106,19 @@ local THE_NEXUS = CreateInstance({
                 stype = CREATURE,
                 creature = 26741,
                 display = 24066,
-                name = "Fire Image",
+                name = "火焰镜像",
                 sections = {
-                  Spell(47721, {fbd = N5, so = true, desc = "Inflicts 2357 to 2643 Fire damage to the target."}), -- Fire Blast
-                  Spell(47723, {fbd = N5, so = true, desc = "Inflicts 1275 to 1725 Fire damage to the target."}), -- Scorch
-                  Spell(56939, {fbd = H5, so = true, desc = "Inflicts 3770 to 4230 Fire damage to the target."}), -- Fire Blast
-                  Spell(56938, {fbd = H5, so = true, desc = "Inflicts 2550 to 3450 Fire damage to the target."}), -- Scorch
+                  Spell(47721, {fbd = N5, so = true, desc = "对目标造成2357~2643点火焰伤害"}), -- Fire Blast
+                  Spell(47723, {fbd = N5, so = true, desc = "对目标造成1275~1725点火焰伤害"}), -- Scorch
+                  Spell(56939, {fbd = H5, so = true, desc = "对目标造成3770~4230点火焰伤害"}), -- Fire Blast
+                  Spell(56938, {fbd = H5, so = true, desc = "对目标造成2550~3450点火焰伤害"}), -- Scorch
                 },
               }),
               Stage({
                 stype = CREATURE,
                 creature = 26741,
                 display = 24066,
-                name = "Frost Image",
+                name = "冰霜镜像",
                 sections = {
                   Spell(47727, {fbd = N5, so = true}), -- Blizzard
                   Spell(47729, {fbd = N5, so = true}), -- Ice Barb
@@ -132,14 +132,14 @@ local THE_NEXUS = CreateInstance({
       }),
       Stage({
         so = true,
-        name = "Phase 3",
-        desc = "After the images have been destroyed, she emerges back and uses the same abilities like the first phase. When she reaches 25% health, she will Ice Nova all enemies and cast Fireball Volley.",
+        name = "第三阶段",
+        desc = "当3个镜像都被消灭之后,泰蕾丝塔将重新开始使用第一阶段的技能,并且更加频繁的施展冰霜新星和火球术.",
       }),
     },
   },
   {
-    name = "Anomalus",
-    desc = "Anomalus, an arcane elemental, is one of the 3 bosses guarding Keristrasza's prison, inside The Nexus. It is related to Chaos Theory.",
+    name = "阿诺玛鲁斯",
+    desc = "神秘的元素生物,与成就混沌理论有关.",
     --icon = true,
     creature = 26763,
     display = 26259,
@@ -148,30 +148,30 @@ local THE_NEXUS = CreateInstance({
     sections = {
     	Stage({
         so = true,
-        name = "Phase 1",
+        name = "第一阶段",
         sections = {
-          Spell(47751, {fbd = N5, desc = "Hurls a magical bolt at an enemy, inflicting 2025 to 2475 Arcane damage."}), -- Spark
-          Spell(57062, {fbd = H5, desc = "Hurls a magical bolt at an enemy, inflicting 4275 to 4725 Arcane damage."}), -- Spark
+          Spell(47751, {fbd = N5, desc = "向目标射出一支奥术箭,对其造成2025~2475点奥术伤害."}), -- Spark
+          Spell(57062, {fbd = H5, desc = "向目标射出一支奥术箭,对其造成4275~4725点奥术伤害."}), -- Spark
           Spell(57063, {fbd = H5, flag1 = MAGIC}), -- Arcane Attraction
         },
     	}),
     	Stage({
     		so = true,
-    		name = "Phase 2",
-    		desc = "At 50% health Anomalus enters his second phase. It will end either when his shield expires or you have closed all his portals, then first phase will repeat.",
+    		name = "第二阶段",
+    		desc = "当阿诺玛鲁斯生命值降至50%以下时,进入第二阶段.阿诺玛鲁斯为自己引导一个裂隙之盾,免疫一切伤害.这个阶段将在阿诺玛鲁斯引导法术结束之后或者摧毁了所有混乱裂隙之后结束,并且重新回到第一阶段.",
     		sections = {
           Spell(47748), -- Rift Shield
           Spell(47747), -- Charge Rifts
-          Spell(47743, {so = true, desc = "Tears the fabric of space, opening a Chaotic Rift near Anomalus. The rift continuously spawns Crazed Mana Wraith, and even at a faster rate once charged by Anomalus.", sections = {
+          Spell(47743, {so = true, desc = "撕裂空间的结构，在阿诺玛鲁斯身旁开启一道混乱裂隙.", sections = {
             Spell(47688), -- Chaotic Energy Burst
             Spell(47737), -- Charged Chaotic Energy Burst
             Stage({
               stype = CREATURE,
               creature = 26746,
               display = 27810,
-              name = "Crazed Mana Wraith",
+              name = "狂乱的法力怨灵",
               sections = {
-                Spell(33833, {so = true, desc = "Inflicts 24 to 29 Arcane damage per second for 5 seconds."}), -- Arcane Missilies
+                Spell(33833, {so = true, desc = "向目标射出魔法箭，对其造成24~29点奥术伤害."}), -- Arcane Missilies
               }
             }),
           }}), -- Create Rift
@@ -180,8 +180,8 @@ local THE_NEXUS = CreateInstance({
     },
   },
   {
-    name = "Ormorok the Tree-Shaper",
-    desc = "Ormorok the Tree-Shaper and his creations were probably captured and put into the Nexus to serve as one of the guards. Ormorok himself is the sentinel to one part of Keristrasza's prison. They were subjected to massive amounts of Arcane energy daily. Over time, they were corrupted and became mad.",
+    name = "塑树者奥莫洛克",
+    desc = "塑树者奥莫洛克被抓获之后,他和他的手下被委任成为魔枢的守卫之一,由于奥术能量的缘故,他们逐渐变得疯狂.",
     --icon = true,
     creature = 26794,
     display = 26298,
@@ -190,40 +190,40 @@ local THE_NEXUS = CreateInstance({
     sections = {
       Spell(47958, {fbd = N5, so = true, flag1 = IMPORTANT}), -- Crystal Spikes
       Spell(57082, {fbd = H5, so = true, flag1 = IMPORTANT}), -- Crystal Spikes
-      Spell(47981, {desc = "Reflects the next 4 spells cast on him back to their casters.", flag1 = IMPORTANT}), -- Spell Reflection
+      Spell(47981, {desc = "反射魔法,可以使用4次.", flag1 = IMPORTANT}), -- Spell Reflection
       Spell(48016, {fbd = N5}), -- Trample
       Spell(57066, {fbd = H5}), -- Trample
-      Spell(57086, {fbd = N5, desc = "When health drops below 25%, he will frenzy and increase his damage done by 50%.", flag1 = HEALER}), -- Frenzy
-      Spell(48017, {fbd = H5, desc = "When health drops below 25%, he will frenzy and increase his damage done by 100%.", flag1 = HEALER}), -- Frenzy
-      Spell(61564, {fbd = H5, so = true, icon = "Interface\\Icons\\Spell_Nature_Stranglevines", desc = "Occasionally summons an add to attack the healer.", sections = {
+      Spell(57086, {fbd = N5, desc = "当奥莫洛克的生命值降低到25%以下时,物理伤害提高50%.", flag1 = HEALER}), -- Frenzy
+      Spell(48017, {fbd = H5, desc = "当奥莫洛克的生命值降低到25%以下时,物理伤害提高100%.", flag1 = HEALER}), -- Frenzy
+      Spell(61564, {fbd = H5, so = true, icon = "Interface\\Icons\\Spell_Nature_Stranglevines", desc = "召唤水晶纠结者.", sections = {
         Stage({
           stype = CREATURE,
           creature = 32665,
           display = 19033,
-          name = "Crystalline Tangler",
+          name = "水晶纠结者",
           sections = {
-            Spell(61556, {so = true, desc = "On successful melee attack, causes roots to grow around the target, rendering them unable to move for 2 seconds."}), -- Tangle
+            Spell(61556, {so = true, desc = "近战攻击命中目标后，在目标脚下生出盘足之根，使其无法移动,持续2秒."}), -- Tangle
           },
         }),
       }}, 1), -- Summon Crystalline Tangler
     },
   },
   {
-    name = "Keristrasza",
-    desc = "As a human questgiver Keristrasza can be called by activating the Augmented Arcane Prison, and handles a series of quests that lets the player help in the battle against Malygos.\n\nIn gratitude, Keristrasza aids her rescuers in the fight against the Lord of Magic by luring his consort, Saragosa, to her death. After slaying his consort and luring him into battle with elements of the red dragonflight, Keristrasza is captured by Malygos, who makes her his new consort. Malygos abused her constantly, branding runes into her body and using his powerful magic to bend her will, until she finally went insane. Those who had once aided her now must enter the Nexus to release her from her tortured existence - an unfortunate but necessary end to a sad and tragic tale.",
+    name = "克莉斯塔萨",
+    desc = "红龙军团原本集合红龙想杀死玛利苟斯，但是低估了玛利苟斯的能力，克莉斯塔萨被玛利苟斯抓走强迫成为他的新配偶，囚禁在魔枢，被玛利苟斯摧残心智.",
     --icon = true,
     creature = 26723,
     display = 24307,
     coords = {0.354, 0.672, 1},
     loot = {{35596,N5},{35597,N5},{37162,H5},{35595,N5},{37169,H5},{43102,H5},{37167,H5},{37170,H5},{37172,H5},{37166,H5},{37165,H5},{37171,H5},},
     sections = {
-      Spell(48094, {desc = "Debuffs idle players with a stack of Intense Cold, dealing 100 Frost damage per stack. Applies 1 stack every 2 seconds. Removed upon movement.", flag1 = IMPORTANT}), -- Intense Cold
-      Spell(50997, {desc = "Inflicts 1650 to 1850 Frost damage and roots the target for 10 seconds.", flag1 = MAGIC}), -- Crystal Chains
-      Spell(48096, {fbd = N5, desc = "Inflicts 2763 to 3737 Frost damage, slows movement speed and applies a debuff on the victim dealing 1000 Frost damage every 2 seconds for 10 seconds.", flag1 = TANK}), -- Crystalfire Breath
-      Spell(57091, {fbd = H5, desc = "Inflicts 3825 to 5175 Frost damage, slows movement speed and applies a debuff on the victim dealing 1000 Frost damage every 2 seconds for 10 seconds.", flag1 = TANK}), -- Crystalfire Breath
+      Spell(48094, {desc = "周期性对附近的敌人造成伤害并使其移动速度、攻击速度和施法速度持续降低。移动可以打破该效果.", flag1 = IMPORTANT}), -- Intense Cold
+      Spell(50997, {desc = "对一名敌人造成1650~1850点冰霜伤害并使其无法移动，最多持续10秒.", flag1 = MAGIC}), -- Crystal Chains
+      Spell(48096, {fbd = N5, desc = "对施法者正面锥形区域内的敌人造成2763~3737点冰霜伤害,并且每2秒造成额外的1000点冰霜伤害,持续10秒.受到水晶烈焰吐息影响的玩家移动速度降低.", flag1 = TANK}), -- Crystalfire Breath
+      Spell(57091, {fbd = H5, desc = "对施法者正面锥形区域内的敌人造成3825~5175点冰霜伤害,并且每2秒造成额外的1000点冰霜伤害,持续10秒.受到水晶烈焰吐息影响的玩家移动速度降低.", flag1 = TANK}), -- Crystalfire Breath
       Spell(50155, {flag1 = DPS}), -- Tail Sweep
-      Spell(8599, {desc = "At 25% health she will enrage and deal 10% more damage by Physical attacks, and increase attack speed by30% for 2 minutes."}), -- Enrage
-      Spell(48179, {fbd = H5, desc = "Inflicts 1650 to 1859 Frost damage to everyone and immobilizes them for up to 10 seconds.", flag1 = MAGIC}), -- Crystallize
+      Spell(8599, {desc = "当克莉斯塔萨生命值降至25%的时候,进入狂暴状态.攻击速度提高30%,近战伤害提高10%,持续2分钟."}), -- Enrage
+      Spell(48179, {fbd = H5, desc = "对附近敌人造成1650~1859点冰霜伤害并使其无法移动，最多持续10秒.", flag1 = MAGIC}), -- Crystallize
     },
   },
 })
