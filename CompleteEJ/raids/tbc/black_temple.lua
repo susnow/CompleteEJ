@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local BLACK_TEMPLE = CreateInstance({
-  name = "Black Temple",
-  desc = "The Black Temple is the fortress-citadel of Illidan Stormrage, Lord of Outland. It contains tier 6 set pieces as well as many notable items, including . It's also known for providing reputation for , easily earned through clearing the raid a few times.",
+  name = "黑暗神殿",
+  desc = "黑暗神庙，在暴雪的线上网络游戏“魔兽世界”中，位于影月谷。为70级25人最终挑战副本。里面包含9个首领，而传奇的暗夜精灵、伊利丹、怒风会在最后迎接玩家的挑战.",
   --texture = "BlackTemple",
   area = 796,
 }, {
   {
-    name = "High Warlord Naj'entus",
-    desc = "High Warlord Naj'entus is the first boss of Black Temple.",
+    name = "高阶督军纳因图斯",
+    desc = "高阶督军纳因图斯,娜迦的变异体,是黑暗神殿的第一名BOSS.",
     --icon = true,
     creature = 22887,
     display = 21174,
@@ -43,8 +43,8 @@ local BLACK_TEMPLE = CreateInstance({
     },
   },
   {
-    name = "Supremus",
-    desc = "Supremus, an abyssal, is the second boss in Black Temple.",
+    name = "苏普雷姆斯",
+    desc = "巨大的地狱火,苏普雷姆斯是玛瑟里顿制造地狱火恶魔,但是真正让它能够'动'起来的是伊利丹,在接受了伊利丹为它注入的恶魔能量之后,苏普雷姆斯为伊利丹守卫着正殿的广场大门.",
     --icon = true,
     creature = 22898,
     display = 21145,
@@ -57,8 +57,8 @@ local BLACK_TEMPLE = CreateInstance({
     },
   },
   {
-    name = "Shade of Akama",
-    desc = "Shade of Akama is the dark soul of Akama that binds him to Illidan Stormrage's service. This is the third boss in the Black Temple.",
+    name = "阿卡玛之影",
+    desc = "阿卡玛之影是阿卡玛灵魂的黑暗意识形态.",
     --icon = true,
     creature = 22841,
     display = 21357,
@@ -68,8 +68,8 @@ local BLACK_TEMPLE = CreateInstance({
     },
   },
   {
-    name = "Teron Gorefiend",
-    desc = "Teron Gorefiend, formally the leader of the death knights, is the fourth boss in Black Temple. The encounter features an extremely unique mechanic where players die and then become ghosts--however, with level 85 DPS, you are unlikely to reach this point.",
+    name = "塔隆·血魔",
+    desc = "在生前,塔隆血魔曾经是暗影议会的一名术士,在被奥格瑞姆毁灭之锤杀死之后,被古尔丹复活成为死亡骑士,并且在之后成为了伊利丹的部下.",
     --icon = true,
     creature = 22871,
     display = 21254,
@@ -85,8 +85,8 @@ local BLACK_TEMPLE = CreateInstance({
     },
   },
   {
-    name = "Gurtogg Bloodboil",
-    desc = "Gurtogg Bloodboil, a mutated fel orc, is the fifth boss in Black Temple.",
+    name = "古尔图格·血沸",
+    desc = "曾经是兽人苦工的古尔图格·血沸,一次偶然的机会误服了恶魔的鲜血之后,成为了一名狂暴亢奋和嗜杀的邪兽人百夫长.",
     --icon = true,
     creature = 22948,
     display = 21443,
@@ -110,8 +110,8 @@ local BLACK_TEMPLE = CreateInstance({
     },
   },
   {
-    name = "Essence of Suffering",
-    desc = "Reliquary of the Lost Essence of Suffering Essence of Desire Essence of Anger Essence of Suffering is the first part of the Reliquary of the Lost encounter in Black Temple.",
+    name = "灵魂之匣",
+    desc = "灵魂之匣曾经是德莱尼人供奉在卡拉波神殿中侍奉先祖灵魂的容器,兽人入侵之后,古尔丹将它腐化成了怨魂的吸纳容器,现在,任何胆敢接近灵魂之匣的人,都会和无数飘荡于此的灵魂一样,被灵魂之匣吸收.",
     --icon = true,
     creature = 23418,
     display = 21483,
@@ -126,8 +126,8 @@ local BLACK_TEMPLE = CreateInstance({
     },
   },
   {
-    name = "Mother Shahraz",
-    desc = "Mother Shahraz, a Shivarra demon, is the seventh boss in Black Temple.",
+    name = "莎赫拉丝主母",
+    desc = "相对于男性恶魔，女性恶魔更为狡诈恶毒，心狠手辣。而莎赫拉丝主母则更是女性恶魔中的佼佼者,她出卖了原本的主人玛瑟里顿,并且投靠了伊利丹.",
     --icon = true,
     creature = 22947,
     display = 21252,
@@ -143,8 +143,8 @@ local BLACK_TEMPLE = CreateInstance({
     },
   },
   {
-    name = "The Illidari Council",
-    desc = "The Illidari Council Gathios the Shatterer High Nethermancer Zerevor Lady Malande Veras Darkshadow  The Illidari Council is a group of four blood elves located within the Black Temple who serve as adviser to Illidan Stormrage and are the last bosses fought before encountering the Betrayer himself.",
+    name = "伊利达雷议会",
+    desc = "高阶灵术师塞勒沃尔,击碎者加西奥斯,维尔莱斯·深影,女公爵玛兰德,这4名血精灵族的伊利丹的顾问,把守着背叛者平台的最终入口.",
     --icon = true,
     creature = 23426,
     display = Array,
@@ -155,8 +155,8 @@ local BLACK_TEMPLE = CreateInstance({
     },
   },
   {
-    name = "Illidan Stormrage",
-    desc = "Illidan Stormrage is the current Lord of Outland and serves as the final boss of Black Temple; he is the twin brother of Malfurion Stormrage. He is often referred to as the betrayer due to his acts against his own kind, for which he suffered imprisonment. He drops two legendaries: Warglaive of Azzinoth and Warglaive of Azzinoth.",
+    name = "伊利丹·怒风",
+    desc = "恶魔猎手伊利丹·怒风,玛法里奥·怒风的孪生兄弟,伊利丹在故事中是一位正反评价两极的人物，游走在亲情、爱情当中，情势与环境的改变让他的一生有着传奇的变化.",
     --icon = true,
     creature = 22917,
     display = 21135,
