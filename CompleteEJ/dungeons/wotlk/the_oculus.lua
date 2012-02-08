@@ -1,4 +1,4 @@
-local _, db = ...
+ï»¿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_OCULUS = CreateInstance({
-  name = "Ä§»·",
-  desc = "Ä§»·Î»ÓÚ±±·çÌ¦Ô­Î÷±±²¿µÄ¿¼´ïÀ­¸ßµØµÄÖÐÐÄ£¬ÊÇÀ¶Áú¾üÍÅµÄÀÏ³²¡£Ä§»·ÊÇÀ¶Áú¾üÍÅ¿ØÖÆÄ§ÍøµÄÖØÒª³¡Ëù£¬ÕâÀïÒ²Çô½û×ÅÈýÎ»ÁúÃßÁª¾üµÄ½«Áì¡£À¶ÁúÖ®ÍõÂêÀû¹¶Ë¹ÏÝÈë·è¿ñÖ®ºó£¬ºìÁú¾üÍÅÏÂÁî½ø¹¥¿¼´ïÀ­£¬¶øÄ§»·µÄ×î¸ßÖ¸»Ó¹ÙÊÇÄ§ÍøÊØ»¤Õß°£À×¹¶Ë¹£¬ÓÉÓÚ°£À×¹¶Ë¹ÅÌÐýÔÚÄ§»·µÄÉÏ¿Õ£¬Ã°ÏÕÕßÃÇ±ØÐëÒªÏÈ´ÓÉóÑ¶Õß´ï¿âË¹ÊÖÉÏ¾È³öÈýÎ»ÁúÃßÁª¾ü½«Áì£¬ÔÙ½èÓÃ¾ÞÁúµÄÁ¦Á¿´ò°Ü°£À×¹¶Ë¹.",
+  name = "é­”çŽ¯",
+  desc = "é­”çŽ¯ä½äºŽåŒ—é£Žè‹”åŽŸè¥¿åŒ—éƒ¨çš„è€ƒè¾¾æ‹‰é«˜åœ°çš„ä¸­å¿ƒï¼Œæ˜¯è“é¾™å†›å›¢çš„è€å·¢ã€‚é­”çŽ¯æ˜¯è“é¾™å†›å›¢æŽ§åˆ¶é­”ç½‘çš„é‡è¦åœºæ‰€ï¼Œè¿™é‡Œä¹Ÿå›šç¦ç€ä¸‰ä½é¾™çœ è”å†›çš„å°†é¢†ã€‚è“é¾™ä¹‹çŽ‹çŽ›åˆ©è‹Ÿæ–¯é™·å…¥ç–¯ç‹‚ä¹‹åŽï¼Œçº¢é¾™å†›å›¢ä¸‹ä»¤è¿›æ”»è€ƒè¾¾æ‹‰ï¼Œè€Œé­”çŽ¯çš„æœ€é«˜æŒ‡æŒ¥å®˜æ˜¯é­”ç½‘å®ˆæŠ¤è€…åŸƒé›·è‹Ÿæ–¯ï¼Œç”±äºŽåŸƒé›·è‹Ÿæ–¯ç›˜æ—‹åœ¨é­”çŽ¯çš„ä¸Šç©ºï¼Œå†’é™©è€…ä»¬å¿…é¡»è¦å…ˆä»Žå®¡è®¯è€…è¾¾åº“æ–¯æ‰‹ä¸Šæ•‘å‡ºä¸‰ä½é¾™çœ è”å†›å°†é¢†ï¼Œå†å€Ÿç”¨å·¨é¾™çš„åŠ›é‡æ‰“è´¥åŸƒé›·è‹Ÿæ–¯.",
   --texture = "TheOculus",
   area = 528,
 }, {
   {
-    name = "ÉóÑ¶Õß´ï¿âË¹",
-    desc = "»÷°ÜÉóÑ¶Õß´ï¿âË¹ºó,Íæ¼Ò¾Í¿ÉÒÔ½â¾È³öËû¹ØÑºµÄÈýÃûÁúÃßÁª¾ü½«Áì,²¢ÇÒÊ¹ÓÃ²»Í¬µÄ·ÉÁú×øÆïÀ´Íê³É½ÓÏÂÀ´µÄÕ½¶·.",
+    name = "å®¡è®¯è€…è¾¾åº“æ–¯",
+    desc = "å‡»è´¥å®¡è®¯è€…è¾¾åº“æ–¯åŽ,çŽ©å®¶å°±å¯ä»¥è§£æ•‘å‡ºä»–å…³æŠ¼çš„ä¸‰åé¾™çœ è”å†›å°†é¢†,å¹¶ä¸”ä½¿ç”¨ä¸åŒçš„é£žé¾™åéª‘æ¥å®ŒæˆæŽ¥ä¸‹æ¥çš„æˆ˜æ–—.",
     --icon = true,
     creature = 27654,
     display = 27032,
@@ -42,8 +42,8 @@ local THE_OCULUS = CreateInstance({
     },
   },
   {
-    name = "Íß¶ûÂåË¹¡¤ÔÆ»÷",
-    desc = "Íß¶ûÂåË¹¡¤ÔÆ»÷ À¶Áú¾üÍÅµÄÁìÖ÷,ËûÕòÊØ×ÅÄ§»·µÄÖÐÐÄ²ã,²¢ÇÒ×èÄÓÍæ¼Ò½øÒ»²½µÄÍÆ½ø.",
+    name = "ç“¦å°”æ´›æ–¯Â·äº‘å‡»",
+    desc = "ç“¦å°”æ´›æ–¯Â·äº‘å‡» è“é¾™å†›å›¢çš„é¢†ä¸»,ä»–é•‡å®ˆç€é­”çŽ¯çš„ä¸­å¿ƒå±‚,å¹¶ä¸”é˜»æŒ çŽ©å®¶è¿›ä¸€æ­¥çš„æŽ¨è¿›.",
     --icon = true,
     creature = 27447,
     display = 27033,
@@ -62,8 +62,8 @@ local THE_OCULUS = CreateInstance({
     },
   },
   {
-    name = "·¨Ê¦ÁìÖ÷ÒÁÂåÄ·",
-    desc = "¼ÈÈ»À¶ÁúÒýÒÔÎª°ÁµÄÊÇ°ÂÊõÄ§·¨,ÄÇÃ´»áÓÐÕâÑùÒ»¸öÒÔ·¨Êõ¹¥»÷ÎªÖ÷µÄBOSS³öÏÖ¾Í²»ÊÇÊ²Ã´Ææ¹ÖµÄÊÂÇéÁË.·¨Ê¦ÁìÖ÷ÒÁÂÞÄ·,ÕòÊØ×ÅÄ§»·Ç°Íù¶¥²ãµÄÍ¨µÀ.",
+    name = "æ³•å¸ˆé¢†ä¸»ä¼Šæ´›å§†",
+    desc = "æ—¢ç„¶è“é¾™å¼•ä»¥ä¸ºå‚²çš„æ˜¯å¥¥æœ¯é­”æ³•,é‚£ä¹ˆä¼šæœ‰è¿™æ ·ä¸€ä¸ªä»¥æ³•æœ¯æ”»å‡»ä¸ºä¸»çš„BOSSå‡ºçŽ°å°±ä¸æ˜¯ä»€ä¹ˆå¥‡æ€ªçš„äº‹æƒ…äº†.æ³•å¸ˆé¢†ä¸»ä¼Šç½—å§†,é•‡å®ˆç€é­”çŽ¯å‰å¾€é¡¶å±‚çš„é€šé“.",
     --icon = true,
     creature = 27655,
     display = 25010,
@@ -84,8 +84,8 @@ local THE_OCULUS = CreateInstance({
     },
   },
   {
-    name = "Ä§ÍøÊØ»¤Õß°£À×¹¶Ë¹",
-    desc = "ÔÚ»÷µ¹·¨Ê¦ÁìÖ÷ÒÁÂåÄ·Ö®ºóÄ§ÍøÊØ»¤Õß°£À×¹¶Ë¹¾Í»á³öÏÖ²¢ÇÒÔÚÄ§»·µÄÌì¿ÕÖÐ·ÉÐÐ£¬Íæ¼ÒÐèÒªÊ¹ÓÃ·ÉÁú×ùÆïÔÚÌì¿ÕÖÐÊ¹ÓÃ·ÉÁúµÄÌØÊâÄÜÁ¦È¥»÷°ÜËû.",
+    name = "é­”ç½‘å®ˆæŠ¤è€…åŸƒé›·è‹Ÿæ–¯",
+    desc = "åœ¨å‡»å€’æ³•å¸ˆé¢†ä¸»ä¼Šæ´›å§†ä¹‹åŽé­”ç½‘å®ˆæŠ¤è€…åŸƒé›·è‹Ÿæ–¯å°±ä¼šå‡ºçŽ°å¹¶ä¸”åœ¨é­”çŽ¯çš„å¤©ç©ºä¸­é£žè¡Œï¼ŒçŽ©å®¶éœ€è¦ä½¿ç”¨é£žé¾™åº§éª‘åœ¨å¤©ç©ºä¸­ä½¿ç”¨é£žé¾™çš„ç‰¹æ®Šèƒ½åŠ›åŽ»å‡»è´¥ä»–.",
     --icon = true,
     creature = 27656,
     display = 27034,
