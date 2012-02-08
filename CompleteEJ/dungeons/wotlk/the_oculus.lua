@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_OCULUS = CreateInstance({
-  name = "The Oculus",
-  desc = "The Nexus, a dungeon hub, is an ancient ice fortress found in the center of Coldarra, in Northrend's Borean Tundra. It is a column of magical energy surrounded by levitating earth-covered rings with ice caves underneath. The Nexus is an extensive series of caves and tunnels under Coldarra, containing wings leading to two 5 man dungeons and one 25 man raid. The Oculus is a high level 5 man dungeon located within the Nexus. It is unique because it allows each player to control flying drakes with specific roles (tanking, healing, damage dealing) to complete the dungeon.",
+  name = "魔环",
+  desc = "魔环位于北风苔原西北部的考达拉高地的中心，是蓝龙军团的老巢。魔环是蓝龙军团控制魔网的重要场所，这里也囚禁着三位龙眠联军的将领。蓝龙之王玛利苟斯陷入疯狂之后，红龙军团下令进攻考达拉，而魔环的最高指挥官是魔网守护者埃雷苟斯，由于埃雷苟斯盘旋在魔环的上空，冒险者们必须要先从审讯者达库斯手上救出三位龙眠联军将领，再借用巨龙的力量打败埃雷苟斯.",
   --texture = "TheOculus",
   area = 528,
 }, {
   {
-    name = "Drakos the Interrogator",
-    desc = "Drakos the Interrogator is the first boss located in The Oculus. After killing him, players are able to access the drakes and fly around.",
+    name = "审讯者达库斯",
+    desc = "击败审讯者达库斯后,玩家就可以解救出他关押的三名龙眠联军将领,并且使用不同的飞龙坐骑来完成接下来的战斗.",
     --icon = true,
     creature = 27654,
     display = 27032,
@@ -42,8 +42,8 @@ local THE_OCULUS = CreateInstance({
     },
   },
   {
-    name = "Varos Cloudstrider",
-    desc = "Varos Cloudstrider is the second boss in located in The Oculus. Players access the boss by flying to his platform after killing three platforms of trash.",
+    name = "瓦尔洛斯·云击",
+    desc = "瓦尔洛斯·云击 蓝龙军团的领主,他镇守着魔环的中心层,并且阻挠玩家进一步的推进.",
     --icon = true,
     creature = 27447,
     display = 27033,
@@ -62,8 +62,8 @@ local THE_OCULUS = CreateInstance({
     },
   },
   {
-    name = "Mage-Lord Urom",
-    desc = "Mage-Lord Urom, a powerful human mage who serves Malygos is the third boss of The Oculus. He's located at first on a little platform, but he quickly ports away and summons a series of (beasts, elementals or humanoids); he do this 3 times until going on the central ring, where the real fight starts.",
+    name = "法师领主伊洛姆",
+    desc = "既然蓝龙引以为傲的是奥术魔法,那么会有这样一个以法术攻击为主的BOSS出现就不是什么奇怪的事情了.法师领主伊罗姆,镇守着魔环前往顶层的通道.",
     --icon = true,
     creature = 27655,
     display = 25010,
@@ -84,8 +84,8 @@ local THE_OCULUS = CreateInstance({
     },
   },
   {
-    name = "Ley-Guardian Eregos",
-    desc = "Ley-Guardian Eregos is the final boss in The Oculus. There are several achievements linked to him: Amber Void, Emerald Void, Make It Count, Ruby Void.",
+    name = "魔网守护者埃雷苟斯",
+    desc = "在击倒法师领主伊洛姆之后魔网守护者埃雷苟斯就会出现并且在魔环的天空中飞行，玩家需要使用飞龙座骑在天空中使用飞龙的特殊能力去击败他.",
     --icon = true,
     creature = 27656,
     display = 27034,
