@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_VIOLET_HOLD = CreateInstance({
-  name = "The Violet Hold",
-  desc = "Beneath the floating city of Dalaran is the 5 man dungeon The Violet Hold. Kirin Tor prison guards are fending off invaders of the blue dragonflight who, under orders from Malygos, are using magical portals to enter the hold.",
+  name = "紫罗兰监狱",
+  desc = "紫罗兰监狱位于浮动的魔法之城：达拉然。肯瑞托的监狱护卫者在这里抵挡着玛里苟斯和蓝龙军团的入侵.",
   --texture = "TheVioletHold",
   area = 536,
 }, {
   {
-    name = "Erekem",
-    --desc = "",
+    name = "埃雷克姆",
+    desc = "三只鸦人,被囚禁在紫罗兰监狱中",
     --icon = true,
     creature = 29315,
     display = 27488,
@@ -48,8 +48,8 @@ local THE_VIOLET_HOLD = CreateInstance({
     },
   },
   {
-    name = "Moragg",
-    --desc = "",
+    name = "摩拉格",
+    desc = "一只畸形变异的恐魔,被囚禁在紫罗兰监狱中",
     --icon = true,
     creature = 29316,
     display = 20590,
@@ -63,8 +63,8 @@ local THE_VIOLET_HOLD = CreateInstance({
     },
   },
   {
-    name = "Ichoron",
-    --desc = "",
+    name = "艾库隆",
+    desc = "深水领主,被囚禁在紫罗兰监狱中",
     --icon = true,
     creature = 29313,
     display = 27487,
@@ -82,8 +82,8 @@ local THE_VIOLET_HOLD = CreateInstance({
     },
   },
   {
-    name = "Xevozz",
-    --desc = "",
+    name = "谢沃兹",
+    desc = "臭名昭著的虚灵,被囚禁在紫罗兰监狱中",
     --icon = true,
     creature = 29266,
     display = 27486,
@@ -103,8 +103,8 @@ local THE_VIOLET_HOLD = CreateInstance({
     },
   },
   {
-    name = "Lavanthor",
-    --desc = "",
+    name = "拉文索尔",
+    desc = "熔岩地狱犬,被囚禁在紫罗兰监狱中",
     --icon = true,
     creature = 29312,
     display = 10193,
@@ -123,8 +123,8 @@ local THE_VIOLET_HOLD = CreateInstance({
     },
   },
   {
-    name = "Zuramat the Obliterator",
-    --desc = "",
+    name = "湮灭者祖拉玛特",
+    desc = "虚空行者恶魔,被囚禁在紫罗兰监狱中",
     --icon = true,
     creature = 29314,
     display = 27855,
@@ -141,8 +141,8 @@ local THE_VIOLET_HOLD = CreateInstance({
     },
   },
   {
-    name = "Cyanigosa",
-    --desc = "",
+    name = "塞安妮苟萨",
+    desc = "这头雌性的蓝龙会以高等精灵的形态现身,并且跳到紫罗兰监狱的场地中央显现出本体与玩家作战",
     --icon = true,
     creature = 31134,
     display = 27508,
