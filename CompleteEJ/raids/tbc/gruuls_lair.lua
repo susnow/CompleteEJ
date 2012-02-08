@@ -49,7 +49,7 @@ local GRUULS_LAIR = CreateInstance({
           Spell(16508), -- Intimidating Roar
           Spell(33238, {desc = "持续15秒的旋风斩，每两次造成一次伤害，移动速度降低50%。", flag1 = IMPORTANT}), -- Whirlwind (triggers 33239)
           Spell(26561, {desc = "少于50%血量时，莫加尔大王进入狂暴状态，每隔一段时间恐惧40码内的随机目标，并且猛击未被恐惧的目标击退并造成伤害。", flag1 = IMPORTANT}), -- Berserker Charge
-          Spell(33232, {desc = "提高攻击速度200%，但降低攻击伤害50%。当处于此状态下，莫加尔大王会受到双持惩罚的影响，比如更多的未命中。"}), -- Flurry
+          Spell(33232, {desc = "提高攻击速度200%，但攻击伤害降低50%。当处于此状态下，莫加尔大王会受到双持惩罚的影响，产生更多的未命中。"}), -- Flurry
         },
       }),
       Stage({
@@ -59,9 +59,9 @@ local GRUULS_LAIR = CreateInstance({
         display = 11585,
         name = "先知盲眼 (牧师)",
         sections = {
-          Spell(33144, {desc = "单体治疗46250—53750血量。", flag1 = INTERRUPT}), -- Heal
-          Spell(33152, {desc = "群体治疗，治疗附近目标92500—107500血量。", flag1 = INTERRUPT}), -- Prayer of Healing
-          Spell(33147, {desc = "释放一个30秒内吸收25000伤害的盾，免疫打断和眩晕。", flag1 = IMPORTANT}), -- Greater Power Word: Shield
+          Spell(33144, {desc = "治疗一个盟友46250～53750点生命值", flag1 = INTERRUPT}), -- Heal
+          Spell(33152, {desc = "群体治疗，治疗附近目标92500~107500点生命值。", flag1 = INTERRUPT}), -- Prayer of Healing
+          Spell(33147, {desc = "释放一个吸收盾,可以吸收25000点伤害，持续30秒，免疫打断和眩晕。", flag1 = IMPORTANT}), -- Greater Power Word: Shield
         },
       }),
       Stage({
@@ -71,10 +71,10 @@ local GRUULS_LAIR = CreateInstance({
         display = 12472,
         name = "疯癫者奇克勒 (萨满)",
         sections = {
-          Spell(36152, {desc = "闪电箭，造成1488 — 2012自然伤害。"}), -- Lightning Bolt
-          Spell(33175, {desc = "冲击一名敌人，造成657 — 843自然伤害并沉默5秒。"}), -- Arcane Shock
-          Spell(33237, {desc = "施放冲击波，对30码内目标造成1750 — 2250奥术伤害并击退。"}), -- Arcane Explosion
-          Spell(33173, {desc = "频繁的施放变羊术，持续10秒。"}), -- Greater Polymorph
+          Spell(36152, {desc = "向一个目标射出闪电箭，造成1488～2012点自然伤害。"}), -- Lightning Bolt
+          Spell(33175, {desc = "冲击一名敌人，造成657～843点自然伤害并使其沉默5秒。"}), -- Arcane Shock
+          Spell(33237, {desc = "施放冲击波，对30码内所有目标造成1750～2250奥术伤害并将其击退。"}), -- Arcane Explosion
+          Spell(33173, {desc = "频繁的施放变形术*羊，持续10秒。"}), -- Greater Polymorph
         },
       }),
       Stage({
@@ -84,9 +84,9 @@ local GRUULS_LAIR = CreateInstance({
         display = 20194,
         name = "克罗斯·火手 (法师)",
         sections = {
-          Spell(33051, {desc = "对一名敌人造成8550 — 9450火焰伤害。"}), -- Greater Fireball
-          Spell(33054, {desc = "自身BUFF，减少75%的魔法伤害，持续30秒。", flag1 = MAGIC}), -- Spell Shield
-          Spell(33061, {desc = "对15码内所有目标造成6013 to 6987火焰伤害，并减少70%的移动速度6秒。", flag1 = IMPORTANT}), -- Blast Wave
+          Spell(33051, {desc = "对一名敌人造成8550～9450点火焰伤害。"}), -- Greater Fireball
+          Spell(33054, {desc = "克罗斯火手受到的魔法伤害降低75%，持续30秒。", flag1 = MAGIC}), -- Spell Shield
+          Spell(33061, {desc = "对15码内所有目标造成6013～6987点火焰伤害，并使其移动速度降低70%，持续6秒。", flag1 = IMPORTANT}), -- Blast Wave
         },
       }),
       Stage({
@@ -96,9 +96,9 @@ local GRUULS_LAIR = CreateInstance({
         display = 20195,
         name = "召唤者欧莫 (术士)",
         sections = {
-          Spell(33129, {desc = "2秒一跳，一跳500伤害，持续10秒，可叠加至99层。"}), -- Dark Decay
+          Spell(33129, {desc = "对目标造成每2秒500点暗影伤害，持续10秒，这个效果可叠加99层。"}), -- Dark Decay
           Spell(33130), -- Death Coil
-          Spell(33131, {so = true, icon = "Interface\\Icons\\Spell_Shadow_SummonFelhunter", name = "死亡缠绕", desc = "对仇恨最高的目标使用，对目标造成2000伤害，给自己回4000血。", sections = {
+          Spell(33131, {so = true, icon = "Interface\\Icons\\Spell_Shadow_SummonFelhunter", name = "死亡缠绕", desc = "对仇恨最高的目标使用，对目标造成2000点伤害，并为自己恢复4000点生命值。", sections = {
             Stage({
               stype = CREATURE,
               creature = 18847,
@@ -123,17 +123,17 @@ local GRUULS_LAIR = CreateInstance({
     loot = {28825,29765,28826,28804,29767,28823,28810,28827,28794,},
     sections = {
       Spell(33813, {icon = "Interface\\Icons\\Ability_GhoulFrenzy", flag1 = TANK}, 1), -- Hurtful Strike
-      Spell(36240, {desc = "持续15秒的落石，每三秒2700伤害。"}), -- Cave In
-      Spell(36297, {desc = "沉默4秒，随着战斗时间的增长，格鲁尔会愈加频繁的施放此技能。"}), -- Reverberation
-      Spell(36300, {desc = "自身BUFF，每层提高15%伤害，每30秒叠一层，最高叠30层。", flag1 = IMPORTANT}), -- Growth
+      Spell(36240, {desc = "向一个区域召唤落石，持续15秒，对受到落石影响的玩家每3秒造成2700点伤害。"}), -- Cave In
+      Spell(36297, {desc = "使所有敌人沉默4秒，随着战斗时间的增长，格鲁尔会愈加频繁的施放此技能。"}), -- Reverberation
+      Spell(36300, {desc = "使格鲁尔伤害提高15%，每30秒释放一次，这个效果可以叠加30层。", flag1 = IMPORTANT}), -- Growth
       Stage({
         so = true,
         name = "石化猛击",
-        desc = "每隔74-80秒，格鲁尔将会击飞所有目标，并石化所有目标。",
+        desc = "每隔74-80秒，格鲁尔将会击飞所有目标，并将其石化。",
         flag1 = DEADLY,
         sections = {
-          Spell(33525, {so = true, desc = "落地以后,玩家会得到一个每s降低20%移动速度的'巨人领主的扣握'debuff。", flag1 = IMPORTANT}), -- Ground Slam (triggers 39187, that again triggers 33572 each second)
-          Spell(33654, {so = true, desc = "一个玩家的粉碎效果会对周围20码内的其他玩家造成伤害，当两个玩家站在同一点时,这个伤害最高而达到9000，当两人的距离越远时,这个伤害会越小,到20码时,只会造成70-100的伤害。", flag1 = DEADLY}), -- Shatter
+          Spell(33525, {so = true, desc = "落地以后,玩家会得到一个'巨人领主的扣握'的debuff，每秒降低20%的移动速度。", flag1 = IMPORTANT}), -- Ground Slam (triggers 39187, that again triggers 33572 each second)
+          Spell(33654, {so = true, desc = "一个玩家的粉碎效果会对周围20码内的其他玩家造成伤害，当两个玩家站在同一点时,这个伤害最高而可以达到9000点，相隔的距离越远,这个伤害会越小,当玩家之间的距离超过20码时,只会造成70～100点的伤害。", flag1 = DEADLY}), -- Shatter
         },
       }),
     },

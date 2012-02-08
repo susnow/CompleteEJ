@@ -29,7 +29,7 @@ local THE_EYE = CreateInstance({
 }, {
   {
     name = "空灵机甲",
-    desc = "风暴要塞中，空灵机甲是一名机器型BOSS。",
+    desc = "风暴要塞中，空灵机甲是一个机器人BOSS。",
     --icon = true,
     creature = 19516,
     display = 18951,
@@ -44,7 +44,7 @@ local THE_EYE = CreateInstance({
   },
   {
     name = "奥",
-    desc = "奥是风暴要塞中的第一个BOSS，它是凯尔萨斯逐日者的凤凰。",
+    desc = "奥是风暴要塞中的第一个BOSS，它是凯尔萨斯逐日者的凤宠物。",
     --icon = true,
     creature = 19514,
     display = 18945,
@@ -63,7 +63,7 @@ local THE_EYE = CreateInstance({
   },
   {
     name = "大星术师索兰莉安",
-    desc = "大星术师索兰莉安是风暴要塞中的三号BOSS，也是当年TBC最无人问津的BOSS。",
+    desc = "大星术师索兰莉安是风暴要塞中的三号BOSS，由于BOSS战斗流程复杂，容错性不高，掉落一般导致她成为了TBC最无人问津的BOSS。",
     --icon = true,
     creature = 18805,
     display = 18239,
@@ -79,7 +79,7 @@ local THE_EYE = CreateInstance({
   },
   {
     name = "凯尔萨斯·逐日者",
-    desc = "凯尔萨斯逐日者与他的四名手下，是风暴要塞的第四场BOSS战。在这场史诗级别的BOSS战中，你可以使用七把传说级别的武器来击败凯尔萨斯逐日者，这七把武器只能在这场战斗中使用。凯尔萨斯逐日者以掉落奥的灰烬而受人怜悯，每周都要被无数人击杀……",
+    desc = "凯尔萨斯逐日者与他的四名手下，是风暴要塞的第四场BOSS战。在这场史诗级别的BOSS战中，你可以使用七把传说级别的武器来击败凯尔萨斯逐日者，这七把武器只能在这场战斗中使用。凯尔萨斯逐日者因为掉落奥的灰烬而特别受人青睐，每周都要被无数人蹂躏……",
     --icon = true,
     creature = 19622,
     display = 20023,
