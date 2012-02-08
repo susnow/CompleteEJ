@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,30 +22,30 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local UTGARDE_KEEP = CreateInstance({
-  name = "Utgarde Keep",
-  desc = "Utgarde Keep is the first dungeon hub located on the shores of Lake Cauldros in the Howling Fjord of Northrend. Inhabited by the vrykul who are led by King Ymiron, a half-giant Viking-like race bent on proving their strength to the Lich King, they are raising the most worthy of their warriors to serve him beyond the grave here at their main base of operations. Utgarde Keep is the first 5 man entry level dungeon of Utgarde Keep.",
+  name = "乌特加德城堡",
+  desc = "乌特加德城堡是魔兽世界资料片——巫妖王之怒的新副本。座落在环境优美的嚎风峡湾，是很多玩家刚刚踏上诺森德的土地就接触到的副本之一.",
   texture = "UtgardeKeep",
   area = 523,
 }, {
   {
-    name = "Prince Keleseth",
-    desc = "Prince Keleseth is the first boss of Utgarde Keep. He is the Scourge overlord of Howling Fjord and ambassador to the vrykul.",
+    name = "凯雷塞斯王子(萨莱因)",
+    desc = "凯雷塞斯王子,萨莱茵帝国的王子",
     --icon = true,
     creature = 23953,
     display = 25338,
     coords = {0.287, 0.628, 1},
     loot = {{35570,N5},{35571,N5},{37178,H5},{35572,N5},{37179,H5},{37177,H5},{37180,H5},},
     sections = {
-      Spell(43667, {so = true, desc = "Hurls a bolt of dark magic at an enemy, inflicintg 2975 to 4025 Shadow damage.", fbd = N5}), -- Shadow Bolt Normal
-      Spell(59389, {so = true, desc = "Hurls a bolt of dark magic at an enemy, inflicting 5950 to 8050 Shadow damage.", fbd = H5}), -- Shadow Bolt Heroic
-      Spell(48400, {so = true, desc = "Encases a random group member in ice for 20 seconds. Inflicts 400 damage every second.", flag1 = IMPORTANT, fbd = N5}), -- Frost Tomb Normal
-      Spell(48400, {so = true, desc = "Encases a random group member in ice for 20 seconds. Inflicts 400 damage every second.\n\nIn Heroic mode, by not destroying the ice you will be granted the achievement On The Rocks.", flag1 = IMPORTANT, fbd = H5}), -- Frost Tomb Normal (but with a tip for Heroic achievement)
+      Spell(43667, {so = true, desc = "向敌人施放黑暗的魔法箭，造成2975~4025点暗影伤害.", fbd = N5}), -- Shadow Bolt Normal
+      Spell(59389, {so = true, desc = "向附近的敌人发射黑暗的魔法箭，对其造成5950~8050点暗影伤害.", fbd = H5}), -- Shadow Bolt Heroic
+      Spell(48400, {so = true, desc = "将目标困在寒冰障壁中,每1秒受到400点冰霜伤害.", flag1 = IMPORTANT, fbd = N5}), -- Frost Tomb Normal
+      Spell(48400, {so = true, desc = "将目标困在寒冰障壁中,每1秒受到400点冰霜伤害,在不打破冰块的情况下击败英雄模式的凯雷塞斯王子将获得一个成就奖励.", flag1 = IMPORTANT, fbd = H5}), -- Frost Tomb Normal (but with a tip for Heroic achievement)
       Stage({
         so = true,
       	stype = CREATURE,
       	creature = 23970,
       	display = 27651,
-      	name = "Vrykul Skeleton",
+      	name = "维库骷髅",
         desc = "Summons four skeletons, they resurrect after a short while.",
       	sections = {
       		Spell(42702, {desc = "Decrepifies the target, reducing Strength by 100 and slowing movement by 30% for 10 seconds.", flag1 = DISEASE, fbd = N5}), -- Decrepify Normal
@@ -56,8 +56,8 @@ local UTGARDE_KEEP = CreateInstance({
     },
   },
   {
-    name = "Skarvald and Dalronn",
-    desc = "Skarvald the Constructor is a Vrykul boss in the Utgarde Keep. It is likely he is the one building the tunnel to Gjalerbron. He is also accompanied by Dalronn the Controller, a necromancer. Both of them will fight at the same time when aggroed.",
+    name = "建筑师斯卡瓦尔德",
+    desc = "建筑师卡瓦尔德和控制者达尔隆镇守着前往乌特加德城堡顶层的通道.",
     --icon = true,
     creature = 24200,
     display = 22194,
@@ -69,7 +69,7 @@ local UTGARDE_KEEP = CreateInstance({
         stype = CREATURE,
         creature = 24200,
         display = 22194,
-        name = "Skarvald the Constructor",
+        name = "建筑师斯卡瓦尔德",
         sections = {
           Spell(43651), -- Charge
           Spell(48583), -- Stone Strike
@@ -81,9 +81,9 @@ local UTGARDE_KEEP = CreateInstance({
         stype = CREATURE,
         creature = 24201,
         display = 26349,
-        name = "Dalronn the Controller",
+        name = "控制者达尔隆",
         sections = {
-          Spell(43650, {desc = "Debilitates the target, lowering melee attack, spell casting, movement, and ranged attack speeds by 50%. Deals 750 Shadow damage every 2 seconds for 8 seconds."}), -- Debilitate
+          Spell(43650, {desc = "使目标衰弱，近战攻击、施法速度、移动速度及远程攻击速度降低50%。 每2秒造成750点暗影伤害，持续8秒."}), -- Debilitate
           Spell(43649, {fbd = N5}), -- Shadow Bolt
           Spell(59575, {fbd = H5}), -- Shadow Bolt
           --Spell(52611, {fbd = H5}), -- Summon Skeletons
@@ -91,8 +91,8 @@ local UTGARDE_KEEP = CreateInstance({
             stype = CREATURE,
             creature = 28878,
             display = 5231,
-            name = "Skeletal Minion",
-            desc = "Summons two skeletons with regular intervals, these only auto attack.",
+            name = "骷髅爪牙",
+            desc = "召唤两只骷髅爪牙加入战斗.",
             fbd = H5,
           }),
         },
@@ -100,15 +100,15 @@ local UTGARDE_KEEP = CreateInstance({
     },
     adds = {
       {
-        name = "Dalronn the Controller",
+        name = "控制者达尔隆",
         creature = 24201,
         display = 26349,
       },
     },
   },
   {
-    name = "Ingvar the Plunderer",
-    desc = "Ingvar the Plunderer is the last boss in Utgarde Keep. He directs the attacks on Valgarde from the balcony over the waterfall in Daggercap Bay. Under the command of Ingvar the Plunderer, the dragon riders revel in slaughtering their enemies from above without warning. He's known among both ally and enemy forces for his brute strength. His axe is duller than one would think; when close up, he relies on his brute strength to cut down foes.",
+    name = "劫掠者因格瓦尔",
+    desc = "维库人,乌特加德城堡的最终BOSS.",
     --icon = true,
     creature = 23954,
     display = 21953,
@@ -120,7 +120,7 @@ local UTGARDE_KEEP = CreateInstance({
         stype = CREATURE,
         creature = 23954,
         display = 21953,
-        name = "Phase 1: Vrykul",
+        name = "第一阶段:维库人",
         sections = {
           Spell(42724), -- Cleave
           Spell(42669, {fbd = N5}), -- Smash
@@ -136,16 +136,16 @@ local UTGARDE_KEEP = CreateInstance({
         stype = CREATURE,
         creature = 23980,
         display = 26351,
-        name = "Phase 2: Vargul",
-        desc = "The Val'kyr, Annhylde the Caller, will bring Ingvar the Plunderer back to life as a Vargul.",
+        name = "第二阶段:瓦古尔",
+        desc = "瓦格雷出现将死去的因格瓦尔复活成了一名瓦古尔.",
         sections = {
           Spell(42723), -- Dark Smash
           Spell(42729, {fbd = N5}), -- Dreadful Roar
           Spell(59734, {fbd = H5}), -- Dreadful Roar
           Spell(42730, {fbd = N5, flag1 = CURSE}), -- Woe Strike
           Spell(59735, {fbd = H5, flag1 = CURSE}), -- Woe Strike
-          Spell(42751, {icon = "Interface\\Icons\\INV_Axe_17", desc = "Throws a Shadow Axe at a random target. The axe will arrive at that location and spin in place for 10 seconds, dealing 1750 to 2250 damage per second to all nearby enemies.", fbd = N5}, 1), -- Shadow Axe
-          Spell(59720, {icon = "Interface\\Icons\\INV_Axe_17", desc = "Throws a Shadow Axe at a random target. The axe will arrive at that location and spin in place for 10 seconds, dealing 3500 to 4500 damage per second to all nearby enemies.", fbd = H5}, 1), -- Shadow Axe
+          Spell(42751, {icon = "Interface\\Icons\\INV_Axe_17", desc = "向一名随机目标投掷暗影利斧。暗影利斧击中目标后会在原地旋转10秒，并对附近的所有敌人每秒造成1750~2250点伤害.", fbd = N5}, 1), -- Shadow Axe
+          Spell(59720, {icon = "Interface\\Icons\\INV_Axe_17", desc = "向一名随机目标投掷暗影利斧。暗影利斧击中目标后会在原地旋转10秒，并对附近的所有敌人每秒造成3500~4500点伤害.", fbd = H5}, 1), -- Shadow Axe
         },
       }),
     },
