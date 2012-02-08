@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,41 +22,41 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local BLACKFATHOM_DEEPS = CreateInstance({
-  name = "Blackfathom Deeps",
-  desc = "Situated along the Zoram Strand of Ashenvale, Blackfathom Deeps was once a glorious temple dedicated to the night elves' moon goddess, Elune. However, the Great Sundering shattered the temple - sinking it beneath the waves of the Veiled Sea. There, the temple remained untouched until naga and satyr, drawn by its ancient power, emerged to plumb its secrets.\n\nLegends hold that Aku'mai, a favored pet of the primordial Old Gods, has taken up residence within the temple's ruins. The cult known as the Twilight's Hammer has also come to bask in Aku'mai's evil presence - and members of the shamanic order known as the Earthen Ring rush to oppose them, knowing that where the Old Gods are invoked, dangers to the whole of Azeroth cannot be far behind.",
+  name = "黑暗深渊",
+  desc = "黑暗深渊位于灰谷佐拉姆海岸的黑暗深渊曾经是一座光辉灿烂的神庙，供奉着暗夜精灵的月亮女神艾露恩。但神庙在大灾变中坍塌了，沉入了波涛汹涌的迷雾之海。神庙一直静静地在海底沉睡，直到纳迦海妖和萨特受到其力量的吸引，前来探索其中的秘密。n\n传说古代怪兽阿库麦尔现在就盘踞在神庙的废墟里。阿库麦尔是上古诸神的宠物，一直在这一地区捕食。受到阿库麦尔的吸引，一群名为暮光之锤的邪教徒也来到这里，感受上古诸神的邪恶力量。",
   texture = "BlackfathomDeeps",
   area = 688,
   dflag = N5,
 }, {
   {
-    name = "Ghamoo-Ra",
-    desc = "Ghamoo-Ra lives on the small island in the second cavern of the instance. He roams around the center of the landmass and is surrounded by several other turtles. The additional turtles are neutral, and Ghamoo-Ra can be engaged without disturbing these other beasts.",
+    name = "加摩拉",
+    desc = "加摩拉居住在地下城第二个洞穴中的小岛上。他在岩块的中央漫步，其他的海龟围绕在他四周。除加摩拉之外的海龟都是中立的，他并不会因为其他的海龟受到打扰而激怒。",
     --icon = true,
     creature = 4887,
     display = 37143,
     coords = {0.330, 0.604, 1},
     loot = {6907,6908,},
     sections = {
-      Spell(5568, {so = true, desc = "Inflicts 172 to 229 damage plus 8 to nearby enemies."}), -- Trample
+      Spell(5568, {so = true, desc = "对附近的敌人造成172到229点伤害。"}), -- Trample践踏
     },
   },
   {
-    name = "Lady Sarevess",
-    desc = "Lady Sarevess is a very twisted spellcaster who dabbles in the realm of magic. She can be a bit tough for a spellcaster, so get ready for a good tangle in the Blackfathom Deeps.",
+    name = "萨利维丝",
+    desc = "萨利维丝是魔法领域中的一个扭曲的施法者。她是一个有难度的施法者，请做好缠斗的准备。",
     --icon = true,
     creature = 4831,
     display = 4979,
     coords = {0.113, 0.398, 1},
     loot = {888,11121,3078,},
     sections = {
-      Spell(6660, {so = true, desc = "Shoots at an enemy, inflicting 24 to 29 damage."}), -- Shoot
-      Spell(8435, {so = true}), -- Forked Lightning
-      Spell(246, {so = true, flag1 = MAGIC}), -- Slow
+      Spell(6660, {so = true, desc = "射击目标，对其造成24到29点物理伤害。"}), -- Shoot射击
+      Spell(8435, {so = true, desc = "对施法者正面锥形区域内的敌人造成自然伤害。"}), -- Forked Lightning叉状闪电
+      Spell(246, {so = true, desc = "使敌人的移动速度降低35%，攻击速度降低35%，持续6秒。", flag1 = MAGIC}), -- Slow减速术
     },
   },
   {
-    name = "Gelihast",
-    desc = "Gelihast is a level 26 elite murloc mini-boss in Blackfathom Deeps. He goes down quite quickly but he can interrupt and kill casters very quickly, dealing high damage as he is wielding 2 swords and has an incredible attack speed. Killing him allows access to an altar, when used it gives the beneficial debuff Blessing of Blackfathom.",
+    name = "格里哈斯特",
+    desc = "格里哈斯特是黑暗深渊中的一个26级精英。作为一个小BOSS，他速度很快，可以打断、并快速杀死一个施法者，造成高额伤害。双持武器的他有着令人难以置信的攻击速度。 杀死他之后可以通过一个祭坛来获得“黑暗深渊的祝福”",
     --icon = true,
     creature = 6243,
     display = 1773,
@@ -67,34 +67,34 @@ local BLACKFATHOM_DEEPS = CreateInstance({
     },
   },
   {
-    name = "Lorgus Jett",
-    desc = "Lorgus Jett is a high ranking Twilight's Hammer human found in Blackfathom Deeps. His death is a required criterion for completion of Allegiance to the Old Gods, a Horde-only quest. Jett may be found in a few different locations within Blackfathom Deeps, so it may take extra searching to find him.",
+    name = "洛古斯·杰特",
+    desc = "洛古斯·杰特是一名人类高阶暮光之锤成员。部落任务[上古之神的仆从]要求你杀死他。他可能在多个位置出现，所以寻找他的话可能需要多费一点时间。",
     --icon = true,
     creature = 12902,
     display = 12822,
     coords = {0.386, 0.200, 2},
     loot = {},
     sections = {
-      Spell(12550, {so = true, desc = "Surrounds Lorgus Jett with 3 balls of lightning, melee and range attackers have a 50% chance to trigger one of the orbs and take 2 Nature damage. Each time the shield strikes, a ball of lightning dissipates.", flag1 = MAGIC}), -- Lightning Shield
-      Spell(12167, {so = true, desc = "Blasts an enemy with lightning, inflicting 74 to 87 Nature damage."}), -- Lightning Bolt
+      Spell(12550, {so = true, desc = "3颗闪电球环绕着施法者，有50%的几率对近战或远程攻击者造成自然伤害。每次闪电之盾发动反击都会消耗一颗闪电球。闪电之盾最多可维持10分钟，或者在反击3次后消失。", flag1 = MAGIC}), -- Lightning Shield闪电之盾
+      Spell(12167, {so = true, desc = "用闪电攻击目标，对其造成74到87点自然伤害。"}), -- Lightning Bolt闪电箭
     },
   },
   {
-    name = "Baron Aquanis",
-    desc = "Baron Aquanis is a water elemental found in Blackfathom Deeps that can be summoned through a horde-only quest Baron Aquanis when attempting to gather the Fathom Core from the Fathom Stone.",
+    name = "阿奎尼斯男爵",
+    desc = "阿奎尼斯男爵是一个黑暗深渊中的水元素，你尝试在深渊石获取[深渊之核]时可以通过部落任务[阿奎尼斯男爵]召唤他。",
     --icon = true,
     creature = 12876,
     display = 110,
     coords = {0.408, 0.722, 2},
     loot = {16782,},
     sections = {
-      Spell(15531, {so = true, desc = "Inflicts 99 to 116 Frost damage to nearby enemies, immobilizing them for up to 8 seconds.", flag1 = MAGIC}), -- Frost Nova
-      Spell(15043, {so = true, desc = "Inflicts 99 to 116 Frost damage to an enemy and reduces its movement speed by 50% for 4 seconds.", flag1 = MAGIC}), -- Frostbolt
+      Spell(15531, {so = true, desc = "对附近的敌人造成99到116点冰霜伤害并将其冻结在原地，冻结效果最多可持续8秒。", flag1 = MAGIC}), -- Frost Nova冰霜新星
+      Spell(15043, {so = true, desc = "对敌人造成99到116点冰霜伤害，并使其移动速度降低，持续4秒。", flag1 = MAGIC}), -- Frostbolt寒冰箭
     },
   },
   {
-    name = "Old Serra'kis",
-    desc = "Old Serra'kis is a giant threshadon found in Blackfathom Deeps. Finding Serra'kis proves to be harder than the actual fight. To reach him, you must dive into the water around Moonshrine Sanctum and swim under the left side of the ruins. The fight is not tough, and as long as you're careful not to run out of breath you shouldn't have any problems. Having a Warlock to cast Unending Breath or Shaman for Water Breathing is helpful here. Without either of these classes, it will be difficult to kill him quickly enough due to his locations not having an opening to the surface for air. Coaxing him out of the cave may be a better option than fighting him inside it in this case.",
+    name = "瑟拉吉斯",
+    desc = "瑟拉吉斯是黑暗深渊中的一只巨型蛇颈龙。找到它会比打败它更难一些，你需要在Moonshrine Sanctum跳入水中，它在左边的废墟下面。战斗很简单，轰掉它就行了。",			--地名未翻
     --icon = true,
     creature = 4830,
     display = 1816,
@@ -103,35 +103,35 @@ local BLACKFATHOM_DEEPS = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Auto Attack",
-        desc = "Does not perform any special abilities.",
+        name = "自动攻击",
+        desc = "没有特殊技能。",
       }),
     },
   },
   {
-    name = "Twilight Lord Kelris",
-    desc = "Twilight Lord Kelris is the commander of the sect of the cult Twilight's Hammer that has inhabited Blackfathom Deeps. Kelris will be found in a trance as you enter the room, and as such he will not notice you until attacked directly. This gives the group ample time to clear the room of any other Twilight's Hammer cultists before engaging Kelris himself. He will use a Mind Control spell periodically, as well as a Sleep. Be prepared to deal with incapacitated or charmed players accordingly. His main attack is a Shadow Bolt spell identical to player warlocks. His head is the required criterion for completion of Blackfathom Villainy.\n\nAfter dispatching Twilight Lord Kelris, the four candles around the statue of Queen Azshara must be lit to open the door to Aku'mai. Beware, though, the candles will each spawn a wave of enemies. Be prepared to fight each time your group lights one of the candles.",
+    name = "梦游者克尔里斯",
+    desc = "梦游者克尔里斯是盘踞在黑暗深渊的狂热派暮光之锤成员的直接指挥官。一进入房间你就可以看到他，在受到攻击前他并不会主动攻击你。所以在与他战斗之前，你有充足的时间来清理房间中的其他暮光之锤狂热者。他会周期性的施放[催眠术]和[精神控制]，做好应对这两个法术的准备。他的主要攻击方式是暗影箭，其效果与术士的相同。任务[黑暗深渊中的邪恶]需要你取得他的脑袋。\n\n击败他之后，点亮艾萨拉女王雕像周围的四个烛台就能打开通向阿库麦尔的大门。注意。点亮每个烛台都会刷新一波敌人，做好战斗准备。",
     --icon = true,
     creature = 4832,
     display = 4939,
     coords = {0.527, 0.819, 2},
     loot = {1155,6903,},
     sections = {
-      Spell(15587, {so = true, desc = "Inflicts 49 to 58 Shadow damage to an enemy."}), -- Mind Blast
-      Spell(8399, {so = true, desc = "Puts an enemy to sleep for up to 6 seconds. Any damage caused will awaken them.", flag1 = MAGIC}), -- Sleep
+      Spell(15587, {so = true, desc = "对目标造成49到58点暗影伤害。"}), -- Mind Blast心灵震爆
+      Spell(8399, {so = true, desc = "使敌人进入睡眠状态，最多持续6秒。任何对目标造成伤害的行为都会唤醒它。", flag1 = MAGIC}), -- Sleep催眠术
     },
   },
   {
-    name = "Aku'mai",
-    desc = "The ancient hydra Aku'mai, princess of the deep, has taken up residence within the Blackfathom Deeps, which once was a glorious temple dedicated to the night elves' moon-goddess Elune. A favored pet of the primordial Old Gods, Aku'mai has been a scourge to the Zoram Strand for ages. Drawn to Aku'mai's presence in the Deeps, the cult known as the Twilight's Hammer has gathered to bask in the Old Gods' evil presence by sacrificing innocents to the monstrous beast in order to gain favor with her twisted masters.",
+    name = "阿库麦尔",
+    desc = "史上的深渊王子阿库麦尔曾掌管着黑暗深渊的居民，那里曾一度是个供奉着暗夜精灵月光神明爱露恩的神庙。作为上古之神的爪牙，阿库麦尔一直是佐拉姆海岸多年的祸根。由于他的存在，那些被称为目光之锤的狂热分子为了取悦他们的扭曲的主人，聚集起来，通过将无辜者喂给猛兽的方式来献祭上古邪神的仪式。",
     --icon = true,
     creature = 4829,
     display = 2837,
     coords = {0.858, 0.863, 2},
     loot = {6910,6909,6911,},
     sections = {
-      Spell(3490, {so = true, desc = "Increases attack speed by 75% for 5 seconds. Reduces physical damage dealt by 15."}), -- Frenzied Rage
-      Spell(3815, {so = true, desc = "Inflicts 35 Nature damage to enemies within 8 years every 3 seconds for 15 seconds.", flag1 = POISON}), -- Poison Cloud
+      Spell(3490, {so = true, desc = "使施法者的攻击速度提高75%，持续5秒，但物理伤害能力降低15点。"}), -- Frenzied Rage狂暴怒气
+      Spell(3815, {so = true, desc = "每3秒对附近的敌人造成35点自然伤害，持续15秒。", flag1 = POISON}), -- Poison Cloud毒云
     },
   },
 })

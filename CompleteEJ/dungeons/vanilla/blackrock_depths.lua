@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,15 +22,15 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local BLACKROCK_DEPTHS = CreateInstance({
-  name = "Blackrock Depths",
-  desc = "Once the capital city of the Dark Iron dwarves, this volcanic labyrinth now serves as the seat of power for Ragnaros the Firelord. Ragnaros has uncovered the secret to creating life from stone and plans to build an army of unstoppable golems to aid him in conquering the whole of Blackrock Mountain. Obsessed with defeating Nefarian and his draconic minions, Ragnaros will go to any extreme to achieve final victory.",
+  name = "黑石深渊",
+  desc = "黑石深渊在黑石山的最深处，达格兰·索瑞森大帝和他的黑铁矮人统治着这里。黑石深渊是少量的黑铁矿石产地之一，熔炼它们需要的黑铁熔炉也在这里。同时这里还有制造一切黑铁装备所需要的黑铁铁砧。黑石深渊是团队副本之前最史诗的一个区域，这里有着二十多个首领和众多的任务线，是回到经典旧世真切的经历。在之后的两个资料片中，副本中的首领之间可以通过钻机快速到达，并移除了一些任务链，比如奥妮克希亚系列任务。",
   texture = "BlackrockDepths",
   area = 704,
   dflag = N5,
 }, {
   {
-    name = "Bael'Gar",
-    desc = "Once you enter the instance, take the port to the left and head forward. It's recommended to do him first to save time from running.",
+    name = "贝尔加",
+    desc = "进入黑石深渊之后,从左边的路线向前走就能遇到洛考尔.",
     --icon = true,
     creature = 9016,
     display = 12162,
@@ -38,40 +38,40 @@ local BLACKROCK_DEPTHS = CreateInstance({
     loot = {11807,11805,11803,11802,},
     sections = {
       Spell(13895, {so = true, flag1 = IMPORTANT}), -- Summon Spawn of Bael'Gar
-      Spell(23379, {so = true, desc = "Deals 70 to 80 Fire damage to the current target and additional 50 Fire damage every 3 seconds for 24 seconds. Stacks maximum 3 times.", flag1 = HEALER}), -- Magma Splash
+      Spell(23379, {so = true, desc = "对当前敌对目标造成70~80点火焰伤害,同时每3秒再造成50点额外的火焰伤害,持续24秒,这个效果最高可以叠加3次.", flag1 = HEALER}), -- Magma Splash
     },
   },
   {
-    name = "Lord Roccor",
-    desc = "Lord Roccor can be found patroling the lower Halls of the Law, right outside the room of Houndmaster Grebmar, nearby the arena.",
+    name = "洛考尔",
+    desc = "洛考尔一般出现在驯犬者和竞技场附近的地方",
     --icon = true,
     creature = 9025,
     display = 5781,
     coords = {0.560, 0.670, 1},
     loot = {22397,22234,11631,11632,},
     sections = {
-      Spell(13729, {so = true, desc = "Instantly burns an enemy for 24 to 29 Fire damage, then inflicts additional 4 Fire damage every 3 seconds for 12 seconds.", flag1 = MAGIC}), -- Flame Shock
+      Spell(13729, {so = true, desc = "使一个敌对目标燃烧,造成24~29点火焰伤害,同时每3秒再造成4点额外的火焰伤害,持续12秒.", flag1 = MAGIC}), -- Flame Shock
       Spell(13728, {so = true, flag1 = HEALER}), -- Earth Shock
       Spell(6524, {so = true}), -- Ground Tremor
     },
   },
   {
-    name = "Houndmaster Grebmar",
-    desc = "Houndmaster Grebmar resides under the arena, protected by a pack of his pet dogs.",
+    name = "驯犬者格雷布玛尔",
+    desc = "格雷布玛尔和他的猎犬守护着竞技场.",
     --icon = true,
     creature = 9319,
     display = 9212,
     coords = {0.505, 0.630, 1},
     loot = {11629,11627,11623,11628,},
     sections = {
-      Spell(13730, {so = true, desc = "Reduces the melee attack power of nearby enemies by 10 for 20 seconds."}), -- Demoralizing Shout
+      Spell(13730, {so = true, desc = "使附近10码内的所有敌人伤害降低,持续20秒."}), -- Demoralizing Shout
       Spell(15615, {so = true, flag1 = HEALER}), -- Pummel
       Spell(21049, {so = true, flag1 = MAGIC}), -- Bloodlust
     },
   },
   {
-    name = "High Interrogator Gerstahn",
-    desc = "The final boss of the Lower City section of the instance, usually most Looking for Dungeon groups go straight for her to finish up quickly and then queue again.",
+    name = "审讯官格斯塔恩",
+    desc = "她是黑石深渊入口区的最终BOSS,如果玩家通过随机副本的形式进入这个副本队列,击败她就可以获得随机副本的奖励.",
     --icon = true,
     creature = 9018,
     display = 8761,
@@ -79,14 +79,14 @@ local BLACKROCK_DEPTHS = CreateInstance({
     loot = {11626,11625,11624,22240,},
     sections = {
       Spell(14033, {so = true, flag1 = INTERRUPT}), -- Mana Burn
-      Spell(14032, {so = true, desc = "Utters a word of darkness, inflicting 6 Shadow damage to an enemy every 3 seconds for 15 seconds.", flag1 = MAGIC}), -- Shadow Word: Pain
+      Spell(14032, {so = true, desc = "格斯塔恩吟唱黑暗的咒语,对所有敌人造成每3秒6点的暗影伤害,持续15秒.", flag1 = MAGIC}), -- Shadow Word: Pain
       Spell(13704, {so = true, flag1 = MAGIC}), -- Psychic Scream
-      Spell(12040, {so = true, desc = "Surrounds the caster with a shield woven of Shadow magic. The shield lasts 30 seconds and absorbs 200 damage.", flag1 = MAGIC}), -- Shadow Shield
+      Spell(12040, {so = true, desc = "格斯塔恩为自己施加一个黑暗魔法护盾,可以吸收200点伤害,持续30秒.", flag1 = MAGIC}), -- Shadow Shield
     },
   },
   {
-    name = "High Justice Grimstone",
-    desc = "High Justice Grimstone can be found within the Ring of Law, also known as the arena. When you walk near the center of the room, he will start an event that will spawn random waves of mobs, then one of six possible bosses.",
+    name = "裁决者格里斯通",
+    desc = "玩家在法律之环的竞技场中可以通过格里斯通触发战斗,面对6位中随机的1名Boss.",
     --icon = true,
     creature = 10096,
     display = 9329,
@@ -97,54 +97,54 @@ local BLACKROCK_DEPTHS = CreateInstance({
         stype = CREATURE,
         creature = 9031,
         display = 3004,
-        name = "Anub'shiah",
+        name = "阿努希尔 ",
         sections = {
-          Spell(13787, {desc = "Protects the caster, increasing armor by 210, Shadow resistance by 3 and health regeneration by 7 for 30 minutes.", flag1 = MAGIC}), -- Demon Armor
-          Spell(8994, {desc = "Banishes an enemy, preventing all action but making it invulnerable for up to 5 seconds.", flag1 = MAGIC}), -- Banish
+          Spell(13787, {desc = "保护施法者,使其护甲值提高210点,暗影抗性提高3点,生命回复速度提高,持续30分钟.", flag1 = MAGIC}), -- Demon Armor
+          Spell(8994, {desc = "放逐敌对目标，使其完全无法行动，但也不会受到任何伤害，最多持续5秒。在同一时间内只能放逐一个目标.", flag1 = MAGIC}), -- Banish
           Spell(15471), -- Enveloping Web
           Spell(15470, {flag1 = CURSE}), -- Curse of Tongues
-          Spell(12493, {desc = "Reduces the 1 Physical damage dealt by an enemy for 20 seconds.", flag1 = CURSE}), -- Curse of Weakness
-          Spell(15472, {desc = "Hurls a bolt of dark magic at an enemy, inflicting 199 to 232 Shadow damage."}), -- Shadow Bolt
+          Spell(12493, {desc = "降低一名敌人造成的物理伤害，持续20秒.", flag1 = CURSE}), -- Curse of Weakness
+          Spell(15472, {desc = "向目标射出一支暗影箭，对其造成199~232点暗影伤害."}), -- Shadow Bolt
         },
       }),
       Stage({
         stype = CREATURE,
         creature = 9029,
         display = 523,
-        name = "Eviscerator",
+        name = "剜眼者",
         sections = {
-          Spell(7121, {desc = "Creates an anti-magic shell around Eviscerator, making him immune to magic for 6 seconds.", flag1 = DPS}), -- Anti-Magic Shield
-          Spell(15245, {desc = "Hurls missiles of dark magic, inflicting 99 to 116 Shadow damage to nearby enemies."}), -- Shadow Bolt Volley
-          Spell(14331, {desc = "Inflicts 18 Physical damage to an enemy every 3 seconds for 15 seconds. Stacks maximum 3 times.", flag1 = TANK}), -- Vicious Rend
+          Spell(7121, {desc = "反魔法的护罩包围施法者，使其对魔法免疫，持续6秒.", flag1 = DPS}), -- Anti-Magic Shield
+          Spell(15245, {desc = "向附近的敌人射出多支暗影箭，对它们造成99~116点暗影伤害."}), -- Shadow Bolt Volley
+          Spell(14331, {desc = "每3秒对敌人造成18点物理伤害，持续15秒,这个效果最多可以叠加3次.", flag1 = TANK}), -- Vicious Rend
         },
       }),
       Stage({
         stype = CREATURE,
         creature = 9027,
         display = 8760,
-        name = "Gorosh the Dervish",
+        name = "修行者高罗什",
         sections = {
           Spell(16856, {flag1 = MAGIC}), -- Bloodlust
           Spell(21049, {flag1 = HEALER}), -- Mortal Strike
-          Spell(13736, {desc = "Attacks nearby enemies in a whirlwind of steel that lasts 2 seconds and inflicts normal damage plus 300."}), -- Whirlwind (triggers 15589)
+          Spell(13736, {desc = "像旋风一般挥舞手中的武器，造成普通伤害再加上300点的额外伤害，持续2秒."}), -- Whirlwind (triggers 15589)
         },
       }),
       Stage({
         stype = CREATURE,
         creature = 9028,
         display = 7873,
-        name = "Grizzle",
+        name = "格里兹尔",
         sections = {
           Spell(40504, {flag1 = TANK}), -- Cleave
           Spell(6524), -- Ground Tremor
-          Spell(8269, {desc = "Frenzies at low health, increases attack speed by 60% for 2 minutes.", flag1 = HEALER}), -- Frenzy
+          Spell(8269, {desc = "攻击速度提高60%,持续2分钟.", flag1 = HEALER}), -- Frenzy
         },
       }),
       Stage({
         stype = CREATURE,
         creature = 9032,
         display = 8271,
-        name = "Hedrum the Creeper",
+        name = "爬行者赫杜姆",
         sections = {
           Spell(15475, {flag1 = POISON}), -- Baneful Poison
           Spell(3609, {flag1 = POISON}), -- Paralyzing Poison
@@ -155,42 +155,42 @@ local BLACKROCK_DEPTHS = CreateInstance({
         stype = CREATURE,
         creature = 9030,
         display = 11538,
-        name = "Ok'thor the Breaker",
+        name = "破坏者奥科索尔",
         sections = {
-          Spell(15254, {desc = "Hurls a magical bolt at an enemy, inflicting 99 to 116 Arcane damage."}), -- Arcane Bolt
-          Spell(15453, {desc = "Sends out a blast wave of magic, inflicting 124 to 145 Arcane damage to enemies within 30 yards."}), -- Arcane Explosion
-          Spell(13323, {desc = "Transforms an enemy into a sheep, forcing it to wander around for up to 6 sec. While wandering, the sheep cannot attack or cast spells. Any damage will transform the target back into its normal form.", flag1 = MAGIC}), -- Polymorph
+          Spell(15254, {desc = "向目标射出一支魔法箭，对其造成99~116点奥术伤害."}), -- Arcane Bolt
+          Spell(15453, {desc = "制造一次以施法者为中心的魔法爆炸，对附近30码的敌人造成124~145点奥术伤害."}), -- Arcane Explosion
+          Spell(13323, {desc = "将敌人变成绵羊，使其在周围到处闲逛，最多持续6秒。在这个过程中，绵羊无法攻击或施法，但会以极快的速度恢复生命值，任何伤害都会让绵羊恢复正常状态", flag1 = MAGIC}), -- Polymorph
           Spell(13747, {flag1 = MAGIC}), -- Slow
         },
       }),
     },
   },
   {
-    name = "Pyromancer Loregrain",
-    desc = "Loregrain is located just past the arena, accessible after you've first defeated the random boss event. Run past the crowd on the top floor and you are on your right way.",
+    name = "控火师罗格雷恩",
+    desc = "这家伙似乎是个火爆的牛头人萨满祭司..",
     --icon = true,
     creature = 9024,
     display = 8762,
     coords = {0.544, 0.960, 2},
     loot = {11747,11748,11750,11749,},
     sections = {
-      Spell(15041, {so = true, desc = "Surrounds Loregrain with a shield that lasts 1 minute and absorbs 120 Fire damage.", flag1 = MAGIC}), -- Fire Ward
-      Spell(15616, {so = true, desc = "Instantly burns an enemy for 49 to 58 Fire damage, then inflicts additional 9 Fire damage every 3 seconds for 12 seconds.", flag1 = MAGIC}), -- Flame Shock
-      Spell(15095, {so = true, desc = "Burns an enemy, inflicting 66 to 77 Fire damage."}), -- Molten Blast
+      Spell(15041, {so = true, desc = "罗格雷恩为自己施加一个烈焰结界，持续1分钟，可吸收120点火焰伤害.", flag1 = MAGIC}), -- Fire Ward
+      Spell(15616, {so = true, desc = "立刻用火焰燃烧目标，造成49~58点火焰伤害,并继续对其每3秒造成一次额外的9点火焰伤害，持续12秒.", flag1 = MAGIC}), -- Flame Shock
+      Spell(15095, {so = true, desc = "烧灼目标，造成66~77点火焰伤害."}), -- Molten Blast
       --Spell(15038), -- Scorching Totem
       Stage({
         so = true,
         stype = CREATURE,
         creature = 9637,
         display = 4589,
-        name = "Scorching Totem",
-        desc = "Attacks enemies with Scorch, dealing 33 to 38 Fire damage each 2 seconds. The totem lasts 35 seconds.", -- 15037
+        name = "灼烧图腾",
+        desc = "在施法者身边召唤一个灼烧图腾，每2秒攻击一个附近的敌人,造成33~38点火焰伤害。持续35秒.", -- 15037
       }),
     },
   },
   {
-    name = "Warder Stilgiss and Verek",
-    desc = "Warder Stilgiss and his pet darkhound Verek, are found in the Black Vault. They are protecting the coffer rooms and access to The Heart of the Mountain.",
+    name = "典狱官斯迪尔基斯",
+    desc = "玩家可以在黑色避难所中找到典狱官斯迪尔基斯和他的宠物维雷克.",
     --icon = true,
     creature = 9041,
     display = 9089,
@@ -202,12 +202,12 @@ local BLACKROCK_DEPTHS = CreateInstance({
         stype = CREATURE,
         creature = 9041,
         display = 9089,
-        name = "Warder Stilgiss",
+        name = "典狱官斯迪尔基斯",
         sections = {
-          Spell(12544, {desc = "Encases the caster in a layer of frost that lasts 30 minutes. If an enemy strikes the caster, they may have their movement slowed by 30% and the time between their attacks increased by 20% for 5 seconds.", flag1 = MAGIC}), -- Frost Armor (triggers 6136)
-          Spell(15044, {desc = "Surrounds the caster with a shield that lasts 1 minute and can absorb 120 Frost damage.", flag1 = MAGIC}), -- Frost Ward
-          Spell(12674, {desc = "Inflicts 87 to 101 Frost damage to nearby enemies, immobilizing them for 8 seconds.", flag1 = MAGIC}), -- Frost Nova
-          Spell(12675, {desc = "Inflicts 149 to 174 Frost damage to an enemy and reduces its movement speed by 50% for 4 seconds.", flag1 = MAGIC}), -- Frostbolt
+          Spell(12544, {desc = "一层寒冰包裹施法者，持续30分钟。这层厚重的寒冰能提高护甲值，并且使近战攻击者的移动速度降低30%，攻击间隔增加20%,持续5秒", flag1 = MAGIC}), -- Frost Armor (triggers 6136)
+          Spell(15044, {desc = "斯迪尔基斯为自己施展冰霜结界，持续1分钟，可吸收120点冰霜伤害", flag1 = MAGIC}), -- Frost Ward
+          Spell(12674, {desc = "对附近的敌人造成87~101点冰霜伤害并将其冻结在原地，冻结效果最多可持续8秒.", flag1 = MAGIC}), -- Frost Nova
+          Spell(12675, {desc = "对敌人造成149~174点冰霜伤害，并使其移动速度降低50%，持续4秒.", flag1 = MAGIC}), -- Frostbolt
         },
       }),
       Stage({
@@ -215,48 +215,48 @@ local BLACKROCK_DEPTHS = CreateInstance({
         stype = CREATURE,
         creature = 9042,
         display = 9019,
-        name = "Verek",
+        name = "维雷克",
         sections = {
-          Spell(15042, {desc = "Increases the Physical damage taken by an enemy by 1 for 20 seconds.", flag1 = CURSE}), -- Curse of Blood
-          Spell(8599, {desc = "Enrages, increasing physical damage dealt by 10% and attack speed by 30% for 2 minutes.", flag1 = ENRAGE}), -- Enrage
+          Spell(15042, {desc = "使目标在受到物理攻击时所承受的伤害提高，持续20秒.", flag1 = CURSE}), -- Curse of Blood
+          Spell(8599, {desc = "维雷克进入激怒状态,物理伤害提高10%,攻击速度提高30%, 持续2分钟.", flag1 = ENRAGE}), -- Enrage
         },
       }),
     },
   },
   {
-    name = "Fineous Darkvire",
-    desc = "Fineous Darkvire is the current Chief Architect of the Dark Iron dwarves in Shadowforge City. He is one of the most difficult bosses to handle at lower levels.",
+    name = "弗诺斯·达克维尔<首席建筑师>",
+    desc = "弗诺斯·达克维尔是黑铁矮人的首席设计师,是一个比较有难度的Boss,如果玩家等级较低的情况下去挑战他的话也许会遇到不小的困难",
     --icon = true,
     creature = 9056,
     display = 8704,
     coords = {0.633, 0.210, 1},
     loot = {22223,11841,11842,11839,},
     sections = {
-      Spell(8258, {desc = "This passive aura grants him and nearby allies 20 bonus armor for 4 minutes."}), -- Devotion Aura
-      Spell(15346, {so = true, desc = "Every time an enemy is struck the caster is healed for 8.", flag1 = MAGIC}), -- Seal of Reckoning
-      Spell(15493, {so = true, desc = "Calls upon Holy magic to heal an ally for 185 to 215.", flag1 = INTERRUPT}), -- Holy Light
+      Spell(8258, {desc = "护甲值提高20点,持续4分钟."}), -- Devotion Aura
+      Spell(15346, {so = true, desc = "弗诺斯·达克维尔施展清算圣印,持续30秒.击中敌人时,弗诺斯·达克维尔会回复8点生命值.", flag1 = MAGIC}), -- Seal of Reckoning
+      Spell(15493, {so = true, desc = "召唤圣光的力量治疗目标,为其恢复185~215点生命值.", flag1 = INTERRUPT}), -- Holy Light
       Spell(11978, {so = true, flag1 = HEALER}), -- Kick
       Spell(13953, {so = true}), -- Holy Strike
     },
   },
   {
-    name = "Lord Incendius",
-    desc = "Lord Incendius can be found guarding the Black Anvil.",
+    name = "伊森迪奥斯",
+    desc = "玩家可以在黑铁砧附近找到这个火元素领主",
     --icon = true,
     creature = 9017,
     display = 1204,
     coords = {0.565, 0.309, 1},
     loot = {11765,11767,11766,11764,19268,},
     sections = {
-      Spell(26977, {so = true, desc = "Reduces the Fire Resistance of all enemies within 45 yards by 100 for 30 seconds. Stacks maximum 3 times.", flag1 = CURSE}), -- Curse of the Elemental Lord
+      Spell(26977, {so = true, desc = "降低45码范围内所有敌人100点的火焰抗性,持续30秒.这个效果最多可以叠加3次.", flag1 = CURSE}), -- Curse of the Elemental Lord
       Spell(14099, {so = true, flag1 = TANK}), -- Mighty Blow
-      Spell(13900, {so = true, desc = "Inflicts 510 to 690 Fire damage to all enemies in a selected area."}), -- Fiery Burst
+      Spell(13900, {so = true, desc = "对指定区域中的所有敌人造成510点~690点火焰伤害."}), -- Fiery Burst
       Spell(13899, {so = true}), -- Fire Storm
     },
   },
   {
-    name = "General Angerforge",
-    desc = "General Angerforge is the venerable general of the Dark Iron armies. He is located just past the arena and across the bridge. You can skip the arena event you are doing the upper city run by using the doors instead. Remember to use the mechanism to lower the bridge before heading out.",
+    name = "安格弗将军",
+    desc = "安格弗将军镇守着暗炉之锁.",
     --icon = true,
     creature = 9033,
     display = 8756,
@@ -264,77 +264,77 @@ local BLACKROCK_DEPTHS = CreateInstance({
     loot = {11820,11817,11810,11816,11821,},
     sections = {
       Spell(15572, {flag1 = HEALER}), -- Sunder Armor
-      Spell(17687, {desc = "Increases attack speed by 30% for 15 seconds, affecting up to 3 swings."}), -- Flurry
-      Spell(15061, {desc = "Periodically enrages, increasing physical damage dealt by 1 and attack speed by 30% for 5 seconds."}), -- Enrage
+      Spell(17687, {desc = "使施法者下三次攻击速度提高30%，持续15秒."}), -- Flurry
+      Spell(15061, {desc = "激怒,物理伤害能力提高1点,攻击速度提高30%,持续5秒."}), -- Enrage
       Stage({
         so = true,
         stype = CREATURE,
         creature = 8894,
         display = 8752,
-        name = "Anvilrage Medic",
-        desc = "Engages the players once General Angerforge reaches low health. He accompanied by several militia dwarves.",
+        name = "铁怒医师",
+        desc = "安格弗将军的矮人随从.",
         flag1 = IMPORTANT,
         sections = {
-          Spell(15587, {desc = "Inflicts 49 to 58 Shadow damage to an enemy."}), -- Mind Blast
-          Spell(15585, {desc = "Invokes Holy magic to heal allies within 30 yards for 217 to 252.", flag1 = INTERRUPT}), -- Prayer of Healing
-          Spell(15586, {desc = "Calls upon Holy magic to heal an ally for 249 to 290.", flag1 = INTERRUPT}), -- Heal
+          Spell(15587, {desc = "对目标造成49~58点暗影伤害."}), -- Mind Blast
+          Spell(15585, {desc = "召唤神圣魔法的能量治疗附近30码的队友,为其恢复217~252点生命值.", flag1 = INTERRUPT}), -- Prayer of Healing
+          Spell(15586, {desc = "使用神圣的力量治疗盟友,为其恢复249~290点生命值.", flag1 = INTERRUPT}), -- Heal
           Spell(13864, {flag1 = MAGIC}), -- Power Word: Fortitude
         },
       })
     },
   },
   {
-    name = "Golem Lord Argelmach",
-    desc = "Golem Lord Argelmach can be found in a private room of the Manufactory, accompanied by two elite golems.",
+    name = "傀儡统帅阿格曼奇",
+    desc = "在黑铁矮人制造机械傀儡的房间里,玩家可以找到傀儡统帅阿格曼奇,以及,它的两名傀儡保镖.",
     --icon = true,
     creature = 8983,
     display = 8759,
     coords = {0.364, 0.649, 2},
     loot = {11823,11669,11822,11819,},
     sections = {
-      Spell(15507, {so = true, desc = "Surrounds the caster with 3 balls of lightning that have a 50% chance of striking melee or ranged attackers for Nature damage. Each time the lightning shield strikes, a ball of lightning dissipates.", flag1 = MAGIC}), -- Lightning Shield
-      Spell(15305, {so = true, desc = "Strikes an enemy with a lightning bolt that deals 149 to 174 Nature damage and arcs to another nearby enemy. The spell affects up to 5 targets, inflicting greater Nature damage to each successive target."}), -- Chain Lightning
-      Spell(15605, {desc = "Instantly throws a bolt of lightning at an enemy, inflicting 62 to 72 Nature damage."}), -- Shock
+      Spell(15507, {so = true, desc = "3颗闪电球环绕着施法者，有50%的几率对近战或远程攻击者造成自然伤害。每次闪电之盾发动反击都会消耗一颗闪电球。因此，闪电之盾最多可维持10分钟，或者在反击3次后消失.", flag1 = MAGIC}), -- Lightning Shield
+      Spell(15305, {so = true, desc = "向敌人射出一支闪电箭，这支闪电箭会在击中目标后继续攻击它周围最近的敌人，最多可攻击5个目标，每次击中都会造成更高的自然伤害."}), -- Chain Lightning
+      Spell(15605, {desc = "立即向目标射出一支闪电箭，对其造成自然伤害."}), -- Shock
       Stage({
         so = true,
         stype = CREATURE,
         creature = 8906,
         display = 8177,
-        name = "Ragereaver Golem",
+        name = "狂怒傀儡",
         sections = {
-          Spell(17687, {desc = "Increases attack speed by 30% for 15 seconds, affecting up to 3 swings."}), -- Flurry
-          Spell(12795, {desc = "Enrages at low health, increasing damage dealt by 1 and attack speed by 30% for 2 minutes."}), -- Frenzy
+          Spell(17687, {desc = "使施法者下三次攻击速度提高30%，持续15秒."}), -- Flurry
+          Spell(12795, {desc = "激怒,物理伤害能力提高1点,攻击速度提高30%,持续2分钟."}), -- Frenzy
         },
       }),
     },
   },
   {
-    name = "Hurley Blackbreath",
-    desc = "Engaged once the kegs of beer in the storage room have been destroyed. He is accompanied by four guards.",
+    name = "霍尔雷·黑须",
+    desc = "摧毁黑铁酒吧储藏室中的啤酒酒桶,霍尔雷·黑须会带着他的4个警卫冲进储藏室,并且开始攻击玩家",
     --icon = true,
     creature = 9537,
     display = 8658,
     coords = {0.477, 0.589, 2},
     loot = {22275,18044,18043,11735,},
     sections = {
-      Spell(9573, {so = true, desc = "Inflicts 10 Fire damage to enemies in a cone in front of the caster."}), -- Flame Breath
+      Spell(9573, {so = true, desc = "对施法者前方锥形范围内的敌人造成10点火焰伤害."}), -- Flame Breath
       Spell(14872, {so = true}), -- Drunken Rage
       Stage({
         so = true,
         stype = CREATURE,
         creature = 9541,
         display = 8661,
-        name = "Blackbreath Crony",
+        name = "黑须的亲信",
         sections = {
-          Spell(15581, {so = true, desc = "Inflicts normal damage plus 3 to an enemy."}), -- Sinister Strike
-          Spell(15583, {so = true, desc = "Inflicts 6 Physical damage to an enemy every 2 seconds for 10 seconds."}), -- Rupture
+          Spell(15581, {so = true, desc = "对目标造成普通武器伤害外加一定的伤害加成."}), -- Sinister Strike
+          Spell(15583, {so = true, desc = "每2秒对敌人造成6点物理伤害，持续10秒."}), -- Rupture
         },
       }),
     },
   },
   {
-    name = "Ribbly Screwspigot",
-    desc = "Ribbly Screwspigot hides from bounty hunters in the Grim Guzzler bar. You need to talk to him in order to engage the fight. He is accompanied by bodyguards.",
+    name = "雷布里·斯库比格特",
+    desc = "赏金猎人,最大的爱好是喝酒.",
     --icon = true,
     creature = 9543,
     display = 8667,
@@ -348,48 +348,48 @@ local BLACKROCK_DEPTHS = CreateInstance({
         stype = CREATURE,
         creature = 10043,
         display = 9233,
-        name = "Ribbly's Crony",
+        name = "雷布里·斯库比格特",
         sections = {
-          Spell(13298, {desc = "Inflicts 9 Nature damage to an enemy every 3 seconds for 15 seconds.", flag1 = POISON}), -- Poison
-          Spell(15581, {desc = "Inflicts normal damage plus 3 to an enemy."}), -- Sinister Strike
+          Spell(13298, {desc = "每3秒对敌人造成9点自然伤害,持续15秒.", flag1 = POISON}), -- Poison
+          Spell(15581, {desc = "对目标造成普通武器伤害外加一定的伤害加成."}), -- Sinister Strike
           Spell(15692), -- Eviscerate
         },
       }),
     },
   },
   {
-    name = "Plugger Spazzring",
-    desc = "Plugger Spazzring supplies his Dark Iron dwarf patrons with mugs of ale, and holds the key to the bar door. While killing him may give access to the key, a rogue could simply pickpocket the key and sneak off. Once you engage Plugger Spazzring, nearby neutral dwarves will enter the fight and assist him. Alternatively you may talk to Private Rocknot nearby, and gain access further into the dungeon.",
+    name = "普拉格",
+    desc = "黑铁酒吧的老板,如果玩家想通过黑铁酒吧,可以杀死普拉格获取钥匙,或者...让一个盗贼去偷钥匙.",
     --icon = true,
     creature = 9499,
     display = 8652,
     coords = {0.505, 0.589, 2},
     loot = {12793,12791,},
     sections = {
-      Spell(13787, {desc = "Protects the caster, increasing armor by 210, Shadow resistance by 3 and health regeneration by 7 for 30 minutes.", flag1 = MAGIC}), -- Demon Armor
-      Spell(8994, {desc = "Banishes an enemy, preventing all action but making it invulnerable for up to 5 seconds.", flag1 = MAGIC}), -- Banish
-      Spell(12742, {desc = "Burns an enemy for 66 to 77 Fire damage, then inflicts additional 9 Fire damage every 3 seconds for 15 seconds.", flag1 = MAGIC}), -- Immolate
+      Spell(13787, {desc = "保护施法者,护甲值提高210点,暗影抗性提高3点,生命回复速度提高持续30分钟.", flag1 = MAGIC}), -- Demon Armor
+      Spell(8994, {desc = "放逐敌对目标，使其完全无法行动，但也不会受到任何伤害，最多持续5秒。在同一时间内只能放逐一个目标s.", flag1 = MAGIC}), -- Banish
+      Spell(12742, {desc = "灼烧敌人造成66~77点火焰伤害，并对其每3秒造成一次额外9点火焰伤害，持续15秒.", flag1 = MAGIC}), -- Immolate
       Spell(13338, {flag1 = CURSE}), -- Curse of Tongues
-      Spell(12739, {desc = "Hurls a bolt of dark magic at an enemy, inflicting 99 to 116 Shadow damage."}), -- Shadow Bolt
+      Spell(12739, {desc = "向目标射出一支暗影箭，对其造成99~116点暗影伤害."}), -- Shadow Bolt
     },
   },
   {
-    name = "Phalanx",
-    desc = "In order to fight Phalanx you need to talk to Private Rocknot and make him knock down the door. Phalanx will run to protect the door and become hostile. It is important you engage him before any other bosses, as he may reset back to being friendly due to several reasons.",
+    name = "法拉克斯",
+    desc = "法拉克斯守护着黑铁酒吧的后门,在攻击他之前处于友好状态.",
     --icon = true,
     creature = 9502,
     display = 8177,
     coords = {0.525, 0.643, 2},
     loot = {11745,11744,22212,},
     sections = {
-      Spell(15588, {so = true, desc = "Inflicts 71 to 79 Nature damage to nearby enemies, increasing the time between their attacks by 33% and slowing their movement by 40% for 6 seconds.", flag1 = MAGIC}), -- Thunderclap
-      Spell(14099, {so = true, desc = "Inflicts normal damage plus 25 to an enemy, knocking it back."}), -- Mighty Blow
-      Spell(15285, {so = true, desc = "Inflicts 49 to 58 Fire damage to enemies within 20 yards."}), -- Fireball Volley
+      Spell(15588, {so = true, desc = "对附近的敌人造成71~79点自然伤害，使其攻击间隔延长33%，移动速度降低40%，持续6秒.", flag1 = MAGIC}), -- Thunderclap
+      Spell(14099, {so = true, desc = "对一名敌人造成普通伤害及额外的25点伤害，并将其击退."}), -- Mighty Blow
+      Spell(15285, {so = true, desc = "对附近20码内的敌人造成49~58点火焰伤害."}), -- Fireball Volley
     },
   },
   {
-    name = "Ambassador Flamelash",
-    desc = "Ambassador Flamelash is a servant of Sulfuron Harbinger, and is the first Flamewalker to be encountered by adventurers.",
+    name = "弗莱拉斯大使",
+    desc = "弗莱拉斯大使是萨弗隆先驱者的仆从,是玩家可以遇到的第一个烈焰行者.",
     --icon = true,
     creature = 9156,
     display = 8329,
@@ -401,18 +401,18 @@ local BLACKROCK_DEPTHS = CreateInstance({
         stype = CREATURE,
         creature = 9178,
         display = 4607,
-        name = "Burning Spirit",
-        desc = "Once engaged, small burning spirits will swarm from edges of the room and walk toward Ambassador Flamelash. Once they reach him, he will absorb them and grow in size and power.",
+        name = "燃灵术",
+        desc = "战斗开始后,一群小型的火元素会从四周向弗莱拉斯大使聚拢,并且增加他的力量.",
         sections = {
           --Spell(13489), -- Burning Spirit
-          Spell(14744, {so = true, desc = "Increases the damage dealt by Ambassador Flamelash by 5% for 3 minutes. Stacks maximum 50 times.", flag1 = IMPORTANT}), -- Burning Spirit
+          Spell(14744, {so = true, desc = "使施法者用物理攻击对敌人造成的伤害提高5%,持续3分钟,这个效果最多可以叠加50次.", flag1 = IMPORTANT}), -- Burning Spirit
         },
       }),
     },
   },
   {
-    name = "The Seven",
-    desc = "The Seven consist of Anger'rel, Doom'rel, Dope'rel, Gloom'rel, Hate'rel, Seeth'rel and Vile'rel. Talking to Doom'rel will engage the encounter. Before doing that, Miner characters would want to talk to Gloom'rel first for a quest to learn to smelt dark iron ore.",
+    name = "七贤",
+    desc = "玩家需要击败7名黑铁矮人的贤者才可以获取七贤之箱中的宝藏.",
     --icon = true,
     creature = 9039,
     display = 8687,
@@ -423,11 +423,11 @@ local BLACKROCK_DEPTHS = CreateInstance({
         stype = CREATURE,
         creature = 9035,
         display = 8686,
-        name = "Anger'rel (Protection Warrior)",
+        name = "安格雷尔(防战)",
         sections = {
-          Spell(15061, {desc = "Periodically enrages, increasing physical damage dealt by 1 and attack speed by 30% for 5 seconds."}), -- Enrage
+          Spell(15061, {desc = "激怒,物理伤害能力提高1点,攻击速度提高30%,持续5秒."}), -- Enrage
           Spell(11971, {flag1 = HEALER}), -- Sunder Armor
-          Spell(15580, {desc = "Strikes at an enemy, inflicting normal damage plus 15."}), -- Strike
+          Spell(15580, {desc = "对敌人造成额外的15点近战伤害."}), -- Strike
           Spell(12169), -- Shield Block
           Spell(15062), -- Shield Wall
         },
@@ -436,36 +436,36 @@ local BLACKROCK_DEPTHS = CreateInstance({
         stype = CREATURE,
         creature = 9039,
         display = 8687,
-        name = "Doom'rel (Warlock)",
+        name = "杜姆雷尔(术士)",
         sections = {
-          Spell(15092, {desc = "Once engaged, summons three Voidwalkers to assist Doom'rel. The summons do not perform any special abilities."}), -- Summon Voidwalkers
-          Spell(13787, {desc = "Protects the caster, increasing armor by 210, Shadow resistance by 3 and health regeneration by 7 for 30 minutes.", flag1 = MAGIC}), -- Demon Armor
-          Spell(8994, {desc = "Banishes an enemy, preventing all action but making it invulnerable for up to 5 seconds.", flag1 = MAGIC}), -- Banish
-          Spell(12493, {desc = "Reduces the 1 Physical damage dealt by an enemy for 20 seconds.", flag1 = CURSE}), -- Curse of Weakness
-          Spell(12742, {desc = "Burns an enemy for 66 to 77 Fire damage, then inflicts additional 9 Fire damage every 3 seconds for 15 seconds.", flag1 = MAGIC}), -- Immolate
-          Spell(15245, {desc = "Hurls missiles of dark magic, inflicting 99 to 116 Shadow damage to nearby enemies."}), -- Shadow Bolt Volley
+          Spell(15092, {desc = "召唤虚空行者爪牙来协助杜姆雷尔进行战斗,这个虚空行者爪牙没有特殊的能力."}), -- Summon Voidwalkers
+          Spell(13787, {desc = "保护施法者,护甲值提高210点,暗影抗性提高3点,生命回复速度提高持续30分钟..", flag1 = MAGIC}), -- Demon Armor
+          Spell(8994, {desc = "放逐敌对目标，使其完全无法行动，但也不会受到任何伤害，最多持续5秒。在同一时间内只能放逐一个目标.", flag1 = MAGIC}), -- Banish
+          Spell(12493, {desc = "降低一名敌人造成的物理伤害，持续20秒.", flag1 = CURSE}), -- Curse of Weakness
+          Spell(12742, {desc = "灼烧敌人造成66~77点火焰伤害，并对其每3秒造成一次额外9点火焰伤害，持续15秒.", flag1 = MAGIC}), -- Immolate
+          Spell(15245, {desc = "向附近的目标射出暗影箭，对其造成99~116点暗影伤害."}), -- Shadow Bolt Volley
         },
       }),
       Stage({
         stype = CREATURE,
         creature = 9040,
         display = 8688,
-        name = "Dope'rel (Rogue)",
+        name = "多普雷尔 (盗贼)",
         sections = {
           Spell(15087), -- Evasion
           Spell(12540, {flag1 = TANK}), -- Gouge
-          Spell(15581, {desc = "Inflicts normal damage plus 3 to an enemy."}), -- Sinister Strike
-          Spell(15583, {desc = "Inflicts 6 Physical damage to an enemy every 2 seconds for 10 seconds."}), -- Rupture
-          Spell(15582, {desc = "Inflicts normal attack damage plus 30 to an enemy, but only if attacking from behind."}), -- Backstab
+          Spell(15581, {desc = "对目标造成普通武器伤害外加一定的伤害加成."}), -- Sinister Strike
+          Spell(15583, {desc = "每2秒对敌人造成6点物理伤害，持续10秒."}), -- Rupture
+          Spell(15582, {desc = "对目标造成普通伤害附加额外30点伤害，会从目标背后发动."}), -- Backstab
         },
       }),
       Stage({
         stype = CREATURE,
         creature = 9037,
         display = 8689,
-        name = "Gloom'rel (Arms Warrior)",
+        name = "格鲁雷尔 (武器战)",
         sections = {
-          Spell(13847, {desc = "Grants Glom'rel immunity to fear effects, all his attacks do critical hits but has his armor reduced by 35% for 15 seconds.", flag1 = IMPORTANT}), -- Recklessness
+          Spell(13847, {desc = "格鲁雷尔免疫恐惧效果,所有攻击都造成爆击,护甲值降低35%,持续15秒.", flag1 = IMPORTANT}), -- Recklessness
           Spell(40504, {flag1 = TANK}), -- Cleave
           Spell(13737, {flag1 = HEALER}), -- Mortal Strike
           Spell(9080), -- Hamstring
@@ -475,58 +475,58 @@ local BLACKROCK_DEPTHS = CreateInstance({
         stype = CREATURE,
         creature = 9034,
         display = 8690,
-        name = "Hate'rel",
+        name = "黑特雷尔",
         sections = {
-          Spell(12040, {desc = "Surrounds the caster with a shield woven of Shadow magic. The shield lasts 30 seconds and absorbs 200 damage.", flag1 = MAGIC}), -- Shadow Shield
-          Spell(15232, {desc = "Hurls a bolt of dark magic at an enemy, inflicting 149 to 174 Shadow damage."}), -- Shadow Bolt
-          Spell(17687, {desc = "Increases attack speed by 30% for 15 seconds, affecting up to 3 swings."}), -- Flurry
-          Spell(15580, {desc = "Strikes at an enemy, inflicting normal damage plus 15."}), -- Strike
+          Spell(12040, {desc = "使施法者被一层由暗影魔法编织而成的护盾所包围,该护盾持续30秒,可以吸收200点伤害.", flag1 = MAGIC}), -- Shadow Shield
+          Spell(15232, {desc = "向目标射出一支暗影箭，对其造成149~174点暗影伤害."}), -- Shadow Bolt
+          Spell(17687, {desc = "使施法者下三次攻击速度提高30%，持续15秒."}), -- Flurry
+          Spell(15580, {desc = "对敌人造成额外的近战伤害."}), -- Strike
         },
       }),
       Stage({
         stype = CREATURE,
         creature = 9038,
         display = 8691,
-        name = "Seeth'rel (Frost Mage)",
+        name = "西斯雷尔 (冰法)",
         sections = {
-          Spell(12544, {desc = "Encases the caster in a layer of frost that lasts 30 minutes. If an enemy strikes the caster, they may have their movement slowed by 30% and the time between their attacks increased by 20% for 5 seconds.", flag1 = MAGIC}), -- Frost Armor (triggers 6136)
-          Spell(15244, {desc = "Inflicts 49 to 58 Frost damage to enemies in a cone in front of the caster, reducing their movement speed by 50% for 8 seconds.", flag1 = TANK}), -- Cone of Cold
-          Spell(15044, {desc = "Surrounds the caster with a shield that lasts 1 minute and can absorb 120 Frost damage.", flag1 = MAGIC}), -- Frost Ward
-          Spell(12674, {desc = "Inflicts 87 to 101 Frost damage to nearby enemies, immobilizing them for 8 seconds.", flag1 = MAGIC}), -- Frost Nova
-          Spell(12675, {desc = "Inflicts 149 to 174 Frost damage to an enemy and reduces its movement speed by 50% for 4 seconds.", flag1 = MAGIC}), -- Frostbolt
-          Spell(8364, {desc = "Calls down a blizzard that lasts 8 seconds, inflicting 4 Frost damage every 2 seconds to all enemies in a selected area."}), -- Blizzard
+          Spell(12544, {desc = "一层寒冰包裹施法者，持续30分钟。这层厚重的寒冰能提高护甲值，并且使近战攻击者的移动速度降低，攻击间隔增加.", flag1 = MAGIC}), -- Frost Armor (triggers 6136)
+          Spell(15244, {desc = "对施法者面前一个锥形区域内的敌人造成冰霜伤害，并降低他们的移动速度，持续8秒.", flag1 = TANK}), -- Cone of Cold
+          Spell(15044, {desc = "护盾围绕施法者，持续1分钟，可吸收固定量的冰霜伤害.", flag1 = MAGIC}), -- Frost Ward
+          Spell(12674, {desc = "对附近的敌人造成冰霜伤害并将其冻结在原地，冻结效果最多可持续8秒.", flag1 = MAGIC}), -- Frost Nova
+          Spell(12675, {desc = "对敌人造成冰霜伤害，并使其移动速度降低，持续4秒.", flag1 = MAGIC}), -- Frostbolt
+          Spell(8364, {desc = "召唤持续8秒的暴风雪，对指定区域内的所有敌人每2秒造成一次冰霜伤害."}), -- Blizzard
         },
       }),
       Stage({
         stype = CREATURE,
         creature = 9036,
         display = 8692,
-        name = "Vile'rel (Priest)",
+        name = "瓦勒雷尔 (牧师)",
         sections = {
-          Spell(15587, {desc = "Inflicts 49 to 58 Shadow damage to an enemy."}), -- Mind Blast
-          Spell(15586, {desc = "Calls upon Holy magic to heal an ally for 249 to 290.", flag1 = INTERRUPT}), -- Heal
-          Spell(15585, {desc = "Invokes Holy magic to heal nearby party members for 217 to 252.", flag1 = INTERRUPT}), -- Prayer of Healing
-          Spell(11974, {desc = "Wraps an ally in a shield that lasts up to 30 seconds, absorbing 137 damage.", flag1 = MAGIC}), -- Power Word: Shield
+          Spell(15587, {desc = "对目标造成49~58点暗影伤害Inflicts 49 to 58 Shadow damage to an enemy."}), -- Mind Blast
+          Spell(15586, {desc = "使用神圣的力量治疗盟友,为其恢复249~290点生命值.", flag1 = INTERRUPT}), -- Heal
+          Spell(15585, {desc = "召唤神圣魔法的能量治疗附近所有的队友,为其恢复217~252点生命值.", flag1 = INTERRUPT}), -- Prayer of Healing
+          Spell(11974, {desc = "为盟友加上魔法护盾,可吸收137点伤害，持续30秒.", flag1 = MAGIC}), -- Power Word: Shield
         },
       }),
     },
   },
   {
-    name = "Magmus",
-    desc = "Magmus protects the Emperor's Seat from penetration by any interested adventurers. When forced into battle, Magmus triggers statues in the Iron Hall to spew fire. The fire can be avoided by standing between statues while taking him down.\n\nIn order to fight him, you need to light two braziers in The Lyceum. You can do this by seeking out and defeating the patrolling Shadowforge Flame Keepers. The assigned party member has to loot the Shadowforge Torch and use it on one of the braziers.",
+    name = "玛格姆斯",
+    desc = "如果要挑战玛格姆斯,玩家需要击杀暗炉持火者并且夺取暗炉火炬,点燃大厅里面的两座火盆来打开大门.",
     --icon = true,
     creature = 9938,
     display = 12162,
     coords = {0.802, 0.116, 2},
     loot = {11935,22400,22208,11746,22395,},
     sections = {
-      Spell(15668, {so = true, desc = "Inflicts 133 to 154 Fire damage to all enemies in a selected area."}), -- Fiery Burst
-      Spell(15593, {so = true, desc = "Inflicts weapon damage plus 50 as Physical damage to nearby enemies, knocking them back and stunning them for 4 seconds."}), -- War Stomp
+      Spell(15668, {so = true, desc = "对指定区域中的所有敌人造成133~154点火焰伤害."}), -- Fiery Burst
+      Spell(15593, {so = true, desc = "对附近的敌人造成物理伤害,将其击退并且昏迷4秒."}), -- War Stomp
     },
   },
   {
-    name = "Emperor Dagran Thaurissan",
-    desc = "Dagran Thaurissan is the current ruler of the Dark Iron clan, a descendant of Emperor Thaurissan and Modgud. Even as the leader of his clan, he is, like all Dark Iron dwarves, a servant of Ragnaros. The Emperor rules his people not from the city founded by (and named for) his ancestor, but rather from the depths of Blackrock Mountain near the entrance to Ragnaros's domain, the Molten Core.\n\nThe Emperor seduced King Magni Bronzebeard's daughter, Princess Moira Bronzebeard, and she is now pregnant with his child, who is half Bronzebeard dwarf and half Dark Iron dwarf, and the heir to both thrones of Shadowforge and Ironforge.",
+    name = "达格兰·索瑞森大帝",
+    desc = ".达格兰·索瑞森大帝是黑铁氏族的皇帝,现在是炎魔拉格纳罗斯的手下/",
     --icon = true,
     creature = 9019,
     display = 8807,
@@ -535,10 +535,10 @@ local BLACKROCK_DEPTHS = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Emperor Dagran Thaurissan",
+        name = "达格兰·索瑞森大帝",
         sections = {
           Spell(15636, {flag1 = IMPORTANT}), -- Avatar of Flame
-          Spell(17492, {desc = "Inflicts 49 to 58 Fire damage to an enemy, stunning it for 5 seconds."}), -- Hand of Thaurissan
+          Spell(17492, {desc = "对敌人造成49~58点火焰伤害,并且使其昏迷5秒."}), -- Hand of Thaurissan
         },
       }),
       Stage({
@@ -546,13 +546,13 @@ local BLACKROCK_DEPTHS = CreateInstance({
         stype = CREATURE,
         creature = 8929,
         display = 8705,
-        name = "Princess Moira Bronzebeard", -- "High Priestess of Thaurissan" does no longer appear since the quests were removed and the lore broke with Cataclysm, good job!
+        name = "铁炉堡公主茉艾拉·铜须<铁炉堡公主>", -- "High Priestess of Thaurissan" does no longer appear since the quests were removed and the lore broke with Cataclysm, good job!
         sections = {
-          Spell(15587, {desc = "Inflicts 49 to 58 Shadow damage to an enemy."}), -- Mind Blast
-          Spell(15537, {desc = "Hurls a bolt of dark magic at an enemy, inflicting 124 to 145 Shadow damage."}), -- Shadow Bolt
-          Spell(15654, {desc = "Utters a word of darkness, inflicting 9 Shadow damage to an enemy every 3 seconds for 15 seconds.", flag1 = MAGIC}), -- Shadow Word: Pain
-          Spell(8362, {desc = "Heals an ally for 5 every 3 seconds for 15 seconds.", flag1 = MAGIC}), -- Renew
-          Spell(15586, {desc = "Calls upon Holy magic to heal an ally for 249 to 290.", flag1 = INTERRUPT}), -- Heal
+          Spell(15587, {desc = "对目标造成49~58点暗影伤害."}), -- Mind Blast
+          Spell(15537, {desc = "向目标射出一支暗影箭，对其造成124~145点暗影伤害."}), -- Shadow Bolt
+          Spell(15654, {desc = "黑暗的咒语，每3秒对敌人造成9点暗影伤害，持续15秒.", flag1 = MAGIC}), -- Shadow Word: Pain
+          Spell(8362, {desc = "为一名盟友每3秒治疗恢复一次生命值，持续15秒.", flag1 = MAGIC}), -- Renew
+          Spell(15586, {desc = "使用神圣的力量治疗盟友,为其恢复249~290点生命值.", flag1 = INTERRUPT}), -- Heal
         },
       }),
     },
