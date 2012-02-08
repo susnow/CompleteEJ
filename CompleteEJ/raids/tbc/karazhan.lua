@@ -161,11 +161,11 @@ local KARAZHAN = CreateInstance({
         display = 16540,
         name = "莫罗斯",
         sections = {
-          Spell(34694, {desc = "Blinds the target, causing it to wander confused for 10 seconds. Any damage taken will remove the effect.", flag1 = POISON}), -- Blind
-          Spell(29425, {desc = "Inflicts 950 to 1050 damage to an enemy and stuns it for 6 seconds. Any damage taken will remove the effect."}), -- Gouge
-          Spell(37023, {desc = "When Moroes reaches 30% health, he will Frenzy and increase his Physical damage dealt by 20% for 5 minutes.", flag1 = IMPORTANT}), -- Frenzy
-          Spell(29448, {so = true, desc = "Moroes vanishes for up to 12 seconds, gaining the element of surprise.", flag1 = IMPORTANT, sections = {
-            Spell(37066, {desc = "Upon becoming visible, uses Garrote on a random enemy, inflicting 1075 damage every 3 seconds for 5 minutes.", flag1 = HEALER}), -- Garrote
+          Spell(34694, {desc = "致盲目标10秒，受到任何伤害就会解除此状态。", flag1 = POISON}), -- Blind
+          Spell(29425, {desc = "凿击，对一名敌人造成950-1050伤害，并晕6秒。"}), -- Gouge
+          Spell(37023, {desc = "当莫罗斯的血量低于30%时将进入激怒状态,在此状态下，他的伤害与攻击速度将大幅提高。", flag1 = IMPORTANT}), -- Frenzy
+          Spell(29448, {so = true, desc = "莫罗斯消失12秒，并消除所有DEBUFF。", flag1 = IMPORTANT, sections = {
+            Spell(37066, {desc = "消失结束后，对一名玩家进行锁喉，每3秒造成1075伤害，持续5分钟。", flag1 = HEALER}), -- Garrote
           }}), -- Vanish
         },
       }),
@@ -249,23 +249,23 @@ local KARAZHAN = CreateInstance({
     },
   },
   {
-    name = "Maiden of Virtue",
-    desc = "Maiden of Virtue is a titanic watcher-like boss in the Guest Chambers wing of Karazhan. She is, ironically, being the Maiden of Virtue, put behind the rooms that are full of ladies of the night. It is unclear how this happened or who sent her. The Maiden is optional; it is not necessary to kill her in order to reach other bosses.",
+    name = "贞节圣女",
+    desc = "贞节圣女是位于卡拉赞会客室一侧泰坦观测室的BOSS，讽刺的是，作为贞节圣女，被安排在了一个充满夜之女郎的房间之后。发生这样事情的原因和把她送到这里的人是谁都还不清楚。圣女是一个可选boss，可以跳过她去击杀其他的boss。",
     --icon = true,
     creature = 16457,
     display = 16198,
     coords = {0.836, 0.500, 4},
     loot = {28516,28520,28511,28512,28522,},
     sections = {
-      Spell(29512, {so = true, desc = "Constantly deals 240 to 360 Holy damage each second and prevents spellcasting for 1 second.  This aura has 12 yards range and is visually illustrated by the circle she stands on.", flag1 = IMPORTANT}), -- Holy Ground
-      Spell(32445, {so = true, desc = "Sends bolts of holy power at a random enemy, the bolts jump to other nearby enemies. Initially deals 1950 to 2050 Holy damage but increases by 40% each jump.  Does not target or jump to pets.", flag1 = IMPORTANT}), -- Holy Wrath
-      Spell(29522, {desc = "Consumes an enemy in flames, burning it for 3238 to 3762 Fire damage and inflicting additional 1750 Fire damage each 2 seconds for 12 seconds.", flag1 = MAGIC}), -- Holy Fire
-      Spell(29511, {desc = "Puts all enemies in a state of meditation, incapacitating them for 12 seconds.  Breaks on any damage received."}), -- Repentance
+      Spell(29512, {so = true, desc = "神圣奉献，在其身边12码半径内不断施放，对范围内玩家每三秒造成240-360神圣伤害，并伴有1秒沉默效果。", flag1 = IMPORTANT}), -- Holy Ground
+      Spell(32445, {so = true, desc = "类似ZUG蛇BOSS的技能，对第一目标造成2000神圣伤害，若10码内有其他成员，则发生跳跃对其造成2900伤害，第三次跳跃伤害3800，第四次5400，依此类推。瞬发，冷却时间20秒。", flag1 = IMPORTANT}), -- Holy Wrath
+      Spell(29522, {desc = "对某一地方目标施放神圣之火，造成3238-3762火焰伤害，附带魔法效果，每两秒1750火焰伤害持续12秒。", flag1 = MAGIC}), -- Holy Fire
+      Spell(29511, {desc = "忏悔所有玩家，昏迷10秒。"}), -- Repentance
     },
   },
   {
-    name = "Opera Event",
-    desc = "In the Opera House, Barnes can be found. When a player talks to him, he walks on the stage and announces the Opera event for this week: Red Riding Hood, Romulo & Julianne or Wizard of Oz.",
+    name = "歌剧",
+    desc = "在剧院中，与一名NPC对话即可触发战斗。从三个歌剧中随机选取一个：绿野仙踪、小红帽和罗密欧与朱丽叶。",
     --icon = true,
     creature = 16812,
     display = 16616,
@@ -276,69 +276,69 @@ local KARAZHAN = CreateInstance({
         stype = CREATURE,
         creature = 17521,
         display = 17053,
-        name = "The Big Bad Wolf",
-        desc = "Talk to Grandma and she will tell you the story.",
+        name = "大灰狼",
+        desc = "与老奶奶对话，她会给你讲这个故事。",
         sections = {
-          Spell(30756, {so = true, desc = "A random enemy is turned into Little Red Riding Hood, this reduces that targets armor to 0, increases movement speed by 50%, pacifies and silences. Your only choice is to run away and survive! Lasts 20 seconds.", flag1 = IMPORTANT}), -- Little Red Riding Hood
-          Spell(30752, {desc = "Causes enemies within 10 yards to flee in fear for 3 seconds.", flag1 = MAGIC}), -- Terrifying Howl
-          Spell(30761, {desc = "Stuns all enemies in front for 4 seconds."}), -- Wide Swipe
+          Spell(30756, {so = true, desc = "将某一玩家变成小红帽，被变形的玩家护甲为0，移动速度增加50%。在此期间内大灰狼只会攻击被变成小红帽的玩家，持续20秒。", flag1 = IMPORTANT}), -- Little Red Riding Hood
+          Spell(30752, {desc = "恐惧10码内的玩家3秒。", flag1 = MAGIC}), -- Terrifying Howl
+          Spell(30761, {desc = "使所有玩家昏迷4秒。"}), -- Wide Swipe
         },
       }),
       Stage({
-        name = "Romulo and Julianne",
-        desc = "A young man and woman meet by chance and fall instantly in love. But their families are bitter enemies, and in order to be together, the two lovers must be prepared to risk everything.",
+        name = "罗密欧与朱丽叶",
+        desc = "两个年轻人机缘巧合之下相见，然后陷入爱河，但是他们的家庭不允许这样，两人为了在一起，不怕任何艰难险阻。",
         sections = {
           Stage({
             stype = CREATURE,
             creature = 17534,
             display = 17068,
-            name = "Phase 1: Julianne",
+            name = "第一阶段： 朱丽叶",
             sections = {
               Spell(30890), -- Blinding Passion
               Spell(30887, {flag1 = MAGIC}), -- Devotion
-              Spell(30878, {desc = "Heals an ally for 46250 to 53750.", flag1 = INTERRUPT}), -- Eternal Affection
-              Spell(30889, {desc = "Dazzles the target, filling it with intense attraction, stunning them for 6 seconds."}), -- Powerful Attraction
+              Spell(30878, {desc = "治疗友方46250-53750血量。", flag1 = INTERRUPT}), -- Eternal Affection
+              Spell(30889, {desc = "击晕目标6秒。"}), -- Powerful Attraction
             },
           }),
           Stage({
             stype = CREATURE,
             creature = 17533,
             display = 17067,
-            name = "Phase 2: Romulo",
+            name = "第二阶段： 罗密欧",
             sections = {
               Spell(30841, {flag1 = MAGIC}), -- Daring
-              Spell(30822, {desc = "Deals weapon damage and reduces the targets stats by 10% for 1 minute. This can stack max 8 times, ultimately reducing statistics by 80%.", flag1 = POISON}), -- Poisoned Thrust
-              Spell(30815, {desc = "Strikes at an enemy behind the caster and within 10 yards, inflicting 1900 to 2100 Physical damage and knocking them away.", flag1 = DPS}), -- Backward Lunge
+              Spell(30822, {desc = "造成武器伤害并对目标施放一个减少10%属性的DEBUFF，可叠8层，持续1分钟。", flag1 = POISON}), -- Poisoned Thrust
+              Spell(30815, {desc = "背刺10码内的某个敌人，造成1900-2100物理伤害。", flag1 = DPS}), -- Backward Lunge
               Spell(30817), -- Deadly Swathe
             },
           }),
           Stage({
-            name = "Phase 3: Romulo and Julianne",
-            desc = "You will face both at the same time, but this time they share one new ability.",
+            name = "第三阶段： 罗密欧与朱丽叶",
+            desc = "你需要同时面对罗密欧与朱丽叶，并且他们有了新技能。",
             sections = {
-              Spell(30951, {so = true, desc = "Revives their loved once with full health, if not also killed within 10 seconds of their death.", flag1 = IMPORTANT}), -- Undying Love
+              Spell(30951, {so = true, desc = "他们必须在10秒内同时死亡，不然就会复活。", flag1 = IMPORTANT}), -- Undying Love
             },
           }),
         },
       }),
       Stage({
-        name = "Wizard of Oz",
+        name = "绿野仙踪",
         sections = {
           Stage({
             stype = CREATURE,
             creature = 17535,
             display = 17069,
-            name = "Dorothee",
+            name = "桃乐丝",
             sections = {
-              Spell(31014, {desc = "Summons the yipping dog Tito, who will interrupt and silence casters."}), -- Summon Tito
-              Spell(31013, {desc = "Lets out a scream, causing up to 3 nearby enemies to flee for 2 seconds."}), -- Frightened Scream
+              Spell(31014, {desc = "召唤他的小狗，随机攻击可沉默目标。"}), -- Summon Tito
+              Spell(31013, {desc = "恐惧附近的3名玩家2秒。"}), -- Frightened Scream
               Spell(31012), -- Water Bolt
               Stage({
                 so = true,
                 stype = ABILITY,
                 icon = "Interface\\Icons\\INV_Misc_QuestionMark",
                 name = "Attention Disorder",
-                desc = "Cannot be interrupted or tanked, and attacks random enemies.",
+                desc = "不能被打断或嘲讽，随机攻击。",
                 flag1 = IMPORTANT,
               }),
             },
@@ -347,7 +347,7 @@ local KARAZHAN = CreateInstance({
             stype = CREATURE,
             creature = 17548,
             display = 17079,
-            name = "Tito",
+            name = "蒂托",
             sections = {
               Spell(31015), -- Annoying Yipping
               Stage({
@@ -355,7 +355,7 @@ local KARAZHAN = CreateInstance({
                 stype = ABILITY,
                 icon = "Interface\\Icons\\Spell_Misc_EmotionAngry",
                 name = "Anguished Mourning",
-                desc = "Causes Dorothee to Enrage if killed when she is still alive.",
+                desc = "如果在桃乐丝活着的时候杀了蒂托，桃乐丝就会狂暴。",
                 flag1 = IMPORTANT,
               }),
             },
@@ -364,7 +364,7 @@ local KARAZHAN = CreateInstance({
             stype = CREATURE,
             creature = 17546,
             display = 18261,
-            name = "Roar",
+            name = "老虎",
             sections = {
               Spell(31041, {flag1 = HEALER}), -- Mangle
               Spell(31042, {flag1 = HEALER}), -- Shred Armor
@@ -372,8 +372,8 @@ local KARAZHAN = CreateInstance({
                 so = true,
                 stype = ABILITY,
                 icon = "Interface\\Icons\\Spell_Misc_EmotionAfraid",
-                name = "Scaredy Cat",
-                desc = "Very susceptible to fear.",
+                name = "胆小鬼",
+                desc = "非常容易被恐惧。",
                 flag1 = IMPORTANT,
               }),
             },
@@ -382,37 +382,37 @@ local KARAZHAN = CreateInstance({
             stype = CREATURE,
             creature = 17543,
             display = 17076,
-            name = "Strawman",
+            name = "稻草人",
             sections = {
               Spell(31046), -- Brain Bash
-              Spell(31069, {desc = "The target forgets what he was going to say, becoming silenced for 4 seconds and looses 713 to 787 mana."}), -- Brain Wipe
-              Spell(31075, {so = true, name = "Fire Hazard", desc = "Upon being damaged by fire, will become disoriented up to 6 seconds and run around in panic.", flag1 = IMPORTANT}, 1), -- Burning Straw
+              Spell(31069, {desc = "使目标失去控制，沉默4秒并失去713-787蓝。"}), -- Brain Wipe
+              Spell(31075, {so = true, name = "怕火", desc = "受到火系伤害会进入困惑状态6秒。", flag1 = IMPORTANT}, 1), -- Burning Straw
             },
           }),
           Stage({
             stype = CREATURE,
             creature = 17547,
             display = 17187,
-            name = "Tinhead",
+            name = "铁皮人",
             sections = {
-              Spell(31043, {so = true, desc = "Inflicts normal plus 500 Physical damage to an enemy and its nearest allies, affecting up to 3 targets."}), -- Cleave
-              Spell(31086, {so = true, desc = "The longer Tinhead fights, the more he rusts. Each application slows him by 10%, and can stack up to 8 stacks.", flag1 = IMPORTANT}), -- Rust
+              Spell(31043, {so = true, desc = "顺劈对前方敌人造成普攻+500的物理伤害。"}), -- Cleave
+              Spell(31086, {so = true, desc = "存活时间越长，它越虚弱，每层减少10%移动速度，最多8层。", flag1 = IMPORTANT}), -- Rust
             },
           }),
           Stage({
             stype = CREATURE,
             creature = 18168,
             display = 17550,
-            name = "The Crone",
-            desc = "Appears after all the others have been defeated.",
+            name = "老巫婆",
+            desc = "其他小boss被击败后出场。",
             sections = {
-              Spell(32337, {so = true, desc = "Strikes an enemy with a lightning bolt that arcs to another nearby enemy. The spell affects up to 5 targets, inflicting greater Nature damage to each successive target. Initial damage caused is 2775 to 3225 Nature damage."}), -- Chain Lightning
+              Spell(32337, {so = true, desc = "制造一个旋风，造成2775-3225自然法术伤害。"}), -- Chain Lightning
               Stage({
                 so = true,
                 stype = ABILITY,
                 icon = "Interface\\Icons\\Spell_Nature_Cyclone",
-                name = "Cyclone",
-                desc = "Knocks an enemy up into the air, that target takes fall damage as it lands.",
+                name = "老巫婆",
+                desc = "把敌人吹到风中，并受到跌落伤害。",
                 flag1 = IMPORTANT,
               }),
             },
@@ -422,8 +422,8 @@ local KARAZHAN = CreateInstance({
     },
   },
   {
-    name = "The Curator",
-    desc = "The Curator is an Arcane Guardian boss in the Menagerie in Karazhan. It is not optional, raids wanting to kill the bosses behind it must first defeat The Curator.",
+    name = "馆长",
+    desc = "馆长是神秘的看门BOSS。他是不可跳过的，所以想打后面的BOSS必须搞定这货。",
     --icon = true,
     creature = 15691,
     display = 16958,
@@ -434,54 +434,54 @@ local KARAZHAN = CreateInstance({
         so = true,
         stype = ABILITY,
         icon = "Interface\\Icons\\Spell_Arcane_Arcane04",
-        name = "Summon Astral Flare",
-        desc = "Summons one every 10 seconds, as long he is not Evocating. Each summon costs 10% mana.",
+        name = "召唤闪电球",
+        desc = "每10秒召唤一个闪电球，血量约为12000。它会施放闪电链，对目标造成675-825奥术伤害，若目标10码内有其他友方单位则会发生折射造成等量伤害，召唤每个闪电球小号10%的魔法。",
         sections = {
           Spell(30235, {so = true}), -- Arcing Sear
         },
       }),
       Spell(30403, {so = true}), -- Arcane Infusion
-      Spell(30254, {so = true, desc = "When The Curator has spent all his mana, he will enter Evocation mode and restore 5% mana per second for 20 seconds. At the same time this increases damage taken by 200% so this is the moment to burst him down.", flag1 = IMPORTANT}), -- Evocation
+      Spell(30254, {so = true, desc = "当馆长空蓝时，他会进入唤醒状态，每秒5%，20秒回满。这个阶段，馆长所受伤害提高200%。", flag1 = IMPORTANT}), -- Evocation
     },
   },
   {
-    name = "Terestian Illhoof",
-    desc = "Terestian Illhoof is an optional Satyr boss located in The Repository in Karazhan's Library wing. He starts off with his minion, Kil'rek, and will summon more imps as the fight goes on.",
+    name = "特雷斯坦·邪蹄",
+    desc = "特雷斯坦·邪蹄是个可选BOSS，在图书馆暗门后的密室中。这场战斗首先将会先打他的喽啰基尔瑞克，并且在接下来的时间召唤更多的小喽啰。",
     --icon = true,
     creature = 15688,
     display = 11343,
     coords = {0.525, 0.696, 11},
     loot = {22561,28652,28653,28659,28656,28658,},
     sections = {
-      Spell(30171, {so = true, desc = "Opens two portals into the Twisting Nether that periodically summons demonic minions.", sections = {
+      Spell(30171, {so = true, desc = "在房间内部的两侧造出两个传送门，非精英小鬼将不断刷新。", sections = {
         Stage({
           stype = CREATURE,
           creature = 17267,
           display = 16944,
-          name = "Fiendish Imp",
+          name = "小鬼",
           sections = {
-            Spell(30050, {so = true, desc = "Shoots a bolt of fire at an enemy, inflicting 181 to 209 Fire damage."}), -- Firebolt
+            Spell(30050, {so = true, desc = "瞄准敌人并造成181-209火焰伤害。"}), -- Firebolt
           },
         }),
       }}), -- Fiendish Portal (30179 is a duplicate?)
-      Spell(30066, {name = "Summon Kil'rek", desc = "Kil'rek will be summoned shortly after portals spawn and 45 seconds after each time he is killed.", flag1 = IMPORTANT, sections = {
-        Spell(30065, {so = true, desc = "When Kil'rek dies, Terestian Illhoof will receive a debuff that increases the damage he takes by 25% that lasts until he summons Kil'rek again.", flag1 = IMPORTANT}), -- Broken Pact
+      Spell(30066, {name = "召唤基尔瑞克", desc = "当他被杀死后45秒，他会被再次召唤。", flag1 = IMPORTANT, sections = {
+        Spell(30065, {so = true, desc = ".当他被杀后，邪蹄会带上一个DEBUFF，所承受的伤害提高25%直到基尔瑞克再次被召唤出来。", flag1 = IMPORTANT}), -- Broken Pact
         Spell(30053, {so = true, flag1 = IMPORTANT}), -- Amplify Flames
       }}, 1), -- Summon Imp (Kil'Rek)
-      Spell(30115, {so = true, desc = "Sacrifices a random target to the old gods, stunning it and leeching 1500 health every second for 30 seconds or until it dies.\n\nYou can free the person by killing the chains that holds them down.", flag1 = DEADLY}), -- Sacrifice
-      Spell(30055, {desc = "Hurls missiles of dark magic, inflicting 3188 to 4312 Shadow damage to his target."}), -- Shadow Bolt
+      Spell(30115, {so = true, desc = "邪蹄会定期将一随机玩家传送到房间中央的绿圈里，该玩家将被一层恶魔锁链束缚住，处于昏迷状态并每秒受到1500左右的暗影伤害，同时治疗BOSS，除非摧毁了恶魔锁链。", flag1 = DEADLY}), -- Sacrifice
+      Spell(30055, {desc = "火焰印记，对目标造成3188-4312暗影伤害。"}), -- Shadow Bolt
     },
     adds = {
       {
-        name = "Kil'rek",
+        name = "基尔瑞克",
         creature = 17229,
         display = 20364,
       },
     },
   },
   {
-    name = "Shade of Aran",
-    desc = "The Shade of Aran is a boss in the abandoned tower of Karazhan. He is the spirit of Nielas Aran, the father of Medivh, killed in a battle to contain the future Guardian when the power inside him awakened.",
+    name = "埃兰之影",
+    desc = "埃兰之影是卡拉赞的一名BOSS。他是麦迪文的父亲，体内力量被唤醒后，在一场守护战中死亡。",
     --icon = true,
     creature = 16524,
     display = 16621,
@@ -490,62 +490,62 @@ local KARAZHAN = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Basic abilities",
-        desc = "Used troughout the entire fight, as long he isn't doing anything more important.",
+        name = "基本技能",
+        desc = "贯穿整场战斗的技能。",
         sections = {
-          Spell(29954, {desc = "Inflicts 3500 to 4500 Frost damage to an enemy and reduces its movement speed by 65% for 4 seconds. Costs 2500 mana.", flag1 = MAGIC, flag2 = INTERRUPT}), -- Frostbolt
-          Spell(29953, {desc = "Inflicts 3910 to 5290 Fire damage to an enemy. Costs 2500 mana.", flag1 = INTERRUPT}), -- Fireball
-          Spell(29956, {desc = "Inflicts 1260 to 1540 Arcane damage to an enemy. Does not cost mana."}), -- Arcane Missiles
-          Spell(29991, {desc = "Forms icy chains around random enemy, locking the target in place for 10 seconds.", flag1 = MAGIC}), -- Chains of Ice
-          Spell(29961, {desc = "Counters the spellcasting of all enemies within 9 yards, preventing any spell from that school of magic from being cast for 10 seconds.", flag1 = IMPORTANT}), -- Counterspell
+          Spell(29954, {desc = "3秒施法，3500-4400冰霜伤害，附带持续4秒的65%减速效果。", flag1 = MAGIC, flag2 = INTERRUPT}), -- Frostbolt
+          Spell(29953, {desc = "3秒施法，3910-5290火焰伤害。", flag1 = INTERRUPT}), -- Fireball
+          Spell(29956, {desc = "通道法术，每秒造成1500点奥术伤害,持续5秒。"}), -- Arcane Missiles
+          Spell(29991, {desc = "冻住目标使其10秒内无法移动，无伤害，可驱散，可通过一切解除定身的技能与物品解除。", flag1 = MAGIC}), -- Chains of Ice
+          Spell(29961, {desc = "作用范围为埃兰的10码距离内，发动非常频繁，但仅是打断当前施法，不造成持续沉默。", flag1 = IMPORTANT}), -- Counterspell
         },
       }),
       Stage({
         so = true,
-        name = "Special abilities",
-        desc = "Every 30 to 35 seconds, Aran uses one of his three special abilities. Never the same twice in a row, and they can not be interrupted.",
+        name = "特殊技能",
+        desc = "每30-35秒发动一次，一般来说不会连续两次施放同一技能，无法通过任何方式阻止其发动。",
         sections = {
           Stage({
             stype = ABILITY,
             icon = "Interface\\Icons\\Spell_Shadow_AnimateDead",
-            name = "Area of Death",
-            desc = "Aran will perform three abilities in a specific order and cause instant death if not properly avoided.",
+            name = "死亡之地Area of Death",
+            desc = "埃兰将以特定顺序施放三个技能，如果全中，那必死无疑。",
             flag1 = DEADLY,
             sections = {
-              Spell(29979, {so = true, desc = "Pulls everyone to Aran, exactly on top of him."}), -- Massive Magnetic Pull
-              Spell(30035, {so = true, desc = "Applies slow to everyone, slowing movement speed by 60%, casting and attacking speed by 35%. Lasts for 10 seconds.", flag1 = MAGIC}), -- Mass Slow
-              Spell(29973, {so = true, desc = "Massive amounts of arcane power violently errupt and deal 9000 to 11000 Arcane damage to everyone.\n\nYou can save yourself by reaching any wall in the room.", flag1 = DEADLY}),
+              Spell(29979, {so = true, desc = "将所有人传送至房间正中。"}), -- Massive Magnetic Pull
+              Spell(30035, {so = true, desc = "群体减速60%持续10秒。", flag1 = MAGIC}), -- Mass Slow
+              Spell(29973, {so = true, desc = "对30码内目标，施放强力奥爆术，造成9000-11000奥术伤害。\n\n只有到达房间的边缘处才可规避伤害。", flag1 = DEADLY}),
             },
           }),
-          Spell(29946, {desc = "Forms a ring of fire around random players, if they cross this ring it will violently explode and deal 3238 to 3762 Fire damage to all allies. The ring of fire lasts for 20 seconds.", flag1 = DEADLY}), -- Flame Wreath (30004 duplicate?)
-          Spell(29969, {desc = "Aran summons a Blizzard that will follow the outer edge of the room in a circle formation. Standing in it will slow you and cause heavy damage over time.", flag1 = IMPORTANT}), -- Summon Blizzard
+          Spell(29946, {desc = "火焰之环，随机作用于三个人，周围5-8码的人不要试图移动，不然会引发爆发，造成3000-4000火焰伤害。", flag1 = DEADLY}), -- Flame Wreath (30004 duplicate?)
+          Spell(29969, {desc = "每秒1700伤害并减速，作用范围几乎占据半个场地，并会缓慢的饶场移动360度左右。", flag1 = IMPORTANT}), -- Summon Blizzard
         },
       }),
       Stage({
         so = true,
-        name = "At 40% health: Summon Water Elementals",
-        desc = "Aran summons four Water Elementals, one in each corner of the room. They will despawn after 90 seconds.",
+        name = "40%血量时： 召唤水元素",
+        desc = "埃兰在房间的四个方向召唤4个水元素，水元素持续90秒。",
         sections = {
           Stage({
             so = true,
             stype = CREATURE,
             creature = 17167,
             display = 5450,
-            name = "Conjured Elemental", -- Summon Water Elementals (37051, 37052, 37053, 29962)
+            name = "水元素", -- Summon Water Elementals (37051, 37052, 37053, 29962)
             sections = {
-              Spell(37054, {desc = "Hurls a watery bolt at an enemy, inflicting 1000 to 2000 Frost damage."}), -- Water Bolt
+              Spell(37054, {desc = "水箭，造成1000-2000冰霜伤害。"}), -- Water Bolt
             },
           }),
         },
       }),
       Stage({
         so = true,
-        name = "At 20% mana: Mass Polymorph, Drink, Pyroblast",
-        desc = "Aran will Mass Polymorph everyone, sit down and drink then break the polymoph with a Pyroblast Volley.",
+        name = "20%蓝时：变羊，喝水和冲击波",
+        desc = "埃兰将把全体玩家变羊，并坐下喝水，10秒后冲击波，造成6800火焰伤害。",
         sections = {
-          Spell(29963, {desc = "Transforms all enemies into sheep, forcing them to wander around for 10 seconds, but also making them quickly regenerating their health. Any damage will break the transofmration.", flag1 = MAGIC}), -- Mass Polymorph
-          Spell(29975, {desc = "Drinks astral water and restores mana over time."}), -- Conjure Water
-          Spell(29978, {name = "Pyroblast Volley", desc = "Inflicts 6800 Fire damage to all enemies."}, 1), -- Pyroblast
+          Spell(29963, {desc = "将所有玩家变羊10秒。", flag1 = MAGIC}), -- Mass Polymorph
+          Spell(29975, {desc = "喝水回蓝。"}), -- Conjure Water
+          Spell(29978, {name = "冲击波=", desc = "对所有玩家造成6800火焰伤害。"}, 1), -- Pyroblast
         },
       }),
       Stage({
@@ -553,8 +553,8 @@ local KARAZHAN = CreateInstance({
         stype = CREATURE,
         creature = 18254,
         display = 17644,
-        name = "Shadows of Aran",
-        desc = "This serves as the Enrage timer. After 12 minutes of fighting, these will spawn around the room and quickly wipe the group.",
+        name = "埃兰之影",
+        desc = "12分钟内没有击杀埃兰，埃兰会狂暴并秒杀全团。",
         flag1 = DEADLY,
       }),
       --Spell(29977, {flag1 = MAGIC}), -- Combustion (mobs can't crit with spells, it's hardcoded into the game, so why have this?)
@@ -564,15 +564,15 @@ local KARAZHAN = CreateInstance({
     },
     adds = {
       {
-        name = "Water Elemental",
+        name = "水元素",
         creature = 17167,
         display = 5450,
       },
     },
   },
   {
-    name = "Netherspite",
-    desc = "Netherspite is an immense nether dragon found lurking in the Celestial Watch, Medivh's personal observatory. As the only dragon found inside the dark tower, he will use his otherworldly powers to vanquish any creatures that attempt to go near him. This dragon's death is not required for further progress into the tower but he does control the trash between the Shade of Aran and the Chess Event.",
+    name = "虚空幽龙",
+    desc = "天文台的虚空幽龙是一名强大的虚空龙。作为塔内唯一的一条龙，它会用超脱世界之力的力量来战胜任何接近它的生物。这个BOSS是可选择BOSS。",
     --icon = true,
     creature = 15689,
     display = 15363,
@@ -581,64 +581,64 @@ local KARAZHAN = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Phase 1: Portals",
-        desc = "Each portal will provide a specific bonus to who ever is hit by the beam. By default all portal beams head for Netherspite, but players can get in their way.\n\nYou can only take a specific color for one portal phase, the next one you will still have a debuff, forcing you to pick another color. By then you are able to go back to the original color assignment. For example you as tank can do red first, green after, then red again, and repeat.",
+        name = "第一阶段： 光线",
+        desc = "每条光线提供一种特殊能力赋予被击中的生物。默认情况下，所有光线射向虚空幽龙，但玩家可以通过阻挡光线来获得相应的能力。\n\n在第一个光线阶段，你阻挡了一种颜色，那么下一个光线阶段，你就会有一个DEBUFF，因此，你必须去阻挡其他颜色。然后再回到第一阶段，如此循环。举个例子，作为T你可以先阻挡红色，再绿色，再红色，如此循环。",
         sections = {
-          Spell(30466, {icon = "Interface\\Icons\\INV_Misc_QirajiCrystal_02", name = "Perseverence", desc = "Also known as the \"Tank beam\" and the effects of being hit by this beam are described below.", sections = {
+          Spell(30466, {icon = "Interface\\Icons\\INV_Misc_QirajiCrystal_02", name = "坚毅红光", desc = "\"坦克光线\"，阻挡此光线将会获得下列能力。", sections = {
             Stage({
               so = true,
-              name = "Netherspite",
-              desc = "Damage taken reduced by 1% per application.",
+              name = "虚空幽龙",
+              desc = "每层减少1%的所受伤害。",
             }),
             Stage({
               so = true,
-              name = "Players",
-              desc = "Netherspite will aggro you.\nDamage taken is reduced by 1% per application.\nMaximum health is modified, first application gives 31000 health, additional applications add 1000 more health.\nReplenishes full health every application.",
+              name = "玩家",
+              desc = "虚空幽龙将会攻击你。\n每层减少1%所受伤害。\n最多血量增加，第一层31000，后面每层减少1000血量上限。\n每次叠加层数将会自动回满血量。",
             }),
           }}, 1), -- Nether Portal - Perseverence
-          Spell(30467, {icon = "Interface\\Icons\\INV_Misc_QirajiCrystal_03", name = "Serenity", desc = "Also known as the \"Healer beam\" and the effects of being hit by this beam are described below.", sections = {
+          Spell(30467, {icon = "Interface\\Icons\\INV_Misc_QirajiCrystal_03", name = "宁静绿光", desc = "\"治疗光线\"，阻挡此光线将会获得下列能力。", sections = {
             Stage({
               so = true,
-              name = "Netherspite",
-              desc = "Heals for 4000 per application, stacking. First 4000, second 8000, 12000, and so forth.",
+              name = "虚空幽龙",
+              desc = "每层治疗4000血量，叠加。第一层4000，然后8000，12000……",
             }),
             Stage({
               so = true,
-              name = "Players",
-              desc = "Healing done is increased by 5% per application.\nSpell and ability cost reduced by 1% per application. (Not only mana, also rage and energy.)\nMaximum mana reduced by 200.\nReplenishes full mana every application.",
+              name = "玩家",
+              desc = "每层提升5％治疗效果。\n减少技能消耗1％（包括法力,怒气以及能量的损耗）。\n减少法力值上限200点。\每次叠加层数将会自动回满魔法值。",
             }),
           }}, 1), -- Nether Portal - Serenity
-          Spell(30468, {icon = "Interface\\Icons\\INV_Misc_QirajiCrystal_04", name = "Dominance", desc = "Also known as the \"Damager beam\" and the effects of being hit by this beam are described below.", sections = {
+          Spell(30468, {icon = "Interface\\Icons\\INV_Misc_QirajiCrystal_04", name = "支配蓝光", desc = "=\"输出光线\"，阻挡此光线就会获得下列能力。", sections = {
             Stage({
               so = true,
-              name = "Netherspite",
-              desc = "Increases spell damage by 1% each application.",
+              name = "虚空幽龙",
+              desc = "每层增加技能伤害1%。",
             }),
             Stage({
               so = true,
-              name = "Players",
-              desc = "Damage dealt is increased by 5% per application.\nHealing received reduced by 1% per application.\nDamage taken by spells is increased by 8% per application.",
+              name = "玩家",
+              desc = "每层增加5%伤害。\n每层降低1%治疗效果。\n每层提高法术所受伤害8%。",
             }),
           }}, 1), -- Nether Portal - Dominance
-          Spell(38549, {so = true, desc = "After portal beams are activated, Netherspite will increase his damage done by 200%."}), -- Empowerment
-          Spell(37063, {desc = "Netherspite will randomly spawn Void Zone below a random player, it will deal a lot of damage as long you stand on it.", flag1 = DEADLY}), -- Void Zone
+          Spell(38549, {so = true, desc = "光线被激活时，提高虚空幽龙伤害200%。"}), -- Empowerment
+          Spell(37063, {desc = "随机选择一目标，在其脚下施放一圈持续15秒的虚空地带，任何在其范围内的人都将受到每2秒1000暗影伤害。", flag1 = DEADLY}), -- Void Zone
         },
       }),
       Stage({
         so = true,
-        name = "Phase 2: Banish Phase",
-        desc = "He will become banished for 30 seconds and only cast Netherbreath until phase 1 starts again.",
+        name = "第二阶段： 放逐阶段",
+        desc = "虚空幽龙将会被放逐30秒，而且这个阶段虚空幽龙只会施法。",
         sections = {
-          Spell(38523, {so = true, desc = "Targets a random enemy, turns towards them and unleashes 4163 to 4837 Arcane damage in a cone in front of him. Any allies nearby are also damaged.", flag1 = IMPORTANT}), -- Netherbreath
+          Spell(38523, {so = true, desc = "随机选择一个目标,朝其方向进行锥型范围喷吐,对该范围内玩家造成4100 - 4800伤害并击退30码。", flag1 = IMPORTANT}), -- Netherbreath
         },
       }),
-      Spell(30522, {so = true, desc = "Netherspite will during the encounter damage everyone for 1200 Shadow damage every 5 seconds."}), -- Nether Burn
-      Spell(38688, {so = true, desc = "Netherspite will enrage after 9 minutes and deal 500% more damage. This will quickly wipe the group.", flag1 = DEADLY}), -- Nether Infusion
+      Spell(30522, {so = true, desc = "覆盖全场的光环效果，每5秒对每个人造成1200点暗影伤害。"}), -- Nether Burn
+      Spell(38688, {so = true, desc = "战斗9分钟后，虚空幽龙狂暴，提高500%伤害，这会导致灭团。", flag1 = DEADLY}), -- Nether Infusion
     },
   },
   {
-    name = "Chess Event",
-    desc = "The Chess event in Karazhan must be solved in order to reach Prince Malchezaar. The raid plays a sort of chess match against Medivh.\n\nAlthough the analogy to chess is usable (Daemons are \"stronger\" than Footmen for example), it's not very strict. The pieces from the event behave very differently from real chess pieces, in particular player-controlled pieces autoattack enemy pieces they face, and the Kings are actually the strongest pieces in the game. In order to start the event, a player has to talk to the King piece of their own faction. The objective is to kill the enemy King without losing one's own King.",
+    name = "千王之厅",
+    desc = "如果你想去搞玛克扎尔王子，那么必须搞定这个BOSS。在这场BOSS战中，你将会与麦迪文的回声对弈。\n\n这棋局设计的并不严格，与真正的国际象棋有些差距。国王是棋局中最强大的存在，玩家可以通过控制棋子击杀对面国王来获得胜利。与NPC交谈可开启战斗。",
     --icon = true,
     creature = 16816,
     display = 18720,
@@ -647,49 +647,49 @@ local KARAZHAN = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Chess Pieces",
-        desc = "Each chess piece has four abilities, they are keybound to buttons 1 through 4. First first is to change facing direction, the second is to move the piece. The third and fourth are special abilities that vary between pieces.",
+        name = "棋子",
+        desc = "每个棋子有4个技能，快捷键1-4。1为面朝方向，2为移动棋子，3和4为特殊的攻击技能。",
         sections = {
           Stage({
-            name = "King (King Llane/Warchief Blackhand: Paladin/Warrior)",
+            name = "国王 (莱恩国王/黑手酋长： 圣骑士/兽人战士)",
             sections = {
-              Stage({so = true, name = "Sweep/Cleave", desc = "Deals 4000 damage to thee frontal adjacent enemy units."}),
-              Stage({so = true, name = "Heroism/Bloodlust", desc = "Grants 50% increased damage to all allied humanoids on all 8 adjacent spaces, does not affect self."}),
+              Stage({so = true, name = "横扫", desc = "对前方三个单位造成4000伤害。"}),
+              Stage({so = true, name = "怒吼", desc = "提升所有临近位置的友方目标50%伤害，持续10秒。该技能不对国王本身产生效果。"}),
             },
           }),
           Stage({
-            name = "Queen (Conjurer/Warlock: Spellcaster)",
+            name = "皇后 (人类法师/兽人术士： 强大的魔法师)",
             sections = {
-              Stage({so = true, name = "Elemental Blast/Fireball", desc = "Deals 4000 damage to any single chess piece."}),
-              Stage({so = true, name = "Rain of Fire/Poison Cloud", desc = "Deal 6000 damage to any hostile chess piece and all adjacent hostile pieces. Cooldown 15 secs."}),
+              Stage({so = true, name = "元素魔法", desc = "对任意单体目标造成4000伤害。"}),
+              Stage({so = true, name = "范围魔法", desc = "对任意一个目标及其周围临近棋子造成6000伤害。"}),
             },
           }),
           Stage({
-            name = "Bishop (Cleric/Necrolyte: Healer)",
+            name = "主教 (人类牧师/兽人先知： 治疗)",
             sections = {
-              Stage({so = true, name = "Healing/Shadow Mend", desc = "Heal a friendly piece for 12000."}),
-              Stage({so = true, name = "Holy Lance/Shadow Spear", desc = "Deals 2000 damage to enemy units standing in a straight line of three squares in front."}),
+              Stage({so = true, name = "单体治疗", desc = "治疗一名有房单位12000血量。"}),
+              Stage({so = true, name = "伤害法术", desc = "对正面三格内的所有目标造成2000点伤害。"}),
             },
           }),
           Stage({
-            name = "Knight (Charger/Wolf: Melee Damager II)",
+            name = "骑士 (战马/战狼： 肉搏单位II)",
             sections = {
-              Stage({so = true, name = "Smash/Bite", desc = "3000 damage to a target one square in front."}),
-              Stage({so = true, name = "Stomp/Howl", desc = "Reduces damage of all adjacent hostile chess pieces by 50%, lasts for 10 seconds."}),
+              Stage({so = true, name = "普通技能", desc = "对正面目标造成3000伤害。"}),
+              Stage({so = true, name = "嚎叫", desc = "减少临近的所有目标50%的伤害，持续10秒。"}),
             },
           }),
           Stage({
-            name = "Rook (Water Elemental/Daemon: AoE Damager)",
+            name = "城堡 (水元素/恶魔守卫： 群伤单位)",
             sections = {
-              Stage({so = true, name = "Geyser/Hellfire", desc = "Deals 3000 damage to all adjacent hostile chess pieces."}),
-              Stage({so = true, name = "Water Shield/Fire Shield", desc = "Reduce damage taken by 50% for 5 seconds."}),
+              Stage({so = true, name = "普攻技能", desc = "对邻近的任意一目标造成3000伤害。"}),
+              Stage({so = true, name = "防御技能", desc = "减少自身50%所受到的伤害，持续5秒。"}),
             },
           }),
           Stage({
-            name = "Pawn (Footman/Grunt: Melee Damager I)",
+            name = "兵卒 (人类步兵/兽人步兵： 肉搏单位I)",
             sections = {
-              Stage({so = true, name = "Heroic Blow/Vicious Strike", desc = "Deals 1000 damage to a target one square in front."}),
-              Stage({so = true, name = "Shield Block/Weapon Deflection", desc = "Absorbs 500 damage. Lasts 5 seconds."}),
+              Stage({so = true, name = "英勇打击", desc = "对正面目标造成1000伤害。"}),
+              Stage({so = true, name = "盾", desc = "吸收500点物理伤害，持续5秒。"}),
             },
           }),
         },
@@ -699,34 +699,34 @@ local KARAZHAN = CreateInstance({
         stype = CREATURE,
         creature = 16816,
         display = 18720,
-        name = "Echo of Medivh",
-        desc = "During the fight, Medivh will cheat at random by using one of the three abilities.",
+        name = "麦迪文的回声",
+        desc = "在这场战斗中，麦迪文会发出下列三种指令。",
         sections = {
           Stage({
             stype = ABILITY,
             icon = "Interface\\Icons\\Spell_Holy_Heal",
-            name = "Healing Cheat",
-            desc = "Heals three or four of Medivh's pieces to full health. This is indicated by bright light around affected pieces.",
+            name = "治疗",
+            desc = "回满3-4个麦迪文的棋子的血量。",
           }),
           Stage({
             stype = ABILITY,
             icon = "Interface\\Icons\\Spell_Shadow_DeathPact",
-            name = "Berserking Cheat",
-            desc = "Buffs three or four of Medivh's pieces to deal more damage. This is indicated with a purple aura and that the peices have grown considerably in size.",
+            name = "狂暴",
+            desc = "使3-4个麦迪文的棋子狂暴。",
           }),
           Stage({
             stype = ABILITY,
             icon = "Interface\\Icons\\INV_Elemental_Primal_Fire",
-            name = "Damage Cheat",
-            desc = "Damages random pieces owned by the players, the pieces will die if left in the fire. This is indicated by fire under the affected pieces. I can't believe I had to explicitly write that.",
+            name = "伤害",
+            desc = "随机攻击玩家的棋子，使其受到火焰灼烧，如果不立刻移动，将会死亡。",
           }),
         },
       }),
     },
   },
   {
-    name = "Nightbane",
-    desc = "Nightbane is a summonable raid boss in Karazhan. He is a fiery skeletal dragon, transformed by Medivh from Arcanagos and formerly of the blue dragonflight. While not the ruler of Karazhan, a position apparently held by Prince Malchezaar, many consider Nightbane to be the true final boss of the tower, due to his superior difficulty in the early days of the dungeon's release.\n\nAlthough the \"Blackened Urn\" is no longer required to summon Nightbane, a raid member must have completed the quest \"Medivh's Journal\" in order to click the urn on the ground.",
+    name = "夜之魇",
+    desc = "夜之魇是卡拉赞中的召唤BOSS。他是由麦迪文转化蓝龙而来的骨龙。尽管玛克扎尔王子被作为卡拉赞的最终BOSS，但很多玩家认为夜之魇才应该是最终BOSS，因为早期版本它技能复杂，击杀难度略大。想要召唤夜之魇必须完成一系列的任务。",
     --icon = true,
     creature = 17225,
     display = 18062,
@@ -735,47 +735,47 @@ local KARAZHAN = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Phase 1: Ground",
-        desc = "The ground phase lasts from when he lands until his health reaches 75%, 50% or 25%, at which point phase 2 begins.",
+        name = "第一阶段： 地面阶段",
+        desc = "当BOSS血量到达75%，50%，25%的时候，夜之魇会进入第二阶段。",
         sections = {
-          Spell(36922, {desc = "A bellowing roar terrifies all enemies within 35 yards for 4 seconds."}), -- Bellowing Roar
-          Spell(30129, {desc = "Chars the ground, dealing 2188 to 2812 Fire damage every 3 seconds to anyone standing on it.", flag1 = MAGIC, flag2 = DEADLY}), -- Charred Earth
-          Spell(30131, {desc = "Inflicts normal damage to an enemy and its nearest allies, affecting up to 2 targets.", flag1 = TANK}), -- Cleave
-          Spell(25653, {desc = "Inflicts 450 damage on enemies in a cone behind Nightbane, knocking them back."}), -- Tail Sweep
-          Spell(30130, {desc = "Distracts enemies with ash in their eyes, reducing their chance to hit with attacks, spells and abilities by 30%. Lasts for 40 seconds.", flag1 = MAGIC}), -- Distracting Ash
-          Spell(30210, {desc = "Deals 3700 to 4300 Fire damage to enemies in a cone in front of Nightbane. Lasts 15 seconds.", flag1 = IMPORTANT}), -- Smoldering Breath
+          Spell(36922, {desc = "恐惧35码内所有玩家4秒。"}), -- Bellowing Roar
+          Spell(30129, {desc = "对某个随机目标所处半径10码的范围区域施加灼烧,对站于该区域内的目标造成每3秒2000-3000伤害。", flag1 = MAGIC, flag2 = DEADLY}), -- Charred Earth
+          Spell(30131, {desc = "顺劈，可由两个目标分担。", flag1 = TANK}), -- Cleave
+          Spell(25653, {desc = "对站于其尾部的玩家造成450点火焰伤害附带击倒。"}), -- Tail Sweep
+          Spell(30130, {desc = "减少随机目标的治疗与攻击技能40％距离，持续40秒。", flag1 = MAGIC}), -- Distracting Ash
+          Spell(30210, {desc = "施放吐息对身前圆锥范围内的人造成3700到4300的火焰伤害，并附带每3秒1688到1912的DOT伤害，持续15秒。", flag1 = IMPORTANT}), -- Smoldering Breath
         },
       }),
       Stage({
         so = true,
-        name = "Phase 2: Air",
-        desc = "The flight phase lasts until Nightbane has finished casting his two abilities.",
+        name = "第二阶段： 空中阶段",
+        desc = "当夜之魇施放完两个特殊技能后，转入第一阶段。",
         sections = {
-          Spell(37098, {so = true, desc = "Bombards enemies on the terrace with bone fragments, summoning three skeletons in the process and deals 880 to 1020 Physical damage each second for 11 seconds.", sections = {
+          Spell(37098, {so = true, desc = "召唤骷髅，对目标造成880-1020物理伤害。", sections = {
             Stage({
               stype = CREATURE,
               creature = 17261,
               display = 16156,
-              name = "Restless Skeleton",
-              desc = "Should be swiftly killed before Nightbane lands.",
+              name = "骷髅",
+              desc = "必须在夜之魇落地之前处理掉。",
             }),
           }}), -- Rain of Bones (triggers 37091)
-          Spell(30128, {desc = "Inflicts 1850 to 2150 damage to the target and additional 3000 Fire damage over 18 seconds.", flag1 = MAGIC}), -- Smoking Blast (37057 duplicate? triggers 30127)
-          Spell(30282, {so = true, desc = "Throws fireballs at any enemies farther than 40 yards away. Each Fireball deals 2550 to 3450 Fire damage per second and lasts until that target runs closer to Nightbane.", flag1 = DEADLY}), -- Fireball Barrage
+          Spell(30128, {desc = "对上天后的仇恨最高目标施放，每秒造成1850-2150的物理伤害并附加一个火系DOT，每3秒造成500点火焰伤害持续18秒。", flag1 = MAGIC}), -- Smoking Blast (37057 duplicate? triggers 30127)
+          Spell(30282, {so = true, desc = "如果有任何人在夜之魇的攻击范围之外，他将施放火焰弹对全场所有人造成每秒3000-3500的伤害。", flag1 = DEADLY}), -- Fireball Barrage
         },
       }),
     },
     adds = {
       {
-        name = "Restless Skeleton",
+        name = "骷髅",
         creature = 17261,
         display = 16156,
       },
     },
   },
   {
-    name = "Prince Malchezaar",
-    desc = "Little is known about him, except that he is a man'ari eredar, he claims to be a prince, and that he is a member of the Burning Legion. It is unknown how or when he arrived at Karazhan or what his purpose there is. He apparently arrived while some agents of the Violet Eye were still alive inside Karazhan, notably Keanna. It was likely shortly before Karazhan was sealed, as the Violet Eye were aware of Keanna's death.",
+    name = "玛克扎尔王子",
+    desc = "我们只知道玛克扎尔王子是艾瑞达人属于燃烧军团，其他的一无所知。没人知道他是什么时候，怎么来到卡拉赞的，也不知道的他的目的何在。他来的时候似乎紫罗兰的代表尤其是柯安娜还在卡拉赞。他来了不久，卡拉赞就被封闭了。",
     --icon = true,
     creature = 15690,
     display = 19274,
@@ -784,52 +784,52 @@ local KARAZHAN = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Common for all phases",
+        name = "贯穿全场的技能",
         sections = {
           Stage({
             stype = CREATURE,
             creature = 17646,
             display = 18036,
-            name = "Netherspite Infernal",
-            desc = "Malchezaar will spawn Infernals that land randomly in the area. In phase 1 and 2 the interval is 45 seconds, while in phase 3 they spawn with an interval of 15 seconds.",
+            name = "召唤地狱火",
+            desc = "他会在7个位置中的一个召唤一个地狱火，第一二阶段45秒召唤一次，第三阶段15秒召唤一次。",
             flag1 = DEADLY,
             sections = {
-              Spell(30859, {so = true, desc = "Ignites the area around the Infernal, causing 875 to 1125 Fire damage in a 20 yards radius, each second for 180 seconds.", flag1 = DEADLY}), -- Hellfire
+              Spell(30859, {so = true, desc = "地狱火会施放地狱烈焰对20码内的玩家造成875-1125火焰伤害，持续180秒。", flag1 = DEADLY}), -- Hellfire
             },
           }),
-          Spell(30852, {desc = "Dark magic is unleashed at Malchezaar, causing 3000 Shadow damage and knocking back all enemies within 30 yards.", flag1 = IMPORTANT}), -- Shadow Nova
+          Spell(30852, {desc = "施放暗影新星，对30码内的目标造成3000点的暗影伤害并造成击退效果。", flag1 = IMPORTANT}), -- Shadow Nova
         },
       }),
       Stage({
         so = true,
-        name = "Phase 1",
-        desc = "This phase ends when Malchezaar reaches 60% health.",
+        name = "第一阶段",
+        desc = "玛克扎尔王子在血量达到60%时进入第二阶段。",
         sections = {
-          Spell(30843, {so = true, desc = "Reduces healing effects and health regeneration by 100% and reduces health to 1 health point, lasts for 9 seconds.  Upon expiration the health is restored.", flag1 = IMPORTANT}), -- Enfeeble
-          Spell(30854, {desc = "Utters a word of darkness, inflicting 1500 Shadow damage to his target every 3 seconds for 18 seconds.", flag1 = MAGIC}), -- Shadow Word: Pain
+          Spell(30843, {so = true, desc = "对非坦克任意个5个队伍成员施放，使他们的最大生命为1，治疗效果和生命恢复为0，持续9秒。结束后满血。", flag1 = IMPORTANT}), -- Enfeeble
+          Spell(30854, {desc = "对坦克施放暗言术痛，每三秒造成1500暗影伤害，持续18秒。", flag1 = MAGIC}), -- Shadow Word: Pain
           
         },
       }),
       Stage({
         so = true,
-        name = "Phase 2",
-        desc = "This phase ends when Malchezaar reaches 30% health.",
+        name = "第二阶段",
+        desc = "玛克扎尔王子在血量达到30%时进入第三阶段。",
         sections = {
-          Spell(30843, {desc = "Reduces healing effects and health regeneration by 100% and reduces health to 1 health point, lasts for 9 seconds.  Upon expiration the health is restored.", flag1 = IMPORTANT}), -- Enfeeble
-          Spell(23547, {desc = "Malchezaar is given the ability to parry frontal attacks, and will upon parry hit 40% faster on his next swing.", flag1 = TANK}), -- Parry
-          Spell(30901, {desc = "Reduces targets armor by 1000 per application and can stack to 5 applications. Lasts 20 seconds.", flag1 = HEALER}), -- Sunder Armor
-          Spell(3391, {so = true, desc = "Gives Malchezaar a chance to attack twice instead of once.\n\nIn combination with Sunder Armor and Parry, he can easily deal over 12000 damage in one second, this makes phase 2 very random and hard for healers and tanks. Get him to phase 3 as fast as you possibly can.", flag1 = DEADLY}), -- Thrash
+          Spell(30843, {desc = "对非坦克任意个5个队伍成员施放，使他们的最大生命为1，治疗效果和生命恢复为0，持续9秒。结束后满血。", flag1 = IMPORTANT}), -- Enfeeble
+          Spell(23547, {desc = "玛克扎尔王子拥有龙类的招架惩罚机制。", flag1 = TANK}), -- Parry
+          Spell(30901, {desc = "每层减少目标1000护甲，可堆叠5层，持续20秒。", flag1 = HEALER}), -- Sunder Armor
+          Spell(3391, {so = true, desc = "类似风怒2连，瞬间打2下。", flag1 = DEADLY}), -- Thrash
         },
       }),
       Stage({
         so = true,
-        name = "Phase 3",
+        name = "第三阶段",
         sections = {
-          Spell(39095, {desc = "Increases all damage taken by 100%."}), -- Amplify Damage
-          Spell(30898, {desc = "Utters a word of darkness, inflicting 1313 to 1687 Shadow damage to a random enemy every 3 seconds for 18 seconds.", flag1 = MAGIC}), -- Shadow Word: Pain (random)
+          Spell(39095, {desc = "提高所有伤害100%。Increases all damage taken by 100%."}), -- Amplify Damage
+          Spell(30898, {desc = "对随机目标施放暗言术痛，每三秒造成1500暗影伤害，持续18秒。", flag1 = MAGIC}), -- Shadow Word: Pain (random)
           Stage({
-            name = "Flying Axes",
-            desc = "Malchezaar unleashes his axes on random targets, they can not be targeted and will attack at random. They will increase they damage as they change targets, first start at 400 damage per swing and work their way up to 1000 damage per swing.",
+            name = "飞斧",
+            desc = "玛克扎尔王子频繁向随机目标掷出飞斧，造成伤害并会不断叠加。一开始是400伤害，最高堆叠到1000伤害。",
             flag1 = HEALER,
           }),
         },
@@ -837,7 +837,7 @@ local KARAZHAN = CreateInstance({
     },
     adds = {
       {
-        name = "Netherspite Infernal",
+        name = "地狱火",
         creature = 17646,
         display = 18036,
       },
