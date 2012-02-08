@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local TRIAL_OF_THE_CHAMPION = CreateInstance({
-  name = "Trial of the Champion",
-  desc = "Trial of the Champion is a 5-man instance located in the northeast corner of Icecrown, inside the Crusaders' Coliseum at the Argent Tournament grounds. The entrance can be found on the north side of the building. One member of your party needs to talk to a NPC present to start each encounter.",
+  name = "冠军的试炼",
+  desc = "冠军的试炼是位于冰冠冰川的银白联赛场地中的一个副本,为了选拔出与天谴军团作战的勇士,玩家要代表自己的阵营迎接来自银色北伐军及对立阵营的挑战.",
   --texture = "TrialoftheChampion",
   area = 542,
 }, {
   {
-    name = "The Black Knight",
-    desc = "The Black Knight is the third and last boss of the Trial of the Champion. Players fight him in Forsaken, skeletal, and wraith forms. He is linked to the achievement I've Had Worse.",
+    name = "黑骑士",
+    desc = "黑骑士是巫妖王的将领,是巫妖王试探银白十字军实力的一名死亡骑士.",
     --icon = true,
     creature = 35451,
     display = 29837,
