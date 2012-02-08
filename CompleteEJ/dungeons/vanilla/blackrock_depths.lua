@@ -30,7 +30,7 @@ local BLACKROCK_DEPTHS = CreateInstance({
 }, {
   {
     name = "贝尔加",
-    desc = "进入黑石深渊之后,从左边的路线向前走就能遇到洛考尔.",
+    desc = "进入黑石深渊之后,从左边的路线向前走就能遇到贝尔加.",
     --icon = true,
     creature = 9016,
     display = 12162,
