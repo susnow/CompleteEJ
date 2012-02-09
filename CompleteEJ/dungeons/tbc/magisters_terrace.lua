@@ -22,13 +22,13 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local MAGISTERS_TERRACE = CreateInstance({
-  name = "Magisters' Terrace",
-  desc = "Magisters' Terrace is a 5-man instance located on the Isle of Quel'Danas. The instance features four bosses: Selin Fireheart, Vexallus, Priestess Delrissa and Kael'thas Sunstrider himself, who has returned despite his \"defeat\" in Tempest Keep: The Eye. Uniquely, this 5-man drops all epics, starting what would become a trend repeating in WotLK of 5-mans being added towards the end of an expansion with epic loot. Swift White Hawkstrider and Phoenix Hatchling drop off Kael'thas, too, serving as popular vanity items while every boss has a chance to drop Orb of the Sin'dorei which turns the user temporarily into a blood elf.",
+  name = "魔导师平台",
+  desc = "魔导师平台位于奎尔丹纳斯岛.魔导师平台是凯尔萨斯·逐日者王子的领地.经历了风暴要塞的失败之后,很多人以为这位血精灵之王已然身死,但是他却被更为强大的能量复活了.如今的凯尔萨斯已经面目全非,胸口那块散发诡异颜色的绿色水晶让他变得邪气十足.唯一没变的,是他为了追求更强能量的信念.",
   --texture = "MagistersTerrace",
   area = 798,
 }, {
   {
-    name = "Selin Fireheart",
+    name = "塞林·火心",
     --desc = "",
     --icon = true,
     creature = 24723,
@@ -43,8 +43,8 @@ local MAGISTERS_TERRACE = CreateInstance({
     },
   },
   {
-    name = "Vexallus",
-    desc = "Vexallus is a voidwraith infused with arcane energy. He is the second boss in the Magisters' Terrace.",
+    name = "维萨鲁斯",
+    desc = "维萨鲁斯受到了奥术能量诅咒. 他是魔导师平台的第二个boss.",
     --icon = true,
     creature = 24744,
     display = 22731,
@@ -59,8 +59,8 @@ local MAGISTERS_TERRACE = CreateInstance({
     },
   },
   {
-    name = "Priestess Delrissa",
-    desc = "Delrissa's Minions Kagani Nightstrike (Rogue) Ellrys Duskhallow (Warlock) Eramas Brightblaze (Monk) Yazzai (Mage) Warlord Salaris (Warrior) Garaxxas (Hunter) Apoko (Shaman) Zelfan (Engineer)  Priestess Delrissa is the third boss within Magisters' Terrace. Upon instance creation, she randomly chooses four companions with their own unique abilities. All five, including Delrissa, must be defeated in order to complete the event.",
+    name = "女祭司德莉希亚",
+    desc = "女祭司德莉希亚是一个六只手的恶魔,她能够使用“快速治疗”,“恢复”,“驱散魔法”,“真言术:盾”以及“暗言术：痛”.她会和4个小弟一起出战,这4个小弟是由8个怪物中随机抽出的.",
     --icon = true,
     creature = 24560,
     display = 22596,
@@ -82,8 +82,8 @@ local MAGISTERS_TERRACE = CreateInstance({
     },
   },
   {
-    name = "Kael'thas Sunstrider",
-    desc = "Kael'thas Sunstrider is the final boss within Magisters' Terrace. Although believed to have been defeated in The Eye, Kael'thas has been kept alive by a green crystal embedded within his chest. He has a chance to drop Phoenix Hatchling and Swift White Hawkstrider, two popular vanity items for collectors.",
+    name = "凯尔萨斯·逐日者",
+    desc = "凯尔萨斯·逐日者是魔导师平台的最终boss,堕落的凯子为了复兴血精灵家族甘心为基尔加丹做门卫，在太阳之井高地门前修建了一座了望台.",
     --icon = true,
     creature = 24664,
     display = 22906,

@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local AUCHENAI_CRYPTS = CreateInstance({
-  name = "Auchenai Crypts",
-  desc = "Auchindoun is a former draenei holy site and Horde fortress in the middle of the Bone Wastes in Outland's Terokkar Forest. It was a hallowed ground until the Shadow Council took over, summoned an extremely powerful demon as old as time itself, and destroyed half of Terokkar Forest in the process. Different factions now vie for power in this magical spot: Ethereals suck the arcane energy from the Mana-Tombs, the Burning Legion harvests souls inside the Auchenai Crypts, arakkoa zealots work dark magic in the Sethekk Halls, and the Shadow Council plots its domination of Outland from within the Shadow Labyrinth. Auchenai Crypts is a wing of Auchindoun and its entrance can be found to the west of the Ring of Observance.",
+  name = "奥金尼地穴",
+  desc = "奥金顿是前德莱尼圣地,在外域泰罗卡森林的白骨荒野中心.这是一个神圣的地方,直到被暗影议会接管,他们召唤了一个和时间一样古老,极其强大的恶魔,并摧毁了一半的泰罗卡森林.不同的阵营现在在这个神奇的地方争夺权力:吸收了法力陵墓中奥术能量的虚空幽客,在奥金尼地下的燃烧军团灵魂,在赛塞泰克大厅的鸦人狂热者,以及统治了整个暗影迷宫的暗影议会.",
   --texture = "AuchenaiCrypts",
   area = 722,
 }, {
   {
-    name = "Shirrak the Dead Watcher",
-    desc = "Shirrak the Dead Watcher is the first boss found in Auchenai Crypts.",
+    name = "死亡看守者辛瑞克",
+    desc = "死亡看守者辛瑞克是奥金尼地穴的第一个BOSS.",
     --icon = true,
     creature = 18371,
     display = 18916,
@@ -43,8 +43,8 @@ local AUCHENAI_CRYPTS = CreateInstance({
     },
   },
   {
-    name = "Exarch Maladaar",
-    desc = "Exarch Maladaar, the leader of the Auchenai Death Cult is the second and final boss found in Auchenai Crypts.",
+    name = "主教玛拉达尔",
+    desc = "主教玛拉达尔, 是奥金尼地穴的最终BOSS.",
     --icon = true,
     creature = 18373,
     display = 17715,

@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_ARCATRAZ = CreateInstance({
-  name = "The Arcatraz",
-  desc = "Tempest Keep is a former Naaru fortress in the Netherstorm in Outland. This crystalline fortress is now ruled by Kael'thas Sunstrider, the lord of the blood elves, and dominated by scores of his brethren. The structure is divided into three wings in the skies--satellites of the gigantic structure--with the fourth wing, the Exodar, now in the world of Azeroth as the Draenei capital. Arcatraz used to require an arduous attunement method to gain access to its prison corridors, but that was removed with previous patches.",
+  name = "禁魔监狱",
+  desc = "这座古老的纳鲁建筑物位于虚空风暴的东南边. 它正被凯尔萨斯逐日者王子和他的血精灵手下占据着,禁魔监狱需要通过一系列的钥匙任务才能打开它的大门.",
   --texture = "TheArcatraz",
   area = 731,
 }, {
   {
-    name = "Zereketh the Unbound",
-    desc = "Zereketh the Unbound is the first boss found in The Arcatraz.",
+    name = "自由的瑟雷凯斯",
+    desc = "自由的瑟雷凯斯是禁魔监狱中的第一个boss.",
     --icon = true,
     creature = 20870,
     display = 19882,
@@ -44,8 +44,8 @@ local THE_ARCATRAZ = CreateInstance({
     },
   },
   {
-    name = "Dalliah the Doomsayer",
-    desc = "Dalliah the Doomsayer is the third boss found in The Arcatraz.",
+    name = "末日预言者达尔莉安",
+    desc = "末日预言者达尔莉安是禁魔监狱中的第三个boss.",
     --icon = true,
     creature = 20885,
     display = 19888,
@@ -62,8 +62,8 @@ local THE_ARCATRAZ = CreateInstance({
     },
   },
   {
-    name = "Wrath-Scryer Soccothrates",
-    desc = "Wrath-Scryer Soccothrates is the second boss found in The Arcatraz.",
+    name = "天怒预言者苏克拉底",
+    desc = "天怒预言者苏克拉底是禁魔监狱中的第二个boss.",
     --icon = true,
     creature = 20886,
     display = 19977,
@@ -78,8 +78,8 @@ local THE_ARCATRAZ = CreateInstance({
     },
   },
   {
-    name = "Harbinger Skyriss",
-    desc = "Harbinger Skyriss is the fifth and final boss of a multi-wave encounter in The Arcatraz.",
+    name = "预言者斯克瑞斯",
+    desc = "预言者斯克瑞斯是禁魔监狱中的最终boss.",
     --icon = true,
     creature = 20912,
     display = 19943,

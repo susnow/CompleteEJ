@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local MANA_TOMBS = CreateInstance({
-  name = "Mana-Tombs",
-  desc = "Auchindoun is a former draenei holy site and Horde fortress in the middle of the Bone Wastes in Outland's Terokkar Forest. It was a hallowed ground until the Shadow Council took over, summoned an extremely powerful demon as old as time itself, and destroyed half of Terokkar Forest in the process. Different factions now vie for power in this magical spot: Ethereals suck the arcane energy from the Mana-Tombs, the Burning Legion harvests souls inside the Auchenai Crypts, arakkoa zealots work dark magic in the Sethekk Halls, and the Shadow Council plots its domination of Outland from within the Shadow Labyrinth. Mana-Tombs is a wing of Auchindoun and its entrance is at the north of the Ring of Observance.",
+  name = "法力陵墓",
+  desc = "法力陵墓是整个奥金顿副本群中级别最低,难度最低的副本.节点亲王沙法尔是这里的主人,那么这里自然遍布着他的那些虚灵随从.这里对应星界财团的声望.",
   --texture = "ManaTombs",
   area = 732,
 }, {
   {
-    name = "Pandemonius",
-    desc = "Pandemonius is a large, armored voidwalker and the first boss found in Mana-Tombs.",
+    name = "潘德莫努斯",
+    desc = "潘德莫努斯是一个虚灵,他是法力陵墓中的第一个boss.",
     --icon = true,
     creature = 18341,
     display = 19338,
@@ -45,8 +45,8 @@ local MANA_TOMBS = CreateInstance({
     },
   },
   {
-    name = "Tavarok",
-    desc = "Tavarok is a colossus and the second boss found in Mana-Tombs.",
+    name = "塔瓦洛克",
+    desc = "塔瓦洛克是法力陵墓中的第二个boss.",
     --icon = true,
     creature = 18343,
     display = 19332,
@@ -60,8 +60,8 @@ local MANA_TOMBS = CreateInstance({
     },
   },
   {
-    name = "Nexus-Prince Shaffar",
-    desc = "Nexus-Prince Shaffar is the final boss of Mana-Tombs. He leads a faction of ethereals who oppose the Consortium.",
+    name = "节点亲王沙法尔",
+    desc = "节点亲王沙法尔是法力陵墓中的最终boss. 他领导了反对联盟的虚空幽灵.",
     --icon = true,
     creature = 18344,
     display = 19780,

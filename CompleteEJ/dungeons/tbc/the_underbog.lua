@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_UNDERBOG = CreateInstance({
-  name = "The Underbog",
-  desc = "The Underbog is the second 5-man wing of the Coilfang Reservoir. The only Naga presence in this section defends the structure they built to house their hydra god, Ghaz'an. Killing mobs and bosses grant Cenarion Expedition reputation, capped to Honored in normal mode.",
+  name = "幽暗沼泽",
+  desc = "幽暗沼泽是盘牙水库地下城的第二个5人副本,是盘牙水库内未被纳迦侵入消灭的自然生命的家园.在这个地区仅有的纳迦们保护着他们的多头蛇神加兹安的居所.剩余区域是一个自然的栖息地,赞加沼泽最强大生物种类们的家.",
   --texture = "TheUnderbog",
   area = 726,
 }, {
   {
-    name = "Hungarfen",
-    desc = "Hungarfen is a large fungal giant and the first boss of The Underbog.",
+    name = "霍加尔芬",
+    desc = "大型真菌巨人霍加尔芬是幽暗沼泽的第一个BOSS.",
     --icon = true,
     creature = 17770,
     display = 17228,
@@ -42,8 +42,8 @@ local THE_UNDERBOG = CreateInstance({
     },
   },
   {
-    name = "Ghaz'an",
-    desc = "Ghaz'an the Hydra is the second boss of The Underbog.",
+    name = "加兹安",
+    desc = "加兹安是幽暗沼泽的第二个BOSS.",
     --icon = true,
     creature = 18105,
     display = 17528,
@@ -58,8 +58,8 @@ local THE_UNDERBOG = CreateInstance({
     },
   },
   {
-    name = "Swamplord Musel'ek",
-    desc = "Swamplord Musel'ek is a Broken hunter, ruler of the Murkblood, and the third boss of The Underbog. He is accompanied by his pet, Claw.",
+    name = "沼地领主穆塞雷克",
+    desc = "一个带宝宝的德莱尼猎人,他带的宝宝其实是任务需要找的一个德鲁伊NPC,但是战斗刚开始的时候他是敌对的,将他打成空血的时候才会转变成友善的目标.",
     --icon = true,
     creature = 17826,
     display = 18570,
@@ -80,8 +80,8 @@ local THE_UNDERBOG = CreateInstance({
     },
   },
   {
-    name = "The Black Stalker",
-    desc = "The Black Stalker is the final boss of The Underbog.",
+    name = "黑色阔步者",
+    desc = "黑色阔步者是幽暗沼泽中的最终BOSS.",
     --icon = true,
     creature = 17882,
     display = 18194,

@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_MECHANAR = CreateInstance({
-  name = "The Mechanar",
-  desc = "Tempest Keep is a former Naaru fortress in the Netherstorm in Outland. This crystalline fortress is now ruled by Kael'thas Sunstrider, the lord of the blood elves, and dominated by scores of his brethren. The structure is divided into three wings in the skies--satellites of the gigantic structure--with the fourth wing, the Exodar, now in the world of Azeroth as the Draenei capital.",
+  name = "能源舰",
+  desc = "这座古老的纳鲁建筑物位于虚空风暴的东南边. 它正被凯尔萨斯逐日者王子和他的血精灵手下占据着.",
   --texture = "TheMechanar",
   area = 730,
 }, {
   {
-    name = "Mechano-Lord Capacitus",
-    desc = "Mechano-Lord Capacitus is an arcane titan boss found on the first floor in The Mechanar wing of Tempest Keep.",
+    name = "机械领主卡帕西图斯",
+    desc = "机械领主卡帕西图斯是一个奥术泰坦boss,位于能源舰的一层.",
     --icon = true,
     creature = 19219,
     display = 19162,
@@ -45,8 +45,8 @@ local THE_MECHANAR = CreateInstance({
     },
   },
   {
-    name = "Nethermancer Sepethrea",
-    desc = "Nethermancer Sepethrea is an optional boss found in The Mechanar wing of Tempest Keep.",
+    name = "灵术师塞比瑟蕾",
+    desc = "灵术师塞比瑟蕾是能源舰中的可选boss.",
     --icon = true,
     creature = 19221,
     display = 19166,
@@ -59,8 +59,8 @@ local THE_MECHANAR = CreateInstance({
     },
   },
   {
-    name = "Pathaleon the Calculator",
-    desc = "Pathaleon the Calculator is the last boss after Nethermancer Sepethrea in the Mechanar.",
+    name = "计算者帕萨雷恩",
+    desc = "计算者帕萨雷恩是灵术师塞比瑟蕾后的boss,是能源舰中的最终boss.",
     --icon = true,
     creature = 19220,
     display = 20033,

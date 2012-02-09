@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_SLAVE_PENS = CreateInstance({
-  name = "The Slave Pens",
-  desc = "Coilfang Reservoir is an instance located in Zangarmarsh. The structure itself is a subterranean water pumping station, operated by the Naga. The dungeon is made up of gigantic caverns with huge pipes descending from the ceiling powered by titanic crystal capacitors. While the entrance to the Reservoir is underwater, the instance itself is only partially submerged, similar to the Blackfathom Deeps. The Slave Pens used to have an elaborate questline that attuned players to Karazhan but that is no longer required to access the raid instance.",
+  name = "奴隶围栏",
+  desc = "奴隶围栏是盘牙水库副本群的第一个副本. 其结构本身是一个地下水泵站, 娜迦海妖统治着这里.这里囚禁了大量的奴隶,而奸佞的纳迦则是幕后的主使.",
   --texture = "TheSlavePens",
   area = 728,
 }, {
   {
-    name = "Mennu the Betrayer",
-    desc = "Mennu the Betrayer is the first boss of The Slave Pens in Coilfang Reservoir. He is a Broken Draenei shaman.",
+    name = "背叛者门努",
+    desc = "背叛者门努是奴隶围栏的第一个boss. 他是一个破碎的德莱尼萨满.",
     --icon = true,
     creature = 17941,
     display = 17728,
@@ -44,8 +44,8 @@ local THE_SLAVE_PENS = CreateInstance({
     },
   },
   {
-    name = "Rokmar the Crackler",
-    desc = "Rokmar the Crackler is the second boss of The Slave Pens in Coilfang Reservoir.",
+    name = "巨钳鲁克玛尔",
+    desc = "巨钳鲁克玛尔是奴隶围栏的第二个boss.",
     --icon = true,
     creature = 17991,
     display = 17729,
@@ -60,8 +60,8 @@ local THE_SLAVE_PENS = CreateInstance({
     },
   },
   {
-    name = "Quagmirran",
-    desc = "Quagmirran is the third and final boss of The Slave Pens. He is a Fungal Giant players encounter after freeing Naturalist Bite from his prison near him.",
+    name = "夸格米拉",
+    desc = "夸格米拉是奴隶围栏的最终boss，他是一个真菌巨人.",
     --icon = true,
     creature = 17942,
     display = 18224,

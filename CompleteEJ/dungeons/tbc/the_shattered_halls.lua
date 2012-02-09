@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_SHATTERED_HALLS = CreateInstance({
-  name = "The Shattered Halls",
-  desc = "Hellfire Citadel is the headquarters of the Fel Orcs of Outland; it's an impenetrable bastion that once served as the base of operations for the orcs throughout the First and Second Wars. Kargath Bladefist and his Fel orcs now make their home in the citadel. The Shattered Halls is a level 70 instance in Hellfire Peninsula commonly referred to as \"SH,\" serving as the third wing of Hellfire Citadel, with Kargath Bladefist as the final boss. Although it originally required a specific key just to open up normal modes, it has been removed along with other keys in patch 4.2.",
+  name = "破碎大厅",
+  desc = "破碎大厅是邪兽人在外域的老巢.这里的指挥官就是碎手氏族的大酋长,卡加斯·刃拳.用双刃替代双手的他是暗影议会的一员,也是暗影议会核心成员中唯一一个不是术士的人.当黑暗之门被摧毁后,卡加斯与玛瑟里顿暗中有了勾结,他占据了地狱火堡垒,声称自己才是部落真正的酋长.",
   --texture = "TheShatteredHalls",
   area = 710,
 }, {
   {
-    name = "Grand Warlock Nethekurse",
-    desc = "Grand Warlock Nethekurse is a Fel Orc warlock and first boss in the Shattered Halls wing of Hellfire Citadel, located in Hellfire Peninsula.",
+    name = "高阶术士奈瑟库斯",
+    desc = "高阶术士奈瑟库斯是破碎大厅的第一个boss.",
     --icon = true,
     creature = 16807,
     display = 16628,
@@ -48,8 +48,8 @@ local THE_SHATTERED_HALLS = CreateInstance({
     },
   },
   {
-    name = "Blood Guard Porung",
-    desc = "Blood Guard Porung is a fel orc boss found after the Archer Gauntlet only in Heroic Shattered Halls.",
+    name = "血卫士伯鲁恩",
+    desc = "血卫士伯鲁恩只有在英雄模式下的破碎大厅才会出现.",
     --icon = true,
     creature = 20923,
     display = 17725,
@@ -60,8 +60,8 @@ local THE_SHATTERED_HALLS = CreateInstance({
     },
   },
   {
-    name = "Warbringer O'mrogg",
-    desc = "Warbringer O'mrogg is a two-headed Ogre, and the second boss in the Shattered Halls.",
+    name = "战争使者沃姆罗格",
+    desc = "战争使者沃姆罗格是个双头怪物,是破碎大厅的第二个boss.",
     --icon = true,
     creature = 16809,
     display = 18031,
@@ -74,8 +74,8 @@ local THE_SHATTERED_HALLS = CreateInstance({
     },
   },
   {
-    name = "Warchief Kargath Bladefist",
-    desc = "Warchief Kargath Bladefist is the master of the fel orcs and former Chieftain of the Shattered Hand Clan. He is the final boss of the Shattered Halls.",
+    name = "酋长卡加斯·刃拳",
+    desc = "卡加斯·刃拳是破碎大厅的最终boss.",
     --icon = true,
     creature = 16808,
     display = 19799,

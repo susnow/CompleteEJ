@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_BLACK_MORASS = CreateInstance({
-  name = "The Black Morass",
-  desc = "Located in the eastern part of Tanaris, the Caverns of Time (CoT) contain various portals to different key time periods and events in Warcraft history. The caverns act as a crossroads for the various timelines--through them one can travel back and forth along the ebb and flow of time. The Caverns of Time are home to the Brood of Nozdormu and the bronze dragonflight. It is their sacred charge to guard the caverns against the intrusion of mortals, whose interference would assuredly disrupt the flow of time. Recently, a mysterious force called the Infinite Dragonflight has begun to meddle with time. The Black Morass is one of the timeways accessible in the Caverns of Time. In this wing, a group of players must defend the last Guardian Medivh, in a swamp known as The Black Morass. The Guardian Medivh, possessed by Sargeras, attempts to open the Dark Portal to Draenor, while wave upon wave of dragonkin of the Infinite Dragonflight attempt to defeat Medivh in order to alter time and halt the invasion of Azeroth from Draenor. In 4.2, its attunement process was removed and it no longer requires you to run a prior CoT instance.",
+  name = "黑色沼泽",
+  desc = "黑色沼泽是赤脊山脉东面的一片巨大沼泽地.它是第一次大战前兽人占领的第一片土地,在第二次大战后艾泽拉斯的保卫者在这片土地上耗费了很多年来清理兽人余孽.麦迪文的黑暗之门的废墟也在这里.",
   --texture = "TheBlackMorass",
   area = 733,
 }, {
   {
-    name = "Chrono Lord Deja",
-    desc = "Chrono Lord Deja is the first boss of the Caverns of Time: The Black Morass encounter. He spawns upon the opening of the sixth portal. He is a drakonid of the Infinite Dragonflight.",
+    name = "时空领主德亚",
+    desc = "时空领主德亚是时光之穴:黑色沼泽的第一个boss. 第六波怪结束后他会出现.",
     --icon = true,
     creature = 17879,
     display = 20513,
@@ -46,8 +46,8 @@ local THE_BLACK_MORASS = CreateInstance({
     },
   },
   {
-    name = "Temporus",
-    desc = "Temporus is the second boss of the Caverns of Time: The Black Morass encounter. He is a drake of the Infinite Dragonflight that spawns upon the opening of the 12th portal.",
+    name = "坦普卢斯",
+    desc = "坦普卢斯是时光之穴:黑色沼泽的第二个boss,在十二波小怪结束后出现.",
     --icon = true,
     creature = 17880,
     display = 19066,
@@ -65,8 +65,8 @@ local THE_BLACK_MORASS = CreateInstance({
     },
   },
   {
-    name = "Aeonus",
-    desc = "Aeonus is a dragon of the Infinite Dragonflight, and the final boss of Caverns of Time: The Black Morass. He spawns from the 18th and final portal.",
+    name = "埃欧努斯",
+    desc = "埃欧努斯是时光之穴:黑色沼泽的最终boss.",
     --icon = true,
     creature = 17881,
     display = 20510,

@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local SETHEKK_HALLS = CreateInstance({
-  name = "Sethekk Halls",
-  desc = "Auchindoun is a former draenei holy site and Horde fortress in the middle of the Bone Wastes in Outland's Terokkar Forest. It was a hallowed ground until the Shadow Council took over, summoned an extremely powerful demon as old as time itself, and destroyed half of Terokkar Forest in the process. Different factions now vie for power in this magical spot: Ethereals suck the arcane energy from the Mana-Tombs, the Burning Legion harvests souls inside the Auchenai Crypts, arakkoa zealots work dark magic in the Sethekk Halls, and the Shadow Council plots its domination of Outland from within the Shadow Labyrinth. Sethekk Halls is a wing of Auchindoun and its entrance is on the east side of the Ring of Observance. On heroic mode, it contains a boss which drops a coveted rare mount: Reins of the Raven Lord.",
+  name = "塞泰克大厅",
+  desc = "塞泰克大厅是魔兽世界奥金顿副本群的一个分支.这里的势力主要是一群邪恶的鸦人,而且要注意的是,德鲁伊的史诗飞行形态任务最终一步就是在这里召唤乌鸦之神的.这里对应贫民窟的声望.",
   --texture = "SethekkHalls",
   area = 723,
 }, {
   {
-    name = "Darkweaver Syth",
-    desc = "Darkweaver Syth is the first boss found in Sethekk Halls.",
+    name = "黑暗编织者塞斯",
+    desc = "黑暗编织者塞斯塞泰克大厅中的第一个boss.",
     --icon = true,
     creature = 18472,
     display = 20599,
@@ -49,8 +49,8 @@ local SETHEKK_HALLS = CreateInstance({
     },
   },
   {
-    name = "Talon King Ikiss",
-    desc = "Talon King Ikiss is one of the leaders of the arkoaa along with Darkweaver Syth. He is the final boss in the Sethekk Halls.",
+    name = "利爪之王艾吉斯",
+    desc = "利爪之王艾吉斯是塞斯塞泰克大厅中的最终boss.",
     --icon = true,
     creature = 18473,
     display = 18636,
@@ -70,8 +70,8 @@ local SETHEKK_HALLS = CreateInstance({
     },
   },
   {
-    name = "Anzu",
-    desc = "Anzu the Raven God is a boss in Sethekk Halls appearing on Heroic difficulty only. He used to be able to be summoned only by the druid class, but anyone can summoned him now. He drops the rare mount, Reins of the Raven Lord.",
+    name = "安苏",
+    desc = "安苏只有在英雄难度下的塞斯塞泰克大厅才能被召唤. 过去他只能被德鲁伊召唤, 但是现在任何人都可以召唤出他. 安苏会有小几率掉落乌鸦之神的缰绳.",
     --icon = true,
     creature = 23035,
     display = 21492,

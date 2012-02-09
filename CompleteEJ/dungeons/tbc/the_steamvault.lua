@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_STEAMVAULT = CreateInstance({
-  name = "The Steamvault",
-  desc = "Coilfang Reservoir is an instance located in Zangarmarsh. The structure itself is a subterranean water pumping station, operated by the Naga. The dungeon is made up of gigantic caverns with huge pipes descending from the ceiling powered by titanic crystal capacitors. While the entrance to the Reservoir is underwater, the instance itself is only partially submerged, similar to the Blackfathom Deeps. It is also the only Coilfang Reservoir instance that a player can run in Normal mode and receive Cenarion Expedition reputation all the way to Exalted.",
+  name = "蒸汽地窟",
+  desc = "蒸汽地窟是盘牙水库地下城的第三个5人副本. 其结构本身就是一个地下水泵站, 娜迦海妖统治着这里. 瓦斯琪女士忠心的仆人督军卡利瑟里斯带着他的手下机械师斯蒂里格和水术师瑟斯比亚驻守在蒸汽地窟他们似乎在研究一种结合水和机械的法术，这种法术能带给娜迦战士无坚不摧的力量。娜迦族以此为据点不断吸取赞加沼泽的湖水,导致毒蛇湖的水位下降,引发了一系列生态问题,无数生物的生活环境遭到破坏.",
   --texture = "TheSteamvault",
   area = 727,
 }, {
   {
-    name = "Hydromancer Thespia",
-    desc = "Hydromancer Thespia is the first boss of The Steamvault in Coilfang Reservoir.",
+    name = "水术师瑟丝比娅",
+    desc = "水术师瑟丝比娅是盘牙水库中蒸汽地窟的第一个boss.",
     --icon = true,
     creature = 17797,
     display = 11268,
@@ -42,8 +42,8 @@ local THE_STEAMVAULT = CreateInstance({
     },
   },
   {
-    name = "Mekgineer Steamrigger",
-    desc = "Mekgineer Steamrigger is the second boss of The Steamvault in Coilfang Reservoir. You will need to slay him in order to proceed to Warlord Kalithresh, the final boss of the instance.",
+    name = "机械师斯蒂里格",
+    desc = "机械师斯蒂里格是盘牙水库中蒸汽地窟的第二个boss. 如果你想继续前进见到督军卡利瑟里斯必须要杀害他.",
     --icon = true,
     creature = 17796,
     display = 18638,
@@ -56,8 +56,8 @@ local THE_STEAMVAULT = CreateInstance({
     },
   },
   {
-    name = "Warlord Kalithresh",
-    desc = "Warlord Kalithresh is the third and last boss of The Steamvault in Coilfang Reservoir.",
+    name = "督军卡利瑟里斯",
+    desc = "督军卡利瑟里斯是盘牙水库中蒸汽地窟的第三个boss.",
     --icon = true,
     creature = 17798,
     display = 20235,

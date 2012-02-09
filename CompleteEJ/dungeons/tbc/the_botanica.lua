@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_BOTANICA = CreateInstance({
-  name = "The Botanica",
-  desc = "Tempest Keep is a former Naaru fortress in the Netherstorm in Outland. This crystalline fortress is now ruled by Kael'thas Sunstrider, the lord of the blood elves, and dominated by scores of his brethren. The structure is divided into three wings in the skies--satellites of the gigantic structure--with the fourth wing, the Exodar, now in the world of Azeroth as the Draenei capital.",
+  name = "生态船",
+  desc = "生态船位于风暴要塞.生态船原先是纳鲁游历各个世界的植物收藏馆，现在他被凯尔萨斯王子所占据，指挥官萨拉妮丝在那里奉凯尔萨斯王子之名研究着来自于其他大陆的各种奇怪植物.",
   --texture = "TheBotanica",
   area = 729,
 }, {
   {
-    name = "Commander Sarannis",
-    desc = "Commander Sarannis is the first boss in The Botanica wing of Tempest Keep.",
+    name = "指挥官萨瑞尼斯",
+    desc = "指挥官萨瑞尼斯是生态船中的第一个boss.",
     --icon = true,
     creature = 17976,
     display = 18929,
@@ -41,8 +41,8 @@ local THE_BOTANICA = CreateInstance({
     },
   },
   {
-    name = "High Botanist Freywinn",
-    desc = "High Botanist Freywinn is the second boss found in The Botanica wing of Tempest Keep.",
+    name = "大植物学家费瑞卫恩",
+    desc = "大植物学家费瑞卫恩是生态船中的第二个boss.",
     --icon = true,
     creature = 17975,
     display = 19045,
@@ -59,8 +59,8 @@ local THE_BOTANICA = CreateInstance({
     },
   },
   {
-    name = "Thorngrin the Tender",
-    desc = "Thorngrin the Tender is the third boss in The Botanica wing of Tempest Keep.",
+    name = "看管者索恩格林",
+    desc = "看管者索恩格林是生态船中的第三个boss.",
     --icon = true,
     creature = 17978,
     display = 14416,
@@ -74,8 +74,8 @@ local THE_BOTANICA = CreateInstance({
     },
   },
   {
-    name = "Laj",
-    desc = "Laj is the fourth boss found in The Botanica wing of Tempest Keep.",
+    name = "拉伊",
+    desc = "拉伊是生态船中的第四个boss.",
     --icon = true,
     creature = 17980,
     display = 13109,
@@ -87,8 +87,8 @@ local THE_BOTANICA = CreateInstance({
     },
   },
   {
-    name = "Warp Splinter",
-    desc = "Warp Splinter, a large Ancient of War, is the fifth boss in The Botanica.",
+    name = "扭曲分裂者",
+    desc = "扭曲分裂者是生态船中的最终boss.",
     --icon = true,
     creature = 17977,
     display = 19438,

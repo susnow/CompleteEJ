@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local OLD_HILLSBRAD_FOOTHILLS = CreateInstance({
-  name = "Old Hillsbrad Foothills",
+  name = "旧希尔斯布莱德丘陵",
   --desc = "",
   --texture = "OldHillsbradFoothills",
   area = 734,
 }, {
   {
-    name = "Lieutenant Drake",
-    desc = "Lieutenant Drake is the first boss inside of Caverns of Time: Old Hillsbrad Foothills. He appears after you've put bombs in all of the barrels inside the internment lodges inside Durnholde Keep.",
+    name = "德拉克中尉",
+    desc = "德拉克中尉是时光之穴: 旧希尔斯布莱德丘陵的第一个boss. 需要玩家使用之前得到的炸药包制造兽人监狱火灾,以便引出德拉克中尉.",
     --icon = true,
     creature = 17848,
     display = 17386,
@@ -46,8 +46,8 @@ local OLD_HILLSBRAD_FOOTHILLS = CreateInstance({
     },
   },
   {
-    name = "Captain Skarloc",
-    desc = "Captain Skarloc is the second boss of Caverns of Time: Old Hillsbrad Foothills. He appears when you've escorted Thrall through the front gate of Durnholde Keep. He drops Recipe: Ironshield Potion, a rare recipe.",
+    name = "斯卡洛克上尉",
+    desc = "斯卡洛克上尉是时光之穴: 旧希尔斯布莱德丘陵的第二个boss. 他出现在你护送萨尔的路上.",
     --icon = true,
     creature = 17862,
     display = 17387,
@@ -63,8 +63,8 @@ local OLD_HILLSBRAD_FOOTHILLS = CreateInstance({
     },
   },
   {
-    name = "Epoch Hunter",
-    desc = "Epoch Hunter is a drake boss of the Infinite Dragonflight that attacks the young Thrall and his rescuers inside the Caverns of Time: Old Hillsbrad Foothills. The Epoch Hunter appears after you have escorted Thrall to Tarren Mill and found Taretha inside the inn.",
+    name = "时空猎手",
+    desc = "时空猎手是时光之穴: 旧希尔斯布莱德丘陵的最后boss.",
     --icon = true,
     creature = 18096,
     display = 19135,

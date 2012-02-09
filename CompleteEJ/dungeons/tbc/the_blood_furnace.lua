@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_BLOOD_FURNACE = CreateInstance({
-  name = "The Blood Furnace",
-  desc = "The Blood Furnace is the second wing of the Hellfire Citadel. It is located above Hellfire Ramparts, inside of the tower that overlooks the ramparts themselves. The entrance is on the Alliance (Southern) side of the Citadel, up a ramp. Through this instance, players discover that it is Magtheridon that is entrapped by the Fel Orcs' sorcery, and they're using his blood to manufacture a new Fel Horde, infused with his demonic energy.",
+  name = "鲜血熔炉",
+  desc = "鲜血熔炉位于地狱火堡垒的右上方.这里囚禁着恶魔玛瑟里顿,伊利丹的仆从利用玛瑟里顿的鲜血造出了战斗能力更强的邪兽人种族.恶魔的鲜血被抽出在熔炉中炼化后,最后注入兽人体内.伊利丹最强大的队伍源源不断从此而出.",
   --texture = "TheBloodFurnace",
   area = 725,
 }, {
   {
-    name = "The Maker",
-    desc = "The Maker is the first boss of The Blood Furnace in Hellfire Citadel.",
+    name = "制造者",
+    desc = "制造者是鲜血熔炉的第一个boss.",
     --icon = true,
     creature = 17381,
     display = 18369,
@@ -42,8 +42,8 @@ local THE_BLOOD_FURNACE = CreateInstance({
     },
   },
   {
-    name = "Broggok",
-    desc = "Broggok is the second boss in The Blood Furnace wing of Hellfire Citadel.",
+    name = "布洛戈克",
+    desc = "布洛戈克是鲜血熔炉的第一个boss.",
     --icon = true,
     creature = 17380,
     display = 19372,
@@ -58,8 +58,8 @@ local THE_BLOOD_FURNACE = CreateInstance({
     },
   },
   {
-    name = "Keli'dan the Breaker",
-    desc = "Keli'dan the Breaker, the Fel Orc jailer of Magtheridon, is the final boss in the The Blood Furnace wing of Hellfire Citadel.",
+    name = "击碎者克里丹",
+    desc = "击碎者克里丹, 恶魔兽人,玛瑟里顿之卒, 是鲜血熔炉的最终boss.",
     --icon = true,
     creature = 17377,
     display = 17153,

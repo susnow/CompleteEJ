@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local SHADOW_LABYRINTH = CreateInstance({
-  name = "Shadow Labyrinth",
-  desc = "Auchindoun is a former draenei holy site and Horde fortress in the middle of the Bone Wastes in Outland's Terokkar Forest. It was a hallowed ground until the Shadow Council took over, summoned an extremely powerful demon as old as time itself, and destroyed half of Terokkar Forest in the process. Different factions now vie for power in this magical spot: Ethereals suck the arcane energy from the Mana-Tombs, the Burning Legion harvests souls inside the Auchenai Crypts, arakkoa zealots work dark magic in the Sethekk Halls, and the Shadow Council plots its domination of Outland from within the Shadow Labyrinth. Shadow Labyrinth is the southern wing of Auchindoun.",
+  name = "暗影迷宫",
+  desc = "暗影迷宫是奥金顿副本群最高级的一个分支,邪兽人占领了这里,而让人意想不到的是,在副本的尽头,他们竟然把与拉格纳罗斯同等身份的元素之神摩摩尔软禁了…….",
   --texture = "ShadowLabyrinth",
   area = 724,
 }, {
   {
-    name = "Ambassador Hellmaw",
-    desc = "Ambassador Hellmaw is the first boss found in Shadow Labyrinth.",
+    name = "赫尔默大使",
+    desc = "赫尔默大使是暗影迷宫的第一个boss.",
     --icon = true,
     creature = 18731,
     display = 18821,
@@ -42,8 +42,8 @@ local SHADOW_LABYRINTH = CreateInstance({
     },
   },
   {
-    name = "Blackheart the Inciter",
-    desc = "Blackheart the Inciter is the second boss found in Shadow Labyrinth.",
+    name = "煽动者布莱卡特",
+    desc = "煽动者布莱卡特是暗影迷宫的第二个boss.",
     --icon = true,
     creature = 18667,
     display = 18058,
@@ -56,8 +56,8 @@ local SHADOW_LABYRINTH = CreateInstance({
     },
   },
   {
-    name = "Grandmaster Vorpil",
-    desc = "Grandmaster Vorpil is the third boss found in Shadow Labyrinth.",
+    name = "沃匹尔大师",
+    desc = "沃匹尔大师是暗影迷宫的第三个boss.",
     --icon = true,
     creature = 18732,
     display = 18535,
@@ -72,8 +72,8 @@ local SHADOW_LABYRINTH = CreateInstance({
     },
   },
   {
-    name = "Murmur",
-    desc = "Murmur is the final boss of the Shadow Labyrinth. Codex of Blood reveals some of his history, explaining that Murmur is the primordial essence of sound.",
+    name = "摩摩尔",
+    desc = "摩摩尔是暗影迷宫的最终boss. 鲜血法典揭示了他的历史.",
     --icon = true,
     creature = 18708,
     display = 18839,

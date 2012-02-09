@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local HELLFIRE_RAMPARTS = CreateInstance({
-  name = "Hellfire Ramparts",
-  desc = "The Hellfire Ramparts (often known as just \"Ramparts\") are the first wing of the Hellfire Citadel instance in Hellfire Peninsula. The citadel itself sits in the center of the zone, in the middle of a broken-up wall that divided the zone before the conflict began. The Ramparts takes place atop this wall along the sides of the citadel.",
+  name = "地狱火城墙",
+  desc = "地狱火城墙是地狱火堡垒的一个建筑侧翼,坐落在地狱火半岛的中央.这里遍是碎手氏族的邪兽人们,瓦兹德和他的虚空龙坐骑纳杉是这里的统帅.一开始进入这一副本你会有一种来到了黑石塔下层的感觉,满地都是帐篷和堕落兽人.",
   --texture = "HellfireRamparts",
   area = 797,
 }, {
   {
-    name = "Watchkeeper Gargolmar",
-    desc = "The first boss encounter of the Hellfire Ramparts wing of the Hellfire Citadel instance in Hellfire Peninsula.",
+    name = "看护者卡尔古玛",
+    desc = "看护者卡尔古玛是在地狱火半岛中的地狱火城墙遇到的第一个BOSS.",
     --icon = true,
     creature = 17306,
     display = 18236,
@@ -44,8 +44,8 @@ local HELLFIRE_RAMPARTS = CreateInstance({
     },
   },
   {
-    name = "Omor the Unscarred",
-    desc = "Omor the Unscarred is the second or third boss encounter of the Hellfire Ramparts wing of the Hellfire Citadel instance in Hellfire Peninsula. You can choose whether you wish to fight him before or after Vazruden and Nazan.",
+    name = "无疤者欧玛尔",
+    desc = "无疤者欧玛尔是一个可选boss.",
     --icon = true,
     creature = 17308,
     display = 18237,
@@ -61,7 +61,7 @@ local HELLFIRE_RAMPARTS = CreateInstance({
     },
   },
   {
-    name = "Nazan",
+    name = "纳杉",
     --desc = "",
     --icon = true,
     creature = 17536,
