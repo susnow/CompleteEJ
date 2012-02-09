@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_ARCATRAZ = CreateInstance({
-  name = "��ħ����",
-  desc = "�������ϵ���³������λ����շ籩�Ķ��ϱ�. ������������˹���������Ӻ�����Ѫ��������ռ����,��ħ������Ҫͨ��һϵ�е�Կ��������ܴ����Ĵ���.",
+  name = "禁魔监狱",
+  desc = "这座古老的纳鲁建筑物位于虚空风暴的东南边. 它正被凯尔萨斯逐日者王子和他的血精灵手下占据着,禁魔监狱需要通过一系列的钥匙任务才能打开它的大门.",
   --texture = "TheArcatraz",
   area = 731,
 }, {
   {
-    name = "���ɵ�ɪ�׿�˹",
-    desc = "���ɵ�ɪ�׿�˹�ǽ�ħ�����еĵ�һ��boss.",
+    name = "自由的瑟雷凯斯",
+    desc = "自由的瑟雷凯斯是禁魔监狱中的第一个boss.",
     --icon = true,
     creature = 20870,
     display = 19882,
@@ -44,8 +44,8 @@ local THE_ARCATRAZ = CreateInstance({
     },
   },
   {
-    name = "ĩ��Ԥ���ߴ����",
-    desc = "ĩ��Ԥ���ߴ�����ǽ�ħ�����еĵ�����boss.",
+    name = "末日预言者达尔莉安",
+    desc = "末日预言者达尔莉安是禁魔监狱中的第三个boss.",
     --icon = true,
     creature = 20885,
     display = 19888,
@@ -62,8 +62,8 @@ local THE_ARCATRAZ = CreateInstance({
     },
   },
   {
-    name = "��ŭԤ�����տ�����",
-    desc = "��ŭԤ�����տ������ǽ�ħ�����еĵڶ���boss.",
+    name = "天怒预言者苏克拉底",
+    desc = "天怒预言者苏克拉底是禁魔监狱中的第二个boss.",
     --icon = true,
     creature = 20886,
     display = 19977,
@@ -78,8 +78,8 @@ local THE_ARCATRAZ = CreateInstance({
     },
   },
   {
-    name = "Ԥ����˹����˹",
-    desc = "Ԥ����˹����˹�ǽ�ħ�����е�����boss.",
+    name = "预言者斯克瑞斯",
+    desc = "预言者斯克瑞斯是禁魔监狱中的最终boss.",
     --icon = true,
     creature = 20912,
     display = 19943,
