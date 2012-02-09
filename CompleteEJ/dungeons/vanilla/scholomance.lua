@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local SCHOLOMANCE = CreateInstance({
-  name = "Scholomance",
-  desc = "The Scholomance is housed within a series of crypts that lie beneath the ruined keep of Caer Darrow. Once owned by the noble Barov family, Caer Darrow fell into ruin following the Second War. As the wizard Kel'thuzad enlisted followers for his Cult of the Damned, he would often promise immortality in exchange for serving the Lich King. The Barov family fell to Kel'thuzad's charismatic influence and donated the keep and its crypts to the Scourge. The cultists then killed the Barovs and turned the ancient crypts into a school for necromancy known as the Scholomance. Though Kel'thuzad no longer resides in the crypts, devoted cultists and instructors still remain. The powerful lich, Ras Frostwhisper, rules over the site and guards it in the Scourge's name � while the mortal necromancer, Darkmaster Gandling, serves as the school's insidious headmaster.",
+  name = "通灵学院",
+  desc = "通灵学院藏匿凯尔达隆城堡的废墟下的地窖群里。凯尔达隆被毁于第二次战争时期，它曾经属于高贵的巴罗夫家族。在巫师克尔苏加德招募诅咒神教教徒的时候，经常用永生来诱惑人们为巫妖王服务。巴罗夫家族受了克尔苏加德的迷惑，并将城堡及地下室献给了天灾军团。教徒们随后杀害了巴罗夫家族的成员，并将那些古老的地下室改造成了一座亡灵法术学院，取名通灵学院。虽然克尔苏加德已经不再住在这里，狂热的教徒和导师们却留了下来。目前，强大的巫妖霜语，黑暗院长加丁正领导着这座学院。",
   texture = "Scholomance",
   area = 763,
   dflag = N5,
 }, {
   {
-    name = "Kirtonos the Herald",
+    name = "传令官基尔图诺斯",
     desc = "Long ago, he became the master of Scholomance's Doctor Theolen Krastinov. Responsible for many of the atrocities during Krastinov's rule over Scholomance, Kirtonos fed on the blood of his innocent victims. To appease his master, Doctor Krastinov had to provide the gargoyle with more and more blood.",
     --icon = true,
     creature = 10506,
@@ -124,7 +124,7 @@ local SCHOLOMANCE = CreateInstance({
   },
   {
     name = "Ras Frostwhisper",
-    desc = "Ras Frostwhisper was once a human mage from Stromgarde. He was a hedge mage, a rogue wizard that never received his formal training from Dalaran. He was among the first to join the Cult of the Damned and quickly advanced through its ranks. He turned himself over to the Lich King when the Scourge invaded, in return for immortality. Upon the ground in Stratholme, within the Slaughterhouse, Ras Frostwhisper took a dagger to his own neck and cut from one side to the other�all the time with a smile upon his face. His corpse fell onto Menethil's Gift and it is there that the Lich King raised his fallen corpse as a Lich, granting him immortality while Leonid Barthalomew the Revered looked on. He now spends his time overseeing the operations in the necromancy school of Scholomance. Magistrate Marduke has a plan to rob the lich of his powers, return him to his mortal form, and slay him once and for all.",
+    desc = "Ras Frostwhisper was once a human mage from Stromgarde. He was a hedge mage, a rogue wizard that never received his formal training from Dalaran. He was among the first to join the Cult of the Damned and quickly advanced through its ranks. He turned himself over to the Lich King when the Scourge invaded, in return for immortality. Upon the ground in Stratholme, within the Slaughterhouse, Ras Frostwhisper took a dagger to his own neck and cut from one side to the other梐ll the time with a smile upon his face. His corpse fell onto Menethil's Gift and it is there that the Lich King raised his fallen corpse as a Lich, granting him immortality while Leonid Barthalomew the Revered looked on. He now spends his time overseeing the operations in the necromancy school of Scholomance. Magistrate Marduke has a plan to rob the lich of his powers, return him to his mortal form, and slay him once and for all.",
     --icon = true,
     creature = 10508,
     display = 7919,
@@ -230,7 +230,7 @@ local SCHOLOMANCE = CreateInstance({
   },
   {
     name = "Darkmaster Gandling",
-    desc = "Darkmaster Gandling is a mummified wretch. He teaches students how to raise the dead in the Lich King�s name. Formerly a Dalaran wizard, he betrayed his masters for dark power and now revels in undeath. His graduates go on to Stratholme, the Scourge's capital in the Eastern Plaguelands. He apparently teaches at both the Scholomance in Caer Darrow and School of Necromancy in Andorhal.",
+    desc = "Darkmaster Gandling is a mummified wretch. He teaches students how to raise the dead in the Lich King抯 name. Formerly a Dalaran wizard, he betrayed his masters for dark power and now revels in undeath. His graduates go on to Stratholme, the Scourge's capital in the Eastern Plaguelands. He apparently teaches at both the Scholomance in Caer Darrow and School of Necromancy in Andorhal.",
     --icon = true,
     creature = 1853,
     display = 11070,

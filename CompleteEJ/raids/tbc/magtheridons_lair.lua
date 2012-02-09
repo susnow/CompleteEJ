@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[2], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,15 +22,15 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local MAGTHERIDONS_LAIR = CreateInstance({
-  name = "Magtheridon's Lair",
-  desc = "Magtheridon's Lair is the raid wing of the Hellfire Citadel dungeon in Outland where you fight the brutish pit lord Magtheridon himself. You can find the entrance to Magtheridon's Lair on the very bottom of the western side of the Citadel, opposite side from Rampars.",
+  name = "玛瑟里顿的巢穴",
+  desc = "玛瑟里顿的巢穴这个副本处于外域地狱火半岛之中，在这个副本里，你将直面深渊领主玛瑟里顿。你可以在地狱火堡垒的西边找到这个副本的入口。",
   texture = "MagtheridonsLair",
   area = 779,
   dflag = N25,
 }, {
   {
-    name = "Magtheridon",
-    desc = "Magtheridon, the former Lord of Outland, is a pit lord who conquered the ruins of the orcish homeworld following its destruction. His reign was ended by the arrival of Illidan Stormrage, who took Magtheridon's throne at the Black Temple for himself. Deciding that Magtheridon would have a further part to play, Illidan had Magtheridon's body dragged to the Hellfire Citadel where he imprisoned the pit lord, leaving him at the mercy of the fel orcs. A group of adventurers entered the depths of Hellfire Citadel, released the former Lord of Outland from his bonds, and finally destroyed him, taking his head as proof of their prowess.",
+    name = "玛瑟里顿",
+    desc = "玛瑟里顿暴雪开发的魔兽系列游戏中的角色。他是前外域之王，在兽人家乡毁灭之后征服了这片土地的一名深渊领主。他的统治因为伊利丹·怒风的到来而被终结，伊利丹正是想将玛瑟里顿在黑暗神殿的王位据为己有。伊利丹认为玛瑟里顿尚能发挥余热，所以将其拖至地狱火堡垒进行监禁，把他的性命留给了地狱兽人。玛瑟里顿震耳的哀嚎响彻云霄。玩家们可以进入这个副本，解放玛瑟里顿并最终击败他，把玛瑟里顿的头颅当做实力的证明。 ",
     --icon = true,
     creature = 17257,
     display = 18527,
@@ -39,18 +39,18 @@ local MAGTHERIDONS_LAIR = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Phase 1: Hellfire Channelers",
-        desc = "You will face 5 Hellfire Channelers, each using their own Manticron Cube to keep Magtheridon banished. They do not aggro on vicinity, you must attack to engage the encounter. After combat starts you have 2 minutes before phase 2 starts.",
+        name = "第一阶段： 地狱火魔导师",
+        desc = "你需要面对五名地狱火导魔师，他们使用五个盒子来禁锢玛瑟里顿。你通过攻击他们来触发战斗，战斗开始之后，你有两分钟的时间来进入第二阶段。",
         sections = {
           Stage({
             stype = CREATURE,
             creature = 17256,
             display = 9865,
-            name = "Hellfire Channeler",
-            desc = "When killed transfers the soul to remaining Hellfire Channelers, increasing their damage by 20% and casting speed by 10%. This buff stacks.",
+            name = "地狱火魔导师",
+            desc = "当杀死一名地狱火魔导师，他们的伤害就会提高20%，施法速度提高10%。",
             sections = {
-              Spell(30528, {desc = "Heals an ally  for 69375 to 80625, 30 yards range.", flag1 = INTERRUPT}), -- Dark Mending
-              Spell(30510, {desc = "Hurls missiles of dark magic, inflicting 1488 to 2012 Shadow damage to enemies within 30 yards."}), -- Shadow Bolt Volley
+              Spell(30528, {desc = "治疗30码内的盟友 69375 — 80625 。", flag1 = INTERRUPT}), -- Dark Mending
+              Spell(30510, {desc = "暗影箭，攻击30码某个敌人，造成 1488—2012 暗影伤害。"}), -- Shadow Bolt Volley
               --Spell(30511), -- Burning Abyssal
             },
           }),
@@ -58,27 +58,27 @@ local MAGTHERIDONS_LAIR = CreateInstance({
             stype = CREATURE,
             creature = 17454,
             display = 16874,
-            name = "Burning Abyssal",
-            desc = "Summoned by Hellfire Channelers, they do not perform any special abilities, they auto attack and hit hard but can be feared and banished.",
+            name = "地狱火",
+            desc = "被地狱火魔导师召唤，普攻 ，能被恐惧或放逐。 ",
           }),
         },
       }),
       Stage({
         so = true,
-        name = "Phase 2: Magtheridon",
+        name = "第二阶段： 玛瑟里顿",
         sections = {
-          Spell(30616, {so = true, desc = "Each 60 seconds, Magtheridon will cast Blast Nova, it will inflict 2188 to 2812 Fire damage each 2 seconds for 10 seconds.\n\nThis can be countered by using all the Manticron Cubes in the room at the same time.", flag1 = IMPORTANT}), -- Blast Nova
+          Spell(30616, {so = true, desc = "每60秒玛瑟里顿就会施放火焰新星，每两秒造成 2188—2812 火焰伤害，持续10秒。\n\n同时触发五个盒子可以打断这个技能。", flag1 = IMPORTANT}), -- Blast Nova
           Spell(30619, {flag1 = TANK}), -- Cleave
           --Spell(30205), -- Shadow Cage
         },
       }),
       Stage({
         so = true,
-        name = "Phase 3: At 30% health",
-        desc = "Magtheridon will shatter the walls, causing the roof to crash on the group. This deals 5250 to 6750 damage to everyone and stuns for 2 seconds.\n\nAvoid falling debris, if hit by falling rocks you will instantly be killed.",
+        name = "第三阶段： 30%血量",
+        desc = "玛瑟里顿会敲击墙壁，造成落石。持续两秒对敌方全体造成 5250—6750 伤害。\n\n如果待在落实处，你必死无疑。",
         flag1 = DEADLY,
       }),
-      Spell(26662, {desc = "Magtheridon will berserk after 22 minutes of combat, increasing attack speed by 150% and damage done by 500%. Also becomes immune to Taunt effects.", flag1 = DEADLY}), -- Berserk
+      Spell(26662, {desc = "战斗持续22分钟后，玛瑟里顿陷入狂暴，攻速提高150%，伤害提高500%。然后，灭吧。", flag1 = DEADLY}), -- Berserk
     },
   },
 })

@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[2], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_EYE = CreateInstance({
-  name = "The Eye",
-  desc = "Tempest Keep is a former Naaru fortress in the Netherstorm in Outland. This crystalline fortress is now ruled by Kael'thas Sunstrider, the lord of the blood elves, and dominated by scores of his brethren. The structure is divided into three wings in the skies--satellites of the gigantic structure--with the fourth wing, the Exodar, now in the world of Azeroth as the Draenei capital. This raid instance is most notable for dropping Ashes of Al'ar, one of the most coveted mounts in World of Warcraft.",
+  name = "风暴要塞",
+  desc = "外域的风暴要塞原来是神秘的纳鲁用来宇宙航行的飞船。这个水晶要塞现在被血精灵王子，凯尔萨斯逐日者掌控。风暴要塞被分成四个部分，其中的三个部分像卫星一样连在一起，但第四部分已经落到了艾泽拉斯世界，即德莱尼主城，埃索达。这个副本最令人垂涎的就是奥的灰烬，魔兽世界中最稀有的坐骑之一。",
   --texture = "TheEye",
   area = 782,
 }, {
   {
-    name = "Void Reaver",
-    desc = "Void Reaver is a large mechanical reaver boss found in The Eye.",
+    name = "空灵机甲",
+    desc = "风暴要塞中，空灵机甲是一名机器型BOSS。",
     --icon = true,
     creature = 19516,
     display = 18951,
@@ -43,8 +43,8 @@ local THE_EYE = CreateInstance({
     },
   },
   {
-    name = "Al'ar",
-    desc = "Al'ar is the first boss of The Eye. It is Kael'thas Sunstrider's phoenix.",
+    name = "奥",
+    desc = "奥是风暴要塞中的第一个BOSS，它是凯尔萨斯逐日者的凤凰。",
     --icon = true,
     creature = 19514,
     display = 18945,
@@ -62,8 +62,8 @@ local THE_EYE = CreateInstance({
     },
   },
   {
-    name = "High Astromancer Solarian",
-    desc = "High Astromancer Solarian is the third boss found in The Eye.",
+    name = "大星术师索兰莉安",
+    desc = "大星术师索兰莉安是风暴要塞中的三号BOSS，也是当年TBC最无人问津的BOSS。",
     --icon = true,
     creature = 18805,
     display = 18239,
@@ -78,8 +78,8 @@ local THE_EYE = CreateInstance({
     },
   },
   {
-    name = "Kael'thas Sunstrider",
-    desc = "Kael'thas' Advisors Thaladred the Darkener Lord Sanguinar Grand Astromancer Capernian Master Engineer Telonicus  Kael'thas Sunstrider, Lord of the Blood Elves, is the fourth and final boss encounter of the Eye. He is accompanied by his council of four advisors: Thaladred the Darkener, Master Engineer Telonicus, Grand Astromancer Capernian and Lord Sanguinar. He spawns seven powerful legendary items which you have to fight, defeat and then equip in order to defeat Kael'thas. These items are usable only during the encounter; reseting the encounter, wiping, or releasing to the graveyard will cause them to desummon. He is famous for dropping Ashes of Al'ar, one of the most popular mounts in the game.",
+    name = "凯尔萨斯·逐日者",
+    desc = "凯尔萨斯逐日者与他的四名手下，是风暴要塞的第四场BOSS战。在这场史诗级别的BOSS战中，你可以使用七把传说级别的武器来击败凯尔萨斯逐日者，这七把武器只能在这场战斗中使用。凯尔萨斯逐日者以掉落奥的灰烬而受人怜悯，每周都要被无数人击杀……",
     --icon = true,
     creature = 19622,
     display = 20023,

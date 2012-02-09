@@ -1,6 +1,7 @@
 ﻿## Interface: 40300
 ## Title: CompleteEJ
 ## Notes: What encounter journal doesn't have information about all the encounters? Bah!
+## LoadWith: Blizzard_EncounterJournal
 ## Version: 1.00
 core.lua
 
