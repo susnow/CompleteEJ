@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,15 +22,15 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local RAZORFEN_KRAUL = CreateInstance({
-  name = "Razorfen Kraul",
-  desc = "Ten thousand years ago - during the War of the Ancients, the mighty demigod, Agamaggan, came forth to battle the Burning Legion. Though the colossal boar fell in combat, his actions helped save Azeroth from ruin. Yet over time, in the areas where his blood fell, massive thorn-ridden vines sprouted from the earth. The quilboar - believed to be the mortal offspring of the mighty god, came to occupy these regions and hold them sacred. The heart of these thorn-colonies was known as the Razorfen. The great mass of Razorfen Kraul was conquered by the old crone, Charlga Razorflank. Under her rule, the shamanistic quilboar stage attacks on rival tribes as well as Horde villages. Some speculate that Charlga has even been negotiating with agents of the Scourge - aligning her unsuspecting tribe with the ranks of the Undead for some insidious purpose.",
+  name = "剃刀沼泽",
+  desc = "一万年前的上古之战中,强大不朽的野猪之神 - 阿迦玛甘,因为塞纳留斯的求助而和燃烧军团展开了战斗.虽然阿迦玛甘最终倒在了燃烧军团之前,但是他的贡献是不可磨灭的.他的牺牲为玛法里奥和其他人赢得了冲进艾萨拉要塞到达永恒之井的时间,最终拯救了艾泽拉斯.然而随着时间的推移,在阿迦玛甘死去的地方,野猪人相信阿迦玛甘之血洒落的地方会生长出粗壮的荆棘藤蔓.阿迦玛甘洒落的血液形成了一种叫做血岩的矿物,野猪人用它来获得力.剃刀高地入口为阿迦玛甘的嘴，传说中阿迦玛甘将获得再生，野猪人们正等待这一天的到来.生活在这里的野猪人全部都是上古之时半神阿迦玛甘的后裔,阿迦玛甘曾经和塞纳留斯一起对抗过燃烧军团的入侵,为此他甚至付出了生命的代价,可是他们二者的后代却是有着两种截然不同的命运.",
   texture = "RazorfenKraul",
   area = 761,
   dflag = N5,
 }, {
   {
-    name = "Roogug",
-    desc = "Roogug and his Stone Rumbler pet can be found to the left on the first split road you encounter.",
+    name = "鲁古格",
+    desc = "鲁古格和他的小弟就在左边第一个分岔路口.",
     --icon = true,
     creature = 6168,
     display = 6110,
@@ -50,7 +50,7 @@ local RAZORFEN_KRAUL = CreateInstance({
     },
   },
   {
-    name = "Aggem Thorncurse",
+    name = "阿格姆",
     desc = "Prophet of the Death's Head tribe. Masters the ability to summon Boar Spirits to assist him in combat.",
     --icon = true,
     creature = 4424,
@@ -73,7 +73,7 @@ local RAZORFEN_KRAUL = CreateInstance({
     },
   },
   {
-    name = "Death Speaker Jargba",
+    name = "亡语者贾格巴",
     desc = "Jargba is a Death Speaker, a prophet of the Quilboar religion which preaches their fallen god Agamaggan will rise from the dead. As such, he is a combination of priest and powerful warrior.",
     --icon = true,
     creature = 4428,
@@ -86,8 +86,8 @@ local RAZORFEN_KRAUL = CreateInstance({
     },
   },
   {
-    name = "Overlord Ramtusk",
-    desc = "Overlord Ramtusk is accompanied by two Razorfen Spearhide guards.",
+    name = "主宰拉姆塔斯",
+    desc = "主宰拉姆塔斯身边有二个60级的精英守卫.",
     --icon = true,
     creature = 4420,
     display = 4652,
@@ -111,8 +111,8 @@ local RAZORFEN_KRAUL = CreateInstance({
     },
   },
   {
-    name = "Earthcaller Halmgar (Rare)",
-    desc = "A rare spawn that spawns on the platform across the first bridge, right after Overlord Ramtusk. Accompanied by a Earth Rumbler.",
+    name = "唤地者哈穆加 (稀有)",
+    desc = "在平台上的第一座桥梁会随机出现一种罕见的怪",
     --icon = true,
     creature = 4842,
     display = 6102,
@@ -126,7 +126,7 @@ local RAZORFEN_KRAUL = CreateInstance({
         stype = CREATURE,
         creature = 4528,
         display = 9589,
-        name = "Stone Rumbler",
+        name = "奔岩碾压者",
         desc = "Does not perform any special abilities.",
       }),
       --Spell(2484, {so = true, desc = "Summons an Earthbind Totem with 5 health at the feet of the caster for 45 seconds."}), -- Earthbind Totem
@@ -135,7 +135,7 @@ local RAZORFEN_KRAUL = CreateInstance({
         stype = CREATURE,
         creature = 2630,
         display = 4588,
-        name = "Earthbind Totem",
+        name = "地缚图腾",
         desc = "Summons an Earthbind Totem with 5 health at the feet of the caster for 45 seconds.",
         sections = {
           Spell(3600, {desc = "Reduces the movement speed of all nearby enemies by 50% for 5 seconds.", flag1 = MAGIC}), -- Earthbind
@@ -145,7 +145,7 @@ local RAZORFEN_KRAUL = CreateInstance({
     },
   },
   {
-    name = "Agathelos the Raging",
+    name = "暴怒的阿迦赛罗斯",
     desc = "Agathelos is a truly collosal armoured boar roughly twice the size of a common thunder lizard, and becomes even bigger when enraged. He is kept in a short tunnel guarded by several quilboar who maintain a field to keep the monstrous creature penned in.\n\nGiven that the god and progenitor of the Quilboar is Agamaggan, a titanic boar, an animal such as Agathelos is one of considerable spiritual significance.",
     --icon = true,
     creature = 4422,
@@ -160,7 +160,7 @@ local RAZORFEN_KRAUL = CreateInstance({
     },
   },
   {
-    name = "Blind Hunter (Rare)",
+    name = "盲眼猎手 (稀有)",
     desc = "A rare bat that spawns in the alcove right before Charlga Razorflank.",
     --icon = true,
     creature = 4425,
@@ -176,7 +176,7 @@ local RAZORFEN_KRAUL = CreateInstance({
     },
   },
   {
-    name = "Charlga Razorflank",
+    name = "卡尔加·刺肋",
     desc = "The great mass of Razorfen Kraul was conquered by the old crone, Charlga Razorflank. Under her rule, the shamanistic quilboar stage attacks on rival tribes as well as Horde villages. Some speculate that Charlga has even been negotiating with agents of the Scourge - aligning her unsuspecting tribe with the ranks of the Undead for some insidious purpose. Charlga is a tenacious leader and an extremely powerful geomancer.",
     --icon = true,
     creature = 4421,

@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local MARAUDON = CreateInstance({
-  name = "Maraudon",
-  desc = "Maraudon is a system of caverns located in the Valley of Spears, east of Shadowprey Village, in Desolace. It is a combination of ancient centaur burial grounds and a temple dedicated to the elemental earth. Maraudon is broken up into different levels and zones; since Cataclysm, these have been remodeled and retooled to be a smoother experience for adventurers.",
+  name = "玛拉顿",
+  desc = "玛拉顿被狂暴的玛拉顿半人马所保护，那是凄凉之地最神圣的地方.月神爱露恩与白鹿玛洛恩结合生下了塞纳留斯,塞纳留斯的两个儿子,一个成为了月光林地和塞纳里奥议会的新主人,另一个却和土元素公主瑟莱德丝结合,结果他们的子嗣没有继承自然的力量,反而继承了土元素狂暴的力量,并杀死了自己的父亲,这一分支被成为半人马,只留下土元素公主独子一人带着自己丈夫的尸体,停留在玛拉顿.玛拉顿被分成不同层次、区域;自从灾难过后,这里已经重新成为一个冒险家来探险的地方.",
   texture = "Maraudon",
   area = 750,
   dflag = N5,
 }, {
   {
-    name = "Noxxion",
+    name = "诺克赛恩",
     desc = "The first boss of the orange wing. Noxxion is a living symbol of the corruption of Maraudon, created by Lord Vyletongue.",
     --icon = true,
     creature = 13282,
@@ -44,13 +44,13 @@ local MARAUDON = CreateInstance({
         stype = CREATURE,
         creature = 13456,
         display = 5492,
-        name = "Noxxion's Spawn",
+        name = "诺克赛恩产物",
         desc = "Does not perform any special abilities.",
       }),
     },
   },
   {
-    name = "Razorlash",
+    name = "锐刺鞭笞者",
     desc = "The final boss of the orange wing, a giant thorny lasher.",
     --icon = true,
     creature = 12258,
@@ -63,7 +63,7 @@ local MARAUDON = CreateInstance({
     },
   },
   {
-    name = "Lord Vyletongue",
+    name = "维利塔恩",
     desc = "The only boss in the purple wing. He is the head of the Putridus clan of satyrs. He has corrupted parts of Maraudon, stunting the growth of many of the plants inside. He also created the elemental Noxxion.",
     --icon = true,
     creature = 12236,
@@ -78,7 +78,7 @@ local MARAUDON = CreateInstance({
     },
   },
   {
-    name = "Celebras the Cursed",
+    name = "被诅咒的塞雷布拉斯",
     desc = "The only boss in the Poison Falls wing. Celebras is the son of Remulos and is a Keeper of the Grove, like his father. Cavindra calls Celebras her brother.\n\nAfter Celebras's uncle Zaetar was killed by his centaur offspring, Zaetar's spirit was held prisoner by his mate, Theradras. In an attempt to free his uncle's spirit, Celebras and his dryad sisters entered Maraudon. However, the corruption that had spread through the caverns soon overcame them. Celebras the Cursed now wanders blindly inside, cursed by corruption.",
     --icon = true,
     creature = 12225,
@@ -94,14 +94,14 @@ local MARAUDON = CreateInstance({
         stype = CREATURE,
         creature = 13743,
         display = 9593,
-        name = "Corrupt Force of Nature",
+        name = "腐化的自然之力",
         desc = "Does not perform any special abilities.",
       }),
     },
   },
   {
-    name = "Landslide",
-    desc = "The first boss of the inner sanctum.",
+    name = "兰斯利德",
+    desc = "这是玛拉顿内部圣地中的第一个boss.",
     --icon = true,
     creature = 12203,
     display = 12293,
@@ -115,7 +115,7 @@ local MARAUDON = CreateInstance({
         stype = CREATURE,
         creature = 11783,
         display = 12310,
-        name = "Theradrim Shardling",
+        name = "瑟莱德丝碎片",
         sections = {
           Spell(13584, {so = true, desc = "Strikes at an enemy, inflicting normal damage plus additional 5% damage."}), -- Strike
         },
@@ -123,8 +123,8 @@ local MARAUDON = CreateInstance({
     },
   },
   {
-    name = "Tinkerer Gizlock",
-    desc = "The second boss of the inner sanctum.",
+    name = "工匠吉兹洛克",
+    desc = "这是玛拉顿内部圣地中的第二个boss.",
     --icon = true,
     creature = 13601,
     display = 7125,
@@ -138,8 +138,8 @@ local MARAUDON = CreateInstance({
     },
   },
   {
-    name = "Rotgrip",
-    desc = "The third boss of the inner sanctum, usually treated as the last to save time running all the way back up after the final boss.\n\nRotgrip is a giant crocolisk that lives in the waters below Princess Theradras' platform.",
+    name = "洛特格里普",
+    desc = "玛拉顿内部圣地的第三个boss,通常会在杀了瑟莱德丝公主后才解决他,以便节约时间.他生活在瑟莱德丝公主平台下面的水域中,是一只巨大的鳄鱼",
     --icon = true,
     creature = 13596,
     display = 13589,
@@ -151,8 +151,8 @@ local MARAUDON = CreateInstance({
     },
   },
   {
-    name = "Princess Theradras",
-    desc = "Princess Theradras is an elemental force of earth related to the Old Gods, the only daughter of Therazane the Stonemother. Ages ago, Theradras and Zaetar, first son of Cenarius, began a relationship. The offspring of their time together became known to the people of Kalimdor as centaurs, who promptly slew their father for his part in their misbegotten creation. Fearful of Cenarius' wrath, the grief-stricken Theradras sequestered her dead lover's body in her secret sanctuary, the Crystal Caverns of Terramok, where she watches over him to this day.\n\nTravelers who come to Desolace have little trouble spotting Zaetar's tomb, for the blessing of nature that permeates his being transformed his resting place into a verdant paradise of flora and tranquil pools. Today, this tomb is now trodden by the hooves of Zaetar's children, who have claimed this great cavern as their sacred stronghold Maraudon. The subterranean tunnels are populated by the vicious, long-dead ghosts of the centaur Khans, as well as Theradras' own raging, elemental minions.",
+    name = "瑟莱德丝公主",
+    desc = "在玛拉顿的深处居住着一个邪恶的混乱生物——瑟莱德丝公主,她是一个和上古之神相关的地元素.是四大元素的土领主.又名石母 瑟拉塞恩的第三个女儿.很早以前,她和塞纳留斯的长子扎尔塔结合,他们的后代……被称为半人马.那些半人马杀掉了扎尔塔,并保留了他的遗体.",
     --icon = true,
     creature = 12201,
     display = 12292,
@@ -162,7 +162,7 @@ local MARAUDON = CreateInstance({
       Spell(3391, {so = true}), -- Thrash
       Spell(21832, {so = true, icon = "Interface\\Icons\\INV_Stone_10", desc = "Hurls a boulder at an enemy, inflicting 280 to 360 Physical damage and knocking it down for 2 seconds."}, 1), -- Boulder (triggers 22592)
       Spell(21869, {so = true}), -- Repulsive Gaze
-      Spell(21909, {so = true, desc = "Shakes the ground within 20 yards, damaging enemies for 105 to 135 Nature damage and knocking them slightly back each second for 8 seconds."}), -- Dust Field
+      Spell(21909, {so = true, desc = "震动20码内附近的地面,对敌人造成103-135点伤害，并将他们击退."}), -- Dust Field
     },
   },
 })

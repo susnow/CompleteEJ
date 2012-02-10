@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local RAGEFIRE_CHASM = CreateInstance({
-  name = "Ragefire Chasm",
-  desc = "Ragefire Chasm is an instance dungeon located in Orgrimmar. The entry portal is in the Cleft of Shadow, next to Neeru Fireblade's tent. The lava-filled chasm is home to many hostile troggs, and followers of the Burning Blade have also recently begun poking around the area.",
+  name = "怒焰裂谷",
+  desc = "怒焰裂谷的地理位置十分特殊,位于奥格瑞玛城中.副本入口在奥格瑞玛主城的暗影区,从该区一扇泛光的大门进入即可.怒炎裂谷由一系列火山洞穴组成,一个忠于影子议会的邪教正藏身在裂谷深处,怒炎裂谷里散发出了黑暗力量足以毁灭兽人已经取得的一切.",
   texture = "RagefireChasm",
   area = 680,
   dflag = N5,
 }, {
   {
-    name = "Oggleflint",
+    name = "奥格弗林特",
     desc = "Oggleflint and the troggs once ruled unchallenged in the depths of Ragefire Chasm until the Searing Blade cultists moved in. Too weak to drive away the Searing Blade, Oggleflint and the troggs retreated near the entrance of Ragefire Chasm where they now wait patiently for their unwelcome guests to depart.",
     --icon = true,
     creature = 11517,
@@ -41,7 +41,7 @@ local RAGEFIRE_CHASM = CreateInstance({
     },
   },
   {
-    name = "Taragaman the Hungerer",
+    name = "饥饿者塔拉加曼",
     desc = "Thought to be the leader of the Searing Blade, he hides within the fiery depths of Ragefire Chasm, using his demonic influence to corrupt the citizens of Orgrimmar. In reality, the leaders of the Searing Blade are Bazzalan and Jergosh, this felguard is expendable bait to lure young adventurers in to their death.",
     --icon = true,
     creature = 11520,
@@ -54,7 +54,7 @@ local RAGEFIRE_CHASM = CreateInstance({
     },
   },
   {
-    name = "Jergosh the Invoker",
+    name = "祈求者耶戈什",
     desc = "Jergosh the Invoker has rejected the ideals of the orcs and practices the dark and demonic arts of the warlock. A leader of the Searing Blade Cultists, Jergosh dwells within Ragefire Chasm, concocting a scheme dangerous enough to draw the attention of Thrall himself. He's guarding the Blood Filled Orb, which is needed to summon Zelemar the Wrathful if you have the quest The Path of the Adept.",
     --icon = true,
     creature = 11518,
@@ -67,7 +67,7 @@ local RAGEFIRE_CHASM = CreateInstance({
     },
   },
   {
-    name = "Bazzalan",
+    name = "巴扎兰",
     desc = "Bazzalan leads the Searing Blade cultists along with Jergosh the Invoker. His motives are unclear, but like all satyr, he is a swift and cunning foe. Bazzalan is a bit tougher than the other bosses you will encounter in Ragefire Chasm. He swings fast and hits hard. However, with careful pulling, you can fight him without engaging the two Searing Blade Cultists that are standing in front of him.",
     --icon = true,
     creature = 11519,
