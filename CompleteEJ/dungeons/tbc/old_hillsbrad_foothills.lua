@@ -1,4 +1,4 @@
-local _, db = ...
+ï»¿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local OLD_HILLSBRAD_FOOTHILLS = CreateInstance({
-  name = "¾ÉÏ£¶ûË¹²¼À³µÂÇðÁê",
+  name = "æ—§å¸Œå°”æ–¯å¸ƒèŽ±å¾·ä¸˜é™µ",
   --desc = "",
   --texture = "OldHillsbradFoothills",
   area = 734,
 }, {
   {
-    name = "µÂÀ­¿ËÖÐÎ¾",
-    desc = "µÂÀ­¿ËÖÐÎ¾ÊÇÊ±¹âÖ®Ñ¨: ¾ÉÏ£¶ûË¹²¼À³µÂÇðÁêµÄµÚÒ»¸öboss. ÐèÒªÍæ¼ÒÊ¹ÓÃÖ®Ç°µÃµ½µÄÕ¨Ò©°üÖÆÔìÊÞÈË¼àÓü»ðÔÖ,ÒÔ±ãÒý³öµÂÀ­¿ËÖÐÎ¾.",
+    name = "å¾·æ‹‰å…‹ä¸­å°‰",
+    desc = "å¾·æ‹‰å…‹ä¸­å°‰æ˜¯æ—¶å…‰ä¹‹ç©´: æ—§å¸Œå°”æ–¯å¸ƒèŽ±å¾·ä¸˜é™µçš„ç¬¬ä¸€ä¸ªboss. éœ€è¦çŽ©å®¶ä½¿ç”¨ä¹‹å‰å¾—åˆ°çš„ç‚¸è¯åŒ…åˆ¶é€ å…½äººç›‘ç‹±ç«ç¾,ä»¥ä¾¿å¼•å‡ºå¾·æ‹‰å…‹ä¸­å°‰.",
     --icon = true,
     creature = 17848,
     display = 17386,
@@ -46,8 +46,8 @@ local OLD_HILLSBRAD_FOOTHILLS = CreateInstance({
     },
   },
   {
-    name = "Ë¹¿¨Âå¿ËÉÏÎ¾",
-    desc = "Ë¹¿¨Âå¿ËÉÏÎ¾ÊÇÊ±¹âÖ®Ñ¨: ¾ÉÏ£¶ûË¹²¼À³µÂÇðÁêµÄµÚ¶þ¸öboss. Ëû³öÏÖÔÚÄã»¤ËÍÈø¶ûµÄÂ·ÉÏ.",
+    name = "æ–¯å¡æ´›å…‹ä¸Šå°‰",
+    desc = "æ–¯å¡æ´›å…‹ä¸Šå°‰æ˜¯æ—¶å…‰ä¹‹ç©´: æ—§å¸Œå°”æ–¯å¸ƒèŽ±å¾·ä¸˜é™µçš„ç¬¬äºŒä¸ªboss. ä»–å‡ºçŽ°åœ¨ä½ æŠ¤é€è¨å°”çš„è·¯ä¸Š.",
     --icon = true,
     creature = 17862,
     display = 17387,
@@ -63,8 +63,8 @@ local OLD_HILLSBRAD_FOOTHILLS = CreateInstance({
     },
   },
   {
-    name = "Ê±¿ÕÁÔÊÖ",
-    desc = "Ê±¿ÕÁÔÊÖÊÇÊ±¹âÖ®Ñ¨: ¾ÉÏ£¶ûË¹²¼À³µÂÇðÁêµÄ×îºóboss.",
+    name = "æ—¶ç©ºçŒŽæ‰‹",
+    desc = "æ—¶ç©ºçŒŽæ‰‹æ˜¯æ—¶å…‰ä¹‹ç©´: æ—§å¸Œå°”æ–¯å¸ƒèŽ±å¾·ä¸˜é™µçš„æœ€åŽboss.",
     --icon = true,
     creature = 18096,
     display = 19135,

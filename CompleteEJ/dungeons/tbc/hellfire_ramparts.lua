@@ -1,4 +1,4 @@
-local _, db = ...
+ï»¿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local HELLFIRE_RAMPARTS = CreateInstance({
-  name = "µØÓü»ð³ÇÇ½",
-  desc = "µØÓü»ð³ÇÇ½ÊÇµØÓü»ð±¤ÀÝµÄÒ»¸ö½¨Öþ²àÒí,×øÂäÔÚµØÓü»ð°ëµºµÄÖÐÑë.ÕâÀï±éÊÇËéÊÖÊÏ×åµÄÐ°ÊÞÈËÃÇ,Íß×ÈµÂºÍËûµÄÐé¿ÕÁú×øÆïÄÉÉ¼ÊÇÕâÀïµÄÍ³Ë§.Ò»¿ªÊ¼½øÈëÕâÒ»¸±±¾Äã»áÓÐÒ»ÖÖÀ´µ½ÁËºÚÊ¯ËþÏÂ²ãµÄ¸Ð¾õ,ÂúµØ¶¼ÊÇÕÊÅñºÍ¶éÂäÊÞÈË.",
+  name = "åœ°ç‹±ç«åŸŽå¢™",
+  desc = "åœ°ç‹±ç«åŸŽå¢™æ˜¯åœ°ç‹±ç«å ¡åž’çš„ä¸€ä¸ªå»ºç­‘ä¾§ç¿¼,åè½åœ¨åœ°ç‹±ç«åŠå²›çš„ä¸­å¤®.è¿™é‡Œéæ˜¯ç¢Žæ‰‹æ°æ—çš„é‚ªå…½äººä»¬,ç“¦å…¹å¾·å’Œä»–çš„è™šç©ºé¾™åéª‘çº³æ‰æ˜¯è¿™é‡Œçš„ç»Ÿå¸….ä¸€å¼€å§‹è¿›å…¥è¿™ä¸€å‰¯æœ¬ä½ ä¼šæœ‰ä¸€ç§æ¥åˆ°äº†é»‘çŸ³å¡”ä¸‹å±‚çš„æ„Ÿè§‰,æ»¡åœ°éƒ½æ˜¯å¸ç¯·å’Œå •è½å…½äºº.",
   --texture = "HellfireRamparts",
   area = 797,
 }, {
   {
-    name = "¿´»¤Õß¿¨¶û¹ÅÂê",
-    desc = "¿´»¤Õß¿¨¶û¹ÅÂêÊÇÔÚµØÓü»ð°ëµºÖÐµÄµØÓü»ð³ÇÇ½Óöµ½µÄµÚÒ»¸öBOSS.",
+    name = "çœ‹æŠ¤è€…å¡å°”å¤çŽ›",
+    desc = "çœ‹æŠ¤è€…å¡å°”å¤çŽ›æ˜¯åœ¨åœ°ç‹±ç«åŠå²›ä¸­çš„åœ°ç‹±ç«åŸŽå¢™é‡åˆ°çš„ç¬¬ä¸€ä¸ªBOSS.",
     --icon = true,
     creature = 17306,
     display = 18236,
@@ -44,8 +44,8 @@ local HELLFIRE_RAMPARTS = CreateInstance({
     },
   },
   {
-    name = "ÎÞ°ÌÕßÅ·Âê¶û",
-    desc = "ÎÞ°ÌÕßÅ·Âê¶ûÊÇÒ»¸ö¿ÉÑ¡boss.",
+    name = "æ— ç–¤è€…æ¬§çŽ›å°”",
+    desc = "æ— ç–¤è€…æ¬§çŽ›å°”æ˜¯ä¸€ä¸ªå¯é€‰boss.",
     --icon = true,
     creature = 17308,
     display = 18237,
@@ -61,7 +61,7 @@ local HELLFIRE_RAMPARTS = CreateInstance({
     },
   },
   {
-    name = "ÄÉÉ¼",
+    name = "çº³æ‰",
     --desc = "",
     --icon = true,
     creature = 17536,

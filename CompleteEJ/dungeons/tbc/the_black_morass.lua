@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_BLACK_MORASS = CreateInstance({
-  name = "��ɫ����",
-  desc = "��ɫ�����ǳ༹ɽ�������һƬ�޴������.���ǵ�һ�δ�սǰ����ռ��ĵ�һƬ����,�ڵڶ��δ�ս������˹�ı���������Ƭ�����Ϻķ��˺ܶ�����������������.����ĵĺڰ�֮�ŵķ���Ҳ������.",
+  name = "黑色沼泽",
+  desc = "黑色沼泽是赤脊山脉东面的一片巨大沼泽地.它是第一次大战前兽人占领的第一片土地,在第二次大战后艾泽拉斯的保卫者在这片土地上耗费了很多年来清理兽人余孽.麦迪文的黑暗之门的废墟也在这里.",
   --texture = "TheBlackMorass",
   area = 733,
 }, {
   {
-    name = "ʱ����������",
-    desc = "ʱ������������ʱ��֮Ѩ:��ɫ����ĵ�һ��boss. �������ֽ������������.",
+    name = "时空领主德亚",
+    desc = "时空领主德亚是时光之穴:黑色沼泽的第一个boss. 第六波怪结束后他会出现.",
     --icon = true,
     creature = 17879,
     display = 20513,
@@ -46,8 +46,8 @@ local THE_BLACK_MORASS = CreateInstance({
     },
   },
   {
-    name = "̹��¬˹",
-    desc = "̹��¬˹��ʱ��֮Ѩ:��ɫ����ĵڶ���boss,��ʮ����С�ֽ��������.",
+    name = "坦普卢斯",
+    desc = "坦普卢斯是时光之穴:黑色沼泽的第二个boss,在十二波小怪结束后出现.",
     --icon = true,
     creature = 17880,
     display = 19066,
@@ -65,8 +65,8 @@ local THE_BLACK_MORASS = CreateInstance({
     },
   },
   {
-    name = "��ŷŬ˹",
-    desc = "��ŷŬ˹��ʱ��֮Ѩ:��ɫ���������boss.",
+    name = "埃欧努斯",
+    desc = "埃欧努斯是时光之穴:黑色沼泽的最终boss.",
     --icon = true,
     creature = 17881,
     display = 20510,

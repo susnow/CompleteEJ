@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_SHATTERED_HALLS = CreateInstance({
-  name = "�������",
-  desc = "���������а������������ϳ�.�����ָ�ӹپ�����������Ĵ�����,����˹����ȭ.��˫�����˫�ֵ����ǰ�Ӱ����һԱ,Ҳ�ǰ�Ӱ�����ĳ�Ա��Ψһһ��������ʿ����.���ڰ�֮�ű��ݻٺ�,����˹����ɪ��ٰ������˹���,��ռ���˵�������,�����Լ����ǲ�������������.",
+  name = "破碎大厅",
+  desc = "破碎大厅是邪兽人在外域的老巢.这里的指挥官就是碎手氏族的大酋长,卡加斯·刃拳.用双刃替代双手的他是暗影议会的一员,也是暗影议会核心成员中唯一一个不是术士的人.当黑暗之门被摧毁后,卡加斯与玛瑟里顿暗中有了勾结,他占据了地狱火堡垒,声称自己才是部落真正的酋长.",
   --texture = "TheShatteredHalls",
   area = 710,
 }, {
   {
-    name = "�߽���ʿ��ɪ��˹",
-    desc = "�߽���ʿ��ɪ��˹����������ĵ�һ��boss.",
+    name = "高阶术士奈瑟库斯",
+    desc = "高阶术士奈瑟库斯是破碎大厅的第一个boss.",
     --icon = true,
     creature = 16807,
     display = 16628,
@@ -48,8 +48,8 @@ local THE_SHATTERED_HALLS = CreateInstance({
     },
   },
   {
-    name = "Ѫ��ʿ��³��",
-    desc = "Ѫ��ʿ��³��ֻ����Ӣ��ģʽ�µ���������Ż����.",
+    name = "血卫士伯鲁恩",
+    desc = "血卫士伯鲁恩只有在英雄模式下的破碎大厅才会出现.",
     --icon = true,
     creature = 20923,
     display = 17725,
@@ -60,8 +60,8 @@ local THE_SHATTERED_HALLS = CreateInstance({
     },
   },
   {
-    name = "ս��ʹ����ķ�޸�",
-    desc = "ս��ʹ����ķ�޸��Ǹ�˫ͷ����,����������ĵڶ���boss.",
+    name = "战争使者沃姆罗格",
+    desc = "战争使者沃姆罗格是个双头怪物,是破碎大厅的第二个boss.",
     --icon = true,
     creature = 16809,
     display = 18031,
@@ -74,8 +74,8 @@ local THE_SHATTERED_HALLS = CreateInstance({
     },
   },
   {
-    name = "��������˹����ȭ",
-    desc = "����˹����ȭ���������������boss.",
+    name = "酋长卡加斯·刃拳",
+    desc = "卡加斯·刃拳是破碎大厅的最终boss.",
     --icon = true,
     creature = 16808,
     display = 19799,

@@ -1,4 +1,4 @@
-local _, db = ...
+ï»¿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_BLOOD_FURNACE = CreateInstance({
-  name = "ÏÊÑªÈÛÂ¯",
-  desc = "ÏÊÑªÈÛÂ¯Î»ÓÚµØÓü»ð±¤ÀÝµÄÓÒÉÏ·½.ÕâÀïÇô½û×Å¶ñÄ§ÂêÉªÀï¶Ù,ÒÁÀûµ¤µÄÆÍ´ÓÀûÓÃÂêÉªÀï¶ÙµÄÏÊÑªÔì³öÁËÕ½¶·ÄÜÁ¦¸üÇ¿µÄÐ°ÊÞÈËÖÖ×å.¶ñÄ§µÄÏÊÑª±»³é³öÔÚÈÛÂ¯ÖÐÁ¶»¯ºó,×îºó×¢ÈëÊÞÈËÌåÄÚ.ÒÁÀûµ¤×îÇ¿´óµÄ¶ÓÎéÔ´Ô´²»¶Ï´Ó´Ë¶ø³ö.",
+  name = "é²œè¡€ç†”ç‚‰",
+  desc = "é²œè¡€ç†”ç‚‰ä½äºŽåœ°ç‹±ç«å ¡åž’çš„å³ä¸Šæ–¹.è¿™é‡Œå›šç¦ç€æ¶é­”çŽ›ç‘Ÿé‡Œé¡¿,ä¼Šåˆ©ä¸¹çš„ä»†ä»Žåˆ©ç”¨çŽ›ç‘Ÿé‡Œé¡¿çš„é²œè¡€é€ å‡ºäº†æˆ˜æ–—èƒ½åŠ›æ›´å¼ºçš„é‚ªå…½äººç§æ—.æ¶é­”çš„é²œè¡€è¢«æŠ½å‡ºåœ¨ç†”ç‚‰ä¸­ç‚¼åŒ–åŽ,æœ€åŽæ³¨å…¥å…½äººä½“å†….ä¼Šåˆ©ä¸¹æœ€å¼ºå¤§çš„é˜Ÿä¼æºæºä¸æ–­ä»Žæ­¤è€Œå‡º.",
   --texture = "TheBloodFurnace",
   area = 725,
 }, {
   {
-    name = "ÖÆÔìÕß",
-    desc = "ÖÆÔìÕßÊÇÏÊÑªÈÛÂ¯µÄµÚÒ»¸öboss.",
+    name = "åˆ¶é€ è€…",
+    desc = "åˆ¶é€ è€…æ˜¯é²œè¡€ç†”ç‚‰çš„ç¬¬ä¸€ä¸ªboss.",
     --icon = true,
     creature = 17381,
     display = 18369,
@@ -42,8 +42,8 @@ local THE_BLOOD_FURNACE = CreateInstance({
     },
   },
   {
-    name = "²¼Âå¸ê¿Ë",
-    desc = "²¼Âå¸ê¿ËÊÇÏÊÑªÈÛÂ¯µÄµÚÒ»¸öboss.",
+    name = "å¸ƒæ´›æˆˆå…‹",
+    desc = "å¸ƒæ´›æˆˆå…‹æ˜¯é²œè¡€ç†”ç‚‰çš„ç¬¬ä¸€ä¸ªboss.",
     --icon = true,
     creature = 17380,
     display = 19372,
@@ -58,8 +58,8 @@ local THE_BLOOD_FURNACE = CreateInstance({
     },
   },
   {
-    name = "»÷ËéÕß¿ËÀïµ¤",
-    desc = "»÷ËéÕß¿ËÀïµ¤, ¶ñÄ§ÊÞÈË,ÂêÉªÀï¶ÙÖ®×ä, ÊÇÏÊÑªÈÛÂ¯µÄ×îÖÕboss.",
+    name = "å‡»ç¢Žè€…å…‹é‡Œä¸¹",
+    desc = "å‡»ç¢Žè€…å…‹é‡Œä¸¹, æ¶é­”å…½äºº,çŽ›ç‘Ÿé‡Œé¡¿ä¹‹å’, æ˜¯é²œè¡€ç†”ç‚‰çš„æœ€ç»ˆboss.",
     --icon = true,
     creature = 17377,
     display = 17153,

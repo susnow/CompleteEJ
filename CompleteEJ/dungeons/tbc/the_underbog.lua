@@ -1,4 +1,4 @@
-local _, db = ...
+ï»¿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_UNDERBOG = CreateInstance({
-  name = "ÓÄ°µÕÓÔó",
-  desc = "ÓÄ°µÕÓÔóÊÇÅÌÑÀË®¿âµØÏÂ³ÇµÄµÚ¶þ¸ö5ÈË¸±±¾,ÊÇÅÌÑÀË®¿âÄÚÎ´±»ÄÉåÈÇÖÈëÏûÃðµÄ×ÔÈ»ÉúÃüµÄ¼ÒÔ°.ÔÚÕâ¸öµØÇø½öÓÐµÄÄÉåÈÃÇ±£»¤×ÅËûÃÇµÄ¶àÍ·ÉßÉñ¼Ó×È°²µÄ¾ÓËù.Ê£ÓàÇøÓòÊÇÒ»¸ö×ÔÈ»µÄÆÜÏ¢µØ,ÔÞ¼ÓÕÓÔó×îÇ¿´óÉúÎïÖÖÀàÃÇµÄ¼Ò.",
+  name = "å¹½æš—æ²¼æ³½",
+  desc = "å¹½æš—æ²¼æ³½æ˜¯ç›˜ç‰™æ°´åº“åœ°ä¸‹åŸŽçš„ç¬¬äºŒä¸ª5äººå‰¯æœ¬,æ˜¯ç›˜ç‰™æ°´åº“å†…æœªè¢«çº³è¿¦ä¾µå…¥æ¶ˆç­çš„è‡ªç„¶ç”Ÿå‘½çš„å®¶å›­.åœ¨è¿™ä¸ªåœ°åŒºä»…æœ‰çš„çº³è¿¦ä»¬ä¿æŠ¤ç€ä»–ä»¬çš„å¤šå¤´è›‡ç¥žåŠ å…¹å®‰çš„å±…æ‰€.å‰©ä½™åŒºåŸŸæ˜¯ä¸€ä¸ªè‡ªç„¶çš„æ –æ¯åœ°,èµžåŠ æ²¼æ³½æœ€å¼ºå¤§ç”Ÿç‰©ç§ç±»ä»¬çš„å®¶.",
   --texture = "TheUnderbog",
   area = 726,
 }, {
   {
-    name = "»ô¼Ó¶û·Ò",
-    desc = "´óÐÍÕæ¾ú¾ÞÈË»ô¼Ó¶û·ÒÊÇÓÄ°µÕÓÔóµÄµÚÒ»¸öBOSS.",
+    name = "éœåŠ å°”èŠ¬",
+    desc = "å¤§åž‹çœŸèŒå·¨äººéœåŠ å°”èŠ¬æ˜¯å¹½æš—æ²¼æ³½çš„ç¬¬ä¸€ä¸ªBOSS.",
     --icon = true,
     creature = 17770,
     display = 17228,
@@ -42,8 +42,8 @@ local THE_UNDERBOG = CreateInstance({
     },
   },
   {
-    name = "¼Ó×È°²",
-    desc = "¼Ó×È°²ÊÇÓÄ°µÕÓÔóµÄµÚ¶þ¸öBOSS.",
+    name = "åŠ å…¹å®‰",
+    desc = "åŠ å…¹å®‰æ˜¯å¹½æš—æ²¼æ³½çš„ç¬¬äºŒä¸ªBOSS.",
     --icon = true,
     creature = 18105,
     display = 17528,
@@ -58,8 +58,8 @@ local THE_UNDERBOG = CreateInstance({
     },
   },
   {
-    name = "ÕÓµØÁìÖ÷ÄÂÈûÀ×¿Ë",
-    desc = "Ò»¸ö´ø±¦±¦µÄµÂÀ³ÄáÁÔÈË,Ëû´øµÄ±¦±¦ÆäÊµÊÇÈÎÎñÐèÒªÕÒµÄÒ»¸öµÂÂ³ÒÁNPC,µ«ÊÇÕ½¶·¸Õ¿ªÊ¼µÄÊ±ºòËûÊÇµÐ¶ÔµÄ,½«Ëû´ò³É¿ÕÑªµÄÊ±ºò²Å»á×ª±ä³ÉÓÑÉÆµÄÄ¿±ê.",
+    name = "æ²¼åœ°é¢†ä¸»ç©†å¡žé›·å…‹",
+    desc = "ä¸€ä¸ªå¸¦å®å®çš„å¾·èŽ±å°¼çŒŽäºº,ä»–å¸¦çš„å®å®å…¶å®žæ˜¯ä»»åŠ¡éœ€è¦æ‰¾çš„ä¸€ä¸ªå¾·é²ä¼ŠNPC,ä½†æ˜¯æˆ˜æ–—åˆšå¼€å§‹çš„æ—¶å€™ä»–æ˜¯æ•Œå¯¹çš„,å°†ä»–æ‰“æˆç©ºè¡€çš„æ—¶å€™æ‰ä¼šè½¬å˜æˆå‹å–„çš„ç›®æ ‡.",
     --icon = true,
     creature = 17826,
     display = 18570,
@@ -80,8 +80,8 @@ local THE_UNDERBOG = CreateInstance({
     },
   },
   {
-    name = "ºÚÉ«À«²½Õß",
-    desc = "ºÚÉ«À«²½ÕßÊÇÓÄ°µÕÓÔóÖÐµÄ×îÖÕBOSS.",
+    name = "é»‘è‰²é˜”æ­¥è€…",
+    desc = "é»‘è‰²é˜”æ­¥è€…æ˜¯å¹½æš—æ²¼æ³½ä¸­çš„æœ€ç»ˆBOSS.",
     --icon = true,
     creature = 17882,
     display = 18194,

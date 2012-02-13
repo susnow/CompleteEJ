@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local SHADOW_LABYRINTH = CreateInstance({
-  name = "��Ӱ�Թ�",
-  desc = "��Ӱ�Թ��ǰ½�ٸ���Ⱥ��߼���һ����֧,а����ռ��������,���������벻������,�ڸ����ľ�ͷ,���Ǿ�Ȼ������������˹ͬ�����ݵ�Ԫ��֮��ĦĦ�������ˡ���.",
+  name = "暗影迷宫",
+  desc = "暗影迷宫是奥金顿副本群最高级的一个分支,邪兽人占领了这里,而让人意想不到的是,在副本的尽头,他们竟然把与拉格纳罗斯同等身份的元素之神摩摩尔软禁了…….",
   --texture = "ShadowLabyrinth",
   area = 724,
 }, {
   {
-    name = "�ն�Ĭ��ʹ",
-    desc = "�ն�Ĭ��ʹ�ǰ�Ӱ�Թ��ĵ�һ��boss.",
+    name = "赫尔默大使",
+    desc = "赫尔默大使是暗影迷宫的第一个boss.",
     --icon = true,
     creature = 18731,
     display = 18821,
@@ -42,8 +42,8 @@ local SHADOW_LABYRINTH = CreateInstance({
     },
   },
   {
-    name = "ɿ���߲�������",
-    desc = "ɿ���߲��������ǰ�Ӱ�Թ��ĵڶ���boss.",
+    name = "煽动者布莱卡特",
+    desc = "煽动者布莱卡特是暗影迷宫的第二个boss.",
     --icon = true,
     creature = 18667,
     display = 18058,
@@ -56,8 +56,8 @@ local SHADOW_LABYRINTH = CreateInstance({
     },
   },
   {
-    name = "��ƥ����ʦ",
-    desc = "��ƥ����ʦ�ǰ�Ӱ�Թ��ĵ�����boss.",
+    name = "沃匹尔大师",
+    desc = "沃匹尔大师是暗影迷宫的第三个boss.",
     --icon = true,
     creature = 18732,
     display = 18535,
@@ -72,8 +72,8 @@ local SHADOW_LABYRINTH = CreateInstance({
     },
   },
   {
-    name = "ĦĦ��",
-    desc = "ĦĦ���ǰ�Ӱ�Թ�������boss. ��Ѫ�����ʾ��������ʷ.",
+    name = "摩摩尔",
+    desc = "摩摩尔是暗影迷宫的最终boss. 鲜血法典揭示了他的历史.",
     --icon = true,
     creature = 18708,
     display = 18839,

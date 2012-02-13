@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local MANA_TOMBS = CreateInstance({
-  name = "������Ĺ",
-  desc = "������Ĺ�������½�ٸ���Ⱥ�м������,�Ѷ���͵ĸ���.�ڵ�����ɳ���������������,��ô������Ȼ�鲼��������Щ�������.�����Ӧ�ǽ���ŵ�����.",
+  name = "法力陵墓",
+  desc = "法力陵墓是整个奥金顿副本群中级别最低,难度最低的副本.节点亲王沙法尔是这里的主人,那么这里自然遍布着他的那些虚灵随从.这里对应星界财团的声望.",
   --texture = "ManaTombs",
   area = 732,
 }, {
   {
-    name = "�˵�ĪŬ˹",
-    desc = "�˵�ĪŬ˹��һ������,���Ƿ�����Ĺ�еĵ�һ��boss.",
+    name = "潘德莫努斯",
+    desc = "潘德莫努斯是一个虚灵,他是法力陵墓中的第一个boss.",
     --icon = true,
     creature = 18341,
     display = 19338,
@@ -45,8 +45,8 @@ local MANA_TOMBS = CreateInstance({
     },
   },
   {
-    name = "�������",
-    desc = "��������Ƿ�����Ĺ�еĵڶ���boss.",
+    name = "塔瓦洛克",
+    desc = "塔瓦洛克是法力陵墓中的第二个boss.",
     --icon = true,
     creature = 18343,
     display = 19332,
@@ -60,8 +60,8 @@ local MANA_TOMBS = CreateInstance({
     },
   },
   {
-    name = "�ڵ�����ɳ����",
-    desc = "�ڵ�����ɳ�����Ƿ�����Ĺ�е�����boss. ���쵼�˷������˵��������.",
+    name = "节点亲王沙法尔",
+    desc = "节点亲王沙法尔是法力陵墓中的最终boss. 他领导了反对联盟的虚空幽灵.",
     --icon = true,
     creature = 18344,
     display = 19780,

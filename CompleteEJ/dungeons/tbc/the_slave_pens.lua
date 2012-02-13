@@ -1,4 +1,4 @@
-local _, db = ...
+ï»¿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_SLAVE_PENS = CreateInstance({
-  name = "Å«Á¥Î§À¸",
-  desc = "Å«Á¥Î§À¸ÊÇÅÌÑÀË®¿â¸±±¾ÈºµÄµÚÒ»¸ö¸±±¾. Æä½á¹¹±¾ÉíÊÇÒ»¸öµØÏÂË®±ÃÕ¾, ÄÈåÈº£ÑýÍ³ÖÎ×ÅÕâÀï.ÕâÀïÇô½ûÁË´óÁ¿µÄÅ«Á¥,¶ø¼éØúµÄÄÉåÈÔòÊÇÄ»ºóµÄÖ÷Ê¹.",
+  name = "å¥´éš¶å›´æ ",
+  desc = "å¥´éš¶å›´æ æ˜¯ç›˜ç‰™æ°´åº“å‰¯æœ¬ç¾¤çš„ç¬¬ä¸€ä¸ªå‰¯æœ¬. å…¶ç»“æž„æœ¬èº«æ˜¯ä¸€ä¸ªåœ°ä¸‹æ°´æ³µç«™, å¨œè¿¦æµ·å¦–ç»Ÿæ²»ç€è¿™é‡Œ.è¿™é‡Œå›šç¦äº†å¤§é‡çš„å¥´éš¶,è€Œå¥¸ä½žçš„çº³è¿¦åˆ™æ˜¯å¹•åŽçš„ä¸»ä½¿.",
   --texture = "TheSlavePens",
   area = 728,
 }, {
   {
-    name = "±³ÅÑÕßÃÅÅ¬",
-    desc = "±³ÅÑÕßÃÅÅ¬ÊÇÅ«Á¥Î§À¸µÄµÚÒ»¸öboss. ËûÊÇÒ»¸öÆÆËéµÄµÂÀ³ÄáÈøÂú.",
+    name = "èƒŒå›è€…é—¨åŠª",
+    desc = "èƒŒå›è€…é—¨åŠªæ˜¯å¥´éš¶å›´æ çš„ç¬¬ä¸€ä¸ªboss. ä»–æ˜¯ä¸€ä¸ªç ´ç¢Žçš„å¾·èŽ±å°¼è¨æ»¡.",
     --icon = true,
     creature = 17941,
     display = 17728,
@@ -44,8 +44,8 @@ local THE_SLAVE_PENS = CreateInstance({
     },
   },
   {
-    name = "¾ÞÇ¯Â³¿ËÂê¶û",
-    desc = "¾ÞÇ¯Â³¿ËÂê¶ûÊÇÅ«Á¥Î§À¸µÄµÚ¶þ¸öboss.",
+    name = "å·¨é’³é²å…‹çŽ›å°”",
+    desc = "å·¨é’³é²å…‹çŽ›å°”æ˜¯å¥´éš¶å›´æ çš„ç¬¬äºŒä¸ªboss.",
     --icon = true,
     creature = 17991,
     display = 17729,
@@ -60,8 +60,8 @@ local THE_SLAVE_PENS = CreateInstance({
     },
   },
   {
-    name = "¿ä¸ñÃ×À­",
-    desc = "¿ä¸ñÃ×À­ÊÇÅ«Á¥Î§À¸µÄ×îÖÕboss£¬ËûÊÇÒ»¸öÕæ¾ú¾ÞÈË.",
+    name = "å¤¸æ ¼ç±³æ‹‰",
+    desc = "å¤¸æ ¼ç±³æ‹‰æ˜¯å¥´éš¶å›´æ çš„æœ€ç»ˆbossï¼Œä»–æ˜¯ä¸€ä¸ªçœŸèŒå·¨äºº.",
     --icon = true,
     creature = 17942,
     display = 18224,

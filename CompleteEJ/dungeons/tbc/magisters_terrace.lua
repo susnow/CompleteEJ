@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,13 +22,13 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local MAGISTERS_TERRACE = CreateInstance({
-  name = "ħ��ʦƽ̨",
-  desc = "ħ��ʦƽ̨λ�ڿ�������˹��.ħ��ʦƽ̨�ǿ�����˹�����������ӵ����.�����˷籩Ҫ����ʧ��֮��,�ܶ�����Ϊ��λѪ����֮����Ȼ����,������ȴ����Ϊǿ�������������.���Ŀ�����˹�Ѿ���Ŀȫ��,�ؿ��ǿ�ɢ��������ɫ����ɫˮ���������а��ʮ��.Ψһû���,����Ϊ��׷���ǿ����������.",
+  name = "魔导师平台",
+  desc = "魔导师平台位于奎尔丹纳斯岛.魔导师平台是凯尔萨斯·逐日者王子的领地.经历了风暴要塞的失败之后,很多人以为这位血精灵之王已然身死,但是他却被更为强大的能量复活了.如今的凯尔萨斯已经面目全非,胸口那块散发诡异颜色的绿色水晶让他变得邪气十足.唯一没变的,是他为了追求更强能量的信念.",
   --texture = "MagistersTerrace",
   area = 798,
 }, {
   {
-    name = "���֡�����",
+    name = "塞林·火心",
     --desc = "",
     --icon = true,
     creature = 24723,
@@ -43,8 +43,8 @@ local MAGISTERS_TERRACE = CreateInstance({
     },
   },
   {
-    name = "ά��³˹",
-    desc = "ά��³˹�ܵ��˰�����������. ����ħ��ʦƽ̨�ĵڶ���boss.",
+    name = "维萨鲁斯",
+    desc = "维萨鲁斯受到了奥术能量诅咒. 他是魔导师平台的第二个boss.",
     --icon = true,
     creature = 24744,
     display = 22731,
@@ -59,8 +59,8 @@ local MAGISTERS_TERRACE = CreateInstance({
     },
   },
   {
-    name = "Ů��˾����ϣ��",
-    desc = "Ů��˾����ϣ����һ����ֻ�ֵĶ�ħ,���ܹ�ʹ�á��������ơ�,���ָ���,����ɢħ����,��������:�ܡ��Լ�����������ʹ��.�����4��С��һ���ս,��4��С������8����������������.",
+    name = "女祭司德莉希亚",
+    desc = "女祭司德莉希亚是一个六只手的恶魔,她能够使用“快速治疗”,“恢复”,“驱散魔法”,“真言术:盾”以及“暗言术：痛”.她会和4个小弟一起出战,这4个小弟是由8个怪物中随机抽出的.",
     --icon = true,
     creature = 24560,
     display = 22596,
@@ -82,8 +82,8 @@ local MAGISTERS_TERRACE = CreateInstance({
     },
   },
   {
-    name = "������˹��������",
-    desc = "������˹����������ħ��ʦƽ̨������boss,����Ŀ���Ϊ�˸���Ѫ����������Ϊ�����ӵ�����������̫��֮���ߵ���ǰ�޽���һ������̨.",
+    name = "凯尔萨斯·逐日者",
+    desc = "凯尔萨斯·逐日者是魔导师平台的最终boss,堕落的凯子为了复兴血精灵家族甘心为基尔加丹做门卫，在太阳之井高地门前修建了一座了望台.",
     --icon = true,
     creature = 24664,
     display = 22906,

@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local THE_STEAMVAULT = CreateInstance({
-  name = "�����ؿ�",
-  desc = "�����ؿ�������ˮ����³ǵĵ�����5�˸���. ��ṹ��������һ������ˮ��վ, ���Ⱥ���ͳ��������. ��˹��Ůʿ���ĵ����˶�������ɪ��˹�����������»�еʦ˹������ˮ��ʦɪ˹����פ���������ؿ������ƺ����о�һ�ֽ��ˮ�ͻ�е�ķ��������ַ����ܴ�������սʿ�޼᲻�ݵ��������������Դ�Ϊ�ݵ㲻����ȡ�޼�����ĺ�ˮ,���¶��ߺ���ˮλ�½�,������һϵ����̬����,���������������⵽�ƻ�.",
+  name = "蒸汽地窟",
+  desc = "蒸汽地窟是盘牙水库地下城的第三个5人副本. 其结构本身就是一个地下水泵站, 娜迦海妖统治着这里. 瓦斯琪女士忠心的仆人督军卡利瑟里斯带着他的手下机械师斯蒂里格和水术师瑟斯比亚驻守在蒸汽地窟他们似乎在研究一种结合水和机械的法术，这种法术能带给娜迦战士无坚不摧的力量。娜迦族以此为据点不断吸取赞加沼泽的湖水,导致毒蛇湖的水位下降,引发了一系列生态问题,无数生物的生活环境遭到破坏.",
   --texture = "TheSteamvault",
   area = 727,
 }, {
   {
-    name = "ˮ��ʦɪ˿���",
-    desc = "ˮ��ʦɪ˿���������ˮ���������ؿߵĵ�һ��boss.",
+    name = "水术师瑟丝比娅",
+    desc = "水术师瑟丝比娅是盘牙水库中蒸汽地窟的第一个boss.",
     --icon = true,
     creature = 17797,
     display = 11268,
@@ -42,8 +42,8 @@ local THE_STEAMVAULT = CreateInstance({
     },
   },
   {
-    name = "��еʦ˹�����",
-    desc = "��еʦ˹�����������ˮ���������ؿߵĵڶ���boss. ����������ǰ��������������ɪ��˹����Ҫɱ����.",
+    name = "机械师斯蒂里格",
+    desc = "机械师斯蒂里格是盘牙水库中蒸汽地窟的第二个boss. 如果你想继续前进见到督军卡利瑟里斯必须要杀害他.",
     --icon = true,
     creature = 17796,
     display = 18638,
@@ -56,8 +56,8 @@ local THE_STEAMVAULT = CreateInstance({
     },
   },
   {
-    name = "��������ɪ��˹",
-    desc = "��������ɪ��˹������ˮ���������ؿߵĵ�����boss.",
+    name = "督军卡利瑟里斯",
+    desc = "督军卡利瑟里斯是盘牙水库中蒸汽地窟的第三个boss.",
     --icon = true,
     creature = 17798,
     display = 20235,

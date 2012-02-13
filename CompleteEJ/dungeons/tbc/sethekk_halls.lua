@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local SETHEKK_HALLS = CreateInstance({
-  name = "��̩�˴���",
-  desc = "��̩�˴�����ħ������½�ٸ���Ⱥ��һ����֧.�����������Ҫ��һȺа���ѻ��,����Ҫע�����,��³����ʷʫ������̬��������һ�������������ٻ���ѻ֮���.�����Ӧƶ��ߵ�����.",
+  name = "塞泰克大厅",
+  desc = "塞泰克大厅是魔兽世界奥金顿副本群的一个分支.这里的势力主要是一群邪恶的鸦人,而且要注意的是,德鲁伊的史诗飞行形态任务最终一步就是在这里召唤乌鸦之神的.这里对应贫民窟的声望.",
   --texture = "SethekkHalls",
   area = 723,
 }, {
   {
-    name = "�ڰ���֯����˹",
-    desc = "�ڰ���֯����˹��̩�˴����еĵ�һ��boss.",
+    name = "黑暗编织者塞斯",
+    desc = "黑暗编织者塞斯塞泰克大厅中的第一个boss.",
     --icon = true,
     creature = 18472,
     display = 20599,
@@ -49,8 +49,8 @@ local SETHEKK_HALLS = CreateInstance({
     },
   },
   {
-    name = "��צ֮������˹",
-    desc = "��צ֮������˹����˹��̩�˴����е�����boss.",
+    name = "利爪之王艾吉斯",
+    desc = "利爪之王艾吉斯是塞斯塞泰克大厅中的最终boss.",
     --icon = true,
     creature = 18473,
     display = 18636,
@@ -70,8 +70,8 @@ local SETHEKK_HALLS = CreateInstance({
     },
   },
   {
-    name = "����",
-    desc = "����ֻ����Ӣ���Ѷ��µ���˹��̩�˴������ܱ��ٻ�. ��ȥ��ֻ�ܱ���³���ٻ�, ���������κ��˶������ٻ�����. ���ջ���С���ʵ�����ѻ֮�������.",
+    name = "安苏",
+    desc = "安苏只有在英雄难度下的塞斯塞泰克大厅才能被召唤. 过去他只能被德鲁伊召唤, 但是现在任何人都可以召唤出他. 安苏会有小几率掉落乌鸦之神的缰绳.",
     --icon = true,
     creature = 23035,
     display = 21492,

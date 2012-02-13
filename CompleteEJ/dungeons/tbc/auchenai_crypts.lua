@@ -1,4 +1,4 @@
-local _, db = ...
+﻿local _, db = ...
 local db, CreateInstance, Stage, Spell = db[1], db.CreateInstance, db.Stage, db.Spell
 
 local VANILLA, TBC, WOTLK = 1, 2, 3
@@ -22,14 +22,14 @@ local ENRAGE = 11
 local ENRAGE2 = 12
 
 local AUCHENAI_CRYPTS = CreateInstance({
-  name = "�½����Ѩ",
-  desc = "�½����ǰ������ʥ��,������̩�޿�ɭ�ֵİ׹ǻ�Ұ����.����һ����ʥ�ĵط�,ֱ������Ӱ���ӹ�,�����ٻ���һ����ʱ��һ������,����ǿ��Ķ�ħ,���ݻ���һ���̩�޿�ɭ��.��ͬ����Ӫ�������������ĵط�����Ȩ��:�����˷�����Ĺ�а�������������Ŀ�,�ڰ½�����µ�ȼ�վ������,������̩�˴�����ѻ�˿�����,�Լ�ͳ����������Ӱ�Թ��İ�Ӱ���.",
+  name = "奥金尼地穴",
+  desc = "奥金顿是前德莱尼圣地,在外域泰罗卡森林的白骨荒野中心.这是一个神圣的地方,直到被暗影议会接管,他们召唤了一个和时间一样古老,极其强大的恶魔,并摧毁了一半的泰罗卡森林.不同的阵营现在在这个神奇的地方争夺权力:吸收了法力陵墓中奥术能量的虚空幽客,在奥金尼地下的燃烧军团灵魂,在赛塞泰克大厅的鸦人狂热者,以及统治了整个暗影迷宫的暗影议会.",
   --texture = "AuchenaiCrypts",
   area = 722,
 }, {
   {
-    name = "���������������",
-    desc = "����������������ǰ½����Ѩ�ĵ�һ��BOSS.",
+    name = "死亡看守者辛瑞克",
+    desc = "死亡看守者辛瑞克是奥金尼地穴的第一个BOSS.",
     --icon = true,
     creature = 18371,
     display = 18916,
@@ -43,8 +43,8 @@ local AUCHENAI_CRYPTS = CreateInstance({
     },
   },
   {
-    name = "�����������",
-    desc = "�����������, �ǰ½����Ѩ������BOSS.",
+    name = "主教玛拉达尔",
+    desc = "主教玛拉达尔, 是奥金尼地穴的最终BOSS.",
     --icon = true,
     creature = 18373,
     display = 17715,
