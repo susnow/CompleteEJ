@@ -37,28 +37,28 @@ local RAZORFEN_KRAUL = CreateInstance({
     coords = {0.644, 0.427, 1},
     loot = {},
     sections = {
-      Spell(20824, {so = true, desc = "Blasts an enemy with lightning, inflicting 69 to 81 Nature damage."}), -- Lightning Bolt
+      Spell(20824, {so = true, desc = "用闪电攻击目标，对其造成69~81点自然伤害."}), -- Lightning Bolt
       --Spell(8270), -- Summon Earth Rumbler
       Stage({
         so = true,
         stype = CREATURE,
         creature = 4528,
         display = 9589,
-        name = "Stone Rumbler",
-        desc = "Does not perform any special abilities.",
+        name = "石行者",
+        desc = "没有特殊能力.",
       }),
     },
   },
   {
     name = "阿格姆",
-    desc = "Prophet of the Death's Head tribe. Masters the ability to summon Boar Spirits to assist him in combat.",
+    desc = "野猪人先知,能在战斗中召唤大量的野猪之魂来协同作战.",
     --icon = true,
     creature = 4424,
     display = 6097,
     coords = {0.807, 0.515, 1},
     loot = {6681,},
     sections = {
-      Spell(14900, {so = true, desc = "Infuses a wounded ally with healing energy, healing it for 100 and spreading to another nearby ally. The spell affects up to 3 targets, but the healing energy is diminished by 50% for each successive target.", flag1 = INTERRUPT}), -- Chain Heal
+      Spell(14900, {so = true, desc = "运用治疗的能量为一个受伤的盟友恢复生命值，这股能量会继续治疗附近的其它盟友，最多影响3个目标，但每次治疗的效果都降低50%.", flag1 = INTERRUPT}), -- Chain Heal
       Spell(30931, {so = true}), -- Battle Shout
       Spell(8286, {so = true, desc = "Summons a Boar Spirit to aid Aggem Thorncurse for 1 minute.", sections = {
         Stage({
@@ -66,23 +66,23 @@ local RAZORFEN_KRAUL = CreateInstance({
           stype = CREATURE,
           creature = 6021,
           display = 4716,
-          name = "Boar Spirit",
-          desc = "Does not perform any special abilities.",
+          name = "野猪之魂",
+          desc = "没有特殊能力.",
         }),
       }}), -- Summon Boar Spirit
     },
   },
   {
     name = "亡语者贾格巴",
-    desc = "Jargba is a Death Speaker, a prophet of the Quilboar religion which preaches their fallen god Agamaggan will rise from the dead. As such, he is a combination of priest and powerful warrior.",
+    desc = "具备牧师与战士能力于一体的先知.",
     --icon = true,
     creature = 4428,
     display = 4644,
     coords = {0.874, 0.416, 1},
     loot = {6685,6682,2816,},
     sections = {
-      Spell(7645, {so = true, desc = "Takes control of a humanoid enemy for 10 seconds, but increases the time between its attacks by 100%.", flag1 = MAGIC}), -- Dominate Mind
-      Spell(20825, {so = true, desc = "Hurls a bolt of dark magic at an enemy, inflicting 69 to 81 Shadow damage."}), -- Shadow Bolt
+      Spell(7645, {so = true, desc = "控制一个等级不高于25级的敌对人型生物，持续10秒。使其攻击间隔延长100%.", flag1 = MAGIC}), -- Dominate Mind
+      Spell(20825, {so = true, desc = "向目标射出一支暗影箭，对其造成69~81点暗影伤害."}), -- Shadow Bolt
     },
   },
   {
@@ -94,18 +94,18 @@ local RAZORFEN_KRAUL = CreateInstance({
     coords = {0.573, 0.309, 1},
     loot = {6679,6686,6687,},
     sections = {
-      Spell(15548, {so = true, desc = "Inflicts 35 to 39 Nature damage to nearby enemies, increasing the time between their attacks by 33% and slowing their movement speed by 40% for 6 sec.", flag1 = MAGIC}), -- Thunderclap
-      Spell(9128, {so = true, desc = "Increases the melee attack power of nearby party members by 4 for 2 min."}), -- Battle Shout
+      Spell(15548, {so = true, desc = "对附近的敌人造成35~39点自然伤害，使其攻击间隔延长33%，移动速度降低40%，持续6秒.", flag1 = MAGIC}), -- Thunderclap
+      Spell(9128, {so = true, desc = "使附近所有小队成员的近战攻击强度提高，持续2分钟."}), -- Battle Shout
       --Spell(7165), -- Battle Stance
       Stage({
         so = true,
         stype = CREATURE,
         creature = 4438,
         display = 6078,
-        name = "Razorfen Spearhide",
+        name = "剃刀沼泽刺鬃守卫",
         sections = {
-          Spell(8148, {desc = "Causes 20 Nature damage to anyone that strikes the caster or nearby allies."}), -- Thorns Aura
-          Spell(8259, {desc = "Inflicts normal damage plus 50 to enemies within 30 yards."}), -- Whirling Barrage
+          Spell(8148, {desc = "对近战攻击者造成20点自然伤害."}), -- Thorns Aura
+          Spell(8259, {desc = "对附近的敌人造成普通武器伤害再加上50点额外伤害."}), -- Whirling Barrage
         },
       }),
     },
@@ -119,7 +119,7 @@ local RAZORFEN_KRAUL = CreateInstance({
     coords = {0.487, 0.458, 1},
     loot = {6688,6689,},
     sections = {
-      Spell(20824, {so = true, desc = "Blasts an enemy with lightning, inflicting 69 to 81 Nature damage."}), -- Lightning Bolt
+      Spell(20824, {so = true, desc = "用闪电攻击目标，对其造成69~81点自然伤害."}), -- Lightning Bolt
       --Spell(8270), -- Summon Earth Rumbler
       Stage({
         so = true,
@@ -127,7 +127,7 @@ local RAZORFEN_KRAUL = CreateInstance({
         creature = 4528,
         display = 9589,
         name = "奔岩碾压者",
-        desc = "Does not perform any special abilities.",
+        desc = "没有什么特殊能力.",
       }),
       --Spell(2484, {so = true, desc = "Summons an Earthbind Totem with 5 health at the feet of the caster for 45 seconds."}), -- Earthbind Totem
       Stage({
@@ -136,32 +136,32 @@ local RAZORFEN_KRAUL = CreateInstance({
         creature = 2630,
         display = 4588,
         name = "地缚图腾",
-        desc = "Summons an Earthbind Totem with 5 health at the feet of the caster for 45 seconds.",
+        desc = "召唤一支5点生命值的地缚图腾,持续45秒.",
         sections = {
-          Spell(3600, {desc = "Reduces the movement speed of all nearby enemies by 50% for 5 seconds.", flag1 = MAGIC}), -- Earthbind
-          Spell(64695, {desc = "Occasionally roots nearby enemies for 5 seconds.", flag1 = MAGIC}), -- Earthgrab
+          Spell(3600, {desc = "使所有邻近敌人的移动速度降低50%,持续5秒.", flag1 = MAGIC}), -- Earthbind
+          Spell(64695, {desc = "地缚图腾在生效时有一定几率使目标定身,持续5秒.", flag1 = MAGIC}), -- Earthgrab
         },
       }),
     },
   },
   {
     name = "暴怒的阿迦赛罗斯",
-    desc = "Agathelos is a truly collosal armoured boar roughly twice the size of a common thunder lizard, and becomes even bigger when enraged. He is kept in a short tunnel guarded by several quilboar who maintain a field to keep the monstrous creature penned in.\n\nGiven that the god and progenitor of the Quilboar is Agamaggan, a titanic boar, an animal such as Agathelos is one of considerable spiritual significance.",
+    desc = "巨大的野猪,是野猪人所信仰的神.",
     --icon = true,
     creature = 4422,
     display = 2450,
     coords = {0.080, 0.683, 1},
     loot = {6691,6690,},
     sections = {
-      Spell(8555, {so = true, desc = "Inflicts 200 damage to an enemy and forces it to feign death for up to 5 minutes. This wipes any threat that enemy had with Agathelos.", flag1 = TANK}), -- Left for Dead
+      Spell(8555, {so = true, desc = "对敌人造成200点伤害，并强制其装死，最多持续5分钟.", flag1 = TANK}), -- Left for Dead
       Spell(8285, {so = true}), -- Rampage
-      Spell(8260, {desc = "Rushes over to his target, moving 60% faster and inflicting 10% additional damage on first attack."}), -- Rushing Charge
+      Spell(8260, {desc = "使施法者的移动速度提高60%，持续4秒，并使其在第一次攻击时所造成的伤害提高10点."}), -- Rushing Charge
       Spell(8269), -- Frenzy
     },
   },
   {
     name = "盲眼猎手 (稀有)",
-    desc = "A rare bat that spawns in the alcove right before Charlga Razorflank.",
+    desc = "稀有精英 蝙蝠.",
     --icon = true,
     creature = 4425,
     display = 4735,
@@ -170,14 +170,14 @@ local RAZORFEN_KRAUL = CreateInstance({
     sections = {
       Stage({
         so = true,
-        name = "Auto Attack",
-        desc = "Does not perform any special abilities.",
+        name = "自动攻击",
+        desc = "没有特殊能力.",
       }),
     },
   },
   {
     name = "卡尔加·刺肋",
-    desc = "The great mass of Razorfen Kraul was conquered by the old crone, Charlga Razorflank. Under her rule, the shamanistic quilboar stage attacks on rival tribes as well as Horde villages. Some speculate that Charlga has even been negotiating with agents of the Scourge - aligning her unsuspecting tribe with the ranks of the Undead for some insidious purpose. Charlga is a tenacious leader and an extremely powerful geomancer.",
+    desc = "野猪人的首领,非常强势的萨满祭司",
     --icon = true,
     creature = 4421,
     display = 31042,
@@ -185,9 +185,9 @@ local RAZORFEN_KRAUL = CreateInstance({
     loot = {5793,6693,6694,6692,},
     sections = {
       Spell(8292, {so = true}), -- Chain Bolt
-      Spell(25058, {so = true, desc = "Heals herself for 200 over 15 seconds.", flag1 = MAGIC}), -- Renew
+      Spell(25058, {so = true, desc = "每3秒为一个盟友回复一次生命值，持续15秒.", flag1 = MAGIC}), -- Renew
       Spell(8361, {so = true}), -- Purity
-      Spell(8358, {desc = "Fully restores her mana."}), -- Mana Spike
+      Spell(8358, {desc = "恢复施法者的法力值."}), -- Mana Spike
     },
   },
 })
