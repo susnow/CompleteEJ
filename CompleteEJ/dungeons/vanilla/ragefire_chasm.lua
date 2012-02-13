@@ -30,7 +30,7 @@ local RAGEFIRE_CHASM = CreateInstance({
 }, {
   {
     name = "奥格弗林特",
-    desc = "Oggleflint and the troggs once ruled unchallenged in the depths of Ragefire Chasm until the Searing Blade cultists moved in. Too weak to drive away the Searing Blade, Oggleflint and the troggs retreated near the entrance of Ragefire Chasm where they now wait patiently for their unwelcome guests to depart.",
+    desc = "奥格弗林特和他的穴居人镇守在怒焰裂谷的入口附近,驱赶走任何企图接近怒焰裂谷深处的探险者.",
     --icon = true,
     creature = 11517,
     display = 32731,
@@ -42,40 +42,40 @@ local RAGEFIRE_CHASM = CreateInstance({
   },
   {
     name = "饥饿者塔拉加曼",
-    desc = "Thought to be the leader of the Searing Blade, he hides within the fiery depths of Ragefire Chasm, using his demonic influence to corrupt the citizens of Orgrimmar. In reality, the leaders of the Searing Blade are Bazzalan and Jergosh, this felguard is expendable bait to lure young adventurers in to their death.",
+    desc = "被认为是怒焰裂谷的领导者,擅长使用恶魔的力量引诱和腐蚀奥格瑞玛的平民",
     --icon = true,
     creature = 11520,
     display = 14152,
     coords = {0.408, 0.578, 1},
     loot = {14148,14149,14145,},
     sections = {
-      Spell(11970, {so = true, desc = "Inflicts 33 to 38 Fire damage to enemies within 10 yards."}), -- Fire Nova
+      Spell(11970, {so = true, desc = "对附近的敌人造成33~38点火焰伤害."}), -- Fire Nova
       Spell(18072, {so = true}), -- Uppercut
     },
   },
   {
     name = "祈求者耶戈什",
-    desc = "Jergosh the Invoker has rejected the ideals of the orcs and practices the dark and demonic arts of the warlock. A leader of the Searing Blade Cultists, Jergosh dwells within Ragefire Chasm, concocting a scheme dangerous enough to draw the attention of Thrall himself. He's guarding the Blood Filled Orb, which is needed to summon Zelemar the Wrathful if you have the quest The Path of the Adept.",
+    desc = "耶戈什,一直在追求术士暗影魔法和恶魔的力量,他试图策划出能引起萨尔注意的危险计划,比如说召唤出一些可怕的恶魔之类的.",
     --icon = true,
     creature = 11518,
     display = 11429,
     coords = {0.343, 0.816, 1},
     loot = {14150,14147,14151,},
     sections = {
-      Spell(11980, {so = true, desc = "Reduces the Physical damage of an enemy by 10% for 15 seconds.", flag1 = CURSE}), -- Curse of Weakness
-      Spell(20800, {so = true, desc = "Burns an enemy for 38 to 44 Fire damage, then inflicts additional 5 Fire damage every 3 seconds for 15 seconds.", flag1 = MAGIC}), -- Immolate
+      Spell(11980, {so = true, desc = "降低一名敌人造成的物理伤害，持续15秒.", flag1 = CURSE}), -- Curse of Weakness
+      Spell(20800, {so = true, desc = "灼烧敌人，并对其每3秒造成一次额外火焰伤害，持续15秒.", flag1 = MAGIC}), -- Immolate
     },
   },
   {
     name = "巴扎兰",
-    desc = "Bazzalan leads the Searing Blade cultists along with Jergosh the Invoker. His motives are unclear, but like all satyr, he is a swift and cunning foe. Bazzalan is a bit tougher than the other bosses you will encounter in Ragefire Chasm. He swings fast and hits hard. However, with careful pulling, you can fight him without engaging the two Searing Blade Cultists that are standing in front of him.",
+    desc = "燃刃信徒的领导者.",
     --icon = true,
     creature = 11519,
     display = 2007,
     coords = {0.419, 0.863, 1},
     loot = {68195,},
     sections = {
-      Spell(744, {so = true, desc = "Inflicts 4 Nature damage to an enemy every 3 seconds for 15 seconds.", flag1 = POISON}), -- Poison
+      Spell(744, {so = true, desc = "每3秒对目标造成一次自然伤害，持续15秒.", flag1 = POISON}), -- Poison
       Spell(14873, {so = true}), -- Sinister Strike
     },
   },
