@@ -30,7 +30,7 @@ local MARAUDON = CreateInstance({
 }, {
   {
     name = "诺克赛恩",
-    desc = "The first boss of the orange wing. Noxxion is a living symbol of the corruption of Maraudon, created by Lord Vyletongue.",
+    desc = "橙色水晶池的第一个首领.恶魔维利塔恩污染了玛拉顿的自然,并且创造了这个元素生物T.",
     --icon = true,
     creature = 13282,
     display = 11172,
@@ -38,20 +38,20 @@ local MARAUDON = CreateInstance({
     loot = {17745,17746,17744,},
     sections = {
       Spell(10966, {so = true}), -- Uppercut
-      Spell(21687, {so = true, desc = "Inflicts 37 to 43 Nature damage to enemies within 45 yards, then additional 25 Nature damage over 15 seconds.", flag1 = POISON}), -- Toxic Volley
-      Spell(21707, {so = true, desc = "Occasionally spawns five elementals and disappears from sight. He will re-materialize once they are defeated."}), -- Summon Noxxion's Spawns
+      Spell(21687, {so = true, desc = "对45码内所有敌人造成37~43点自然伤害,并且每3秒造成额外的5点自然伤害,持续15秒.", flag1 = POISON}), -- Toxic Volley
+      Spell(21707, {so = true, desc = "召唤5个召唤诺克赛恩产物."}), -- Summon Noxxion's Spawns
       Stage({
         stype = CREATURE,
         creature = 13456,
         display = 5492,
         name = "诺克赛恩产物",
-        desc = "Does not perform any special abilities.",
+        desc = "没有任何特殊能力.",
       }),
     },
   },
   {
     name = "锐刺鞭笞者",
-    desc = "The final boss of the orange wing, a giant thorny lasher.",
+    desc = "橙色水晶池区域最终的BOSS,一颗巨大的鞭笞者植物.",
     --icon = true,
     creature = 12258,
     display = 12389,
@@ -59,43 +59,43 @@ local MARAUDON = CreateInstance({
     loot = {17748,17750,17749,17751,},
     sections = {
       Spell(40504, {so = true, flag1 = TANK}), -- Cleave
-      Spell(15976, {so = true, desc = "Inflicts 15 Physical damage to an enemy over 10 seconds, stacks maximum 20 times. At max stacks will deal 300 Physical damage over 10 seconds."}), -- Puncture
+      Spell(15976, {so = true, desc = "每2秒对敌人造成一次15点物理伤害，持续10秒,这个效果最多可以叠加20次."}), -- Puncture
     },
   },
   {
     name = "维利塔恩",
-    desc = "The only boss in the purple wing. He is the head of the Putridus clan of satyrs. He has corrupted parts of Maraudon, stunting the growth of many of the plants inside. He also created the elemental Noxxion.",
+    desc = "紫色水晶池区域唯一的一个BOSS.萨特的首领 .",
     --icon = true,
     creature = 12236,
     display = 12334,
     coords = {0.378, 0.711, 1},
     loot = {17754,17755,17752,},
     sections = {
-      Spell(16100, {so = true, desc = "Shoots at an enemy, inflicting 74 to 87 Physical damage."}), -- Shoot
+      Spell(16100, {so = true, desc = "射击一个敌人,造成74~87点物理伤害."}), -- Shoot
       Spell(21390, {so = true}), -- Multi-Shot
-      Spell(21655, {so = true, desc = "Teleports him 20 yards forward, unless something is in the way."}), -- Blink
-      Spell(7964, {so = true, desc = "Casts a smoke bomb, stunning enemies within 5 yards for 3 seconds.", flag1 = MAGIC}), -- Smoke Bomb
+      Spell(21655, {so = true, desc = "将施法者传送到正前方20码的位置，路线上有阻挡物则会停止."}), -- Blink
+      Spell(7964, {so = true, desc = "施放烟雾弹，使附近的敌人昏迷3秒.", flag1 = MAGIC}), -- Smoke Bomb
     },
   },
   {
     name = "被诅咒的塞雷布拉斯",
-    desc = "The only boss in the Poison Falls wing. Celebras is the son of Remulos and is a Keeper of the Grove, like his father. Cavindra calls Celebras her brother.\n\nAfter Celebras's uncle Zaetar was killed by his centaur offspring, Zaetar's spirit was held prisoner by his mate, Theradras. In an attempt to free his uncle's spirit, Celebras and his dryad sisters entered Maraudon. However, the corruption that had spread through the caverns soon overcame them. Celebras the Cursed now wanders blindly inside, cursed by corruption.",
+    desc = "半人马之子,为了调查玛拉顿的腐化情况进入玛拉顿,后被腐蚀心智.",
     --icon = true,
     creature = 12225,
     display = 12350,
     coords = {0.246, 0.139, 2},
     loot = {17739,17740,17738,},
     sections = {
-      Spell(21807, {so = true, desc = "Hurls a bolt of lightning at an enemy, inflicting 66 to 77 Nature damage."}), -- Wrath
-      Spell(12747, {so = true, desc = "Entangles an enemy in roots, inflicting 4 Nature damage every 3 seconds, and immobilizing it for up to 5 seconds.", flag1 = MAGIC}), -- Entangling Roots
-      Spell(21793, {so = true, desc = "Deals 36 Nature damage to enemies within 45 yards every 2 seconds for 8 seconds, also reducing movement speed by 70% and time between attacks is increased by 300%.", flag1 = INTERRUPT}), -- Twisted Tranquility
-      Spell(21968, {so = true, desc = "Summons three Force of Nature to aid Celebras in battle for 1 minute."}), -- Corrupt Forces of Nature
+      Spell(21807, {so = true, desc = "向目标射出一支闪电箭，对其造成66~77点自然伤害."}), -- Wrath
+      Spell(12747, {so = true, desc = "用根须将敌人缠住，每3秒对其造成一次4点自然伤害，并使其无法移动，最多持续5秒.", flag1 = MAGIC}), -- Entangling Roots
+      Spell(21793, {so = true, desc = "对45码指定区域内的敌人每两秒造成36点的自然伤害，使它们的移动速度降低70%，攻击间隔延长300%，持续8秒.", flag1 = INTERRUPT}), -- Twisted Tranquility
+      Spell(21968, {so = true, desc = "召唤3个堕落自然之力为施法者作战，持续1分钟."}), -- Corrupt Forces of Nature
       Stage({
         stype = CREATURE,
         creature = 13743,
         display = 9593,
         name = "腐化的自然之力",
-        desc = "Does not perform any special abilities.",
+        desc = "没有什么特殊能力.",
       }),
     },
   },
@@ -108,16 +108,16 @@ local MARAUDON = CreateInstance({
     coords = {0.411, 0.489, 2},
     loot = {17943,17734,17736,17737,},
     sections = {
-      Spell(5568, {so = true, desc = "Inflicts normal damage plus additional 8% damage to enemies within 8 yards."}), -- Trample
+      Spell(5568, {so = true, desc = "对附近的敌人造成普通武器伤害与附加伤害."}), -- Trample
       Spell(18670, {so = true, flag1 = TANK}), -- Knock Away
-      Spell(21808, {so = true, desc = "Stuns all enemies for 8 seconds and spawns four Theradrim Shardlings."}), -- Landslide
+      Spell(21808, {so = true, desc = "每2秒召唤一次瑟莱德丝碎片，并令一个区域内的敌人昏迷8秒."}), -- Landslide
       Stage({
         stype = CREATURE,
         creature = 11783,
         display = 12310,
         name = "瑟莱德丝碎片",
         sections = {
-          Spell(13584, {so = true, desc = "Strikes at an enemy, inflicting normal damage plus additional 5% damage."}), -- Strike
+          Spell(13584, {so = true, desc = "攻击一名敌人，对其造成普通伤害再加上一定量的额外伤害."}), -- Strike
         },
       }),
     },
@@ -160,7 +160,7 @@ local MARAUDON = CreateInstance({
     loot = {17715,17766,17714,17713,17707,17710,17711,17780,},
     sections = {
       Spell(3391, {so = true}), -- Thrash
-      Spell(21832, {so = true, icon = "Interface\\Icons\\INV_Stone_10", desc = "Hurls a boulder at an enemy, inflicting 280 to 360 Physical damage and knocking it down for 2 seconds."}, 1), -- Boulder (triggers 22592)
+      Spell(21832, {so = true, icon = "Interface\\Icons\\INV_Stone_10", desc = "对敌人投掷石块,造成280~360点物理伤害,并将其击倒,持续2秒.."}, 1), -- Boulder (triggers 22592)
       Spell(21869, {so = true}), -- Repulsive Gaze
       Spell(21909, {so = true, desc = "震动20码内附近的地面,对敌人造成103-135点伤害，并将他们击退."}), -- Dust Field
     },
