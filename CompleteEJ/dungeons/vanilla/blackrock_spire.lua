@@ -220,7 +220,7 @@ local BLACKROCK_SPIRE = CreateInstance({
     },
   },
   {
-    name = "",
+    name = "达基萨斯将军",
     --desc = "",
     --icon = true,
     creature = 10363,
