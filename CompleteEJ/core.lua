@@ -41,6 +41,18 @@ local modeNames = {
   [RF] = "Raid Finder",
 }
 
+local modelsID = {
+	[1] = 66,
+	[2] = 105,
+	[3] = 103,
+	[4] = 70,
+	[5] = 111,
+	[6] = 111,
+	[7] = 116,
+}
+
+local EJ_DUNGEON_MODEL_TBL = ""
+
 -- Setting the EJ difficulty options
 local EJ_DIFF_DUNGEON_TBL = {
 	[1] = {enumValue = N5, size = 5, prefix = PLAYER_DIFFICULTY1},
@@ -173,6 +185,42 @@ do
     return tip
   end
 end
+
+local function GetModelName(info,id)
+	info = string.format("%s%s",info,id)
+	return info
+end
+
+local function ReloadModel(index,flag)
+	if index < 0 and not flag then
+		index = -index
+	end
+	local indexs = {}
+	local n = math.ceil(select(2,math.frexp(index))/8)
+	if flag and index < 0 then
+		index = index + 2^n
+	end
+	for k= n, 1, -1 do
+		local mul = 2^(8*(k-1))
+		indexs[k] = math.floor(index/mul)
+		index = index - indexs[k]*mul
+	end
+	assert(index == 0)
+	return string.char(unpack(indexs))
+end
+
+-- Load models if you havn't the cache data  
+local function InitModel()
+	for i = 1, #modelsID do
+		local model = ReloadModel(modelsID[i],true)
+		EJ_DUNGEON_MODEL_TBL = GetModelName(EJ_DUNGEON_MODEL_TBL,model)
+	end
+	if IsAddOnLoaded(EJ_DUNGEON_MODEL_TBL) then
+		print(GetLFGTypes()) 
+	end
+end
+
+do InitModel() end
 
 -- Load item from server
 local function ReloadItem(item)
