@@ -23,13 +23,13 @@ local ENRAGE2 = 12
 
 local HALLS_OF_REFLECTION = CreateInstance({
   name = "映像大厅",
-  desc = "映像大厅 is the third and final wing of the Frozen Halls, located within Icecrown Citadel. The The Forge of Souls and Pit of Saron must be completed before a player can enter the Halls of Reflection for the first time.",
+  desc = "映像大厅 冰冠要塞副本群中的最后一个5人副本,传说中霜之哀伤就隐匿于此.",
   --texture = "HallsofReflection",
   area = 603,
 }, {
   {
     name = "法勒瑞克",
-    desc = "法勒瑞克, a captain for Arthas in both life and death, is the first boss in the Halls of Reflection. He will engage the party after 4 spirit waves have been defeated.",
+    desc = "法勒瑞克, 阿尔萨斯的副官之一,映像大厅的第一名首领,在玩家抵御了4波天灾部队的进攻之后出现.",
     --icon = true,
     creature = 38112,
     display = 30972,
@@ -51,7 +51,7 @@ local HALLS_OF_REFLECTION = CreateInstance({
   },
   {
     name = "玛维恩",
-    desc = "玛维恩, Arthas Menethil's second captain, is the second boss in the Halls of Reflection. He will engage the party after the 9th spirit wave has been defeated.",
+    desc = "玛维恩, 阿尔萨斯的副官之一,映像大厅的第二名首领,玩家在前厅中抵御了8波天灾部队的进攻之后出现 .",
     --icon = true,
     creature = 38113,
     display = 30973,

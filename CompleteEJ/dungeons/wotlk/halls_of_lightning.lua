@@ -23,13 +23,13 @@ local ENRAGE2 = 12
 
 local HALLS_OF_LIGHTNING = CreateInstance({
   name = "闪电大厅",
-  desc = "Ulduar is a dungeon hub located at The Storm Peaks of Northrend, revealing many details about the Titans and their activities. Halls of LIghtning is home to Loken, a corrupted Titan watcher. Halls of Lightning is the second and highest level 5 five-man dungeon connected to the titan city Ulduar.",
+  desc = "在离开艾泽拉斯的时候，泰坦们将守卫艾泽拉斯的工作交给忠诚的守卫者，他们沉默地守卫着泰坦的堡垒奥杜尔，作为在邪恶力量侵袭世界时最后的抵抗力量。闪电大厅是泰坦守卫者洛肯的领地，他的主要工作是看管奥杜尔关押的邪恶上古之神尤格-萨隆，但是不知为何洛肯打破的沉默，开始不断的制造钢铁巨人和铁矮人卫兵，他们几乎占据了整个风暴峭壁，并且还在不断建造新的部队。究竟洛肯为什么要这么做？闪电大厅还有多少秘密没有被揭开？.",
   --texture = "HallsofLightning",
   area = 525,
 }, {
   {
     name = "比亚格里将军",
-    desc = "比亚格里将军, an Iron Vrykul, is the first boss in the Halls of Lightning. He patrols around the Unyielding Garrison and与成就<雷击>相关。",
+    desc = "比亚格里将军, 钢铁巨人,闪电大厅中的第一名首领,他会在前厅的通道中巡逻,与成就<雷击>相关。",
     --icon = true,
     creature = 28586,
     display = 27301,
@@ -61,7 +61,7 @@ local HALLS_OF_LIGHTNING = CreateInstance({
   },
   {
     name = "沃尔坎",
-    desc = "沃尔坎, a Fire Giant, 闪电大厅中的第二个BOSS。与成就<破碎的抵抗>相关。",
+    desc = "沃尔坎, 火焰巨人, 闪电大厅中的第二个首领。与成就<破碎的抵抗>相关。",
     --icon = true,
     creature = 28587,
     display = 27071,
@@ -77,7 +77,7 @@ local HALLS_OF_LIGHTNING = CreateInstance({
   },
   {
     name = "艾欧纳尔",
-    desc = "艾欧纳尔, a Lightning Revenant,闪电大厅中的第三个BOSS。",
+    desc = "艾欧纳尔, 风暴元素,闪电大厅中的第三个首领。",
     --icon = true,
     creature = 28546,
     display = 27484,
@@ -93,7 +93,7 @@ local HALLS_OF_LIGHTNING = CreateInstance({
   },
   {
     name = "洛肯",
-    desc = "洛肯, a Titan Watcher,闪电大厅的最后BOSS。与成就<适时死亡>相关。",
+    desc = "洛肯, 泰坦的观察者,闪电大厅的最后首领。与成就<适时死亡>相关。",
     --icon = true,
     creature = 28923,
     display = 27485,

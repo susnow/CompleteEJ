@@ -23,13 +23,13 @@ local ENRAGE2 = 12
 
 local THE_FORGE_OF_SOULS = CreateInstance({
   name = "灵魂洪炉",
-  desc = "灵魂洪炉 is the first wing of the dungeon complex known as the Frozen Halls, located within Icecrown Citadel. The instance portal is located to the left inside the secured area of Icecrown Citadel, near the meeting stone. No attunement is required for entry, but completing the instance is required to gain entrance to the Pit of Saron.",
+  desc = "灵魂洪炉 是冰冠要塞副本群中的第一个5人副本,玩家在完成灵魂烘炉的剧情之后可以传送到萨隆矿坑.",
   --texture = "TheForgeofSouls",
   area = 601,
 }, {
   {
     name = "布隆亚姆",
-    desc = "布隆亚姆, the Godfather of Souls,是灵魂洪炉中的第一个BOSS。与成就<灵魂之能>相关。",
+    desc = "布隆亚姆, 原型来自灵魂乐教父詹姆斯布朗,是灵魂洪炉中的第一个首领。与成就<灵魂之能>相关。",
     --icon = true,
     creature = 36497,
     display = 30226,
@@ -49,7 +49,7 @@ local THE_FORGE_OF_SOULS = CreateInstance({
   },
   {
     name = "灵魂吞噬者",
-    desc = "灵魂吞噬者是灵魂洪炉中的第二个BOSS。 It also guards the Crucible of Souls, needed to temper Quel'Delar. 与成就<三面之灵>相关。",
+    desc = "灵魂吞噬者是灵魂洪炉中的第二个首领. 与成就<三面之灵>相关。",
     --icon = true,
     creature = 36502,
     display = 30148,
