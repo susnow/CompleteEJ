@@ -23,13 +23,13 @@ local ENRAGE2 = 12
 
 local THE_CULLING_OF_STRATHOLME = CreateInstance({
   name = "净化斯坦索姆",
-  desc = "Located in the eastern part of Tanaris, the Caverns of Time contain various portals to different key time periods and events in Warcraft history. The caverns act as a crossroads for the various timelines; through them one can travel back and forth across time. The Caverns of Time are home to the  and the bronze dragonflight. Recently, a mysterious force called the Infinite Dragonflight has begun to meddle with time--the bronze dragonflight is recruiting heroes to make sure that the events that took place in the past remain as they were. The Culling of Stratholme is one of the timeways (\"wings\") accessible in the Caverns of Time. It is centered around helping Prince Arthas purge the city of Stratholme from the grain-infected populace. It is one of the first acts in Arthas' descent into madness and evil.",
+  desc = "阴魂不散的永恒龙族依然没有放弃他们毁灭时间轴的企图，这次他们在另外一个改变世界的重大事件：斯坦索姆之战中找到了新的时空起点，改变这个事件的结果，可能会导致整个大陆的历史崩溃：没有巫妖王，没有寒冰王座下的决斗，你我也不会在诺森德相遇……时光守护者当然不会让永恒龙族的阴谋得逞，他们征召新的勇士去帮助克罗米阻止时间轴被改写，阿尔萨斯王子走上歧路的那一刻，你终于有机会亲眼见证.",
   --texture = "TheCullingofStratholme",
   area = 521,
 }, {
   {
     name = "肉钩",
-    desc = "肉钩 is an abomination and净化斯坦索姆中的第一个BOSS， a wing of the Caverns of Time。他在5波小怪被击败后出现。",
+    desc = "肉钩 缝补憎恶,净化斯坦索姆中的第一个首领，他在5波小怪被击败后出现。",
     --icon = true,
     creature = 26529,
     display = 26579,
@@ -45,7 +45,7 @@ local THE_CULLING_OF_STRATHOLME = CreateInstance({
   },
   {
     name = "塑血者沙尔拉姆",
-    desc = "塑血者沙尔拉姆, a member of the Cult of the Damned, 净化斯坦索姆中的第二个BOSS。他在十波小怪被击败后出现。",
+    desc = "塑血者沙尔拉姆, 天灾通灵师, 净化斯坦索姆中的第二个首领。他在十波小怪被击败后出现。",
     --icon = true,
     creature = 26530,
     display = 26581,
@@ -65,7 +65,7 @@ local THE_CULLING_OF_STRATHOLME = CreateInstance({
   },
   {
     name = "时光领主埃博克",
-    desc = "时光领主埃博克是净化斯坦索姆中的第三个BOSS。 He is a highly-ranked member of the Infinite Dragonflight.",
+    desc = "时光领主埃博克是净化斯坦索姆中的第三个首领。永恒龙族安插在这根时间轴上的使者.",
     --icon = true,
     creature = 26532,
     display = 26580,
@@ -81,7 +81,7 @@ local THE_CULLING_OF_STRATHOLME = CreateInstance({
   },
   {
     name = "玛尔加尼斯",
-    desc = "玛尔加尼斯是精华斯坦索姆中的最后BOSS, a wing of the Caverns of Time.",
+    desc = "恐惧魔王玛尔加尼斯是净化斯坦索姆中的最后首领, 是诱引阿尔萨斯走上歧途的主谋.",
     --icon = true,
     creature = 26533,
     display = 26582,

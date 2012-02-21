@@ -23,13 +23,13 @@ local ENRAGE2 = 12
 
 local PIT_OF_SARON = CreateInstance({
   name = "萨隆矿坑",
-  desc = "The Pit of Saron is the second wing of the Frozen Halls, located within Icecrown Citadel. The The Forge of Souls must be completed before a player can access the Pit of Saron, and this dungeon must be completed in order to access the Halls of Reflection.",
+  desc = "位于冰冠要塞的萨隆矿坑是冰冠要塞副本群中的第二个5人副本,玩家可以通过灵魂熔炉最后的传送器进入这个副本,当完成萨隆矿坑之后,玩家可以传送到映像大厅.",
   --texture = "PitofSaron",
   area = 602,
 }, {
   {
     name = "熔炉之主加弗斯特",
-    desc = "熔炉之主加弗斯特is a flesh giant covered with ice, whose duty is to forge saronite weapons and armor for the Scourge. He is one of the two encounters you will need to defeat before \"unlocking\" the passage to Scourgelord Tyrannus and the Halls of Reflection. Garfrost is considered the first boss encounter in the Pit of Saron.与成就<11大限>相关。",
+    desc = "熔炉之主加弗斯特,装备着萨隆邪铁打造的武装的天灾巨人,如果你想继续完成萨隆矿坑的剧情,你必须击败他.与成就<11大限>相关。",
     --icon = true,
     creature = 36494,
     display = 30843,
@@ -53,7 +53,7 @@ local PIT_OF_SARON = CreateInstance({
   },
   {
     name = "伊克",
-    desc = "伊克 is a plague eruptor that serves as a mount for the leper gnome Krick. 伊克和克莱克 are considered the second boss encounter in the Pit of Saron, one of the two encounters you need to defeat before \"unlocking\" the passage to Scourgelord Tyrannus and the Halls of Reflection.",
+    desc = "伊克 瘟疫混合的变异体,如果你想继续完成萨隆矿坑的剧情,你必须击败他.",
     --icon = true,
     creature = 36476,
     display = 30347,
@@ -71,7 +71,7 @@ local PIT_OF_SARON = CreateInstance({
   },
   {
     name = "克莱克",
-    desc = "克莱克 is a leper gnome in service of the Lich King. 伊克和克莱克 are considered the second boss encounter in the Pit of Saron. This duo is part of one of the two encounters you need to defeat before \"unlocking\" the passage to Scourgelord Tyrannus and the Halls of Reflection.",
+    desc = "克莱克 是伊克的主人,归降于巫妖王意志的麻风侏儒,操纵着伊克与玩家作战.",
     --icon = true,
     creature = 36477,
     display = 30331,
@@ -87,7 +87,7 @@ local PIT_OF_SARON = CreateInstance({
   },
   {
     name = "天灾领主泰兰努斯",
-    desc = "天灾领主泰兰努斯 is a human Death Knight riding the frost wyrm Rimefang. 他是萨隆矿坑的最后BOSS。",
+    desc = "天灾领主泰兰努斯 ,操纵着寒冰之力的死亡骑士,  他是萨隆矿坑的最后首领。",
     --icon = true,
     creature = 36658,
     display = 30277,
